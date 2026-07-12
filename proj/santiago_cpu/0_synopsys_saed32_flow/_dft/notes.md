@@ -1,5 +1,8 @@
 # DFT
 
+isso aqui faz um servidor local para ver os relatórios html: python3 -m http.server 8000
+write_aggregate_report html
+
 module load tmadvisor/
 sg_shell
 
