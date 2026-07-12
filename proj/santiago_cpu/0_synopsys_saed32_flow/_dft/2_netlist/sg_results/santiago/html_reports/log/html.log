@@ -1,0 +1,28 @@
+SpyGlass Predictive Analyzer(R) - SpyGlass_vW-2024.09-SP2-8
+All Rights Reserved. Use, disclosure or duplication 
+without prior written permission of Synopsys Inc. is prohibited.
+Technical support: email spyglass_support@synopsys.com 
+
+Creating 'html' reports using project './santiago.prj'
+##cwd         : /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/0_synopsys_saed32_flow/_dft/2_netlist
+##system      : Linux cadmicro-el8-05.inf.ufrgs.br 4.18.0-553.87.1.el8_10.x86_64 #1 SMP Wed Dec 3 12:45:57 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+##Date & Time : Sun Jul 12 15:48:57 2026
+Checkout 'dashboard' license at Sun Jul 12 15:48:54 2026 
+Checkout 'dashboard' license completed at Sun Jul 12 15:48:55 2026 
+Generating HTML report started at Sun Jul 12 15:48:55 2026 
+Checking project file /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/0_synopsys_saed32_flow/_dft/2_netlist/santiago.prj at Sun Jul 12 15:48:55 2026 
+Processing Project File:/home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/0_synopsys_saed32_flow/_dft/2_netlist/santiago.prj 
+     Work Directory:/home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/0_synopsys_saed32_flow/_dft/2_netlist/sg_results/santiago 
+     Top Name: top_santiago_cpu 
+     Group Mode: 0 
+     Methodology:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/GuideWare/2024.09/block/rtl_handoff 
+    Goals executed: dft/dft_scan_ready:: 
+ 
+HTML Report creation completed at Sun Jul 12 15:48:57 2026 
+Checkin 'dashboard' license at Sun Jul 12 15:48:57 2026 
+----------------------------------------------------------------
+Report 'html' created.
+  File: /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/0_synopsys_saed32_flow/_dft/2_netlist/sg_results/santiago/html_reports/goals_summary.html 
+----------------------------------------------------------------
+
+SpyGlass Exit Code 0

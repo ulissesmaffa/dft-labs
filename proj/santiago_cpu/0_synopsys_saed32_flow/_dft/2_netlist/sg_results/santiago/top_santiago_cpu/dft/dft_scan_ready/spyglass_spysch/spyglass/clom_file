@@ -1,0 +1,72 @@
+##This file is genrated to have command line decompiled Info even in Console
+##(To generate SIGN_OFF report having command line decompiled)
+Run Setup Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Option          Value             Origin  File                           LineNo
+===============================================================================
+--goal_info     dft/dft_scan_ready@ CmdLine -                              -
+--strict_sgdc_check <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 40
+-batch          <ON>              CmdLine -                              -
+-dbdir          ./sg_results/santiago/top_santiago_cpu/.SG_SaveRestoreDB CmdLine -                              -
+-enableSV       <ON>              CmdLine -                              -
+-enable_save_restore <ON>              CmdLine -                              -
+-enable_save_restore_builtin true              CmdLine -                              -
+-inferblackbox  <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 30
+-lib            WORK=>./sg_results/santiago/top_santiago_cpu/WORK CmdLine -                              -
+                SYNOPSYS=>$SPYGLASS_HOME/vhdl_libs/Linux4/SYNOPSYS Config  $SPYGLASS_HOME/.spyglass.setup 25
+-mixed          <ON>              CmdLine -                              -
+-nl             <ON>              CmdLine -                              -
+-overloadrules  Async_07+msgLabel=Async_07_M1+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 68
+                Clock_11+msgLabel=Clock_11_M1+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 73
+-policy         dft               CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 46
+-projectwdir    ./sg_results/santiago CmdLine -                              -
+-report         moresimple        Config  $SPYGLASS_HOME/.spyglass.setup 17
+-rules          Coverage_audit    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 63
+                Info_coverage     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 65
+                Async_07          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 67
+                Async_08          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 70
+                Clock_11          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 72
+                Clock_11_capture  CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 75
+                Clock_26          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 77
+                Diagnose_testclock CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 79
+                Diagnose_testmode CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 81
+                Info_forcedScan   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 83
+                Info_inferredNoScan CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 85
+                Info_noScan       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 87
+                Info_scanwrap     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 89
+                Info_testclock    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 91
+                Info_testmode     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 93
+                Info_testmode_conflict_01 CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 95
+                Info_untestable   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 97
+-sgdc           ./santiago.sgdc   CmdLine -                              -
+-sortmethod     du                Config  $SPYGLASS_HOME/.spyglass.setup 27
+-template       dft/dft_scan_ready CmdLine -                              -
+-templatedir    /tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff CmdLine -                              -
+-top            top_santiago_cpu  CmdLine -                              -
+-wdir           ./sg_results/santiago/top_santiago_cpu/dft/dft_scan_ready CmdLine -                              -
+<design_files>  ../../inp_data/rtl/alu.sv APICall -                              -
+                ../../inp_data/rtl/control.sv APICall -                              -
+                ../../inp_data/rtl/memory.sv APICall -                              -
+                ../../inp_data/rtl/mux4.sv APICall -                              -
+                ../../inp_data/rtl/mux4_registered.sv APICall -                              -
+                ../../inp_data/rtl/register_bank.sv APICall -                              -
+                ../../inp_data/rtl/top.sv APICall -                              -
+
+
+Rules Parameter
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Parameter       Origin  File                           LineNo
+===============================================================================
+
+
+Policy Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+NameOfPolicy    VersionNumber   Path (from where policy loaded)
+===============================================================================
+spyglass        SpyGlass_vW-2024.09-SP2-08 $SPYGLASS_HOME/policies/spyglass
+dft             SpyGlass_vW-2024.09-SP2-08 $SPYGLASS_HOME/policies/dft
+
+
