@@ -1,4 +1,4 @@
-Date Created     : 12-07-2026 17:10:55
+Date Created     : 12-07-2026 19:24:49
 SpyGlass Version : SpyGlass_vW-2024.09-SP2-8
 Project Name     : santiago
 Goal Name        : dft/dft_scan_ready
@@ -13,6 +13,6 @@ WARNING         0         0
 INFO           31         0
 
 -dashboard_data sync_crossings 
--dashboard_data stuck_at_fault 99.8%
--dashboard_data stuck_at_test 99.8%
+-dashboard_data stuck_at_fault 100.0%
+-dashboard_data stuck_at_test 100.0%
 -dashboard_data scannable_flops 100.0%

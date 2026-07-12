@@ -25,6 +25,6 @@ if(!defined $::spyInIspy || !$::spyInIspy)
 )
 );
 }
-spyMessageTagTestBenchmark(64,"./out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass.vdb");
+spyMessageTagTestBenchmark(60,"./out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass.vdb");
 
 1;

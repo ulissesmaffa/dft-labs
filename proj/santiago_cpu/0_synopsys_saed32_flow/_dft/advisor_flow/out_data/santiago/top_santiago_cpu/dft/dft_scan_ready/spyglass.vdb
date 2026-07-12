@@ -1,5 +1,5 @@
 ##spyglass_version: SpyGlass_vW-2024.09-SP2-8
-##date: Sun Jul 12 17:10:51 2026
+##date: Sun Jul 12 19:24:46 2026
 ##user: ulisses.maffazioli
 ##cwd: /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/0_synopsys_saed32_flow/_dft/advisor_flow
 ##lang: verilog+vhdl
@@ -1551,7 +1551,7 @@ Info_untestable@@Info_untestable@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@In desi
 ##sde_property: msg_label Info_untestable_M3
 ##sde_property: msg_id Info_untestable_M3
 ##file_label: DFT_FAULT_COVERAGE_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_scan_ready/spyglass_reports/dft/stuck_at_coverage.rpt -policy dft -external
-Info_coverage@@showCoverage@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@Stuck_at (combinational) coverage estimate for design 'top_santiago_cpu': fault_coverage = 99.8% and test_coverage = 99.8%@@0
+Info_coverage@@showCoverage@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@Stuck_at (combinational) coverage estimate for design 'top_santiago_cpu': fault_coverage = 100.0% and test_coverage = 100.0%@@0
 ##continue: ST.5(fault_browser) 
 ##sde_property: violation -duId 1 
 ##sde_property: msg_label Info_coverage_M1
@@ -1570,15 +1570,15 @@ Info_testmode@@showSimVal@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@'Capture mode'
 ##sde_property: violation -static_auxi_viol
 ##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] Testmode (Rule: Info_testmode)
 ##sde_property: violation -static_auxi_type 2
-Info_testclock@@showSimVal@@Info@@./out_data/santiago/top_santiago_cpu/dft/dft_scan_ready/spyglass_reports/dft/Info_testclock/clk__shift_mode.rpt@@1@@1@@10@@Testclock 'clk' propagation in shift mode. This clock drives 165 flip-flop(s)@@-1
+Info_testclock@@showSimVal@@Info@@./out_data/santiago/top_santiago_cpu/dft/dft_scan_ready/spyglass_reports/dft/Info_testclock/clk__shift_mode.rpt@@1@@1@@10@@Testclock 'clk' propagation in shift mode. This clock drives 173 flip-flop(s)@@-1
 ##sde_property: msg_label Info_testclock_atSpeedClock_M1
 ##sde_property: msg_id Info_testclock_atSpeedClock_M1
-##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] Testclock 'clk': Drives 165 flip-flops (Rule: Info_testclock)
+##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] Testclock 'clk': Drives 173 flip-flops (Rule: Info_testclock)
 ##sde_property: violation -static_auxi_type 1
-Info_testclock@@showSimVal@@Info@@./out_data/santiago/top_santiago_cpu/dft/dft_scan_ready/spyglass_reports/dft/Info_testclock/clk__capture_mode.rpt@@1@@1@@10@@Testclock 'clk' propagation in capture mode. This clock drives 165 flip-flop(s)@@-1
+Info_testclock@@showSimVal@@Info@@./out_data/santiago/top_santiago_cpu/dft/dft_scan_ready/spyglass_reports/dft/Info_testclock/clk__capture_mode.rpt@@1@@1@@10@@Testclock 'clk' propagation in capture mode. This clock drives 173 flip-flop(s)@@-1
 ##sde_property: msg_label Info_testclock_atSpeedClock_M1
 ##sde_property: msg_id Info_testclock_atSpeedClock_M1
-##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] Testclock 'clk': Drives 165 flip-flops (Rule: Info_testclock)
+##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] Testclock 'clk': Drives 173 flip-flops (Rule: Info_testclock)
 ##sde_property: violation -static_auxi_type 2
 ##file_label: DFT_NO_SCAN_REPORT -file ./out_data/santiago/top_santiago_cpu/dft/dft_scan_ready/spyglass_reports/dft/no_scan.rpt -policy dft -external
 Info_noScan@@Info_noScan@@Info@@./inp_data/rtl/top.sv@@1@@1@@1@@Constraint 'force_no_scan' is not specified for design 'top_santiago_cpu'
@@ -1711,19 +1711,19 @@ Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/top.sv@@1@@1@@1@@
 ##sde_property: msg_id DFT_BA_CSV_DATA
 ##file_label: DFT_MULTIBIT_FLIPFLOP_REPORT -file ./out_data/santiago/top_santiago_cpu/dft/dft_scan_ready/spyglass_reports/dft/dft_multibit_flipflop.rpt -policy dft -external
 ##file_label: DFT_COVERAGE_AUDIT_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_scan_ready/spyglass_reports/dft/stuck_at_coverage_audit.rpt -policy dft -external
-Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 0. Original design], Fault-Coverage = 99.8 %, Test-Coverage = 99.8 %
+Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 0. Original design], Fault-Coverage = 100.0 %, Test-Coverage = 100.0 %
 ##sde_property: violation -duId 1 
-Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 1. PIs and POs made controllable & observable], Fault-Coverage = 99.8 %, Test-Coverage = 99.8 %
+Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 1. PIs and POs made controllable & observable], Fault-Coverage = 100.0 %, Test-Coverage = 100.0 %
 ##sde_property: violation -duId 1 
-Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 2. Flip-flops made scannable], Fault-Coverage = 99.8 %, Test-Coverage = 99.8 %
+Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 2. Flip-flops made scannable], Fault-Coverage = 100.0 %, Test-Coverage = 100.0 %
 ##sde_property: violation -duId 1 
-Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 3. Scan-wrap black boxes], Fault-Coverage = 99.8 %, Test-Coverage = 99.8 %
+Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 3. Scan-wrap black boxes], Fault-Coverage = 100.0 %, Test-Coverage = 100.0 %
 ##sde_property: violation -duId 1 
-Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 4. Latches made Transparent], Fault-Coverage = 99.8 %, Test-Coverage = 99.8 %
+Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 4. Latches made Transparent], Fault-Coverage = 100.0 %, Test-Coverage = 100.0 %
 ##sde_property: violation -duId 1 
-Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 5. Combinational Loops made controllable], Fault-Coverage = 99.8 %, Test-Coverage = 99.8 %
+Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 5. Combinational Loops made controllable], Fault-Coverage = 100.0 %, Test-Coverage = 100.0 %
 ##sde_property: violation -duId 1 
-Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 6. Testmode/Tied pins made controllable], Fault-Coverage = 99.8 %, Test-Coverage = 99.8 %
+Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 6. Testmode/Tied pins made controllable], Fault-Coverage = 100.0 %, Test-Coverage = 100.0 %
 ##sde_property: violation -duId 1 
 Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 7. Hanging nets made controllable], Fault-Coverage = 100.0 %, Test-Coverage = 100.0 %
 ##sde_property: violation -duId 1 

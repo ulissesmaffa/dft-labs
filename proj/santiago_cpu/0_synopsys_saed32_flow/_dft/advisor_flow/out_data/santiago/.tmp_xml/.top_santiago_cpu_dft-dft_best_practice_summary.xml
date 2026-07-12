@@ -14,11 +14,11 @@
    <technology name="(Not Available)"> 
    </technology> 
 </tech_reports> 
-<statistics fatal="0" error="0" warning="3" info="41" waived_error="0" waived_warning="0" waived_info="0" /> 
+<statistics fatal="0" error="0" warning="1" info="39" waived_error="0" waived_warning="0" waived_info="0" /> 
 <tech_summary> 
    <technology name="DFT"> 
-<item name="Stuck-at fault coverage=99.8%" link="" /> 
-<item name="Stuck-at test coverage=99.8%" link="" /> 
+<item name="Stuck-at fault coverage=100.0%" link="" /> 
+<item name="Stuck-at test coverage=100.0%" link="" /> 
 <item name="Percentage of scannable flops=100.0%" link="" /> 
    </technology> 
 </tech_summary> 

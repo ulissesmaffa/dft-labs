@@ -1,7 +1,7 @@
 <CWD>/home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/0_synopsys_saed32_flow/_dft/advisor_flow</CWD>
 <ENVVAR>
 	<env name="SPYGLASS_SPYAUTH_FILE">
-		<value>/tmp/spyAuthFileList17005031783887044</value>
+		<value>/tmp/spyAuthFileList17870661783895078</value>
 	</env>
 	<env name="LD_LIBRARY_PATH">
 		<value>/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/auxi:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/lib:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/auxi/tkgui-new:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/auxi/policy_data/spyglass/design_read:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/Audits:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/adv_lowpower:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/area:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/auto-verify:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/clock:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/constraints:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/cubic_netlist:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/dft:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/dft_dsm:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/erc:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/latch:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/lint:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/lowpower:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/mbist-dft:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/miscellaneous:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/morelint:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/openmore:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/power_est:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/prof:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/rtl2netlist:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/sec:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/simulation:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/spyglass:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/starc:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/starc2002:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/starc2005:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/starcad-21:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/timing:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/txv:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/auxi/tkgui-new/Linux4:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/auxi/rme:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/auxi/rme/Parser:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/auxi/rme/Parser/Linux4:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/lib/multi-perl/lib/5.8.3:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/lib/multi-perl/lib/site_perl/5.8.3:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/auxi/tkgui-new/Linux4:/lib64/tls:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/lib/multi-tcl/lib/Linux4:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/lib/python/Linux4/lib:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/../dotty/lib/Linux4:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/auxi/tkgui-new/Linux4:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/lib/multi-tcl/lib/Linux4::/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/lib/multi-qt/lib/Linux4:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/lib/multi-nlview/Linux4:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/lib/multi-boost/Linux4:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/lib/multi-thirdparty/Linux4:/depot/gcc-4.8.3-patch/lib64:/usr/lib64:/usr/X11R6/lib64:/usr/local/lib64:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/lib/multi-vcst/vcs-mx/linux64/lib:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/lib:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/lib/oa/Linux4:::/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/lib/oa/Linux4::/usr/lib:/lib:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/lib/zebulib</value>
@@ -28,7 +28,7 @@
 		<value>LD_LIBRARY_PATH LD_PRELOAD</value>
 	</env>
 	<env name="CMD_FILE_PATH">
-		<value>/tmp/cmdfile_1700503</value>
+		<value>/tmp/cmdfile_1787066</value>
 	</env>
 	<env name="LANG">
 		<value/>
@@ -64,7 +64,7 @@
 		<value>Linux4</value>
 	</env>
 	<env name="SPYGLASS_IPC_SERVER_APP_PID">
-		<value>1700726</value>
+		<value>1787288</value>
 	</env>
 	<env name="SPYGLASS_ENABLE_SYS_IPC_SERVER">
 		<value>yes</value>
@@ -112,7 +112,7 @@
 		<value/>
 	</env>
 	<env name="SPYGLASS_CHECKER_PID_FILE_VAR">
-		<value>/tmp/.SPYGLASS_CHECKER_PID_FILE@@170050344</value>
+		<value>/tmp/.SPYGLASS_CHECKER_PID_FILE@@178706678</value>
 	</env>
 	<env name="SSH_CLIENT">
 		<value>143.54.144.53 59388 22</value>
@@ -178,7 +178,7 @@
 		<value>/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/starc/sgtcl/man:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/power_est/sgtcl/man:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/morelint/sgtcl/man:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/lowpower/sgtcl/man:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/lint/sgtcl/man:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/latch/sgtcl/man:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/erc/sgtcl/man:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/dft/sgtcl/man:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/constraints/sgtcl/man:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/clock/sgtcl/man:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/policies/auto-verify/sgtcl/man:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/lib/multi-tcl/man:/tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/auxi/help_doc/man::</value>
 	</env>
 	<env name="SPYGLASS_IPC_SERVER_APP_INFO">
-		<value>/tmp/.SPYGLASS_IPC_SERVER_APP_INFO@@44</value>
+		<value>/tmp/.SPYGLASS_IPC_SERVER_APP_INFO@@78</value>
 	</env>
 	<env name="LC_TELEPHONE">
 		<value>pt_BR.UTF-8</value>
@@ -422,7 +422,7 @@
 		<value>+suppress+36</value>
 	</Opt>
 	<Opt name="--stime">
-		<value>05:10:44  on jul 12 2026</value>
+		<value>07:24:38  on jul 12 2026</value>
 	</Opt>
 	<Opt name="-blackboxdir">
 		<value>inout</value>
@@ -533,16 +533,16 @@
 </Module_Perf>
 <NOM_DESIGN>
 	<Modules>7</Modules>
-	<Instances>460</Instances>
-	<Nets>805</Nets>
-	<Terminals>2338</Terminals>
-	<MAX>175</MAX>
-	<Avg>65</Avg>
+	<Instances>474</Instances>
+	<Nets>820</Nets>
+	<Terminals>2411</Terminals>
+	<MAX>185</MAX>
+	<Avg>67</Avg>
 </NOM_DESIGN>
 <FLAT_DESIGN>
-	<Instances>475</Instances>
-	<Nets>559</Nets>
-	<Terminals>2063</Terminals>
+	<Instances>489</Instances>
+	<Nets>571</Nets>
+	<Terminals>2129</Terminals>
 	<Paths>10</Paths>
 	<Ports>58</Ports>
 	<BBOX_Inst>0</BBOX_Inst>
@@ -555,7 +555,7 @@
 	<Reduntant>0</Reduntant>
 	<Viol_Waived>0</Viol_Waived>
 </WAIVER_COUNT>
-<PEAK_MEMORY>1976440</PEAK_MEMORY>
+<PEAK_MEMORY>1976436</PEAK_MEMORY>
 <Parameters>
 	<Param name="-ATPG_credit">
 		<DefaultValue>0</DefaultValue>
@@ -1910,7 +1910,7 @@
 	</Rule>
 	<Rule name="dftFLATDU_RFExit">
 		<Time>0</Time>
-		<Memory>-1160</Memory>
+		<Memory>-1024</Memory>
 		<Count>0</Count>
 	</Rule>
 	<Rule name="Info_generated_reports">
@@ -1930,7 +1930,7 @@
 	</Rule>
 	<Rule name="Info_DftDebugData">
 		<Time>0</Time>
-		<Memory>96</Memory>
+		<Memory>-32</Memory>
 		<Count>1</Count>
 	</Rule>
 	<Rule name="dftSGDCSTX_083">
@@ -2095,7 +2095,7 @@
 	</Rule>
 	<Rule name="Info_testclock">
 		<Time>0</Time>
-		<Memory>768</Memory>
+		<Memory>896</Memory>
 		<Count>2</Count>
 	</Rule>
 	<Rule name="Info_testmode_conflict_01">

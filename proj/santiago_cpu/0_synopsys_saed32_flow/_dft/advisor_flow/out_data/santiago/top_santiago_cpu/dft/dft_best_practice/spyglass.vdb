@@ -1,5 +1,5 @@
 ##spyglass_version: SpyGlass_vW-2024.09-SP2-8
-##date: Sun Jul 12 17:11:00 2026
+##date: Sun Jul 12 19:24:54 2026
 ##user: ulisses.maffazioli
 ##cwd: /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/0_synopsys_saed32_flow/_dft/advisor_flow
 ##lang: verilog+vhdl
@@ -1153,7 +1153,7 @@ Diagnose_testclock@@showTestclockBlockInst@@Info@@./inp_data/rtl/top.sv@@3@@1@@1
 ##sde_property: violation -duId 1 
 ##sde_property: msg_label D_TCK_01
 ##sde_property: msg_id D_TCK_01
-Info_synthRedundant@@Info_synthRedundant@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@In RTL design : 132 faults in 'top_santiago_cpu' are synthesis redundant@@0
+Info_synthRedundant@@Info_synthRedundant@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@In RTL design : 134 faults in 'top_santiago_cpu' are synthesis redundant@@0
 ##continue: S.3
 ##sde_property: container S.3 -rtlpath 1
 ##sde_property: violation -duId 1 
@@ -1164,56 +1164,48 @@ Info_synthRedundant@@Info_synthRedundant@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@
 Info_unused@@Info_unused@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@All faults in 'top_santiago_cpu' are detectable after reachability analysis
 ##sde_property: violation -duId 1 
 ##sde_property: violation -static_auxi_viol
-Info_uncontrollable@@showCntVal@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@'Uncontrollable nets' in design 'top_santiago_cpu' are being displayed under capture condition@@0
-##continue: S.4
-##sde_property: container S.4 -rtlpath 1 -nonprob
+Info_uncontrollable@@showCntVal@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@All nets in design 'top_santiago_cpu' are controllable under capture condition
 ##sde_property: violation -duId 1 
 ##sde_property: violation -static_auxi_viol
-##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] Uncontrollable nodes (Rule: Info_uncontrollable)
-Info_unobservable@@showObsVal@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@'Unobservable terminals/ports' in design 'top_santiago_cpu' are being displayed under capture condition@@0
-##continue: S.5
-##sde_property: container S.5 -rtlpath 1 -nonprob
+Info_unobservable@@showObsVal@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@All terminals/ports in design 'top_santiago_cpu' are observable under capture condition
 ##sde_property: violation -duId 1 
 ##sde_property: violation -static_auxi_viol
-##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] Unobservable nodes (Rule: Info_unobservable)
 Info_untestable@@Info_untestable@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@In design 'top_santiago_cpu': '0' faults (over '0' pin(s)) are untestable
 ##sde_property: violation -duId 1 
 ##sde_property: violation -static_auxi_viol
 ##sde_property: msg_label Info_untestable_M3
 ##sde_property: msg_id Info_untestable_M3
 ##file_label: DFT_FAULT_COVERAGE_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass_reports/dft/stuck_at_coverage.rpt -policy dft -external
-Info_coverage@@showCoverage@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@Stuck_at (combinational) coverage estimate for design 'top_santiago_cpu': fault_coverage = 99.8% and test_coverage = 99.8%@@0
+Info_coverage@@showCoverage@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@Stuck_at (combinational) coverage estimate for design 'top_santiago_cpu': fault_coverage = 100.0% and test_coverage = 100.0%@@0
 ##continue: ST.5(fault_browser) 
 ##sde_property: violation -duId 1 
 ##sde_property: msg_label Info_coverage_M1
 ##sde_property: msg_id Info_coverage_M1
-Info_undetectCause@@showCause@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@Design Unit 'top_santiago_cpu' has 10 testable but undetected faults. Pin Count = 2115@@0
-##continue: S.6
-##sde_property: container S.6 -rtlpath 1 -nonprob
+Info_undetectCause@@showCause@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@Design Unit 'top_santiago_cpu' has 0 testable but undetected faults. Pin Count = 2181
 ##sde_property: violation -duId 1 
 Info_testmode@@showSimVal@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@'Shift mode' simulation value for design 'top_santiago_cpu' is displayed@@0
-##continue: S.7 
-##sde_property: container S.7 -rtlpath 1
+##continue: S.4 
+##sde_property: container S.4 -rtlpath 1
 ##sde_property: violation -duId 1 
 ##sde_property: violation -static_auxi_viol
 ##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] Testmode (Rule: Info_testmode)
 ##sde_property: violation -static_auxi_type 1
 Info_testmode@@showSimVal@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@'Capture mode' simulation value for design 'top_santiago_cpu' is displayed@@0
-##continue: S.8 
-##sde_property: container S.8 -rtlpath 1
+##continue: S.5 
+##sde_property: container S.5 -rtlpath 1
 ##sde_property: violation -duId 1 
 ##sde_property: violation -static_auxi_viol
 ##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] Testmode (Rule: Info_testmode)
 ##sde_property: violation -static_auxi_type 2
-Info_testclock@@showSimVal@@Info@@./out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass_reports/dft/Info_testclock/clk__shift_mode.rpt@@1@@1@@10@@Testclock 'clk' propagation in shift mode. This clock drives 165 flip-flop(s)@@-1
+Info_testclock@@showSimVal@@Info@@./out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass_reports/dft/Info_testclock/clk__shift_mode.rpt@@1@@1@@10@@Testclock 'clk' propagation in shift mode. This clock drives 173 flip-flop(s)@@-1
 ##sde_property: msg_label Info_testclock_atSpeedClock_M1
 ##sde_property: msg_id Info_testclock_atSpeedClock_M1
-##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] Testclock 'clk': Drives 165 flip-flops (Rule: Info_testclock)
+##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] Testclock 'clk': Drives 173 flip-flops (Rule: Info_testclock)
 ##sde_property: violation -static_auxi_type 1
-Info_testclock@@showSimVal@@Info@@./out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass_reports/dft/Info_testclock/clk__capture_mode.rpt@@1@@1@@10@@Testclock 'clk' propagation in capture mode. This clock drives 165 flip-flop(s)@@-1
+Info_testclock@@showSimVal@@Info@@./out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass_reports/dft/Info_testclock/clk__capture_mode.rpt@@1@@1@@10@@Testclock 'clk' propagation in capture mode. This clock drives 173 flip-flop(s)@@-1
 ##sde_property: msg_label Info_testclock_atSpeedClock_M1
 ##sde_property: msg_id Info_testclock_atSpeedClock_M1
-##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] Testclock 'clk': Drives 165 flip-flops (Rule: Info_testclock)
+##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] Testclock 'clk': Drives 173 flip-flops (Rule: Info_testclock)
 ##sde_property: violation -static_auxi_type 2
 ##file_label: DFT_NO_FAULT_REPORT -file ./out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass_reports/dft/no_fault.rpt -policy dft -external
 Info_noFault@@Info_noFault@@Info@@./inp_data/rtl/top.sv@@1@@1@@1@@Constraint 'no_fault' is not specified for design 'top_santiago_cpu' in 'capture' mode.
@@ -1257,24 +1249,6 @@ Info_scanwrap@@scanwrap@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@In design 'top_s
 ##file_label: DFT_CONSTRAINT_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass_reports/dft/dft_corrective_sgdc.rpt -policy dft -external
 ##file_label: DFT_TEST_SEL_POINT_FILE_2 -file ./out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass_reports/dft/test_points_selected_2.rpt -policy dft -external
 ##file_label: DFT_TEST_SEL_POINT_SGDC_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass_reports/dft/test_point_constraints.sgdc -policy dft -external
-TA_09@@tst_selection_points@@Warning@@./inp_data/rtl/top.sv@@148@@1@@10@@Net 'top_santiago_cpu.w_memoryOutData[15]' [in 'top_santiago_cpu'] is not controllable to 1 or 0 [un-driven]. Adding a test-point [Cnt = nn- ->yyn]  will make 2 nets controllable and 0 nets observable[Fault Improvement = '6'[%Increase 0.2]]@@0
-##continue: S.9
-##sde_property: container S.9 -rtlpath 1 -nonprob
-##sde_property: violation -duId 1 
-##sde_property: msg_label TA_09_MSG_01
-##sde_property: msg_id TA_09_MSG_01
-TA_09@@tst_selection_points@@Warning@@./inp_data/rtl/top.sv@@148@@1@@10@@Net 'top_santiago_cpu.w_alu_out[15]' [in 'top_santiago_cpu'] is not controllable to 1 or 0 [un-driven]. Adding a test-point [Cnt = nn- ->yyn]  will make 1 nets controllable and 0 nets observable[Fault Improvement = '4'[%Increase 0.1]]@@0
-##continue: S.10
-##sde_property: container S.10 -rtlpath 1 -nonprob
-##sde_property: violation -duId 1 
-##sde_property: msg_label TA_09_MSG_01
-##sde_property: msg_id TA_09_MSG_01
-TA_09@@tst_selection_points@@Info@@./out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass_reports/dft/test_points_selected_2.rpt@@0@@1@@10@@Test points selection report file './out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass_reports/dft/test_points_selected_2.rpt' for module 'top_santiago_cpu' is generated
-##sde_property: msg_label TA_09_MSG_03
-##sde_property: msg_id TA_09_MSG_03
-TA_09@@tst_selection_points@@Info@@./out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass_reports/dft/test_point_constraints.sgdc@@0@@1@@10@@Test points constraint file './out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass_reports/dft/test_point_constraints.sgdc' for module 'top_santiago_cpu' is generated
-##sde_property: msg_label TA_09_MSG_06
-##sde_property: msg_id TA_09_MSG_06
 ##file_label: DFT_RECONVERGENCE_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass_reports/dft/ff_async_reconvergence.rpt -policy dft -external
 Info_DftDebugData@@Info_DftDebugData@@Info@@./inp_data/rtl/top.sv@@1@@1@@1@@DFT data for design block 'top_santiago_cpu'
 ##sde_property: violation -duId 1 
@@ -1282,6 +1256,36 @@ Info_DftDebugData@@Info_DftDebugData@@Info@@./inp_data/rtl/top.sv@@1@@1@@1@@DFT 
 ##sde_property: msg_id DFT_BA_MSG
 Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/top.sv@@1@@1@@1@@
 ##sde_property: violation -duId 1 
+##sde_property: msg_label DFT_BA_CSV_DATA
+##sde_property: msg_id DFT_BA_CSV_DATA
+Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@@1@@1@@@@0
+##continue: S.6
+##sde_property: container S.6 -rtlpath 1.2.4 -nonprob
+##sde_property: violation -duId 4 
+##sde_property: msg_label DFT_BA_CSV_DATA
+##sde_property: msg_id DFT_BA_CSV_DATA
+Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@@1@@1@@@@0
+##continue: S.7
+##sde_property: container S.7 -rtlpath 1.2.4 -nonprob
+##sde_property: violation -duId 4 
+##sde_property: msg_label DFT_BA_CSV_DATA
+##sde_property: msg_id DFT_BA_CSV_DATA
+Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@@1@@1@@@@0
+##continue: S.8
+##sde_property: container S.8 -rtlpath 1.2.4 -nonprob
+##sde_property: violation -duId 4 
+##sde_property: msg_label DFT_BA_CSV_DATA
+##sde_property: msg_id DFT_BA_CSV_DATA
+Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@@1@@1@@@@0
+##continue: S.9
+##sde_property: container S.9 -rtlpath 1.2.4 -nonprob
+##sde_property: violation -duId 4 
+##sde_property: msg_label DFT_BA_CSV_DATA
+##sde_property: msg_id DFT_BA_CSV_DATA
+Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@@1@@1@@@@0
+##continue: S.10
+##sde_property: container S.10 -rtlpath 1.2.4 -nonprob
+##sde_property: violation -duId 4 
 ##sde_property: msg_label DFT_BA_CSV_DATA
 ##sde_property: msg_id DFT_BA_CSV_DATA
 Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@@1@@1@@@@0
@@ -1311,36 +1315,6 @@ Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@
 Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@@1@@1@@@@0
 ##continue: S.15
 ##sde_property: container S.15 -rtlpath 1.2.4 -nonprob
-##sde_property: violation -duId 4 
-##sde_property: msg_label DFT_BA_CSV_DATA
-##sde_property: msg_id DFT_BA_CSV_DATA
-Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@@1@@1@@@@0
-##continue: S.16
-##sde_property: container S.16 -rtlpath 1.2.4 -nonprob
-##sde_property: violation -duId 4 
-##sde_property: msg_label DFT_BA_CSV_DATA
-##sde_property: msg_id DFT_BA_CSV_DATA
-Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@@1@@1@@@@0
-##continue: S.17
-##sde_property: container S.17 -rtlpath 1.2.4 -nonprob
-##sde_property: violation -duId 4 
-##sde_property: msg_label DFT_BA_CSV_DATA
-##sde_property: msg_id DFT_BA_CSV_DATA
-Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@@1@@1@@@@0
-##continue: S.18
-##sde_property: container S.18 -rtlpath 1.2.4 -nonprob
-##sde_property: violation -duId 4 
-##sde_property: msg_label DFT_BA_CSV_DATA
-##sde_property: msg_id DFT_BA_CSV_DATA
-Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@@1@@1@@@@0
-##continue: S.19
-##sde_property: container S.19 -rtlpath 1.2.4 -nonprob
-##sde_property: violation -duId 4 
-##sde_property: msg_label DFT_BA_CSV_DATA
-##sde_property: msg_id DFT_BA_CSV_DATA
-Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@@1@@1@@@@0
-##continue: S.20
-##sde_property: container S.20 -rtlpath 1.2.4 -nonprob
 ##sde_property: violation -duId 4 
 ##sde_property: msg_label DFT_BA_CSV_DATA
 ##sde_property: msg_id DFT_BA_CSV_DATA
@@ -1382,19 +1356,19 @@ Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/top.sv@@1@@1@@1@@
 ##sde_property: msg_id DFT_BA_CSV_DATA
 ##file_label: DFT_MULTIBIT_FLIPFLOP_REPORT -file ./out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass_reports/dft/dft_multibit_flipflop.rpt -policy dft -external
 ##file_label: DFT_COVERAGE_AUDIT_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass_reports/dft/stuck_at_coverage_audit.rpt -policy dft -external
-Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 0. Original design], Fault-Coverage = 99.8 %, Test-Coverage = 99.8 %
+Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 0. Original design], Fault-Coverage = 100.0 %, Test-Coverage = 100.0 %
 ##sde_property: violation -duId 1 
-Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 1. PIs and POs made controllable & observable], Fault-Coverage = 99.8 %, Test-Coverage = 99.8 %
+Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 1. PIs and POs made controllable & observable], Fault-Coverage = 100.0 %, Test-Coverage = 100.0 %
 ##sde_property: violation -duId 1 
-Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 2. Flip-flops made scannable], Fault-Coverage = 99.8 %, Test-Coverage = 99.8 %
+Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 2. Flip-flops made scannable], Fault-Coverage = 100.0 %, Test-Coverage = 100.0 %
 ##sde_property: violation -duId 1 
-Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 3. Scan-wrap black boxes], Fault-Coverage = 99.8 %, Test-Coverage = 99.8 %
+Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 3. Scan-wrap black boxes], Fault-Coverage = 100.0 %, Test-Coverage = 100.0 %
 ##sde_property: violation -duId 1 
-Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 4. Latches made Transparent], Fault-Coverage = 99.8 %, Test-Coverage = 99.8 %
+Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 4. Latches made Transparent], Fault-Coverage = 100.0 %, Test-Coverage = 100.0 %
 ##sde_property: violation -duId 1 
-Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 5. Combinational Loops made controllable], Fault-Coverage = 99.8 %, Test-Coverage = 99.8 %
+Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 5. Combinational Loops made controllable], Fault-Coverage = 100.0 %, Test-Coverage = 100.0 %
 ##sde_property: violation -duId 1 
-Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 6. Testmode/Tied pins made controllable], Fault-Coverage = 99.8 %, Test-Coverage = 99.8 %
+Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 6. Testmode/Tied pins made controllable], Fault-Coverage = 100.0 %, Test-Coverage = 100.0 %
 ##sde_property: violation -duId 1 
 Coverage_audit@@showCoverageaudit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu'[ 7. Hanging nets made controllable], Fault-Coverage = 100.0 %, Test-Coverage = 100.0 %
 ##sde_property: violation -duId 1 
@@ -1411,13 +1385,13 @@ Info_generated_reports@@Info_generated_reports@@Info@@./out_data/santiago/top_sa
 ##file_label: DFT_CONSTRAINT_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_best_practice/spyglass_reports/dft/dft_corrective_sgdc.rpt -policy dft -external
 ##warning_total_suppressed_count:         0
 ##error_total_suppressed_count:         0
-##warning_total_reported_count:        44
+##warning_total_reported_count:        40
 ##error_total_reported_count:         0
 ##total_warning_waived_viol_count:         0
 ##total_error_waived_viol_count:         0
-##totalGeneratedCount:        44
+##totalGeneratedCount:        40
 ##totalWaivedViolationCount:         0
-##totalReportCount:        44
+##totalReportCount:        40
 ##totalDataSeverityCount:        20
 ##totalSuppressedCount:         0
 ##Active_Rules  Async_02_capture Async_03 Async_07 Async_08 Async_11 BIST_01 Clock_04 Clock_08 Clock_09 Clock_11 Clock_11_capture Clock_16 Clock_17 Clock_21 Clock_26 Clock_27 Clock_28 Coverage_audit Diagnose_testclock Diagnose_testmode Info_coverage Info_forcedScan Info_inferredNoScan Info_noFault Info_noScan Info_scanchain Info_scanwrap Info_synthRedundant Info_testclock Info_testmode Info_testmode_conflict_01 Info_uncontrollable Info_undetectCause Info_unobservable Info_untestable Info_unused Latch_02 Latch_08 Latch_10 Scan_07 Scan_22 Scan_24 Scan_25 Scan_26 Soc_04 TA_09 Topology_01 Topology_02 Topology_03 Topology_05 Topology_10 Topology_13 Tristate_06 Tristate_07_shift
