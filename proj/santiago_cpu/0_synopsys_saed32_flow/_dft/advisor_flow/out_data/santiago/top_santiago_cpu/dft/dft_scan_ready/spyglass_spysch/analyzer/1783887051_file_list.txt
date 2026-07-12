@@ -1,0 +1,7 @@
+0 ./inp_data/rtl/mux4_registered.sv
+1 ./inp_data/rtl/mux4.sv
+2 ./inp_data/rtl/register_bank.sv
+3 ./inp_data/rtl/alu.sv
+4 ./inp_data/rtl/memory.sv
+5 ./inp_data/rtl/control.sv
+6 ./inp_data/rtl/top.sv
