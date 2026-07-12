@@ -1,10 +1,8 @@
-module alu #(
-  parameter WIDTH = 8
-)(
-  input  logic [WIDTH-1:0] in1, in2,
+module alu (
+  input  logic [7:0] in1, in2,
   input  logic [3:0] op,
   input  logic invalid_data,
-  output logic [2*WIDTH-1:0] out,
+  output logic [2*7:0] out,
   output logic zero,
   output logic error
 );

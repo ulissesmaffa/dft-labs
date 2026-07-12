@@ -1,7 +1,4 @@
-module mux4 #(
-  // parameters
-  parameter  WIDTH = 8
-) (
+module mux4 (
   // port_list
   input  logic [WIDTH-1:0] din1, din2, din3, din4,
   input  logic       [1:0] select,

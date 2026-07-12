@@ -1,11 +1,9 @@
-module register_bank #(
-  parameter WIDTH = 8
-)(
+module register_bank (
   input clk,
   input rst,
   input wr_en,
-  input [WIDTH-1:0] in,
-  output logic[WIDTH-1:0] out
+  input [7:0] in,
+  output logic[7:0] out
 );
 
   always_ff @(posedge clk or posedge rst) begin : RB

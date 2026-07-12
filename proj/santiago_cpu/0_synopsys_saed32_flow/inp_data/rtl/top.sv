@@ -1,35 +1,31 @@
-module top #(
-  parameter WIDTH= 8
-  )(
+module top_santiago_cpu (
   // inputs
-  input  logic               clk,
-  input  logic               rst,
+  input  logic             clk,
+  input  logic             rst,
   input  logic       [6:0] cmdin,
-  input  logic [WIDTH-1:0] din_1,
-  input  logic [WIDTH-1:0] din_2,
-  input  logic [WIDTH-1:0] din_3,
-  
+  input  logic       [7:0] din_1,
+  input  logic       [7:0] din_2,
+  input  logic       [7:0] din_3,
+
   // outputs
-  output logic [WIDTH-1:0] dout_low,
-  output logic [WIDTH-1:0] dout_high,
-  output logic zero,
-  output logic error,
-  output logic cpu_rdy
+  output logic       [7:0] dout_low,
+  output logic       [7:0] dout_high,
+  output logic             zero,
+  output logic             error,
+  output logic             cpu_rdy
 );
 
   logic w_aluin_reg_en;
 
   /* ##################################################
-   * 
+   *
    * [MUXA] MUX4 - Registered
-   * 
+   *
      ################################################## */
-  logic[1:0] w_in_select_a;
-  logic [WIDTH-1:0] w_muxA;
+  logic [1:0] w_in_select_a;
+  logic [7:0] w_muxA;
 
-  mux4_registered #(
-    .WIDTH            (WIDTH            )
-  ) uu_muxA           (
+  mux4_registered uu_muxA (
     .clk              (clk              ),
     .rst              (rst              ),
     .wr_en            (w_aluin_reg_en   ),
@@ -42,16 +38,14 @@ module top #(
   );
 
   /* ##################################################
-   * 
+   *
    * [MUXB] MUX4 - Registered
-   * 
+   *
      ################################################## */
-  logic[1:0] w_in_select_b;
-  logic [WIDTH-1:0] w_muxB;
+  logic [1:0] w_in_select_b;
+  logic [7:0] w_muxB;
 
-  mux4_registered #(
-    .WIDTH            (WIDTH            )
-  ) uu_muxB (
+  mux4_registered uu_muxB (
     .clk              (clk              ),
     .rst              (rst              ),
     .wr_en            (w_aluin_reg_en   ),
@@ -64,9 +58,9 @@ module top #(
   );
 
   /* ##################################################
-   * 
+   *
    * [CMD-IN FLOP]
-   * 
+   *
      ################################################## */
   logic w_datain_reg_en;
   logic [6:0] ff_cmd_in;
@@ -81,18 +75,16 @@ module top #(
   end
 
   /* ##################################################
-   * 
+   *
    * [ALU]
-   * 
+   *
      ################################################## */
   logic w_invalid_data;
-  logic[3:0] w_opcode;
-  logic [2*WIDTH-1:0] w_alu_out;
+  logic [3:0] w_opcode;
+  logic [15:0] w_alu_out;
   logic w_zero, w_error;
 
-  alu #(
-    .WIDTH            (WIDTH            )
-  ) uu_alu (
+  alu uu_alu (
     .in1              (w_muxA           ),
     .in2              (w_muxB           ),
     .op               (w_opcode         ),
@@ -103,17 +95,15 @@ module top #(
   );
 
   /* ##################################################
-   * 
+   *
    * [MEMORY BLOCK]
-   * 
+   *
      ################################################## */
-  logic [2*WIDTH-1:0] ff_dout;
+  logic [15:0] ff_dout;
   logic w_memoryWrite, w_memoryRead;
-  logic [2*WIDTH-1:0] w_memoryOutData;
+  logic [15:0] w_memoryOutData;
 
-  memory #(
-    .WIDTH            (WIDTH            )
-  ) uu_mem (
+  memory uu_mem (
     .clk              (clk              ),
     .memoryWrite      (w_memoryWrite    ),
     .memoryRead       (w_memoryRead     ),
@@ -124,9 +114,9 @@ module top #(
   );
 
   /* ##################################################
-   * 
+   *
    * [CONTROL]
-   * 
+   *
      ################################################## */
   logic w_selmux2;
   logic w_aluout_reg_en;
@@ -150,11 +140,11 @@ module top #(
   );
 
   /* ##################################################
-   * 
+   *
    * [MUX + out FFs]
-   * 
+   *
      ################################################## */
-  logic [2*WIDTH-1:0] w_mux_out;
+  logic [15:0] w_mux_out;
   assign w_mux_out = (w_selmux2) ? w_memoryOutData : w_alu_out;
 
   always_ff @(posedge clk or posedge rst) begin : FF_OUT
@@ -172,7 +162,7 @@ module top #(
   end
 
   // out dout
-  assign dout_high = ff_dout[2*WIDTH-1 : WIDTH];
-  assign dout_low  = ff_dout[  WIDTH-1 :     0];
+  assign dout_high = ff_dout[15:8];
+  assign dout_low  = ff_dout[ 7:0];
 
 endmodule
