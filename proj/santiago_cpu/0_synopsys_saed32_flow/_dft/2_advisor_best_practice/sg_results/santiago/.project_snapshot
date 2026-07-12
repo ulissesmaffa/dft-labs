@@ -1,0 +1,21 @@
+##Data Import Section
+
+read_file -type sourcelist ./santiago_sources.f
+#BackRefFile:/home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/0_synopsys_saed32_flow/_dft/2_advisor_best_practice/santiago.prj #LineNumber:13
+read_file -type sgdc ./santiago.sgdc
+
+##Common Options Section
+
+set_option projectwdir ./sg_results
+set_option language_mode mixed
+set_option designread_enable_synthesis no
+set_option designread_disable_flatten no
+set_option top top_santiago_cpu
+set_option enableSV yes
+set_option active_methodology /tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
+
+
+##Goal Setup Section
+
+current_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
+
