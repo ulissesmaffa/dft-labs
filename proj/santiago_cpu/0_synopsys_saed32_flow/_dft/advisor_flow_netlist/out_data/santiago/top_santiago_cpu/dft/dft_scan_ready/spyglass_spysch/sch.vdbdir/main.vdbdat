@@ -1,0 +1,45 @@
+#x HLBEGIN S.1
+#x {{TEXT=>0(F);COLOR=>2;BRF=>3,4;}{TEXT=>1;COLOR=>1;}}
+#x 112 { @@n 1 a 0 @@n 106 a 1 @@n 107 a 1 @@d 67 { @@d 1 { @@n 32 a 1
+#x @@n 34 a 1 } } @@d 68 { @@d 1 { @@n 24 a 1 } } @@d 71 { @@n 37 a 1 } }
+#x HLEND
+#x HLBEGIN S.2
+#x {}
+#x 112.67.1 { @@i 0 }
+#x HLEND
+#x HLBEGIN S.3
+#x {}
+#x 112.67.1 { @@i 1 }
+#x HLEND
+#x HLBEGIN S.4
+#x {}
+#x 112.67.1 { @@i 2 }
+#x HLEND
+#x HLBEGIN S.5
+#x {}
+#x 112.67.1 { @@i 3 }
+#x HLEND
+#x HLBEGIN S.6
+#x {}
+#x 112.67.1 { @@i 4 }
+#x HLEND
+#x HLBEGIN S.7
+#x {}
+#x 112.67.1 { @@i 5 }
+#x HLEND
+#x HLBEGIN S.8
+#x {}
+#x 112.67.1 { @@i 6 }
+#x HLEND
+#x HLBEGIN S.9
+#x {}
+#x 112.67.1 { @@i 7 }
+#x HLEND
+#x HLBEGIN S.10
+#x {}
+#x 112.68.1 { @@i 0 }
+#x HLEND
+#x HLBEGIN S.11
+#x {}
+#x 112.68.1 { @@i 1 }
+#x HLEND
