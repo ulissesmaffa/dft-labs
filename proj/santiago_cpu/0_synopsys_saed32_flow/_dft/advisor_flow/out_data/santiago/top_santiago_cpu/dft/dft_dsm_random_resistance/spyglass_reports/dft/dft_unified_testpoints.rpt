@@ -3,7 +3,7 @@
 # TestMAX Advisor : W-2024.09-SP2-08
 
 # test points for target "random_resistant"
-# start time : 22:09:17
+# start time : 22:20:49
 # Requested Test Points : 9
 # Threads requested : 8
 # Threads created   : 7 (excluding main thread)
@@ -25,14 +25,14 @@
 9  observe    w_memoryOutData[1] -root_clock clk -clock clk #Gain : 0.07646 Cov : 93.91901 S@TC : 100.0
 # Current random pattern test coverage is approximately 93.92% with 9 test points. 
 # Test point search completed : 9 (requested count : 9) test points identified.
-# runtime : 0.1002
-# end time : 22:09:17
+# runtime : 0.1049
+# end time : 22:20:49
 
 #+-------------------- TARGET-WISE TEST POINT SUMMARY ----------------+#
 # target : random_resistant
 #   requested test point count : 9
 #   reported test point count  : 9
-#   runtime                    : 0.1002
+#   runtime                    : 0.1049
 # test points for shadow_wrapper
 #   reported test point count  : 0
 #   runtime                    : 0.0000
@@ -40,5 +40,5 @@
 
 #+------------------- UNIFIED TEST POINT SUMMARY ---------------------+#
 # total test points   : 9
-# total runtime       : 0.1002
+# total runtime       : 0.1049
 #+--------------------------------------------------------------------+#

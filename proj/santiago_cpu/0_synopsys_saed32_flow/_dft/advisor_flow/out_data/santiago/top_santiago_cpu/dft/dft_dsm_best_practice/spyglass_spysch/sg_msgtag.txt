@@ -1,95 +1,88 @@
-12 "Info_testmode" 1
+10 "Info_testmode" 1
 "DFT_HPDB_MSG_TAG"
 ["DFT_ATTR!!SIM_SHIFT"]
-13 "Info_testmode" 1
+11 "Info_testmode" 1
 "DFT_HPDB_MSG_TAG"
 ["DFT_ATTR!!SIM_CAPTURE"]
-14 "Info_testmode" 1
+12 "Info_testmode" 1
 "DFT_HPDB_MSG_TAG"
 ["DFT_ATTR!!SIM_ATSPEED_LAUNCH"]
-15 "Info_testmode" 1
+13 "Info_testmode" 1
 "DFT_HPDB_MSG_TAG"
 ["DFT_ATTR!!SIM_FUNCTIONAL"]
-16 "Info_testclock" 2
+14 "Info_testclock" 2
 "DFT_HPDB_MSG_TAG"
 ["DFT_ATTR!!CLK_SHIFT"]
 "DFT_SCH_STATIC_AUXI_AUTOLOAD_MSG_TAG_LIST"
 ["DFT_ATTR!!FF_SCAN","DFT_ATTR!!LD_TP","DFT_ATTR!!BB_PROP_1","DFT_ATTR!!BB_PROP_2","DFT_ATTR!!HIER_B_PROP_CGC","DFT_ATTR!!HIER_B_PROP_NO_FAULT","DFT_ATTR!!SIM_SHIFT","DFT_ATTR!!CLK_SHIFT"]
-17 "Info_testclock" 2
+15 "Info_testclock" 2
 "DFT_HPDB_MSG_TAG"
 ["DFT_ATTR!!CLK_CAPTURE"]
 "DFT_SCH_STATIC_AUXI_AUTOLOAD_MSG_TAG_LIST"
 ["DFT_ATTR!!FF_SCAN","DFT_ATTR!!LD_TP","DFT_ATTR!!BB_PROP_1","DFT_ATTR!!BB_PROP_2","DFT_ATTR!!HIER_B_PROP_CGC","DFT_ATTR!!HIER_B_PROP_NO_FAULT","DFT_ATTR!!SIM_CAPTURE","DFT_ATTR!!CLK_CAPTURE"]
-18 "Info_DftDebugData" 2
+16 "Info_DftDebugData" 2
 "Open_Sp_Sheet"
 ["./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft/dft_data/dft_data_01.csv@@cross-probecol:3"]
 "DFT_DATA_CSV_TAG"
 1
-19 "Info_DftDebugData" 2
+17 "Info_DftDebugData" 2
 "Open_Sp_Sheet"
 ["./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft/dft_data/dft_data_02.csv@@cross-probecol:2"]
 "DFT_DATA_CSV_TAG"
 2
-20 "Info_DftDebugData" 1
+18 "Info_DftDebugData" 1
 "DFT_DATA_CSV_TAG"
 3
-21 "Info_DftDebugData" 1
+19 "Info_DftDebugData" 1
 "DFT_DATA_CSV_TAG"
 4
-22 "Info_DftDebugData" 1
+20 "Info_DftDebugData" 1
 "DFT_DATA_CSV_TAG"
 5
-23 "Info_DftDebugData" 1
+21 "Info_DftDebugData" 1
 "DFT_DATA_CSV_TAG"
 6
-24 "Info_DftDebugData" 1
+22 "Info_DftDebugData" 1
 "DFT_DATA_CSV_TAG"
 7
-25 "Info_DftDebugData" 1
+23 "Info_DftDebugData" 1
 "DFT_DATA_CSV_TAG"
 8
-26 "Info_DftDebugData" 1
+24 "Info_DftDebugData" 1
 "DFT_DATA_CSV_TAG"
 9
-27 "Info_DftDebugData" 1
+25 "Info_DftDebugData" 1
 "DFT_DATA_CSV_TAG"
 10
-28 "Info_DftDebugData" 1
+26 "Info_DftDebugData" 1
 "DFT_DATA_CSV_TAG"
 11
-29 "Info_DftDebugData" 1
+27 "Info_DftDebugData" 1
 "DFT_DATA_CSV_TAG"
 12
-30 "Info_DftDebugData" 1
+28 "Info_DftDebugData" 1
 "DFT_DATA_CSV_TAG"
 175
-31 "Info_DftDebugData" 2
+29 "Info_DftDebugData" 2
 "Open_Sp_Sheet"
 ["./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft/dft_data/dft_data_03.csv@@cross-probecol:2"]
 "DFT_DATA_CSV_TAG"
 176
-33 "Info_DftDebugData" 2
+31 "Info_DftDebugData" 2
 "Open_Sp_Sheet"
 ["./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft/dft_data/dft_data_04.csv@@cross-probecol:2"]
 "DFT_DATA_CSV_TAG"
 177
-35 "Info_DftDebugData" 2
+33 "Info_DftDebugData" 2
 "Open_Sp_Sheet"
 ["./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft/dft_data/dft_data_05.csv@@cross-probecol:2"]
 "DFT_DATA_CSV_TAG"
 178
-37 "Info_DftDebugData" 2
+35 "Info_DftDebugData" 2
 "Open_Sp_Sheet"
 ["./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft/dft_data/dft_data_06.csv@@cross-probecol:2"]
 "DFT_DATA_CSV_TAG"
 179
--1 "Atspeed_11" 3
-"TEMPLATE"
-["dft/dft_dsm_best_practice"]
-"RULE_ORDER"
-[3]
-"RULEGROUP"
-["dft_dsm/Atspeed"]
 -1 "CG_generateReport" 3
 "TEMPLATE"
 ["dft/dft_dsm_best_practice"]

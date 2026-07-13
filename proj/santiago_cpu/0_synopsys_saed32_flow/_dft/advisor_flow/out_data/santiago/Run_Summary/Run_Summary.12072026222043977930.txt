@@ -1,17 +1,17 @@
-Date Created     : 12-07-2026 22:09:26
+Date Created     : 12-07-2026 22:20:43
 SpyGlass Version : SpyGlass_vW-2024.09-SP2-8
 Project Name     : santiago
-Goal Name        : dft/dft_dsm_best_practice
+Goal Name        : dft/dft_best_practice
 Scenario Name    : default_scenario
 Top              : top_santiago_cpu
 
 Message Summary
 Severity   Non-Waived  Waived
 FATAL           0         0
-ERROR           1         0
-WARNING         0         0
-INFO           19         0
+ERROR           0         0
+WARNING         1         0
+INFO           39         0
 
--dashboard_data transition_fault 9.1%
--dashboard_data transition_test 9.1%
+-dashboard_data stuck_at_fault 100.0%
+-dashboard_data stuck_at_test 100.0%
 -dashboard_data scannable_flops 100.0%

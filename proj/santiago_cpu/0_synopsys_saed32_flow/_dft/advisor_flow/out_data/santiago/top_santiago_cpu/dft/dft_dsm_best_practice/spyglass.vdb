@@ -1,5 +1,5 @@
 ##spyglass_version: SpyGlass_vW-2024.09-SP2-8
-##date: Sun Jul 12 22:09:23 2026
+##date: Sun Jul 12 22:20:55 2026
 ##user: ulisses.maffazioli
 ##cwd: /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/0_synopsys_saed32_flow/_dft/advisor_flow
 ##lang: verilog+vhdl
@@ -1150,26 +1150,28 @@ DetectTopDesignUnits@@DetectTopDesignUnits@@Info@@./inp_data/rtl/top.sv@@1@@1@@2
 ##sde_property: file ./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_spysch/waiver/pragma2Waiver.swl -id 10
 ##sde_property: file ./santiago.sgdc -id 1
 ##file_label: DFT_UNIFIED_TESTPOINT_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft/dft_unified_testpoints.rpt -policy dft -external
+##file_label: DSM_ATSPEED03_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft_dsm/atspeed_03.rpt -policy dft_dsm -external
+##file_label: DSM_ATSPEED04_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft_dsm/atspeed_04.rpt -policy dft_dsm -external
 ##file_label: DSM_ATSPEED07_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft_dsm/atspeed_07.rpt -policy dft_dsm -external
-Atspeed_11@@Atspeed_11@@Error@@./inp_data/rtl/top.sv@@3@@1@@10@@Clock domain 'top_santiago_cpu.clk' [in 'top_santiago_cpu'] is not controlled by any atspeed clock in capture-atspeed mode (173 flipflop(s) affected). Clock source is port.@@0
-##continue: S.1
-##sde_property: violation -duId 1 
-##sde_property: msg_label Atspeed_11_MSG_01
-##sde_property: msg_id Atspeed_11_MSG_01
 ##file_label: DFT_CONSTRAINT_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft/dft_corrective_sgdc.rpt -policy dft -external
 ##file_label: DFT_RECONVERGENCE_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft/ff_async_reconvergence.rpt -policy dft -external
 ##file_label: DFT_CG_RPT_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft_dsm/dft_dsm_clock_gating_cell.rpt -policy dft_dsm -external
 CG_generateReport@@CG_generateReport@@Info@@./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft_dsm/dft_dsm_clock_gating_cell.rpt@@0@@1@@10@@Clock gating report file './out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft_dsm/dft_dsm_clock_gating_cell.rpt' is generated
 ##sde_property: msg_label CG_REPORT_FILE
 ##sde_property: msg_id CG_REPORT_FILE
+##file_label: TRANSITION_COVERAGE_CLOCKDOMAIN -file ./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft_dsm/transition_coverage_clockdomain_reports/transition_coverage_clockdomain_clk.rpt -policy dft_dsm -external
+##file_label: TRANSITION_COVERAGE_CLOCKDOMAIN -file ./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft_dsm/transition_coverage_clockdomain_reports/transition_coverage_clockdomain_clk.rpt -policy dft_dsm -external
 ##file_label: DSM_DFT_COVERAGE_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft_dsm/transition_coverage.rpt -policy dft_dsm -external
-Info_transitionCoverage@@showCause@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@Transition (LOC) coverage estimate for design 'top_santiago_cpu': fault_coverage = 9.1% and test_coverage = 9.1%@@0
+Info_transitionCoverage@@showCause@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@Transition (LOC) coverage estimate for design 'top_santiago_cpu': fault_coverage = 100.0% and test_coverage = 100.0%@@0
 ##continue: ST.1(fault_browser) 
 ##sde_property: violation -duId 1 
 ##sde_property: msg_label Info_transitionCoverage_M1
 ##sde_property: msg_id Info_transitionCoverage_M1
-Info_atSpeedClock@@Info_atSpeedClock@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@No at-speed test clocks found in design 'top_santiago_cpu'
-##sde_property: violation -duId 1 
+Info_atSpeedClock@@Info_atSpeedClock@@Info@@./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft_dsm/Info_atSpeedClock/clk__at_speed_mode.rpt@@1@@1@@10@@At-speed clock top_santiago_cpu.clk of design 'top_santiago_cpu' propagation is displayed. This clock drives 173 flip-flop(s)@@-1
+##sde_property: msg_label Info_testclock_atSpeedClock_M1
+##sde_property: msg_id Info_testclock_atSpeedClock_M1
+##sde_property: violation -static_auxi_type 3
+##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] At-speed clock 'top_santiago_cpu.clk': Drives 173 flip-flops (Rule: Info_atSpeedClock)
 Info_atSpeedClock@@Info_atSpeedClock@@Info@@./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft_dsm/Info_atSpeedClock/clk__func_sim_mode.rpt@@1@@1@@10@@Functional [simulation] clock top_santiago_cpu.clk of design 'top_santiago_cpu' propagation is displayed. This clock drives 173 flip-flop(s)@@-1
 ##sde_property: msg_label Info_testclock_atSpeedClock_M1
 ##sde_property: msg_id Info_testclock_atSpeedClock_M1
@@ -1181,51 +1183,47 @@ Info_noAtspeed@@Info_noAtspeed@@Info@@./inp_data/rtl/top.sv@@1@@1@@1@@Constraint
 ##sde_property: msg_label S_NS_NAS_M1
 ##sde_property: msg_id S_NS_NAS_M1
 ##file_label: DSM_DFT_COVERAGE_AUDIT_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft_dsm/transition_coverage_audit.rpt -policy dft_dsm -external
-Info_transitionCoverage_audit@@Info_transitionCoverage_audit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu' [Step 5: NO_ATSPEED_CLOCK], transition Fault-Coverage = 100.0% transition Test-Coverage = 100.0%@@0
+Info_transitionCoverage_audit@@Info_transitionCoverage_audit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu' [Step 13: HANGING_TERM], transition Fault-Coverage = 100.0% transition Test-Coverage = 100.0%@@0
+##continue: S.1
+##sde_property: container S.1 -rtlpath 1
+##sde_property: violation -duId 1 
+Info_transitionCoverage_audit@@Info_transitionCoverage_audit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu' [Step 16: PG_NETS], transition Fault-Coverage = 100.0% transition Test-Coverage = 100.0%@@0
 ##continue: S.2
 ##sde_property: container S.2 -rtlpath 1
 ##sde_property: violation -duId 1 
-Info_transitionCoverage_audit@@Info_transitionCoverage_audit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu' [Step 13: HANGING_TERM], transition Fault-Coverage = 100.0% transition Test-Coverage = 100.0%@@0
-##continue: S.3
-##sde_property: container S.3 -rtlpath 1
-##sde_property: violation -duId 1 
-Info_transitionCoverage_audit@@Info_transitionCoverage_audit@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@For Design Unit 'top_santiago_cpu' [Step 16: PG_NETS], transition Fault-Coverage = 100.0% transition Test-Coverage = 100.0%@@0
-##continue: S.4
-##sde_property: container S.4 -rtlpath 1
-##sde_property: violation -duId 1 
 ##file_label: DFT_CONSTRAINT_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft/dft_corrective_sgdc.rpt -policy dft -external
 Info_synthRedundant@@Info_synthRedundant@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@In RTL design : 134 faults in 'top_santiago_cpu' are synthesis redundant@@0
-##continue: S.5
-##sde_property: container S.5 -rtlpath 1
+##continue: S.3
+##sde_property: container S.3 -rtlpath 1
 ##sde_property: violation -duId 1 
 ##sde_property: violation -static_auxi_viol
 ##sde_property: msg_label Info_synthRedundant_M1
 ##sde_property: msg_id Info_synthRedundant_M1
 ##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] Synthesis redundant nodes (Rule: Info_synthRedundant)
 Info_testmode@@showSimVal@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@'Shift mode' simulation value for design 'top_santiago_cpu' is displayed@@0
-##continue: S.6 
-##sde_property: container S.6 -rtlpath 1
+##continue: S.4 
+##sde_property: container S.4 -rtlpath 1
 ##sde_property: violation -duId 1 
 ##sde_property: violation -static_auxi_viol
 ##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] Testmode (Rule: Info_testmode)
 ##sde_property: violation -static_auxi_type 1
 Info_testmode@@showSimVal@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@'Capture mode' simulation value for design 'top_santiago_cpu' is displayed@@0
-##continue: S.7 
-##sde_property: container S.7 -rtlpath 1
+##continue: S.5 
+##sde_property: container S.5 -rtlpath 1
 ##sde_property: violation -duId 1 
 ##sde_property: violation -static_auxi_viol
 ##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] Testmode (Rule: Info_testmode)
 ##sde_property: violation -static_auxi_type 2
 Info_testmode@@showSimVal@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@'Capture atspeed mode' simulation value for design 'top_santiago_cpu' is displayed@@0
-##continue: S.8 
-##sde_property: container S.8 -rtlpath 1
+##continue: S.6 
+##sde_property: container S.6 -rtlpath 1
 ##sde_property: violation -duId 1 
 ##sde_property: violation -static_auxi_viol
 ##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] Testmode (Rule: Info_testmode)
 ##sde_property: violation -static_auxi_type 3
 Info_testmode@@showSimVal@@Info@@./inp_data/rtl/top.sv@@1@@1@@10@@'Functional mode' simulation value for design 'top_santiago_cpu' is displayed@@0
-##continue: S.9 
-##sde_property: container S.9 -rtlpath 1
+##continue: S.7 
+##sde_property: container S.7 -rtlpath 1
 ##sde_property: violation -duId 1 
 ##sde_property: violation -static_auxi_viol
 ##sde_property: violation -static_auxi_label [Top: top_santiago_cpu] Testmode (Rule: Info_testmode)
@@ -1246,6 +1244,18 @@ Info_DftDebugData@@Info_DftDebugData@@Info@@./inp_data/rtl/top.sv@@1@@1@@1@@DFT 
 ##sde_property: msg_id DFT_BA_MSG
 Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/top.sv@@1@@1@@1@@
 ##sde_property: violation -duId 1 
+##sde_property: msg_label DFT_BA_CSV_DATA
+##sde_property: msg_id DFT_BA_CSV_DATA
+Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@@1@@1@@@@0
+##continue: S.8
+##sde_property: container S.8 -rtlpath 1.2.4 -nonprob
+##sde_property: violation -duId 4 
+##sde_property: msg_label DFT_BA_CSV_DATA
+##sde_property: msg_id DFT_BA_CSV_DATA
+Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@@1@@1@@@@0
+##continue: S.9
+##sde_property: container S.9 -rtlpath 1.2.4 -nonprob
+##sde_property: violation -duId 4 
 ##sde_property: msg_label DFT_BA_CSV_DATA
 ##sde_property: msg_id DFT_BA_CSV_DATA
 Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@@1@@1@@@@0
@@ -1296,18 +1306,6 @@ Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@
 ##sde_property: violation -duId 4 
 ##sde_property: msg_label DFT_BA_CSV_DATA
 ##sde_property: msg_id DFT_BA_CSV_DATA
-Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@@1@@1@@@@0
-##continue: S.18
-##sde_property: container S.18 -rtlpath 1.2.4 -nonprob
-##sde_property: violation -duId 4 
-##sde_property: msg_label DFT_BA_CSV_DATA
-##sde_property: msg_id DFT_BA_CSV_DATA
-Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/register_bank.sv@@14@@1@@1@@@@0
-##continue: S.19
-##sde_property: container S.19 -rtlpath 1.2.4 -nonprob
-##sde_property: violation -duId 4 
-##sde_property: msg_label DFT_BA_CSV_DATA
-##sde_property: msg_id DFT_BA_CSV_DATA
 Info_DftDebugData@@Info_DftDebugData@@Data@@./inp_data/rtl/top.sv@@1@@1@@1@@
 ##sde_property: violation -duId 1 
 ##sde_property: msg_label DFT_BA_CSV_DATA
@@ -1352,13 +1350,13 @@ Info_generated_reports@@Info_generated_reports@@Info@@./out_data/santiago/top_sa
 ##file_label: DFT_CONSTRAINT_FILE -file ./out_data/santiago/top_santiago_cpu/dft/dft_dsm_best_practice/spyglass_reports/dft/dft_corrective_sgdc.rpt -policy dft -external
 ##warning_total_suppressed_count:         0
 ##error_total_suppressed_count:         0
-##warning_total_reported_count:        19
-##error_total_reported_count:         1
+##warning_total_reported_count:        18
+##error_total_reported_count:         0
 ##total_warning_waived_viol_count:         0
 ##total_error_waived_viol_count:         0
-##totalGeneratedCount:        20
+##totalGeneratedCount:        18
 ##totalWaivedViolationCount:         0
-##totalReportCount:        20
+##totalReportCount:        18
 ##totalDataSeverityCount:        20
 ##totalSuppressedCount:         0
 ##Active_Rules  Atspeed_03 Atspeed_04 Atspeed_06 Atspeed_07 Atspeed_09 Atspeed_11 Atspeed_14 Atspeed_19 Atspeed_20 Atspeed_22 Atspeed_30 CG_01_atspeed CG_01_capture CG_01_shift CG_02_atspeed CG_02_capture CG_03_atspeed CG_03_capture CG_07 CG_generateReport Diagnose_02 Diagnose_03 Diagnose_04 Info_atSpeedClock Info_noAtspeed Info_synthRedundant Info_testclock Info_testmode Info_transitionCoverage Info_transitionCoverage_audit
