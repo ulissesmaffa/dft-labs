@@ -1,0 +1,2 @@
+Instance Hierarchy,Module Name,Fault Coverage (%),Test Coverage (%),Fault Coverage Loss (%),Test Coverage Loss (%),Total Fault Number,FC,!DT,DT,SR,UU,TI,BL,FP,LR,UT
+top,top,100.00,100.00,0.00,0.00,42,42,0,42,0,0,0,0,0,0,0

@@ -1,0 +1,27 @@
+-1current_goal: info: loading goal `dft/dft_scan_ready' with top `top' (in progress)
+current_goal: info: finished loading goal `dft/dft_scan_ready' (ok)
+ Reading sgdc file "./constr/constr_comb.sgdc" ...
+ Reading waiver file "./out_data/naive_comb/top/dft/dft_scan_ready/spyglass_spysch/waiver/pragma2Waiver.swl" ...
+-1Warning: Can't create IP-Xact model. IO data not available
+Report 'datasheet' created.
+  File: /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/0_synopsys_saed32_flow/dft/advisor_flow_naive/out_data/naive_comb/html_reports/datasheet.html 
+Detailed Error Trace
+--------------------
+
+  `dft_get_pin_list' command not available in current goal run
+      while executing
+      invoked from within
+      invoked from within
+  "dft_get_pin_list -hierarchy {top} -analysisName Info_coverage"
+
+Error: `dft_get_pin_list' command not available in current goal runDetailed Error Trace
+--------------------
+
+  `dft_get_pin_list' command not available in current goal run
+      while executing
+      invoked from within
+      invoked from within
+  "dft_get_pin_list -hierarchy {top} -analysisName Info_coverage"
+
+Error: `dft_get_pin_list' command not available in current goal runReport 'dashboard' created.
+  File: /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/0_synopsys_saed32_flow/dft/advisor_flow_naive/out_data/naive_comb/html_reports/dashboard.html 

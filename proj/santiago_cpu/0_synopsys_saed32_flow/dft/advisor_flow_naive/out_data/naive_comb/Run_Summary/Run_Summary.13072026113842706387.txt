@@ -1,0 +1,16 @@
+Date Created     : 13-07-2026 11:38:42
+SpyGlass Version : SpyGlass_vW-2024.09-SP2-8
+Project Name     : naive_comb
+Goal Name        : dft/dft_dsm_random_resistance
+Scenario Name    : default_scenario
+Top              : top
+
+Message Summary
+Severity   Non-Waived  Waived
+FATAL           0         0
+ERROR           0         0
+WARNING         0         0
+INFO            8         0
+
+-dashboard_data random_pattern_fault 100.0%
+-dashboard_data random_pattern_test 100.0%

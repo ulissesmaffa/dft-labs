@@ -1,0 +1,38 @@
+#x STXT_BEGIN ST.1
+UTILITY FaultBrowser
+VERSION 3.8.2
+ATTRIBUTES 0
+TABINFO 1,Transition Coverage Report,enabled
+
+TAB 0
+TYPE FaultTree
+COLOR_SET 0xff0000,50,0xff6666,75,0x99cc00,90,0x006600,100
+STRLEN_SEPARATOR @@
+cross_probe_format gui_load_schematic [dft_get_pin_list -hierarchy %h -analysisName Info_transitionCoverage] -is
+add_context_menu -label "Probe Full Hierarchy" -command {gui_load_schematic [dft_get_pin_list -hierarchy %h -view full_hierarchy -analysisName Info_transitionCoverage] -is}
+add_context_menu -label "Probe This Instance" -command {gui_load_schematic [dft_get_pin_list -hierarchy %h -view this_instance -analysisName Info_transitionCoverage] -is}
+COLUMNS Instance Hierarchy,TREE,Module Name,TEXT,Fault Coverage (%),NUM,Test Coverage (%),NUM,Fault Coverage Loss (%),NUM,Test Coverage Loss (%),NUM,Total Fault Number,NUM,FC,NUM,!DT,NUM,DT,NUM,SR,NUM,UU,NUM,TI,NUM,BL,NUM,FP,NUM,LR,NUM,UT,NUM,Color Range,COLOR,Scale,SCALEVALUE
+COLUMN_UNIT 2, 
+SEARCHABLE_COLUMNS 0,1
+
+DATA
+3@@top3@@top6@@100.006@@100.004@@0.004@@0.002@@422@@421@@02@@421@@01@@01@@01@@01@@01@@01@@06@@100.003@@100
+
+END_DATA
+END_TAB
+#x STXT_END ST.1
+#x STXT_BEGIN ST.2
+#x STXT_END ST.2
+#x STXT_BEGIN ST.3
+#x STXT_BEGIN ST.4
+#x STXT_END ST.4
+#x STXT_BEGIN ST.5
+#x STXT_BEGIN ST.6
+#x STXT_END ST.6
+#x STXT_BEGIN ST.7
+#x STXT_BEGIN ST.8
+#x STXT_END ST.8
+#x STXT_BEGIN ST.9
+#x STXT_BEGIN ST.10
+#x STXT_END ST.10
+#x STXT_BEGIN ST.11

@@ -1,0 +1,20 @@
+##Data Import Section
+
+read_file -type hdl ./inp_data/rtl/top_seq.v
+#BackRefFile:./scripts/run_seq.tcl #LineNumber:2
+read_file -type sgdc ./constr/constr_seq.sgdc
+
+##Common Options Section
+
+set_option projectwdir ./out_data
+set_option language_mode mixed
+set_option designread_enable_synthesis no
+set_option designread_disable_flatten no
+set_option top top
+set_option active_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
+
+
+##Goal Setup Section
+
+current_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
+

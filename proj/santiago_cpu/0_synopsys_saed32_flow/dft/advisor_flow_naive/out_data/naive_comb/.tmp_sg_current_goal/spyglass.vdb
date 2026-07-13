@@ -1,0 +1,11 @@
+##MESSAGESORT -rule Soc_05 -language Verilog+VHDL -NOSORT -message 
+##MESSAGESORT -rule TA_09 -language Verilog+VHDL -NOSORT -message Net '%1' %2[Fault Improvement = '%3'[%%Increase %4]]
+##MESSAGESORT -rule Topology_09 -language Verilog+VHDL -NOSORT -message [Reconvergence Depth %3]Logic path from '%1' re-converges at or near '%2'
+##MESSAGESORT -rule TA_02 -language Verilog+VHDL -NOSORT -message Net '%1' %2[Observability Improvement = '%3']
+##MESSAGESORT -rule TA_01 -language Verilog+VHDL -NOSORT -message Net '%1' %2[Controllability Improvement = '%3']
+##MESSAGESORT -rule Info_scanwrap -language Verilog+VHDL -NOSORT -message In design '%1', scan_wrap sgdc command is not supplied
+##MESSAGESORT -rule Clock_11_capture -language Verilog+VHDL -NOSORT -message %2 '%1' [in '%3'] is not controlled %4 %5%6
+##MESSAGESORT -rule Clock_11 -language Verilog+VHDL -NOSORT -message %2 '%1' [in '%3'] is not controlled %4 %5%6
+##MESSAGESORT -rule Async_13 -language Verilog+VHDL -NOSORT -message The source net '%1' feeding '%2' pin of '%3' is not controllable to inactive state in capture mode%4
+##MESSAGESORT -rule Async_09 -language Verilog+VHDL -NOSORT -message The source net '%1' feeding '%2' pin of '%3' is not fully controllable in capture mode%4
+##MESSAGESORT -rule Async_07 -language Verilog+VHDL -NOSORT -message %2[in '%3'] '%1' is not disabled for %5 in test-mode[stops at '%4']%6

@@ -1,0 +1,121 @@
+14 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["./out_data/naive_comb/top/dft/dft_dsm_best_practice/spyglass_reports/dft/dft_data/dft_data_01.csv@@cross-probecol:3"]
+"DFT_DATA_CSV_TAG"
+1
+15 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["./out_data/naive_comb/top/dft/dft_dsm_best_practice/spyglass_reports/dft/dft_data/dft_data_02.csv@@cross-probecol:2"]
+"DFT_DATA_CSV_TAG"
+2
+17 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["./out_data/naive_comb/top/dft/dft_dsm_best_practice/spyglass_reports/dft/dft_data/dft_data_03.csv@@cross-probecol:2"]
+"DFT_DATA_CSV_TAG"
+3
+19 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["./out_data/naive_comb/top/dft/dft_dsm_best_practice/spyglass_reports/dft/dft_data/dft_data_04.csv@@cross-probecol:2"]
+"DFT_DATA_CSV_TAG"
+4
+21 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["./out_data/naive_comb/top/dft/dft_dsm_best_practice/spyglass_reports/dft/dft_data/dft_data_05.csv@@cross-probecol:2"]
+"DFT_DATA_CSV_TAG"
+5
+23 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["./out_data/naive_comb/top/dft/dft_dsm_best_practice/spyglass_reports/dft/dft_data/dft_data_06.csv@@cross-probecol:2"]
+"DFT_DATA_CSV_TAG"
+6
+-1 "CG_generateReport" 3
+"TEMPLATE"
+["dft/dft_dsm_best_practice"]
+"RULE_ORDER"
+[24]
+"RULEGROUP"
+["dft_dsm/ClockGating"]
+-1 "DetectTopDesignUnits" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "ElabSummary" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "Info_DftDebugData" 3
+"TEMPLATE"
+["dft/dft_dsm_best_practice"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["dft/MustRules"]
+-1 "Info_atSpeedClock" 4
+"TEMPLATE"
+["dft/dft_dsm_best_practice"]
+"RULE_ORDER"
+[28]
+"RULEGROUP"
+["dft_dsm/Debug"]
+"SPG_RULETAG_SCH_INFO_RULE"
+"Info_atSpeedClock"
+-1 "Info_generated_reports" 2
+"TEMPLATE"
+["dft/dft_dsm_best_practice"]
+"RULE_ORDER"
+[-1]
+-1 "Info_noAtspeed" 3
+"TEMPLATE"
+["dft/dft_dsm_best_practice"]
+"RULE_ORDER"
+[29]
+"RULEGROUP"
+["dft_dsm/Debug"]
+-1 "Info_synthRedundant" 3
+"TEMPLATE"
+["dft/dft_dsm_best_practice"]
+"RULE_ORDER"
+[30]
+"RULEGROUP"
+["dft/Information"]
+-1 "Info_testclock" 4
+"TEMPLATE"
+["dft/dft_dsm_best_practice"]
+"RULE_ORDER"
+[31]
+"RULEGROUP"
+["dft/Information"]
+"SPG_RULETAG_SCH_INFO_RULE"
+"Info_testclock"
+-1 "Info_testmode" 4
+"TEMPLATE"
+["dft/dft_dsm_best_practice"]
+"RULE_ORDER"
+[32]
+"RULEGROUP"
+["dft/Information"]
+"SPG_RULETAG_SCH_INFO_RULE"
+"Info_testmode"
+-1 "Info_transitionCoverage" 3
+"TEMPLATE"
+["dft/dft_dsm_best_practice"]
+"RULE_ORDER"
+[2]
+"RULEGROUP"
+["dft_dsm/Debug"]
+-1 "dftMandatory_Constraint_Check" 3
+"TEMPLATE"
+["dft/dft_dsm_best_practice"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["dft/MustRules"]
+-1 "dftOptional_Constraint_Check" 3
+"TEMPLATE"
+["dft/dft_dsm_best_practice"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["dft/MustRules"]
