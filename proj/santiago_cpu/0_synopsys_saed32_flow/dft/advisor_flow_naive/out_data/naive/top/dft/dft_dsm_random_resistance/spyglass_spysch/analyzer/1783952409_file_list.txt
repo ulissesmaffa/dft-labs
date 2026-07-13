@@ -1,0 +1,1 @@
+0 ./inp_data/rtl/top.v

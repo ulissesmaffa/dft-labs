@@ -1,0 +1,8 @@
+#x HLBEGIN S.1
+#x {{TEXT=>0(F);COLOR=>2;BRF=>1,4;}}
+#x 59 { @@n 1 a 0 }
+#x HLEND
+#x HLBEGIN S.2
+#x {}
+#x 59 { @@i 5 }
+#x HLEND

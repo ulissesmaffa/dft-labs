@@ -1,0 +1,51 @@
+##This file is genrated to have command line decompiled Info even in Console
+##(To generate SIGN_OFF report having command line decompiled)
+Run Setup Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Option          Value             Origin  File                           LineNo
+===============================================================================
+--goal_info     dft/dft_dsm_random_resistance@ CmdLine -                              -
+--strict_sgdc_check <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 40
+-batch          <ON>              CmdLine -                              -
+-dbdir          ./out_data/naive/top/.SG_SaveRestoreDB CmdLine -                              -
+-enable_save_restore <ON>              CmdLine -                              -
+-enable_save_restore_builtin true              CmdLine -                              -
+-inferblackbox  <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 30
+-lib            WORK=>./out_data/naive/top/WORK CmdLine -                              -
+                SYNOPSYS=>$SPYGLASS_HOME/vhdl_libs/Linux4/SYNOPSYS Config  $SPYGLASS_HOME/.spyglass.setup 25
+-mixed          <ON>              CmdLine -                              -
+-nl             <ON>              CmdLine -                              -
+-policy         dft_dsm           CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_dsm_random_resistance.spq 37
+                dft               CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_dsm_random_resistance.spq 37
+                dft               CmdFile $SPYGLASS_HOME/auxi/policy_data/dft_dsm/autoload.f 1
+                dft               CmdFile $SPYGLASS_HOME/auxi/policy_data/dft_dsm/autoload.f 1
+-projectwdir    ./out_data/naive  CmdLine -                              -
+-report         moresimple        Config  $SPYGLASS_HOME/.spyglass.setup 17
+-rules          Info_random_resistance CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_dsm_random_resistance.spq 54
+-sgdc           ./constr.sgdc     CmdLine -                              -
+-sortmethod     du                Config  $SPYGLASS_HOME/.spyglass.setup 27
+-template       dft/dft_dsm_random_resistance CmdLine -                              -
+-templatedir    /tools/synopsys/tmadvisor/spyglass/W-2024.09-SP2-8/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff CmdLine -                              -
+-top            top               CmdLine -                              -
+-wdir           ./out_data/naive/top/dft/dft_dsm_random_resistance CmdLine -                              -
+<design_files>  ./inp_data/rtl/top.v APICall -                              -
+
+
+Rules Parameter
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Parameter       Origin  File                           LineNo
+===============================================================================
+
+
+Policy Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+NameOfPolicy    VersionNumber   Path (from where policy loaded)
+===============================================================================
+spyglass        SpyGlass_vW-2024.09-SP2-08 $SPYGLASS_HOME/policies/spyglass
+dft_dsm         SpyGlass_vW-2024.09-SP2-08 $SPYGLASS_HOME/policies/dft_dsm
+dft             SpyGlass_vW-2024.09-SP2-08 $SPYGLASS_HOME/policies/dft
+
+
