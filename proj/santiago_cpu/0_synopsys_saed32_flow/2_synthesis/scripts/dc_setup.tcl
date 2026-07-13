@@ -24,10 +24,7 @@ set_min_library $IO_LIB_PATH/saed32io_fc_ss0p95v125c_2p25v.db \
     -min_version $IO_LIB_PATH/saed32io_fc_ff1p16vn40c_2p75v.db 
 
 # design setting
-# set TOP_MODULE_NAME top
-set WIDTH 8
-set RTL_TOP         "top"
-set TOP_MODULE_NAME "top_WIDTH${WIDTH}"
+set TOP_MODULE_NAME top_santiago_cpu
 
 set DESIGN santiago_cpu
 

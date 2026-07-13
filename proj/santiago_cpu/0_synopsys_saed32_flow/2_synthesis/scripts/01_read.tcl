@@ -20,8 +20,7 @@ if {[llength $sv_files] == 0} {
 }
 puts "=== Analyzing [llength $sv_files] files SystemVerilog"
 analyze -format sverilog -library WORK $sv_files
-# elaborate $TOP_MODULE_NAME
-elaborate $RTL_TOP -parameters "WIDTH=${WIDTH}"
+elaborate $TOP_MODULE_NAME
 
 set_verification_top
 

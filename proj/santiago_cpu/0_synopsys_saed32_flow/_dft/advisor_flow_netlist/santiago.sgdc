@@ -1,4 +1,0 @@
-current_design top_santiago_cpu
-
-clock     -name clk -testclock
-test_mode -name rst -value 0 -scanshift

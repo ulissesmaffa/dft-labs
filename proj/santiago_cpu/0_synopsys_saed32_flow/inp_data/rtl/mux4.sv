@@ -1,8 +1,8 @@
 module mux4 (
   // port_list
-  input  logic [WIDTH-1:0] din1, din2, din3, din4,
+  input  logic [7:0] din1, din2, din3, din4,
   input  logic       [1:0] select,
-  output logic [WIDTH-1:0] dout
+  output logic [7:0] dout
 );
 
 always_comb begin : MUX4

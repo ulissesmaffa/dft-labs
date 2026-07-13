@@ -1,5 +1,0 @@
-mux4_registered@@@@top_santiago_cpu.uu_muxA
-mux4_registered@@@@top_santiago_cpu.uu_muxB
-alu@@@@top_santiago_cpu.uu_alu
-memory@@@@top_santiago_cpu.uu_mem
-control@@@@top_santiago_cpu.uu_ctrl
