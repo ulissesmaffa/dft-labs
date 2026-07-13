@@ -1,0 +1,56 @@
+#x STXT_BEGIN ST.1
+UTILITY FaultBrowser
+VERSION 3.8.2
+ATTRIBUTES 0
+TABINFO 1,Transition Coverage Report,enabled
+
+TAB 0
+TYPE FaultTree
+COLOR_SET 0xff0000,50,0xff6666,75,0x99cc00,90,0x006600,100
+STRLEN_SEPARATOR @@
+cross_probe_format gui_load_schematic [dft_get_pin_list -hierarchy %h -analysisName Info_transitionCoverage] -is
+add_context_menu -label "Probe Full Hierarchy" -command {gui_load_schematic [dft_get_pin_list -hierarchy %h -view full_hierarchy -analysisName Info_transitionCoverage] -is}
+add_context_menu -label "Probe This Instance" -command {gui_load_schematic [dft_get_pin_list -hierarchy %h -view this_instance -analysisName Info_transitionCoverage] -is}
+COLUMNS Instance Hierarchy,TREE,Module Name,TEXT,Fault Coverage (%),NUM,Test Coverage (%),NUM,Fault Coverage Loss (%),NUM,Test Coverage Loss (%),NUM,Total Fault Number,NUM,FC,NUM,!DT,NUM,DT,NUM,SR,NUM,UU,NUM,TI,NUM,BL,NUM,FP,NUM,LR,NUM,UT,NUM,Color Range,COLOR,Scale,SCALEVALUE
+COLUMN_UNIT 2, 
+SEARCHABLE_COLUMNS 0,1
+
+DATA
+16@@top_santiago_cpu16@@top_santiago_cpu4@@9.134@@9.135@@90.875@@90.874@@39224@@37884@@34423@@3463@@1341@@01@@01@@01@@01@@01@@04@@9.003@@100
+23@@top_santiago_cpu.uu_mem6@@memory5@@18.525@@18.525@@29.735@@29.734@@13984@@13824@@11263@@2562@@161@@01@@01@@01@@01@@01@@05@@18.003@@100
+23@@top_santiago_cpu.uu_alu3@@alu4@@0.004@@0.005@@26.825@@26.824@@10964@@10164@@10161@@02@@801@@01@@01@@01@@01@@01@@04@@0.003@@100
+24@@top_santiago_cpu.uu_ctrl7@@control4@@1.604@@1.605@@12.995@@12.993@@5383@@5003@@4921@@82@@381@@01@@01@@01@@01@@01@@04@@1.003@@100
+24@@top_santiago_cpu.uu_muxB15@@mux4_registered4@@7.144@@7.144@@5.494@@5.493@@2243@@2243@@2082@@161@@01@@01@@01@@01@@01@@01@@04@@7.003@@100
+32@@top_santiago_cpu.uu_muxB.uu_mux44@@mux44@@0.004@@0.004@@4.654@@4.653@@1763@@1763@@1761@@01@@01@@01@@01@@01@@01@@01@@04@@0.003@@100
+30@@top_santiago_cpu.uu_muxB.uu_rb13@@register_bank5@@33.335@@33.334@@0.844@@0.842@@482@@482@@322@@161@@01@@01@@01@@01@@01@@01@@05@@33.003@@100
+24@@top_santiago_cpu.uu_muxA15@@mux4_registered4@@7.144@@7.144@@5.494@@5.493@@2243@@2243@@2082@@161@@01@@01@@01@@01@@01@@01@@04@@7.003@@100
+32@@top_santiago_cpu.uu_muxA.uu_mux44@@mux44@@0.004@@0.004@@4.654@@4.653@@1763@@1763@@1761@@01@@01@@01@@01@@01@@01@@01@@04@@0.003@@100
+30@@top_santiago_cpu.uu_muxA.uu_rb13@@register_bank5@@33.335@@33.334@@0.844@@0.842@@482@@482@@322@@161@@01@@01@@01@@01@@01@@01@@05@@33.003@@100
+
+END_DATA
+END_TAB
+#x STXT_END ST.1
+#x STXT_BEGIN ST.2
+#x STXT_END ST.2
+#x STXT_BEGIN ST.3
+#x STXT_BEGIN ST.4
+#x STXT_END ST.4
+#x STXT_BEGIN ST.5
+#x STXT_BEGIN ST.6
+#x STXT_END ST.6
+#x STXT_BEGIN ST.7
+#x STXT_BEGIN ST.8
+#x STXT_END ST.8
+#x STXT_BEGIN ST.9
+#x STXT_BEGIN ST.10
+#x STXT_END ST.10
+#x STXT_BEGIN ST.11
+#x STXT_BEGIN ST.12
+#x STXT_END ST.12
+#x STXT_BEGIN ST.13
+#x STXT_BEGIN ST.14
+#x STXT_END ST.14
+#x STXT_BEGIN ST.15
+#x STXT_BEGIN ST.16
+#x STXT_END ST.16
+#x STXT_BEGIN ST.17

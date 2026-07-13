@@ -1,0 +1,123 @@
+3 "Info_random_resistance" 1
+"DFT_SCH_STATIC_AUXI_AUTOLOAD_MSG_TAG_LIST"
+["DFT_DYNA_ATTR3!!P_CNT_0","DFT_DYNA_ATTR3!!P_CNT_1","DFT_DYNA_ATTR3!!P_OBS","DFT_DYNA_ATTR3!!P_DT"]
+5 "Info_random_resistance" 1
+"DFT_DSM_RRF_TP_TAG"
+1
+6 "Info_random_resistance" 1
+"DFT_DSM_RRF_TP_TAG"
+2
+7 "Info_random_resistance" 1
+"DFT_DSM_RRF_TP_TAG"
+3
+8 "Info_random_resistance" 1
+"DFT_DSM_RRF_TP_TAG"
+4
+9 "Info_random_resistance" 1
+"DFT_DSM_RRF_TP_TAG"
+5
+10 "Info_random_resistance" 1
+"DFT_DSM_RRF_TP_TAG"
+6
+11 "Info_random_resistance" 1
+"DFT_DSM_RRF_TP_TAG"
+7
+12 "Info_random_resistance" 1
+"DFT_DSM_RRF_TP_TAG"
+8
+13 "Info_random_resistance" 1
+"DFT_DSM_RRF_TP_TAG"
+9
+14 "Info_random_resistance" 1
+"Open_Sp_Sheet"
+["./out_data/santiago/top_santiago_cpu/dft/dft_dsm_random_resistance/spyglass_reports/dft_dsm/Info_random_resistance/000/Info_random_resistance_001.csv@@cross-probecol:2"]
+15 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["./out_data/santiago/top_santiago_cpu/dft/dft_dsm_random_resistance/spyglass_reports/dft/dft_data/dft_data_01.csv@@cross-probecol:3"]
+"DFT_DATA_CSV_TAG"
+1
+16 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["./out_data/santiago/top_santiago_cpu/dft/dft_dsm_random_resistance/spyglass_reports/dft/dft_data/dft_data_02.csv@@cross-probecol:2"]
+"DFT_DATA_CSV_TAG"
+2
+17 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+3
+18 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+4
+19 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+5
+20 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+6
+21 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+7
+22 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+8
+23 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+9
+24 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+10
+25 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+11
+26 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+12
+27 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+175
+28 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["./out_data/santiago/top_santiago_cpu/dft/dft_dsm_random_resistance/spyglass_reports/dft/dft_data/dft_data_03.csv@@cross-probecol:2"]
+"DFT_DATA_CSV_TAG"
+176
+30 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["./out_data/santiago/top_santiago_cpu/dft/dft_dsm_random_resistance/spyglass_reports/dft/dft_data/dft_data_04.csv@@cross-probecol:2"]
+"DFT_DATA_CSV_TAG"
+177
+32 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["./out_data/santiago/top_santiago_cpu/dft/dft_dsm_random_resistance/spyglass_reports/dft/dft_data/dft_data_05.csv@@cross-probecol:2"]
+"DFT_DATA_CSV_TAG"
+178
+34 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["./out_data/santiago/top_santiago_cpu/dft/dft_dsm_random_resistance/spyglass_reports/dft/dft_data/dft_data_06.csv@@cross-probecol:2"]
+"DFT_DATA_CSV_TAG"
+179
+-1 "DetectTopDesignUnits" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "ElabSummary" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "Info_DftDebugData" 3
+"TEMPLATE"
+["dft/dft_dsm_random_resistance"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["dft/MustRules"]
+-1 "Info_generated_reports" 2
+"TEMPLATE"
+["dft/dft_dsm_random_resistance"]
+"RULE_ORDER"
+[-1]
+-1 "Info_random_resistance" 2
+"TEMPLATE"
+["dft/dft_dsm_random_resistance"]
+"RULE_ORDER"
+[1]

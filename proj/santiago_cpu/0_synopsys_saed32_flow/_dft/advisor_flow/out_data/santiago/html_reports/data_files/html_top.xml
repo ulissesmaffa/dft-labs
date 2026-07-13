@@ -6,5 +6,7 @@
 <goals>
 <goal name="dft/dft_scan_ready" link="data_files/top_santiago_cpu_dft-dft_scan_ready_summary.xml" />
 <goal name="dft/dft_best_practice" link="data_files/top_santiago_cpu_dft-dft_best_practice_summary.xml" />
+<goal name="dft/dft_dsm_best_practice" link="data_files/top_santiago_cpu_dft-dft_dsm_best_practice_summary.xml" />
+<goal name="dft/dft_dsm_random_resistance" link="data_files/top_santiago_cpu_dft-dft_dsm_random_resistance_summary.xml" />
 </goals>
 </html_top>
