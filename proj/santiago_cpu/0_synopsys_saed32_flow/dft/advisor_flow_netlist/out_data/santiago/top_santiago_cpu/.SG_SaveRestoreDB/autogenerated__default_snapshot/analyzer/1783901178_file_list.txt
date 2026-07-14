@@ -1,3 +1,0 @@
-0 ./inp_data/dc/santiago_cpu.v
-1 ./out_data/santiago/top_santiago_cpu/dft/dft_scan_ready/spyglass_spysch/spyglass_lc/aggregate/cells.nom_0.v
-2 ./out_data/santiago/top_santiago_cpu/dft/dft_scan_ready/spyglass_spysch/spyglass/saed32rvt_tt1p05v25c_0.v

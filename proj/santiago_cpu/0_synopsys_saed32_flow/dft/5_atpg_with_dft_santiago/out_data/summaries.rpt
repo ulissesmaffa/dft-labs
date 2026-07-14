@@ -1,0 +1,42 @@
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT       9395
+ Possibly detected                PT          0
+ Undetectable                     UD         85
+ ATPG untestable                  AU          0
+ Not detected                     ND         36
+ -----------------------------------------------
+ total faults                              9516
+ test coverage                            99.62%
+ fault coverage                           98.73%
+ ATPG effectiveness                       99.62%
+ -----------------------------------------------
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                         162
+     #basic_scan patterns                   162
+ -----------------------------------------------
+             Gate Summary Report
+ -----------------------------------------------
+ #primitives                               3381
+ #primary_inputs                             35
+ #primary_outputs                            20
+ #DFFs                                      173
+    #scan                                   173
+ #BUFs                                      747
+ #INVs                                      283
+ #ANDs                                      912
+ #NANDs                                     103
+ #ORs                                       594
+ #NORs                                       50
+ #XORs                                       99
+ #XNORs                                       7
+ #MUXs                                      358
+ -----------------------------------------------
+ type      depth   gate_id
+ -------   -----   -------
+ Control       0         0
+ Observe       0         0
+ Detect        0         0

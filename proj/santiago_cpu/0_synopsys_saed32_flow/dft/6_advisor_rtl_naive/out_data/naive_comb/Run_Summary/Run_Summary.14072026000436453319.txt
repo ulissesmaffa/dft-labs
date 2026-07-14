@@ -1,0 +1,17 @@
+Date Created     : 14-07-2026 00:04:36
+SpyGlass Version : SpyGlass_vW-2024.09-SP2-8
+Project Name     : naive_comb
+Goal Name        : dft/dft_dsm_best_practice
+Scenario Name    : default_scenario
+Top              : top
+
+Message Summary
+Severity   Non-Waived  Waived
+FATAL           0         0
+ERROR           0         0
+WARNING         1         0
+INFO           15         0
+
+-dashboard_data transition_fault 100.0%
+-dashboard_data transition_test 100.0%
+-dashboard_data scannable_flops 0.0%

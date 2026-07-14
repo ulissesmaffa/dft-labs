@@ -1,6 +1,6 @@
 # read in design
 # do not put testbench in the list below
-set_svf $PRE_LAYOUT_DIR/${TOP_MODULE_NAME}.svf
+set_svf $PRE_LAYOUT_DIR/${DESIGN}.svf
 set_app_var hdlin_enable_hier_map true
 set verilogout_show_unconnected_pins true
 
@@ -43,7 +43,7 @@ set_dft_signal -view spec -type ScanEnable  -port test_se
 # check design
 check_design > $REPORT_DIR/dc_check_design.rpt
 
-write -f ddc -hier -out  $PRE_LAYOUT_DIR/${TOP_MODULE_NAME}_unmapped.ddc
+write -f ddc -hier -out  $PRE_LAYOUT_DIR/${DESIGN}_unmapped.ddc
 
 # set_wire_load_model -name "sky130"
 # set_wire_load_mode "top"

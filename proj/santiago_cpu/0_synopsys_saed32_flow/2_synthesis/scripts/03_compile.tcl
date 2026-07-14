@@ -4,6 +4,7 @@ set_fix_multiple_port_nets -all -buffer_constants
 set verilogout_no_tri true
 
 compile_ultra -no_autoungroup -scan
+#compile_ultra -no_autoungroup
 
 # DFT I
 create_test_protocol -infer_clock -infer_asynch
@@ -20,6 +21,7 @@ check_design                      > $REPORT_DIR/2_post_compile_check_design.rpt
 
 # Opt
 compile_ultra -scan -incremental
+#compile_ultra -incremental
 
 # DFT II
 dft_drc                                        > $REPORT_DIR/DFT_drc.rpt
@@ -48,6 +50,7 @@ write_sdc  $PRE_LAYOUT_DIR/$DESIGN.sdc
 write_file -format ddc     -hier -out $PRE_LAYOUT_DIR/$DESIGN.ddc
 write_file -format verilog -hier -out $PRE_LAYOUT_DIR/$DESIGN.v
 
+write_test_protocol -output $PRE_LAYOUT_DIR/$DESIGN.spf
 
 # UM: Review later
 # # optimize design

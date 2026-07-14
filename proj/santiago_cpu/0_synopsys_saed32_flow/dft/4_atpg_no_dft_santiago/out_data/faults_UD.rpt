@@ -6,10 +6,11 @@
  sa1   UT   ff_cmd_in_reg_1_/RSTB
  sa1   UT   ff_cmd_in_reg_0_/RSTB
  sa1   UT   zero_reg/SETB
- sa0   UR   U44/A1
  sa1   UT   ff_dout_reg_0_/SETB
  sa1   UR   U41/A3
  sa1   UR   U40/A1
+ sa1   UR   U40/Y
+ sa1   UR   U40/A2
  sa1   UT   ff_dout_reg_1_/SETB
  sa1   UR   U46/A6
  sa1   UT   ff_dout_reg_2_/SETB
@@ -41,6 +42,7 @@
  sa1   UT   ff_dout_reg_15_/SETB
  sa1   UR   U60/A6
  sa1   UT   error_reg/SETB
+ sa1   UR   U61/A1
  sa1   UT   uu_muxA/uu_rb/out_reg_0_/SETB
  sa1   UT   uu_muxA/uu_rb/out_reg_1_/SETB
  sa1   UT   uu_muxA/uu_rb/out_reg_2_/SETB

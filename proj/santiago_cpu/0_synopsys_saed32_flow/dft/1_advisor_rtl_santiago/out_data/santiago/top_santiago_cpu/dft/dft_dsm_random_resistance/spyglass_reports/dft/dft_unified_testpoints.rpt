@@ -1,0 +1,44 @@
+#+--------------SPYGLASS DFT UNIFIED TEST POINTS REPORT---------------+#
+# date : 2026-07-13
+# TestMAX Advisor : W-2024.09-SP2-08
+
+# test points for target "random_resistant"
+# start time : 21:46:49
+# Requested Test Points : 9
+# Threads requested : 8
+# Threads created   : 7 (excluding main thread)
+
+# Design : "top_santiago_cpu"
+# Initial Random Pattern Test Coverage : 64.85
+# Stuck At Test Coverage : 100.00
+# Target Random Pattern Test Coverage : 99.99
+# Requested Test Points : 9
+# Random Pattern Count : 8000
+1  control-1  w_opcode[2] -root_clock clk -clock clk #Gain : 15.36429 Cov : 80.21505 S@TC : 100.0
+2  control-1  w_memoryRead -root_clock clk -clock clk #Gain : 8.84441 Cov : 89.05946 S@TC : 100.0
+3  control-1  w_opcode[3] -root_clock clk -clock clk #Gain : 4.39826 Cov : 93.45773 S@TC : 100.0
+4  observe    w_memoryOutData[14] -root_clock clk -clock clk #Gain : 0.07898 Cov : 93.53670 S@TC : 100.0
+5  observe    w_memoryOutData[13] -root_clock clk -clock clk #Gain : 0.07646 Cov : 93.61316 S@TC : 100.0
+6  observe    w_memoryOutData[12] -root_clock clk -clock clk #Gain : 0.07646 Cov : 93.68962 S@TC : 100.0
+7  observe    w_memoryOutData[11] -root_clock clk -clock clk #Gain : 0.07646 Cov : 93.76608 S@TC : 100.0
+8  observe    w_memoryOutData[0] -root_clock clk -clock clk #Gain : 0.07646 Cov : 93.84254 S@TC : 100.0
+9  observe    w_memoryOutData[1] -root_clock clk -clock clk #Gain : 0.07646 Cov : 93.91901 S@TC : 100.0
+# Current random pattern test coverage is approximately 93.92% with 9 test points. 
+# Test point search completed : 9 (requested count : 9) test points identified.
+# runtime : 0.0927
+# end time : 21:46:49
+
+#+-------------------- TARGET-WISE TEST POINT SUMMARY ----------------+#
+# target : random_resistant
+#   requested test point count : 9
+#   reported test point count  : 9
+#   runtime                    : 0.0927
+# test points for shadow_wrapper
+#   reported test point count  : 0
+#   runtime                    : 0.0000
+#+--------------------------------------------------------------------+#
+
+#+------------------- UNIFIED TEST POINT SUMMARY ---------------------+#
+# total test points   : 9
+# total runtime       : 0.0927
+#+--------------------------------------------------------------------+#

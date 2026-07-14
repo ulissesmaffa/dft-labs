@@ -7,6 +7,6 @@ cd "$(dirname "$0")"
 
 echo ">> Limpando resultados em: $(pwd)"
 
-rm -rf sg_results/ sg_shell_command.log *.prj
+rm -rf sg_results/ *.log *.prj
 
 echo ">> Limpeza concluida."
