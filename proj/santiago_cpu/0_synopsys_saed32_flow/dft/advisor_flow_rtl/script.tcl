@@ -7,6 +7,9 @@ current_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
 
 # Goal 1 - Stuck-at
 current_goal dft/dft_scan_ready -top top_santiago_cpu
+set_parameter dftGenerateStuckAtFaultReport all
+set_parameter dft_identify_equivalent_faults on
+set_parameter dftDoLogicalRedundancyCheck on
 run_goal
 
 # Goal 2 - Best Practice
