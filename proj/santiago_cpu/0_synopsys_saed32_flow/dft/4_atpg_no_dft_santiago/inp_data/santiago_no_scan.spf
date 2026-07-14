@@ -1,0 +1,137 @@
+STIL 1.0 { Design 2005; }
+Header {
+   Title "  TetraMAX(R)  W-2024.09-SP5-5-i20251022_014626 STIL output";
+   Date "Mon Jul 13 22:54:30 2026";
+   History {
+      Ann {*     Uncollapsed Stuck Fault Summary Report *}
+      Ann {* ----------------------------------------------- *}
+      Ann {* fault class                     code   #faults *}
+      Ann {* ------------------------------  ----  --------- *}
+      Ann {* Detected                         DT          0 *}
+      Ann {* Possibly detected                PT          0 *}
+      Ann {* Undetectable                     UD          0 *}
+      Ann {* ATPG untestable                  AU          0 *}
+      Ann {* Not detected                     ND          0 *}
+      Ann {* ----------------------------------------------- *}
+      Ann {* total faults                                 0 *}
+      Ann {* test coverage                             0.00% *}
+      Ann {* ----------------------------------------------- *}
+      Ann {*  *}
+      Ann {*            Pattern Summary Report *}
+      Ann {* ----------------------------------------------- *}
+      Ann {* #internal patterns                           0 *}
+      Ann {* ----------------------------------------------- *}
+      Ann {*  *}
+      Ann {* rule  severity  #fails  description *}
+      Ann {* ----  --------  ------  --------------------------------- *}
+      Ann {* N20   warning        1  underspecified UDP *}
+      Ann {* B9    warning        1  undriven module internal net *}
+      Ann {* B10   warning       74  unconnected module internal net *}
+      Ann {*  *}
+      Ann {* clock_name        off  period    LE_time  TE_time  meas_time  usage *}
+      Ann {* ----------------  ---  --------  -------  -------  ---------  -------------------------- *}
+      Ann {* clk                0       10ns        4        6          4  nonscan_DFF  *}
+      Ann {* rst                0       10ns        4        6          4  set reset nonscan_DFF  *}
+      Ann {*  *}
+      Ann {* There are no constraint ports *}
+      Ann {* There are no equivalent pins *}
+      Ann {* There are no net connections *}
+      Ann {* top_module_name = top_santiago_cpu *}
+   }
+}
+Signals {
+   "clk" In; "rst" In; "cmdin[6]" In; "cmdin[5]" In; "cmdin[4]" In; "cmdin[3]" In;
+   "cmdin[2]" In; "cmdin[1]" In; "cmdin[0]" In; "din_1[7]" In; "din_1[6]" In; "din_1[5]" In;
+   "din_1[4]" In; "din_1[3]" In; "din_1[2]" In; "din_1[1]" In; "din_1[0]" In; "din_2[7]" In;
+   "din_2[6]" In; "din_2[5]" In; "din_2[4]" In; "din_2[3]" In; "din_2[2]" In; "din_2[1]" In;
+   "din_2[0]" In; "din_3[7]" In; "din_3[6]" In; "din_3[5]" In; "din_3[4]" In; "din_3[3]" In;
+   "din_3[2]" In; "din_3[1]" In; "din_3[0]" In; "dout_low[7]" Out; "dout_low[6]" Out;
+   "dout_low[5]" Out; "dout_low[4]" Out; "dout_low[3]" Out; "dout_low[2]" Out; "dout_low[1]" Out;
+   "dout_low[0]" Out; "dout_high[7]" Out; "dout_high[6]" Out; "dout_high[5]" Out;
+   "dout_high[4]" Out; "dout_high[3]" Out; "dout_high[2]" Out; "dout_high[1]" Out;
+   "dout_high[0]" Out; "zero" Out; "error" Out; "cpu_rdy" Out;
+}
+SignalGroups {
+   "_default_In_Timing_" = '"cmdin[6]" + "cmdin[5]" + "cmdin[4]" + "cmdin[3]" + "cmdin[2]"
+   + "cmdin[1]" + "cmdin[0]" + "din_1[7]" + "din_1[6]" + "din_1[5]" + "din_1[4]" + "din_1[3]"
+   + "din_1[2]" + "din_1[1]" + "din_1[0]" + "din_2[7]" + "din_2[6]" + "din_2[5]" + "din_2[4]"
+   + "din_2[3]" + "din_2[2]" + "din_2[1]" + "din_2[0]" + "din_3[7]" + "din_3[6]" + "din_3[5]"
+   + "din_3[4]" + "din_3[3]" + "din_3[2]" + "din_3[1]" + "din_3[0]"'; // #signals=31
+   "_pi" = '"clk" + "rst" + "cmdin[6]" + "cmdin[5]" + "cmdin[4]" + "cmdin[3]" + "cmdin[2]"
+   + "cmdin[1]" + "cmdin[0]" + "din_1[7]" + "din_1[6]" + "din_1[5]" + "din_1[4]" + "din_1[3]"
+   + "din_1[2]" + "din_1[1]" + "din_1[0]" + "din_2[7]" + "din_2[6]" + "din_2[5]" + "din_2[4]"
+   + "din_2[3]" + "din_2[2]" + "din_2[1]" + "din_2[0]" + "din_3[7]" + "din_3[6]" + "din_3[5]"
+   + "din_3[4]" + "din_3[3]" + "din_3[2]" + "din_3[1]" + "din_3[0]"'; // #signals=33
+   "_in" = '"clk" + "rst" + "cmdin[6]" + "cmdin[5]" + "cmdin[4]" + "cmdin[3]" + "cmdin[2]"
+   + "cmdin[1]" + "cmdin[0]" + "din_1[7]" + "din_1[6]" + "din_1[5]" + "din_1[4]" + "din_1[3]"
+   + "din_1[2]" + "din_1[1]" + "din_1[0]" + "din_2[7]" + "din_2[6]" + "din_2[5]" + "din_2[4]"
+   + "din_2[3]" + "din_2[2]" + "din_2[1]" + "din_2[0]" + "din_3[7]" + "din_3[6]" + "din_3[5]"
+   + "din_3[4]" + "din_3[3]" + "din_3[2]" + "din_3[1]" + "din_3[0]"'; // #signals=33
+   "_default_Out_Timing_" = '"dout_low[7]" + "dout_low[6]" + "dout_low[5]" + "dout_low[4]"
+   + "dout_low[3]" + "dout_low[2]" + "dout_low[1]" + "dout_low[0]" + "dout_high[7]"
+   + "dout_high[6]" + "dout_high[5]" + "dout_high[4]" + "dout_high[3]" + "dout_high[2]"
+   + "dout_high[1]" + "dout_high[0]" + "zero" + "error" + "cpu_rdy"'; // #signals=19
+   "_po" = '"dout_low[7]" + "dout_low[6]" + "dout_low[5]" + "dout_low[4]" + "dout_low[3]"
+   + "dout_low[2]" + "dout_low[1]" + "dout_low[0]" + "dout_high[7]" + "dout_high[6]"
+   + "dout_high[5]" + "dout_high[4]" + "dout_high[3]" + "dout_high[2]" + "dout_high[1]"
+   + "dout_high[0]" + "zero" + "error" + "cpu_rdy"'; // #signals=19
+   "_out" = '"dout_low[7]" + "dout_low[6]" + "dout_low[5]" + "dout_low[4]" + "dout_low[3]"
+   + "dout_low[2]" + "dout_low[1]" + "dout_low[0]" + "dout_high[7]" + "dout_high[6]"
+   + "dout_high[5]" + "dout_high[4]" + "dout_high[3]" + "dout_high[2]" + "dout_high[1]"
+   + "dout_high[0]" + "zero" + "error" + "cpu_rdy"'; // #signals=19
+}
+Timing {
+   WaveformTable "_default_WFT_" {
+      Period '10ns';
+      Waveforms {
+         "clk" { 0 { '0ns' D; } }
+         "clk" { P { '0ns' D; '4ns' U; '5ns' D; } }
+         "clk" { 1 { '0ns' U; } }
+         "clk" { Z { '0ns' Z; } }
+         "rst" { 0 { '0ns' D; } }
+         "rst" { P { '0ns' D; '4ns' U; '5ns' D; } }
+         "rst" { 1 { '0ns' U; } }
+         "rst" { Z { '0ns' Z; } }
+         "_default_In_Timing_" { 0 { '0ns' D; } }
+         "_default_In_Timing_" { 1 { '0ns' U; } }
+         "_default_In_Timing_" { Z { '0ns' Z; } }
+         "_default_In_Timing_" { N { '0ns' N; } }
+         "_default_Out_Timing_" { X { '0ns' Z; } }
+         "_default_Out_Timing_" { H { '0ns' Z; '4ns' H; } }
+         "_default_Out_Timing_" { T { '0ns' Z; '4ns' T; } }
+         "_default_Out_Timing_" { L { '0ns' Z; '4ns' L; } }
+      }
+   }
+}
+ScanStructures {
+   // Uncomment and modify the following to suit your design
+   // ScanChain "chain_name" { ScanIn "chain_input_name"; ScanOut "chain_output_name"; }
+}
+PatternBurst "_burst_" {
+   PatList { "_pattern_" {
+   }
+}}
+PatternExec {
+   PatternBurst "_burst_";
+}
+Procedures {
+   "multiclock_capture" { W "_default_WFT_";
+      V { "_pi"=\j \r33 #; "_po"=\j \r19 #; }}
+   "allclock_capture" { W "_default_WFT_";
+      V { "_pi"=\j \r33 #; "_po"=\j \r19 #; }}
+   "allclock_launch" { W "_default_WFT_";
+      V { "_pi"=\j \r33 #; "_po"=\j \r19 #; }}
+   "allclock_launch_capture" { W "_default_WFT_";
+      V { "_pi"=\j \r33 #; "_po"=\j \r19 #; }}
+   // Uncomment and modify the following to suit your design
+   // load_unload {
+      // V { "clk" = 0; "rst" = 0; } // force clocks off and scan enable pins active
+      // Shift { V { _si=#; _so=#; "clk" = P; "rst" = P; }} // pulse shift clocks
+   // }
+}
+MacroDefs {
+   "test_setup" {
+      W "_default_WFT_";
+      V { "clk"=0; "rst"=0; }
+   }
+}

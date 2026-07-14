@@ -1,0 +1,15 @@
+      Collapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT          0
+ Possibly detected                PT          0
+ Undetectable                     UD        333
+ ATPG untestable                  AU       5443
+ Not detected                     ND          0
+ -----------------------------------------------
+ total faults                              5776
+ test coverage                             0.00%
+ fault coverage                            0.00%
+ ATPG effectiveness                      100.00%
+ -----------------------------------------------
