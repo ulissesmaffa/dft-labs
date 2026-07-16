@@ -1,0 +1,3 @@
+current_design top
+clock     -name clk -testclock
+test_mode -name rst -value 0 -scanshift

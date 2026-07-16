@@ -28,4 +28,4 @@ run_goal
 save_project
 write_aggregate_report html
 
-exit
+#exit
