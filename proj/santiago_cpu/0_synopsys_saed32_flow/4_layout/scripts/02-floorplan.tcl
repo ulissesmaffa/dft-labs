@@ -7,46 +7,54 @@ file mkdir $REPORT_DIR
 initialize_floorplan \
     -shape R \
     -orientation N \
-    -side_length {700 700} \
-    -core_offset 350
+    -core_offset 350 \
+    -honor_pad_limit 
+
+create_io_ring -name io_ring
+#create_io_ring -name io_ring -pad_cell_list [get_cells * -filter design_type==pad]
+
+place_io
+
+set_attribute FILLER* reference_orientation R90
+#create_io_filler_cells -reference_cells {FILLER1 FILLER01}
 
 # pads collection
-set all_pads   [get_cells * -filter "design_type==pad"]
-set corner_ins [get_cells * -filter "ref_name==CORNER"]
-set ring_pads  [remove_from_collection $all_pads $corner_ins]
+#set all_pads   [get_cells * -filter "design_type==pad"]
+#set corner_ins [get_cells * -filter "ref_name==CORNER"]
+#set ring_pads  [remove_from_collection $all_pads $corner_ins]
 #puts "total pads   : [sizeof_collection $all_pads]"
 #puts "corners      : [sizeof_collection $corner_ins]"
 #puts "ring (no cnr): [sizeof_collection $ring_pads]"
 #72 / 4 / 68
 
 # ring with 68 
-create_io_ring -name outer_ring -pad_cell_list $ring_pads
+#create_io_ring -name outer_ring -pad_cell_list $ring_pads
 
 # corners
-set bb [get_attribute [current_block] boundary]
-set dw 0; set dh 0
-foreach pt $bb {
-    if {[lindex $pt 0] > $dw} {set dw [lindex $pt 0]}
-    if {[lindex $pt 1] > $dh} {set dh [lindex $pt 1]}
-}
-set cref [get_attribute [get_cells CORNER0] ref_name]
-set cw [get_attribute [get_lib_cells */$cref] width]
-set ch [get_attribute [get_lib_cells */$cref] height]
+#set bb [get_attribute [current_block] boundary]
+#set dw 0; set dh 0
+#foreach pt $bb {
+#    if {[lindex $pt 0] > $dw} {set dw [lindex $pt 0]}
+#    if {[lindex $pt 1] > $dh} {set dh [lindex $pt 1]}
+#}
+#set cref [get_attribute [get_cells CORNER0] ref_name]
+#set cw [get_attribute [get_lib_cells */$cref] width]
+#set ch [get_attribute [get_lib_cells */$cref] height]
 
-set_cell_location -coordinates [list 0             0            ] -orientation R0 -fixed [get_cells CORNER0] ;# BL
-set_cell_location -coordinates [list [expr {$dw-$cw}] 0          ] -orientation R0 -fixed [get_cells CORNER1] ;# BR
-set_cell_location -coordinates [list [expr {$dw-$cw}] [expr {$dh-$ch}]] -orientation R0 -fixed [get_cells CORNER2] ;# TR
-set_cell_location -coordinates [list 0             [expr {$dh-$ch}]] -orientation R0 -fixed [get_cells CORNER3] ;# TL
+#set_cell_location -coordinates [list 0             0            ] -orientation R0 -fixed [get_cells CORNER0] ;# BL
+#set_cell_location -coordinates [list [expr {$dw-$cw}] 0          ] -orientation R0 -fixed [get_cells CORNER1] ;# BR
+#set_cell_location -coordinates [list [expr {$dw-$cw}] [expr {$dh-$ch}]] -orientation R0 -fixed [get_cells CORNER2] ;# TR
+#set_cell_location -coordinates [list 0             [expr {$dh-$ch}]] -orientation R0 -fixed [get_cells CORNER3] ;# TL
 
 # Check
 #foreach c {CORNER0 CORNER1 CORNER2 CORNER3} {
 #    puts "$c : placed=[get_attribute [get_cells $c] is_placed]  origin=[get_attribute [get_cells $c] origin]  orient=[get_attribute [get_cells $c] orientation]"
 #}
 
-place_io
+#place_io
 
-start_gui
-return
+#start_gui
+#return
 # Filler
 
 # PG lógico
@@ -81,6 +89,9 @@ set_pg_strategy core_rail -core \
     -pattern {{name: std_rail} {nets: {VDD VSS}}}
 
 compile_pg -strategies core_rail
+
+# trucks
+create_trunk_pin_to_trunk -nets {VDD VSS}
 
 # placement
 create_placement -floorplan -effort high
