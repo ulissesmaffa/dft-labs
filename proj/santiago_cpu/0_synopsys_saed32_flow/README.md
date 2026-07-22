@@ -1,4 +1,4 @@
-# SAED32 Flow — RTL-to-GDS
+# SAED32 Flow — RTL-to-GDSII
 **Author:** Ulisses Maffazioli
 **Created:** 2026-07-12
 **Tool:** Synopsys tooling on the SAED32 EDK (32 nm)

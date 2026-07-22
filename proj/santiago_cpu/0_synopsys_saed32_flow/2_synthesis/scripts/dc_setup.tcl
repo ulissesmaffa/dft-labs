@@ -10,22 +10,21 @@ set_app_var search_path [concat $search_path "." $STD_LIB_PATH $IO_LIB_PATH $SOU
 
 # library settings
 set synthetic_library   "dw_foundation.sldb"
-set target_library      $STD_LIB_PATH/saed32rvt_ss0p75v125c.db ;#slow
-set iopad_library	    $IO_LIB_PATH/saed32io_fc_ss0p95v125c_2p25v.db ;#slow
+set target_library      $STD_LIB_PATH/db_nldm/saed32rvt_ss0p75v125c.db
+set iopad_library       $IO_LIB_PATH/db_nldm/saed32io_wb_ss0p95v125c_2p25v.db
 
 # set link_library        "* $target_library $synthetic_library $iopad_library"
 set_app_var link_library   [concat "*" $target_library $synthetic_library $iopad_library] 
 
 # min/max (BC-WC): each lib max (slow) gets its version min (fast)
-set_min_library $STD_LIB_PATH/saed32rvt_ss0p75v125c.db \
-    -min_version $STD_LIB_PATH/saed32rvt_ff0p95v25c.db
+set_min_library $STD_LIB_PATH/db_nldm/saed32rvt_ss0p75v125c.db \
+    -min_version $STD_LIB_PATH/db_nldm/saed32rvt_ff0p95v25c.db
 
-set_min_library $IO_LIB_PATH/saed32io_fc_ss0p95v125c_2p25v.db \
-    -min_version $IO_LIB_PATH/saed32io_fc_ff1p16vn40c_2p75v.db 
+set_min_library $IO_LIB_PATH/db_nldm/saed32io_wb_ss0p95v125c_2p25v.db \
+    -min_version $IO_LIB_PATH/db_nldm/saed32io_wb_ff1p16vn40c_2p75v.db
 
 # design setting
-set TOP_MODULE_NAME top_santiago_cpu
-
+set TOP_MODULE_NAME top_santiago_cpu_pad
 set DESIGN santiago_cpu
 
 #UM: Fix register autoremoval

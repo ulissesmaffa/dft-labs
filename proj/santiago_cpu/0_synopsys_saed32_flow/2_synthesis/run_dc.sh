@@ -7,6 +7,10 @@ SCRIPTS_DIR="$ROOT_DIR/scripts"
 
 export ROOT_DIR
 
+rm -rf "$ROOT_DIR/.tmp"
+rm -rf "$ROOT_DIR/../out_data/reports/syn"/*
+rm -rf "$ROOT_DIR/../out_data/pre_layout"/*
+
 mkdir -p "$TMP_DIR"
 
 module load vcs verdi designcompiler syn

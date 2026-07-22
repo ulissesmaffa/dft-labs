@@ -6,6 +6,7 @@ module top (
     reg [3:0] hold;
     always @(*)
         if (en) hold = din;
+	else hold = 4'b0;
 
     always @(posedge clk or posedge rst)
         if (rst) dout <= 4'b0;

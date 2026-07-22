@@ -1,57 +1,103 @@
+########################################
 # ICC2
+########################################
 
 file mkdir $REPORT_DIR
 
-# 1. floorplan
 initialize_floorplan \
-    -control_type core \
-    -core_utilization 0.70 \
-    -core_offset 40 \
     -shape R \
-    -orientation N
+    -orientation N \
+    -side_length {700 700} \
+    -core_offset 350
 
-# 2. PG lógico
+# pads collection
+set all_pads   [get_cells * -filter "design_type==pad"]
+set corner_ins [get_cells * -filter "ref_name==CORNER"]
+set ring_pads  [remove_from_collection $all_pads $corner_ins]
+#puts "total pads   : [sizeof_collection $all_pads]"
+#puts "corners      : [sizeof_collection $corner_ins]"
+#puts "ring (no cnr): [sizeof_collection $ring_pads]"
+#72 / 4 / 68
+
+# ring with 68 
+create_io_ring -name outer_ring -pad_cell_list $ring_pads
+
+# corners
+set bb [get_attribute [current_block] boundary]
+set dw 0; set dh 0
+foreach pt $bb {
+    if {[lindex $pt 0] > $dw} {set dw [lindex $pt 0]}
+    if {[lindex $pt 1] > $dh} {set dh [lindex $pt 1]}
+}
+set cref [get_attribute [get_cells CORNER0] ref_name]
+set cw [get_attribute [get_lib_cells */$cref] width]
+set ch [get_attribute [get_lib_cells */$cref] height]
+
+set_cell_location -coordinates [list 0             0            ] -orientation R0 -fixed [get_cells CORNER0] ;# BL
+set_cell_location -coordinates [list [expr {$dw-$cw}] 0          ] -orientation R0 -fixed [get_cells CORNER1] ;# BR
+set_cell_location -coordinates [list [expr {$dw-$cw}] [expr {$dh-$ch}]] -orientation R0 -fixed [get_cells CORNER2] ;# TR
+set_cell_location -coordinates [list 0             [expr {$dh-$ch}]] -orientation R0 -fixed [get_cells CORNER3] ;# TL
+
+# Check
+#foreach c {CORNER0 CORNER1 CORNER2 CORNER3} {
+#    puts "$c : placed=[get_attribute [get_cells $c] is_placed]  origin=[get_attribute [get_cells $c] origin]  orient=[get_attribute [get_cells $c] orientation]"
+#}
+
+place_io
+
+start_gui
+return
+# Filler
+
+# PG lógico
 connect_pg_net -automatic
 
-# 3. anel de power (M5 vertical / M6 horizontal — direções derivadas do .tf)
+# power ring
 create_pg_ring_pattern ring_pattern \
     -horizontal_layer M6 -horizontal_width 5 -horizontal_spacing 2 \
     -vertical_layer   M5 -vertical_width   5 -vertical_spacing   2 \
     -track_alignment auto
+
 set_pg_strategy core_ring -core \
     -pattern {{name: ring_pattern} {nets: {VDD VSS}} {offset: {5 5}}}
+
 compile_pg -strategies core_ring
 
-# 4. mesh sobre o core (core ~156um: pitch pequeno)
+# mesh over corer
 create_pg_mesh_pattern mesh_pattern \
     -layers { \
-        {{vertical_layer: M5}   {width: 2} {spacing: minimum} {pitch: 10}} \
-        {{horizontal_layer: M6} {width: 2} {spacing: minimum} {pitch: 10}} }
+        {{vertical_layer: M5}   {width: 2} {spacing: minimum} {pitch: 150}} \
+        {{horizontal_layer: M6} {width: 2} {spacing: minimum} {pitch: 150}} }
+
 set_pg_strategy core_mesh -core \
     -pattern {{name: mesh_pattern} {nets: {VDD VSS}}}
+
 compile_pg -strategies core_mesh
 
-# 5. rail M1 dos standard cells
+# rail M1 of the standard cells
 create_pg_std_cell_conn_pattern std_rail -layers {M1}
+
 set_pg_strategy core_rail -core \
     -pattern {{name: std_rail} {nets: {VDD VSS}}}
+
 compile_pg -strategies core_rail
 
-# 6. placement
+# placement
 create_placement -floorplan -effort high
 legalize_placement
 
-# 7. re-conectar PG (agora com células colocadas) e checar
+# reconnect PG
 connect_pg_net -automatic
 check_legality
 
-# 8. reports e save
+# reports and save
 report_utilization > $REPORT_DIR/fp_utilization.rpt
 save_block -as ${TOP_MODULE_NAME}_floorplan
 save_lib
 
-
-
+###############################################
+#ICC1
+################################################
 # #02a-floorplan
 # # remove ideal networks
 # remove_ideal_network [all_fanout -flat -clock_tree]

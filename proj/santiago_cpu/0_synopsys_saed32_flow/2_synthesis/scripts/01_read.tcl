@@ -30,20 +30,19 @@ link
 uniquify
 
 # DFT spec
-create_port -direction in  test_si
-create_port -direction out test_so
-create_port -direction in  test_se
+#create_port -direction in  test_si
+#create_port -direction out test_so
+#create_port -direction in  test_se
 
-set_scan_configuration -chain_count 1
+#set_scan_configuration -chain_count 1
 
-set_dft_signal -view spec -type ScanDataIn  -port test_si
-set_dft_signal -view spec -type ScanDataOut -port test_so
-set_dft_signal -view spec -type ScanEnable  -port test_se
+#set_dft_signal -view spec -type ScanDataIn  -port test_si
+#set_dft_signal -view spec -type ScanDataOut -port test_so
+#set_dft_signal -view spec -type ScanEnable  -port test_se
 
 # check design
 check_design > $REPORT_DIR/dc_check_design.rpt
 
 write -f ddc -hier -out  $PRE_LAYOUT_DIR/${DESIGN}_unmapped.ddc
 
-# set_wire_load_model -name "sky130"
-# set_wire_load_mode "top"
+
