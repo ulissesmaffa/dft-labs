@@ -40,6 +40,11 @@ uniquify
 #set_dft_signal -view spec -type ScanDataOut -port test_so
 #set_dft_signal -view spec -type ScanEnable  -port test_se
 
+#use for pads
+#set_dft_signal -view existing_dft -type ScanDataIn  -port test_si
+#set_dft_signal -view existing_dft -type ScanDataOut -port test_so
+#set_dft_signal -view existing_dft -type ScanEnable  -port test_se
+
 # check design
 check_design > $REPORT_DIR/dc_check_design.rpt
 

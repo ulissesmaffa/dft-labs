@@ -1,12 +1,14 @@
 # optimize design
-set_fix_hold [all_clocks]
-set_fix_multiple_port_nets -all -buffer_constants
-set verilogout_no_tri true
+#set_fix_hold [all_clocks]
+#set_fix_multiple_port_nets -all -buffer_constants
+#set verilogout_no_tri true
 
 # dont_touch nos pads ANTES do compile (crítico!)
-set_dont_touch [get_cells -hier -filter "is_hierarchical==false && \
-    (ref_name=~*I1025* || ref_name=~*CORNER* || ref_name=~*VDD* || \
-     ref_name=~*VSS* || ref_name=~*IOVDD* || ref_name=~*IOVSS*)"]
+#set_dont_touch [get_cells -hier -filter "is_hierarchical==false && \
+#    (ref_name=~*I1025* || ref_name=~*CORNER* || ref_name=~*VDD* || \
+#     ref_name=~*VSS* || ref_name=~*IOVDD* || ref_name=~*IOVSS*)"]
+
+#set_dont_touch [get_nets -hier *test*]
 
 #compile_ultra -no_autoungroup -scan
 compile_ultra -no_autoungroup
