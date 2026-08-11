@@ -1,7 +1,15 @@
-# optimize design
-set_fix_hold [all_clocks]
-set_fix_multiple_port_nets -all -buffer_constants
-set verilogout_no_tri true
+# --- Protect explicitly instantiated I/O cells ---
+# Note: corner/filler/power_cut are physical-only (LEF-only, no logical model)
+#       and are therefore created in ICC2, not instantiated in RTL.
+foreach pat {PAD_* VDD_* VSS_* IOVDD_* IOVSS_*} {
+    set c [get_cells -quiet $pat]
+    if {[sizeof_collection $c] > 0} {
+        set_dont_touch $c
+        puts "INFO: dont_touch applied to [sizeof_collection $c] cells matching '$pat'"
+    } else {
+        puts "ERROR: no cell matched '$pat' - check top_pad.sv"
+    }
+}
 
 #compile_ultra -no_autoungroup -scan
 compile_ultra -no_autoungroup
@@ -52,35 +60,3 @@ write_file -format verilog -hier -out $PRE_LAYOUT_DIR/$DESIGN.v
 
 #write_test_protocol -output $PRE_LAYOUT_DIR/$DESIGN.spf
 
-# UM: Review later
-# # optimize design
-# set_fix_hold [all_clocks]
-# set_fix_multiple_port_nets -all -buffer_constants
-# set verilogout_no_tri true
-# #Tell DC to preserve the register even if there 2 or more registers produce the same output
-# set_register_merging [get_designs *] false
-# #Tell DC to preserve register that has no fanout
-# set_unloaded_register_removal  [all_registers] false
-# sizeof_collection [all_registers ]
-# compile_ultra -no_autoungroup 
-
-# # generate reports
-# redirect -file "$REPORT_DIR/dc_constraints_180nm.rpt" {report_constraints -all}
-# redirect -file "$REPORT_DIR/dc_timing_max_180nm.rpt"  {report_timing -max 10}
-# redirect -file "$REPORT_DIR/dc_timing_min_180nm.rpt"  {report_timing -delay min -max 10}
-# redirect -file "$REPORT_DIR/dc_qor_180nm.rpt"         {report_qor}
-# redirect -file "$REPORT_DIR/dc_power_180nm.rpt"       {report_power}
-
-# # save design data
-# change_names -rule verilog -hier
-# write -f ddc -hier -out     "$PRE_LAYOUT_DIR/${TOP_MODULE_NAME}_mapped_180nm.ddc"
-# write -f verilog -hier -out "$PRE_LAYOUT_DIR/${TOP_MODULE_NAME}_mapped_180nm.v"
-# write_sdc                   "$PRE_LAYOUT_DIR/${TOP_MODULE_NAME}_mapped_180nm.sdc"
-
-# sizeof_collection [all_registers]
-
-# report_timing
-# report_constraint
-# report_area
-# report_power
-# report_qor

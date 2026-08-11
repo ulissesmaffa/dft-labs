@@ -4,4 +4,4 @@ source ../scripts/01_read.tcl
 source ../scripts/02_constraints.tcl
 source ../scripts/03_compile.tcl
 
-exit
+#exit

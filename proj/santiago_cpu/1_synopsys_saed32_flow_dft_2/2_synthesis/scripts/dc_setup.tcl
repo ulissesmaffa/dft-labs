@@ -24,7 +24,7 @@ set_min_library $IO_LIB_PATH/db_nldm/saed32io_wb_ss0p95v125c_2p25v.db \
     -min_version $IO_LIB_PATH/db_nldm/saed32io_wb_ff1p16vn40c_2p75v.db
 
 # design setting
-set TOP_MODULE_NAME top_santiago_cpu_pad
+set TOP_MODULE_NAME top_santiago_cpu
 set DESIGN santiago_cpu
 
 #UM: Fix register autoremoval

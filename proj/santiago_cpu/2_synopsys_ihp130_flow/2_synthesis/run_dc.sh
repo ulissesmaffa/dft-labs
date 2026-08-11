@@ -15,7 +15,7 @@ mkdir -p "$TMP_DIR"
 
 module load vcs verdi designcompiler syn
 
-echo "=== Running Synthesis ==="
+echo ">> Running Synthesis..."
 cd "$TMP_DIR"
 dc_shell -f "$SCRIPTS_DIR/dc_top.tcl" 2>&1 | tee -i syn.log
-echo "=== Done ==="
+echo ">> Synthesis Done!"

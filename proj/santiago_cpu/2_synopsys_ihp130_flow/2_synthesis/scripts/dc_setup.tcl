@@ -3,7 +3,7 @@ set PRJ_ROOT            $PRJ_ROOT_SETUP
 set FLOW_ROOT           $FLOW_ROOT_SETUP
 set IO_LIB_PATH	        $IO_LIB_PATH_SETUP
 set STD_LIB_PATH        $STD_LIB_PATH_SETUP
-set SOURCE_PATH         $FLOW_ROOT/inp_data/rtl
+set SOURCE_PATH         $FLOW_ROOT/inp_data/source
 
 # search path for all files
 set_app_var search_path [concat $search_path "." $STD_LIB_PATH $IO_LIB_PATH $SOURCE_PATH]

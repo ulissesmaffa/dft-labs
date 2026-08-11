@@ -55,6 +55,16 @@ set IOGND_NET  "VSSPAD"   ;# io ground (3.3V)
 set STD_PWR_PIN "VDD"
 set STD_GND_PIN "VSS"
 
+# --- fillers / corner do anel de I/O (confirmados no LEF de I/O) ---
+#set PAD_FILLER   "filler10u filler4u filler2u filler1u"
+#set PAD_CORNER   "corner"
+# I/O corner and fillers come from the LEF (auto lib EXPLORE_physical_only),
+# since the lm_shell NDM only holds the 9 cells that have timing models.
+set PAD_CORNER "EXPLORE_physical_only/corner"
+set PAD_FILLER "filler10u filler4u filler2u filler1u"
+
+
+
 # --- fillers / antenna (stdcell) ---
 # IHP: FEED* = fillers (feedthrough), do maior para o menor.
 #      DECAP* = decoupling caps (opcional, para preencher + desacoplar).
