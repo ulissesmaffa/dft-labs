@@ -1,26 +1,74 @@
-########################################
-# FLOORPLAN v2 — top_pad_rvx (ICC2, Modelo A)
-########################################
 file mkdir $REPORT_DIR
 
-# ------------------------------------------------------------------------------
-# 1. Inicializa floorplan — die fixo 1950x1950, core_offset = 300 (pad) + 50
-# ------------------------------------------------------------------------------
-initialize_floorplan -boundary {{0 0} {1950 1950}} -core_offset 350
+#########################
+# 02a-floorplan
+#########################
+# Initialization Floorplan
+initialize_floorplan -control_type die \
+    -boundary {{0 0} {1950 1950}} \
+    -core_offset 350
 
-# ------------------------------------------------------------------------------
-# 2. Posiciona os pads no anel (cria io_ring + place_io, espaçamento fixo)
-# ------------------------------------------------------------------------------
+# Positions the Pads
 source ../scripts/auto_iopad.tcl
 
-# ------------------------------------------------------------------------------
-# 3. Fecha o anel com IO fillers (R90 necessário p/ bordas verticais no SAED32)
-# ------------------------------------------------------------------------------
+# Insert IO Fillers
 set_attribute [get_lib_cells saed32io_wb_5v/FILLER*] reference_orientation R90
 create_io_filler_cells -reference_cells $PAD_FILLER
-
 check_io_placement -overlap all
 check_io_placement -gap
+
+# Securing the pads
+set_fixed_objects [get_cells {CORNER* PAD_* VDD_* VSS_* IOVDD_* IOVSS_*}]
+
+# Checking the pads
+sizeof_collection [get_cells -filter "is_placed==true" {PAD_* VDD_* VSS_* IOVDD_* IOVSS_* CORNER*}]
+
+# Checkpoint: 1
+save_block -as ${TOP_MODULE_NAME}_fp
+
+#########################
+# 02b-fp_placement
+#########################
+# Pre-placement check (RM: dp_pre_macro_placement)
+check_design -checks dp_pre_macro_placement > $REPORT_DIR/check_design_pre_placement.rpt
+
+# Coarse placement -- NOT legalized. Legalization happens later, in place_opt.
+create_placement -floorplan -timing_driven
+
+# Placement report (RM)
+report_placement -wirelength all -verbose high > $REPORT_DIR/report_placement.rpt
+
+report_utilization
+
+# Checkpoint: 2
+save_block -as ${TOP_MODULE_NAME}_placement
+
+#########################
+# 02c-fp_powerplan
+#########################
+
+
+
+create_net -power  VDD
+create_net -ground VSS
+create_net -power  VDDIO
+create_net -ground VSSIO
+
+connect_pg_net -net [get_nets VDD]   [get_pins -hierarchical -filter "name==VDD"]
+connect_pg_net -net [get_nets VSS]   [get_pins -hierarchical -filter "name==VSS"]
+connect_pg_net -net [get_nets VDDIO] [get_pins -hierarchical -filter "name==VDDIO"]
+connect_pg_net -net [get_nets VSSIO] [get_pins -hierarchical -filter "name==VSSIO"]
+
+
+
+
+
+
+
+
+
+
+
 
 # ------------------------------------------------------------------------------
 # 4. PG lógico — liga nets VDD/VSS/VDDIO/VSSIO aos pinos
