@@ -3,77 +3,209 @@ file mkdir $REPORT_DIR
 #########################
 # 02a-floorplan
 #########################
-# Initialization Floorplan
 initialize_floorplan -control_type die \
     -boundary {{0 0} {1950 1950}} \
     -core_offset 350
 
-# Positions the Pads
 source ../scripts/auto_iopad.tcl
 
-# Insert IO Fillers
 set_attribute [get_lib_cells saed32io_wb_5v/FILLER*] reference_orientation R90
 create_io_filler_cells -reference_cells $PAD_FILLER
+
 check_io_placement -overlap all
 check_io_placement -gap
 
-# Securing the pads
 set_fixed_objects [get_cells {CORNER* PAD_* VDD_* VSS_* IOVDD_* IOVSS_*}]
-
-# Checking the pads
-sizeof_collection [get_cells -filter "is_placed==true" {PAD_* VDD_* VSS_* IOVDD_* IOVSS_* CORNER*}]
-
-# Checkpoint: 1
 save_block -as ${TOP_MODULE_NAME}_fp
 
 #########################
-# 02b-fp_placement
+#
 #########################
-# Pre-placement check (RM: dp_pre_macro_placement)
-check_design -checks dp_pre_macro_placement > $REPORT_DIR/check_design_pre_placement.rpt
 
-# Coarse placement -- NOT legalized. Legalization happens later, in place_opt.
-create_placement -floorplan -timing_driven
+# pre power ring UPF
 
-# Placement report (RM)
-report_placement -wirelength all -verbose high > $REPORT_DIR/report_placement.rpt
+load_upf ../scripts/power.upf
+commit_upf
 
-report_utilization
+connect_supply_net VSSIO -ports [get_pins */VSSIO]
+connect_supply_net VSS -ports [get_pins */VSS]
+connect_supply_net VDDIO -ports [get_pins */VDDIO]
+connect_supply_net VDD -ports [get_pins */VDD]
 
-# Checkpoint: 2
+connect_pg_net -automatic
+
+# power ring
+create_pg_ring_pattern ring_pattern \
+    -horizontal_layer M9 -horizontal_width 5 -horizontal_spacing 2 \
+    -vertical_layer   M8 -vertical_width   5 -vertical_spacing   2
+
+set_pg_strategy core_ring -core \
+    -pattern {{pattern: ring_pattern}{nets: {VSS VDD}}}
+
+compile_pg -strategies core_ring
+
+# Trunks
+disconnect_net */*IOPAD
+
+create_trunk_pin_to_trunk -nets {VDD VSS} -adjust_to_pin -of_cells {VSS_* VDD_*}
+create_trunk_pin_to_trunk -nets {VDD VSS} -adjust_to_pin -of_cells {VSS_* VDD_*} -direction H -layer M9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#########################
+# 02b-power_intent (UPF)
+#########################
+create_power_domain main_domain -include_scope
+
+foreach net {VDD VSS VDDIO VSSIO} {
+    create_supply_net  -domain main_domain $net
+    create_supply_port -domain main_domain -direction in $net
+    connect_supply_net -ports $net $net
+}
+
+set_domain_supply_net -primary_power_net VDD -primary_ground_net VSS main_domain
+commit_upf
+
+connect_pg_net -automatic
+
+#connect_pg_net -net [get_nets VDD] [get_pins -hierarchical -filter "name==VDD"]
+#connect_pg_net -net [get_nets VSS] [get_pins -hierarchical -filter "name==VSS"]
+#connect_pg_net -net [get_nets VDDIO] [get_pins -hierarchical -filter "name==VDDIO"]
+#connect_pg_net -net [get_nets VSSIO] [get_pins -hierarchical -filter "name==VSSIO"]
+
+# VERIFICACAO: os quatro devem apontar para nets distintos
+#foreach p {VDD VSS VDDIO VSSIO} {
+#    puts "PAD_CLK/$p -> [get_object_name [get_nets -of_objects [get_pins PAD_CLK/$p]]]"
+#}
+
+#########################
+# 02c-placement
+#########################
+create_placement -floorplan -effort high
+legalize_placement
+check_legality
+report_placement -wirelength all -verbose high
 save_block -as ${TOP_MODULE_NAME}_placement
 
 #########################
-# 02c-fp_powerplan
+# 02d-powerplan
 #########################
+# Ring M9(h) / M8(v)
+create_pg_ring_pattern ring_pattern \
+    -horizontal_layer M9 -horizontal_width 5 -horizontal_spacing 2 \
+    -vertical_layer   M8 -vertical_width   5 -vertical_spacing   2
 
+set_pg_strategy core_ring -core \
+    -pattern {{pattern: ring_pattern}{nets: {VSS VDD}}}
 
+# Mesh em escada M2..M7 com via entre camadas adjacentes.
+# Sem os degraus, a via de M1 ate M6 nao fecha (18326 descartadas como dangling).
+create_pg_mesh_pattern pg_mesh -layers { \
+    {{vertical_layer:   M2} {width: 0.2} {spacing: minimum} {pitch: 10} {trim: true}} \
+    {{horizontal_layer: M3} {width: 0.2} {spacing: minimum} {pitch: 10} {trim: true}} \
+    {{vertical_layer:   M4} {width: 0.5} {spacing: minimum} {pitch: 25} {trim: true}} \
+    {{horizontal_layer: M5} {width: 0.5} {spacing: minimum} {pitch: 25} {trim: true}} \
+    {{vertical_layer:   M6} {width: 1}   {spacing: minimum} {pitch: 50} {trim: true}} \
+    {{horizontal_layer: M7} {width: 1}   {spacing: minimum} {pitch: 50} {trim: true}} } \
+    -via_rule { \
+        {{layers: M2} {layers: M3} {via_master: default}} \
+        {{layers: M3} {layers: M4} {via_master: default}} \
+        {{layers: M4} {layers: M5} {via_master: default}} \
+        {{layers: M5} {layers: M6} {via_master: default}} \
+        {{layers: M6} {layers: M7} {via_master: default}} }
 
-create_net -power  VDD
-create_net -ground VSS
-create_net -power  VDDIO
-create_net -ground VSSIO
+# -extension: e' isto que faz a mesh alcancar o ring
+set_pg_strategy pg_mesh_strat -core \
+    -pattern {{pattern: pg_mesh}{nets: {VSS VDD}}} \
+    -extension {{stop: outermost_ring}}
 
-connect_pg_net -net [get_nets VDD]   [get_pins -hierarchical -filter "name==VDD"]
-connect_pg_net -net [get_nets VSS]   [get_pins -hierarchical -filter "name==VSS"]
+# Rail M1
+create_pg_std_cell_conn_pattern std_rail -layers {M1}
+
+set_pg_strategy pg_rail_strat -core \
+    -pattern {{pattern: std_rail}{nets: {VSS VDD}}}
+
+# UM compile_pg para TODAS as estrategias. Compiladas isoladamente,
+# as vias entre elas sao criadas e depois descartadas como dangling.
+set_app_options -name plan.pgroute.ignore_signal_route -value true
+compile_pg
+
+check_pg_connectivity
+
+#########################
+create_pg_vias -nets {VDD VSS} -from_layers M1 -to_layers M6
+connect_pg_net -automatic
+check_pg_connectivity
+
+connect_pg_net -net [get_nets VDDIO] [get_pins -hierarchical -filter "name==VDDIO"]
+connect_pg_net -net [get_nets VSSIO] [get_pins -hierarchical -filter "name==VSSIO"]
+foreach c {VDD_0 IOVDD_0 PAD_CLK} {
+    foreach p {VDD VSS VDDIO VSSIO} {
+        puts "$c/$p -> [get_object_name [get_nets -of_objects [get_pins -quiet $c/$p]]]"
+    }
+}
+
+connect_pg_net -automatic
+
 connect_pg_net -net [get_nets VDDIO] [get_pins -hierarchical -filter "name==VDDIO"]
 connect_pg_net -net [get_nets VSSIO] [get_pins -hierarchical -filter "name==VSSIO"]
 
+foreach c {VDD_0 IOVDD_0 PAD_CLK} {
+    foreach p {VDD VSS VDDIO VSSIO} {
+        puts "$c/$p -> [get_object_name [get_nets -of_objects [get_pins -quiet $c/$p]]]"
+    }
+}
 
+#########################
+# 02e-pad_rings + trunks
+#########################
+create_pad_rings -create all -route_pins_on_layer {M4 M5}
 
+# Uma chamada por net: com dois nets juntos, os pads de ground acabam
+# ligados ao net de power.
+# -avoid_obstructions: sem ele, o segundo net desiste quando o primeiro
+# ja ocupou o track (LED-041).
+disconnect_net */*IOPAD
 
+create_trunk_pin_to_trunk -nets {VDD VSS} -adjust_to_pin -of_cells {VSS_* VDD_*}
+create_trunk_pin_to_trunk -nets {VDD VSS} -adjust_to_pin -of_cells {VSS_* VDD_*} -direction H -layer M9
 
+#create_trunk_pin_to_trunk -nets {VDD}   -adjust_to_pin -avoid_obstructions -of_cells [get_cells {VDD_*}]
+#create_trunk_pin_to_trunk -nets {VSS}   -adjust_to_pin -avoid_obstructions -of_cells [get_cells {VSS_*}]
+#create_trunk_pin_to_trunk -nets {VDDIO} -adjust_to_pin -avoid_obstructions -of_cells [get_cells {IOVDD_*}]
+#create_trunk_pin_to_trunk -nets {VSSIO} -adjust_to_pin -avoid_obstructions -of_cells [get_cells {IOVSS_*}]
 
+#########################
+# 02f-checks
+#########################
+check_pg_connectivity
+check_pg_drc -ignore_std_cells
 
-
-
-
+save_block -as ${TOP_MODULE_NAME}_powerplan
+save_lib
 
 
 # ------------------------------------------------------------------------------
 # 4. PG lógico — liga nets VDD/VSS/VDDIO/VSSIO aos pinos
 # ------------------------------------------------------------------------------
-connect_pg_net -automatic
+#connect_pg_net -automatic
 
 # # ------------------------------------------------------------------------------
 # # 5. Power ring do core (VDD/VSS em M5/M6)
@@ -95,6 +227,15 @@ connect_pg_net -automatic
 # set_pg_strategy core_mesh -core \
 #     -pattern {{name: mesh_pattern} {nets: {VDD VSS}}}
 # compile_pg -strategies core_mesh
+
+#create_pg_mesh_pattern mesh_pattern -layers { \
+#    {{horizontal_layer: M5} {width: 1} {spacing: interleaving} {pitch: 90}} \
+#    {{vertical_layer:   M6} {width: 1} {spacing: interleaving} {pitch: 90}} }
+
+#set_pg_strategy mesh_strategy -core \
+#    -pattern {{name: mesh_pattern} {nets: {VDD VSS}}}
+
+#compile_pg -strategies mesh_strategy
 
 # # ------------------------------------------------------------------------------
 # # 7. Placement dos standard cells (ANTES do rail)

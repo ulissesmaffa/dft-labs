@@ -31,10 +31,17 @@ module top_santiago_cpu_pad (
     //   vddcore/gndcore -> core supply | vddpad/gndpad -> IO supply
     //   IHP nao possui celula de corner instanciada no RTL.
     //------------------------------------------------------------
-    vddcore VDD_0();   gndcore VSS_0();   vddpad IOVDD_0();   gndpad IOVSS_0();
-    vddcore VDD_1();   gndcore VSS_1();   vddpad IOVDD_1();   gndpad IOVSS_1();
-    vddcore VDD_2();   gndcore VSS_2();   vddpad IOVDD_2();   gndpad IOVSS_2();
-    vddcore VDD_3();   gndcore VSS_3();   vddpad IOVDD_3();   gndpad IOVSS_3();
+    vddcore VDD_0();   gndcore VSS_0();   
+    vddpad IOVDD_0();   gndpad IOVSS_0();
+    
+    //vddcore VDD_1();   gndcore VSS_1();   
+    vddpad IOVDD_1();   gndpad IOVSS_1();
+    
+    vddcore VDD_2();   gndcore VSS_2();   
+    vddpad IOVDD_2();   gndpad IOVSS_2();
+    
+    //vddcore VDD_3();   gndcore VSS_3();   
+    vddpad IOVDD_3();   gndpad IOVSS_3();
 
     //------------------------------------------------------------
     // Input Pads  -  ixc013_i16x (DOUT, PAD)
