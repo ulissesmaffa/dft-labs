@@ -1,0 +1,741 @@
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid this.
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+              Version W-2024.09-SP5-4 for linux64 - Sep 10, 2025 
+
+                    Copyright (c) 1988 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Current time:       Thu Jul  9 14:37:59 2026
+Hostname:           cadmicro-el8-06.inf.ufrgs.br
+CPU Model:          QEMU Virtual CPU version 2.5+
+CPU Details:        Cores = 64 : Sockets = 2 : Cache Size = 16384 KB : Freq = 2.60 GHz
+OS:                 Linux 4.18.0-553.87.1.el8_10.x86_64
+RAM:                188 GB (Free   2 GB)
+Swap:                 3 GB (Free   0 GB)
+Work Filesystem:    /home mounted to 192.168.110.32:/str-01-vdisks/userdata/home-inf-el8
+Tmp Filesystem:     / mounted to /dev/sda3
+Work Disk:          8126 GB (Free 3340 GB)
+Tmp Disk:            27 GB (Free   6 GB)
+
+CPU Load: 6%, Ram Free: 2 GB, Swap Free: 0 GB, Work Disk Free: 3340 GB, Tmp Disk Free: 6 GB
+source ../../_setup/setup.tcl
+/home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_sc_hd
+source ../scripts/dc_setup.tcl
+Loading db file '/home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_sc_hd/sky130_fd_sc_hd__ss_100C_1v60.db'
+Loading db file '/home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_sc_hd/sky130_fd_sc_hd__ff_n40C_1v95.db'
+Loading db file '/home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_io/sky130_fd_io__top_gpiov2_ss_ss_100C_1v60_1v65.db'
+Loading db file '/home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_io/sky130_fd_io__top_gpiov2_ff_ff_n40C_1v95_5v50.db'
+Loading db file '/home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_io/sky130_fd_io__top_power_lvc_wpad_ss_100C_1v60_1v65_1v65.db'
+Loading db file '/home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_io/sky130_fd_io__top_power_lvc_wpad_ff_n40C_1v95_5v50_5v50.db'
+source ../scripts/01_read.tcl
+=== Analyzing 7 files SystemVerilog
+Running PRESTO HDLC
+Compiling source file /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/mux4.sv
+Compiling source file /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/top.sv
+Compiling source file /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/alu.sv
+Compiling source file /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/mux4_registered.sv
+Compiling source file /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/register_bank.sv
+Compiling source file /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/control.sv
+Compiling source file /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/memory.sv
+Presto compilation completed successfully.
+Loading db file '/tools/synopsys/designcompiler/W-2024.09-SP5-4/libraries/syn/dw_foundation.sldb'
+Loading db file '/tools/synopsys/designcompiler/W-2024.09-SP5-4/libraries/syn/gtech.db'
+Loading db file '/tools/synopsys/designcompiler/W-2024.09-SP5-4/libraries/syn/standard.sldb'
+  Loading link library 'sky130_fd_sc_hd__ss_100C_1v60'
+  Loading link library 'sky130_fd_io__top_gpiov2_ss_ss_100C_1v60_1v65'
+  Loading link library 'sky130_fd_io__top_power_lvc_wpad_ss_100C_1v60_1v65_1v65'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Inferred memory devices in process in routine 'top_WIDTH8' in file
+	 /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/top.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|    ff_cmd_in_reg    | Flip-flop |   7   |  Y  | N  | Async | Async | N  |  74  |
+|      zero_reg       | Flip-flop |   1   |  N  | N  | None  | Async | N  | 160  |
+|      error_reg      | Flip-flop |   1   |  N  | N  | None  | Async | N  | 160  |
+|     ff_dout_reg     | Flip-flop |  16   |  Y  | N  | None  | Async | N  | 160  |
+==================================================================================
+Presto compilation completed successfully. (top_WIDTH8)
+Module: top_WIDTH8, Ports: 52, Input: 33, Output: 19, Inout: 0
+Module: top_WIDTH8, Registers: 25, Async set/reset: 25, Sync set/reset: 0
+Information: Module top_WIDTH8 report end. (ELAB-965)
+Elaborated 1 design.
+Current design is now 'top_WIDTH8'.
+Information: Building the design 'mux4_registered' instantiated from design 'top_WIDTH8' with
+	the parameters "WIDTH=8". (HDL-193)
+Presto compilation completed successfully. (mux4_registered_WIDTH8)
+Module: mux4_registered_WIDTH8, Ports: 45, Input: 37, Output: 8, Inout: 0
+Module: mux4_registered_WIDTH8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module mux4_registered_WIDTH8 report end. (ELAB-965)
+Information: Building the design 'alu' instantiated from design 'top_WIDTH8' with
+	the parameters "WIDTH=8". (HDL-193)
+Warning:  /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/alu.sv:38: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/alu.sv:47: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/alu.sv:53: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/alu.sv:58: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block in file
+	'/home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/alu.sv'
+===========================================================
+|    Line    |  full/ parallel  |      block location     |
+===========================================================
+|     32     |    auto/auto     | always block at line 24 |
+===========================================================
+Warning:  /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/alu.sv:22: Netlist for always_comb block is empty. (ELAB-982)
+Presto compilation completed successfully. (alu_WIDTH8)
+Module: alu_WIDTH8, Ports: 39, Input: 21, Output: 18, Inout: 0
+Module: alu_WIDTH8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module alu_WIDTH8 report end. (ELAB-965)
+Information: Building the design 'memory' instantiated from design 'top_WIDTH8' with
+	the parameters "WIDTH=8". (HDL-193)
+
+Inferred memory devices in process in routine 'memory_WIDTH8' in file
+	 /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/memory.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|       mem_reg       | Flip-flop |  128  |  Y  | N  | None  | None  | N  |  13  |
+==================================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+| memory_WIDTH8/20 |   8    |   16    |      3       |
+======================================================
+Presto compilation completed successfully. (memory_WIDTH8)
+Module: memory_WIDTH8, Ports: 38, Input: 22, Output: 16, Inout: 0
+Module: memory_WIDTH8, Registers: 128, Async set/reset: 0, Sync set/reset: 0
+Information: Module memory_WIDTH8 report end. (ELAB-965)
+Information: Building the design 'control'. (HDL-193)
+
+Statistics for case statements in always block in file
+	'/home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/control.sv'
+===========================================================
+|    Line    |  full/ parallel  |      block location     |
+===========================================================
+|     43     |     no/auto      | always block at line 40 |
+|     75     |     no/auto      | always block at line 61 |
+|     97     |    auto/auto     | always block at line 61 |
+===========================================================
+
+Inferred memory devices in process in routine 'control' in file
+	 /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/control.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Async | Async | N  |  52  |
+==================================================================================
+Warning:  /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/control.sv:35: Netlist for always_comb block is empty. (ELAB-982)
+Presto compilation completed successfully. (control)
+Module: control, Ports: 26, Input: 10, Output: 16, Inout: 0
+Module: control, Registers: 4, Async set/reset: 4, Sync set/reset: 0
+Information: Module control report end. (ELAB-965)
+Information: Building the design 'mux4' instantiated from design 'mux4_registered_WIDTH8' with
+	the parameters "WIDTH=8". (HDL-193)
+
+Statistics for case statements in always block in file
+	'/home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/mux4.sv'
+===========================================================
+|    Line    |  full/ parallel  |      block location     |
+===========================================================
+|     12     |    auto/auto     | always block at line 11 |
+===========================================================
+Presto compilation completed successfully. (mux4_WIDTH8)
+Module: mux4_WIDTH8, Ports: 42, Input: 34, Output: 8, Inout: 0
+Module: mux4_WIDTH8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module mux4_WIDTH8 report end. (ELAB-965)
+Information: Building the design 'register_bank' instantiated from design 'mux4_registered_WIDTH8' with
+	the parameters "WIDTH=8". (HDL-193)
+
+Inferred memory devices in process in routine 'register_bank_WIDTH8' in file
+	 /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/inp_data/rtl/register_bank.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|       out_reg       | Flip-flop |   8   |  Y  | N  | None  | Async | N  |  11  |
+==================================================================================
+Presto compilation completed successfully. (register_bank_WIDTH8)
+Module: register_bank_WIDTH8, Ports: 19, Input: 11, Output: 8, Inout: 0
+Module: register_bank_WIDTH8, Registers: 8, Async set/reset: 8, Sync set/reset: 0
+Information: Module register_bank_WIDTH8 report end. (ELAB-965)
+Current design is 'top_WIDTH8'.
+
+  Linking design 'top_WIDTH8'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (7 designs)               /home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/2_synthesis/.tmp/top_WIDTH8.db, etc
+  sky130_fd_sc_hd__ss_100C_1v60 (library) /home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_sc_hd/sky130_fd_sc_hd__ss_100C_1v60.db
+  dw_foundation.sldb (library) /tools/synopsys/designcompiler/W-2024.09-SP5-4/libraries/syn/dw_foundation.sldb
+  sky130_fd_io__top_gpiov2_ss_ss_100C_1v60_1v65 (library) /home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_io/sky130_fd_io__top_gpiov2_ss_ss_100C_1v60_1v65.db
+  sky130_fd_io__top_power_lvc_wpad_ss_100C_1v60_1v65_1v65 (library) /home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_io/sky130_fd_io__top_power_lvc_wpad_ss_100C_1v60_1v65_1v65.db
+
+Information: Uniquified 2 instances of design 'mux4_registered_WIDTH8'. (OPT-1056)
+Information: Uniquified 2 instances of design 'mux4_WIDTH8'. (OPT-1056)
+Information: Uniquified 2 instances of design 'register_bank_WIDTH8'. (OPT-1056)
+Creating port 'test_si' in design 'top_WIDTH8'.
+Creating port 'test_so' in design 'top_WIDTH8'.
+Creating port 'test_se' in design 'top_WIDTH8'.
+Accepted scan configuration for modes: all_dft
+Accepted dft signal specification for modes: all_dft
+Accepted dft signal specification for modes: all_dft
+Accepted dft signal specification for modes: all_dft
+Writing ddc file '/home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/out_data/pre_layout/top_WIDTH8_unmapped.ddc'.
+source ../scripts/02_constraints.tcl
+source ../scripts/03_compile.tcl
+Information: Performing leakage power optimization. (PWR-850)
+CPU Load: 6%, Ram Free: 2 GB, Swap Free: 0 GB, Work Disk Free: 3340 GB, Tmp Disk Free: 6 GB
+Analyzing: "/home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_sc_hd/sky130_fd_sc_hd__ss_100C_1v60.db"
+Library analysis succeeded.
+Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | W-2024.09-DWBB_202409.5 |     *     |
+| Licensed DW Building Blocks        | W-2024.09-DWBB_202409.5 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Command Line | compile_ultra -no_autoungroup -scan                                               |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 413                                    |
+| Number of User Hierarchies                              | 9                                      |
+| Sequential Cell Count                                   | 173                                    |
+| Macro Count                                             | 0                                      |
+| Pad Count                                               | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 87                                     |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with Target Library Subset (with clock_path)     | false  (false )                        |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 8 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'top_WIDTH8'
+
+Loaded alib file './alib-52/sky130_fd_sc_hd__ss_100C_1v60.db.alib'
+CPU Load: 6%, Ram Free: 2 GB, Swap Free: 0 GB, Work Disk Free: 3340 GB, Tmp Disk Free: 6 GB
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'memory_WIDTH8'
+  Processing 'top_WIDTH8'
+  Processing 'alu_WIDTH8'
+ Implement Synthetic for 'alu_WIDTH8'.
+Module: DW_div_uns_a_width8_b_width8, Ports: 33, Input: 16, Output: 17, Inout: 0
+Module: DW_div_uns_a_width8_b_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW_div_a_width8_b_width8_tc_mode0_rem_mode1, Ports: 33, Input: 16, Output: 17, Inout: 0
+Module: DW_div_a_width8_b_width8_tc_mode0_rem_mode1, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing 'alu_WIDTH8_DW_div_uns_J1_0'
+  Processing 'control'
+  Processing 'register_bank_WIDTH8_0'
+  Processing 'mux4_registered_WIDTH8_0'
+  Processing 'mux4_WIDTH8_0'
+CPU Load: 6%, Ram Free: 2 GB, Swap Free: 0 GB, Work Disk Free: 3340 GB, Tmp Disk Free: 6 GB
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'sky130_fd_sc_hd__macro_sparecell' in the library 'sky130_fd_sc_hd__ss_100C_1v60' is not characterized for internal power. (PWR-536)
+Information: The library cell 'sky130_fd_sc_hd__conb_1' in the library 'sky130_fd_sc_hd__ss_100C_1v60' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+Information: Automatic shift-register identification is enabled for scan. Not all registers will be scan-replaced. (OPT-467)
+Information: Complementing port 'wr_en' in design 'register_bank_WIDTH8_0'.
+	 The new name of the port is 'wr_en_BAR'. (OPT-319)
+Information: Complementing port 'wr_en' in design 'mux4_registered_WIDTH8_1'.
+	 The new name of the port is 'wr_en_BAR'. (OPT-319)
+Information: Complementing port 'wr_en' in design 'mux4_registered_WIDTH8_0'.
+	 The new name of the port is 'wr_en_BAR'. (OPT-319)
+Information: Complementing port 'wr_en' in design 'register_bank_WIDTH8_1'.
+	 The new name of the port is 'wr_en_BAR'. (OPT-319)
+Information: Complementing port 'aluin_reg_en' in design 'control'.
+	 The new name of the port is 'aluin_reg_en_BAR'. (OPT-319)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Module: DW_div_uns_a_width8_b_width8, Ports: 33, Input: 16, Output: 17, Inout: 0
+Module: DW_div_uns_a_width8_b_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW_div_a_width8_b_width8_tc_mode0_rem_mode1, Ports: 33, Input: 16, Output: 17, Inout: 0
+Module: DW_div_a_width8_b_width8_tc_mode0_rem_mode1, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Structuring 'alu_WIDTH8_DW_div_uns_0'
+  Mapping 'alu_WIDTH8_DW_div_uns_0'
+Module: DW_div_uns_a_width8_b_width8, Ports: 33, Input: 16, Output: 17, Inout: 0
+Module: DW_div_uns_a_width8_b_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW_div_a_width8_b_width8_tc_mode0_rem_mode1, Ports: 33, Input: 16, Output: 17, Inout: 0
+Module: DW_div_a_width8_b_width8_tc_mode0_rem_mode1, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Structuring 'alu_WIDTH8_DW_div_uns_1'
+  Mapping 'alu_WIDTH8_DW_div_uns_1'
+Module: DW_div_uns_a_width8_b_width8, Ports: 33, Input: 16, Output: 17, Inout: 0
+Module: DW_div_uns_a_width8_b_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW_div_a_width8_b_width8_tc_mode0_rem_mode1, Ports: 33, Input: 16, Output: 17, Inout: 0
+Module: DW_div_a_width8_b_width8_tc_mode0_rem_mode1, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Structuring 'alu_WIDTH8_DW_div_uns_2'
+  Mapping 'alu_WIDTH8_DW_div_uns_2'
+Module: DW_div_uns_a_width8_b_width8, Ports: 33, Input: 16, Output: 17, Inout: 0
+Module: DW_div_uns_a_width8_b_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW_div_a_width8_b_width8_tc_mode0_rem_mode1, Ports: 33, Input: 16, Output: 17, Inout: 0
+Module: DW_div_a_width8_b_width8_tc_mode0_rem_mode1, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Structuring 'alu_WIDTH8_DW_div_uns_3'
+  Mapping 'alu_WIDTH8_DW_div_uns_3'
+  Mapping 'alu_WIDTH8_DW01_add_0'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'alu_WIDTH8_DW01_add_1'
+  Mapping 'alu_WIDTH8_DW01_add_2'
+  Mapping 'alu_WIDTH8_DW01_add_3'
+  Mapping 'alu_WIDTH8_DW_div_uns_3'
+Information: Added key list 'DesignWare' to design 'alu_WIDTH8'. (DDB-72)
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:06   13829.5      0.03       0.0       0.0                           7883.3296      0.00  
+    0:00:06   13812.0      0.79       2.1       0.0                           7875.9854      0.00  
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Mapping 'alu_WIDTH8_DP_OP_21_125_6573_2'
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:06   12164.2      0.67       1.5       0.0                           6884.7656      0.00  
+    0:00:06   12280.5      0.00       0.0       0.0                           6985.2988      0.00  
+    0:00:06   12280.5      0.00       0.0       0.0                           6985.2988      0.00  
+    0:00:06   12275.5      0.00       0.0       0.0                           6990.0454      0.00  
+    0:00:06   12186.7      0.00       0.0       0.0                           6963.3560      0.00  
+    0:00:06   12115.4      0.00       0.0       0.0                           6945.4312      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:07   11951.5      0.00       0.0       0.0                           6796.8115      0.00  
+    0:00:07   11951.5      0.00       0.0       0.0                           6796.8115      0.00  
+    0:00:07   11951.5      0.00       0.0       0.0                           6796.8115      0.00  
+    0:00:07   11951.5      0.00       0.0       0.0                           6796.8115      0.00  
+    0:00:07   11951.5      0.00       0.0       0.0                           6796.8115      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6770.9595      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+    0:00:07   11908.9      0.00       0.0       0.0                           6768.7671      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:07   11893.9      0.00       0.0       0.0                           6768.7549      0.00  
+    0:00:07   11806.3      0.00       0.0       0.0                           6689.1904      0.00  
+    0:00:07   11806.3      0.00       0.0       0.0                           6689.1904      0.00  
+    0:00:07   11806.3      0.00       0.0       0.0                           6689.1904      0.00  
+    0:00:07   11806.3      0.00       0.0       0.0                           6689.1904      0.00  
+    0:00:07   11768.8      0.00       0.0       0.0                           6649.6597      0.00  
+    0:00:07   11768.8      0.00       0.0       0.0                           6649.6597      0.00  
+    0:00:07   11768.8      0.00       0.0       0.0                           6649.6597      0.00  
+    0:00:07   11768.8      0.00       0.0       0.0                           6649.6597      0.00  
+    0:00:07   11768.8      0.00       0.0       0.0                           6649.6597      0.00  
+    0:00:07   11768.8      0.00       0.0       0.0                           6649.6597      0.00  
+    0:00:07   11755.0      0.00       0.0       0.0                           6644.6143      0.00  
+CPU Load: 6%, Ram Free: 2 GB, Swap Free: 0 GB, Work Disk Free: 3340 GB, Tmp Disk Free: 6 GB
+Loading db file '/home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_sc_hd/sky130_fd_sc_hd__ff_n40C_1v95.db'
+Loading db file '/home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_io/sky130_fd_io__top_gpiov2_ff_ff_n40C_1v95_5v50.db'
+Loading db file '/home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_sc_hd/sky130_fd_sc_hd__ss_100C_1v60.db'
+Loading db file '/home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_io/sky130_fd_io__top_gpiov2_ss_ss_100C_1v60_1v65.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+CPU Load: 6%, Ram Free: 2 GB, Swap Free: 0 GB, Work Disk Free: 3340 GB, Tmp Disk Free: 6 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+In mode: all_dft...
+
+Information: Starting test protocol creation. (TEST-219)
+  ...inferring clock signals...
+Information: Inferred system/test clock port clk (45.0,55.0). (TEST-260)
+  ...inferring asynchronous signals...
+Information: Inferred active high asynchronous control port rst. (TEST-261)
+In mode: all_dft...
+  Pre-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  	...checking for scan equivalents...
+  ...checking vector rules...
+  ...checking pre-dft rules...
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 0
+
+-----------------------------------------------------------------
+
+
+Test Design rule checking did not find violations
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  0 out of 173 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      * 173 cells are valid scan cells
+
+Information: Test design rule checking completed. (TEST-123)
+  Information: Using test design rule information from previous dft_drc run.
+  Architecting Scan Chains
+
+****************************************
+Preview_dft report
+For    : 'Insert_dft' command
+Design : top_WIDTH8
+Version: W-2024.09-SP5-4
+Date   : Thu Jul  9 14:38:54 2026
+****************************************
+
+Number of chains: 1
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: no_mix
+Scan enable: test_se (no hookup pin)
+
+
+Scan chain '1' (test_si --> test_so) contains 173 cells
+
+
+
+************ Test Point Plan Report ************
+Total number of test points  : 0
+Number of Autofix test points: 0
+Number of Wrapper test points: 0
+Number of test modes         : 0
+Number of test point enables : 0
+Number of data sources       : 0
+Number of data sinks         : 0
+**************************************************
+
+  Information: Using test design rule information from previous dft_drc run.
+  Architecting Scan Chains
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+Resetting current test mode
+  Beginning Mapping Optimizations
+  -------------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:00   11782.6      0.02       0.0       0.0                                0.00  
+
+Information: Performing leakage power optimization. (PWR-850)
+CPU Load: 6%, Ram Free: 2 GB, Swap Free: 0 GB, Work Disk Free: 3340 GB, Tmp Disk Free: 6 GB
+Alib files are up-to-date.
+Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+| Command Line | compile_ultra -incremental -scan                                                  |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 1335                                   |
+| Number of User Hierarchies                              | 9                                      |
+| Sequential Cell Count                                   | 173                                    |
+| Macro Count                                             | 0                                      |
+| Pad Count                                               | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 0                                      |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with Target Library Subset (with clock_path)     | false  (false )                        |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'sky130_fd_sc_hd__macro_sparecell' in the library 'sky130_fd_sc_hd__ss_100C_1v60' is not characterized for internal power. (PWR-536)
+Information: The library cell 'sky130_fd_sc_hd__conb_1' in the library 'sky130_fd_sc_hd__ss_100C_1v60' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:00   11763.8      0.02       0.0       0.0                           6666.6943      0.00  
+    0:00:00   11763.8      0.02       0.0       0.0                           6666.6943      0.00  
+
+  Beginning Mapping Optimizations  (Ultra High effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+    0:00:00   11761.3      0.02       0.0       0.0                           6660.7256      0.00  
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:00   11761.3      0.02       0.0       0.0                           6660.7256      0.00  
+    0:00:00   12086.6      0.02       0.0       0.0                           6948.9966      0.00  
+    0:00:01   11941.5      0.02       0.0       0.0                           6807.8945      0.00  
+    0:00:01   11941.5      0.02       0.0       0.0                           6807.8945      0.00  
+    0:00:01   11959.0      0.00       0.0       0.0                           6811.8027      0.00  
+    0:00:01   11959.0      0.00       0.0       0.0                           6811.8027      0.00  
+    0:00:01   11959.0      0.00       0.0       0.0                           6812.0562      0.00  
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:01   11959.0      0.00       0.0       0.0                           6812.0562      0.00  
+    0:00:01   11959.0      0.00       0.0       0.0                           6812.0562      0.00  
+    0:00:01   11959.0      0.00       0.0       0.0                           6812.0562      0.00  
+    0:00:01   11959.0      0.00       0.0       0.0                           6812.0562      0.00  
+    0:00:01   11959.0      0.00       0.0       0.0                           6812.0562      0.00  
+    0:00:01   11959.0      0.00       0.0       0.0                           6812.0562      0.00  
+    0:00:01   11959.0      0.00       0.0       0.0                           6812.0562      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11950.2      0.00       0.0       0.0                           6805.2734      0.00  
+    0:00:01   11745.0      0.00       0.0       0.0                           6633.9810      0.00  
+    0:00:01   11745.0      0.00       0.0       0.0                           6633.9810      0.00  
+    0:00:01   11745.0      0.00       0.0       0.0                           6633.9810      0.00  
+    0:00:01   11745.0      0.00       0.0       0.0                           6633.9810      0.00  
+    0:00:01   11740.0      0.00       0.0       0.0                           6628.3589      0.00  
+Loading db file '/home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_sc_hd/sky130_fd_sc_hd__ff_n40C_1v95.db'
+Loading db file '/home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_io/sky130_fd_io__top_gpiov2_ff_ff_n40C_1v95_5v50.db'
+Loading db file '/home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_sc_hd/sky130_fd_sc_hd__ss_100C_1v60.db'
+Loading db file '/home/mic63/ulisses.maffazioli/pdk/sky130_workspace/libs.ref/synopsys/sky130_fd_io/sky130_fd_io__top_gpiov2_ss_ss_100C_1v60_1v65.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+CPU Load: 6%, Ram Free: 2 GB, Swap Free: 0 GB, Work Disk Free: 3340 GB, Tmp Disk Free: 6 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+Writing ddc file '/home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/out_data/pre_layout/santiago_cpu.ddc'.
+Writing verilog file '/home/mic63/ulisses.maffazioli/dft-labs/proj/santiago_cpu/1_synopsys_sky130_flow/out_data/pre_layout/santiago_cpu.v'.
+exit
+
+Memory usage for this session 257 Mbytes.
+Memory usage for this session including child processes 257 Mbytes.
+CPU usage for this session 58 seconds ( 0.02 hours ).
+Elapsed time for this session 63 seconds ( 0.02 hours ).
+
+Thank you...

@@ -1,0 +1,71 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : top_WIDTH8
+Version: W-2024.09-SP5-4
+Date   : Thu Jul  9 14:38:54 2026
+****************************************
+
+Operating Conditions: ss_100C_1v60   Library: sky130_fd_sc_hd__ss_100C_1v60
+Wire Load Model Mode: top
+
+  Startpoint: uu_muxB/uu_rb/out_reg[6]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: zero_reg (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_WIDTH8         Small                 sky130_fd_sc_hd__ss_100C_1v60
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  uu_muxB/uu_rb/out_reg[6]/CLK (sky130_fd_sc_hd__sdfrtp_1)
+                                                          0.00       1.00 r
+  uu_muxB/uu_rb/out_reg[6]/Q (sky130_fd_sc_hd__sdfrtp_1)
+                                                          0.90       1.90 f
+  uu_muxB/uu_rb/out[6] (register_bank_WIDTH8_test_1)      0.00       1.90 f
+  uu_muxB/out[6] (mux4_registered_WIDTH8_test_1)          0.00       1.90 f
+  uu_alu/in2[6] (alu_WIDTH8)                              0.00       1.90 f
+  uu_alu/U13/Y (sky130_fd_sc_hd__inv_1)                   0.50       2.41 r
+  uu_alu/U229/Y (sky130_fd_sc_hd__nor2_1)                 0.26       2.66 f
+  uu_alu/U495/COUT (sky130_fd_sc_hd__fa_1)                1.02       3.68 f
+  uu_alu/U538/COUT (sky130_fd_sc_hd__fah_1)               0.65       4.33 f
+  uu_alu/U531/SUM (sky130_fd_sc_hd__fa_1)                 1.03       5.37 f
+  uu_alu/U3/SUM (sky130_fd_sc_hd__fa_1)                   1.05       6.42 f
+  uu_alu/U543/Y (sky130_fd_sc_hd__nor2_1)                 0.30       6.71 r
+  uu_alu/U548/Y (sky130_fd_sc_hd__o21ai_1)                0.21       6.92 f
+  uu_alu/U14/Y (sky130_fd_sc_hd__a21oi_2)                 0.36       7.28 r
+  uu_alu/U35/Y (sky130_fd_sc_hd__o21ai_1)                 0.24       7.52 f
+  uu_alu/U649/Y (sky130_fd_sc_hd__xnor2_1)                0.26       7.78 f
+  uu_alu/U78/X (sky130_fd_sc_hd__or4_4)                   0.83       8.61 f
+  uu_alu/U650/Y (sky130_fd_sc_hd__nor4_1)                 0.32       8.93 r
+  uu_alu/U661/Y (sky130_fd_sc_hd__o21ai_1)                0.25       9.17 f
+  uu_alu/U662/Y (sky130_fd_sc_hd__nor3_1)                 0.30       9.47 r
+  uu_alu/zero (alu_WIDTH8)                                0.00       9.47 r
+  U69/Y (sky130_fd_sc_hd__nand2_1)                        0.17       9.64 f
+  U71/Y (sky130_fd_sc_hd__nand2_1)                        0.11       9.75 r
+  zero_reg/D (sky130_fd_sc_hd__sdfrtp_1)                  0.00       9.75 r
+  data arrival time                                                  9.75
+
+  clock MY_CLK (rise edge)                               10.00      10.00
+  clock network delay (ideal)                             1.00      11.00
+  clock uncertainty                                      -1.00      10.00
+  zero_reg/CLK (sky130_fd_sc_hd__sdfrtp_1)                0.00      10.00 r
+  library setup time                                     -0.27       9.73
+  data required time                                                 9.73
+  --------------------------------------------------------------------------
+  data required time                                                 9.73
+  data arrival time                                                 -9.75
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.02
+
+
+1

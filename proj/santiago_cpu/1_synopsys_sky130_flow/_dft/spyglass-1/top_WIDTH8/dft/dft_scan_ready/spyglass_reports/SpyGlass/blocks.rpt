@@ -1,0 +1,5 @@
+mux4_registered_WIDTH8_test_0@@@@top_WIDTH8.uu_muxA
+mux4_registered_WIDTH8_test_1@@@@top_WIDTH8.uu_muxB
+alu_WIDTH8@@@@top_WIDTH8.uu_alu
+memory_WIDTH8_test_1@@@@top_WIDTH8.uu_mem
+control_test_1@@@@top_WIDTH8.uu_ctrl

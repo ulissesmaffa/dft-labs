@@ -1,0 +1,26 @@
+ 
+****************************************
+check_design summary:
+Version:     W-2024.09-SP5-4
+Date:        Thu Jul  9 14:38:00 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      4
+    Unconnected ports (LINT-28)                                     3
+    Shorted outputs (LINT-31)                                       1
+
+Cells                                                               4
+    Cells do not drive (LINT-1)                                     4
+--------------------------------------------------------------------------------
+
+Warning: In design 'alu_WIDTH8', cell 'C154' does not drive any nets. (LINT-1)
+Warning: In design 'alu_WIDTH8', cell 'C155' does not drive any nets. (LINT-1)
+Warning: In design 'alu_WIDTH8', cell 'C156' does not drive any nets. (LINT-1)
+Warning: In design 'alu_WIDTH8', cell 'C160' does not drive any nets. (LINT-1)
+Warning: In design 'top_WIDTH8', port 'test_si' is not connected to any nets. (LINT-28)
+Warning: In design 'top_WIDTH8', port 'test_so' is not connected to any nets. (LINT-28)
+Warning: In design 'top_WIDTH8', port 'test_se' is not connected to any nets. (LINT-28)
+Warning: In design 'control', output port 'memoryRead' is connected directly to output port 'selmux2'. (LINT-31)
+1

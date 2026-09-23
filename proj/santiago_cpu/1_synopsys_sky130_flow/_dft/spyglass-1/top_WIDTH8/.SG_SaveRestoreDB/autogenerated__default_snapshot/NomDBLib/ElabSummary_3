@@ -1,0 +1,68 @@
+================================================================================
+Elaborated Name: 'mux4_registered_WIDTH8_test_0'
+    (RTL Design Unit name: 'mux4_registered_WIDTH8_test_0', ../out_data/pre_layout/santiago_cpu.v:106)
+     Parameters (Total: 0)
+     Instances (Total: 1): top_WIDTH8.uu_muxA 
+
+================================================================================
+
+Elaborated Name: 'mux4_WIDTH8_1'
+    (RTL Design Unit name: 'mux4_WIDTH8_1', ../out_data/pre_layout/santiago_cpu.v:8)
+     Parameters (Total: 0)
+     Instances (Total: 1): top_WIDTH8.uu_muxA.uu_mux4 
+
+================================================================================
+
+Elaborated Name: 'register_bank_WIDTH8_test_0'
+    (RTL Design Unit name: 'register_bank_WIDTH8_test_0', ../out_data/pre_layout/santiago_cpu.v:53)
+     Parameters (Total: 0)
+     Instances (Total: 1): top_WIDTH8.uu_muxA.uu_rb 
+
+================================================================================
+
+Elaborated Name: 'mux4_registered_WIDTH8_test_1'
+    (RTL Design Unit name: 'mux4_registered_WIDTH8_test_1', ../out_data/pre_layout/santiago_cpu.v:223)
+     Parameters (Total: 0)
+     Instances (Total: 1): top_WIDTH8.uu_muxB 
+
+================================================================================
+
+Elaborated Name: 'mux4_WIDTH8_0'
+    (RTL Design Unit name: 'mux4_WIDTH8_0', ../out_data/pre_layout/santiago_cpu.v:125)
+     Parameters (Total: 0)
+     Instances (Total: 1): top_WIDTH8.uu_muxB.uu_mux4 
+
+================================================================================
+
+Elaborated Name: 'register_bank_WIDTH8_test_1'
+    (RTL Design Unit name: 'register_bank_WIDTH8_test_1', ../out_data/pre_layout/santiago_cpu.v:170)
+     Parameters (Total: 0)
+     Instances (Total: 1): top_WIDTH8.uu_muxB.uu_rb 
+
+================================================================================
+
+Elaborated Name: 'alu_WIDTH8'
+    (RTL Design Unit name: 'alu_WIDTH8', ../out_data/pre_layout/santiago_cpu.v:242)
+     Parameters (Total: 0)
+     Instances (Total: 1): top_WIDTH8.uu_alu 
+
+================================================================================
+
+Elaborated Name: 'memory_WIDTH8_test_1'
+    (RTL Design Unit name: 'memory_WIDTH8_test_1', ../out_data/pre_layout/santiago_cpu.v:1062)
+     Parameters (Total: 0)
+     Instances (Total: 1): top_WIDTH8.uu_mem 
+
+================================================================================
+
+Elaborated Name: 'control_test_1'
+    (RTL Design Unit name: 'control_test_1', ../out_data/pre_layout/santiago_cpu.v:1840)
+     Parameters (Total: 0)
+     Instances (Total: 1): top_WIDTH8.uu_ctrl 
+
+================================================================================
+
+Elaborated Name: 'top_WIDTH8'
+    (RTL Design Unit name: 'top_WIDTH8', ../out_data/pre_layout/santiago_cpu.v:1923)
+     Parameters (Total: 0)
+================================================================================

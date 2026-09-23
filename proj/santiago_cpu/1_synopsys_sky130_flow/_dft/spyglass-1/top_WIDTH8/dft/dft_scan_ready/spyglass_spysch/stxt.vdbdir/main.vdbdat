@@ -1,0 +1,47 @@
+#x STXT_BEGIN ST.1
+#x STXT_END ST.1
+#x STXT_BEGIN ST.2
+#x STXT_BEGIN ST.3
+#x STXT_END ST.3
+#x STXT_BEGIN ST.4
+#x STXT_BEGIN ST.5
+UTILITY FaultBrowser
+VERSION 3.8.2
+ATTRIBUTES 0
+TABINFO 1,Stuck-At Coverage Report,enabled
+
+TAB 0
+TYPE FaultTree
+COLOR_SET 0xff0000,50,0xff6666,75,0x99cc00,90,0x006600,100
+STRLEN_SEPARATOR @@
+cross_probe_format gui_load_schematic [dft_get_pin_list -hierarchy %h -analysisName Info_coverage] -is
+add_context_menu -label "Probe Full Hierarchy" -command {gui_load_schematic [dft_get_pin_list -hierarchy %h -view full_hierarchy -analysisName Info_coverage] -is}
+add_context_menu -label "Probe This Instance" -command {gui_load_schematic [dft_get_pin_list -hierarchy %h -view this_instance -analysisName Info_coverage] -is}
+COLUMNS Instance Hierarchy,TREE,Module Name,TEXT,Fault Coverage (%),NUM,Test Coverage (%),NUM,Fault Coverage Loss (%),NUM,Test Coverage Loss (%),NUM,Total Fault Number,NUM,FC,NUM,!DT,NUM,DT,NUM,SR,NUM,UU,NUM,TI,NUM, BL,NUM, LR,NUM,UT,NUM,Color Range,COLOR,Scale,SCALEVALUE
+COLUMN_UNIT 2, 
+SEARCHABLE_COLUMNS 0,1
+
+DATA
+10@@top_WIDTH810@@top_WIDTH84@@0.004@@0.006@@100.006@@100.005@@102125@@102125@@102121@@01@@01@@01@@01@@01@@01@@04@@0.003@@100
+17@@top_WIDTH8.uu_alu10@@alu_WIDTH84@@0.004@@0.005@@42.685@@42.684@@43584@@43584@@43581@@01@@01@@01@@01@@01@@01@@04@@0.003@@100
+17@@top_WIDTH8.uu_mem20@@memory_WIDTH8_test_14@@0.004@@0.005@@35.275@@35.274@@36024@@36024@@36021@@01@@01@@01@@01@@01@@01@@04@@0.003@@100
+18@@top_WIDTH8.uu_muxB29@@mux4_registered_WIDTH8_test_14@@0.004@@0.004@@4.784@@4.783@@4883@@4883@@4881@@01@@01@@01@@01@@01@@01@@04@@0.003@@100
+24@@top_WIDTH8.uu_muxB.uu_rb27@@register_bank_WIDTH8_test_14@@0.004@@0.004@@2.434@@2.433@@2483@@2483@@2481@@01@@01@@01@@01@@01@@01@@04@@0.003@@100
+26@@top_WIDTH8.uu_muxB.uu_mux413@@mux4_WIDTH8_04@@0.004@@0.004@@2.354@@2.353@@2403@@2403@@2401@@01@@01@@01@@01@@01@@01@@04@@0.003@@100
+18@@top_WIDTH8.uu_muxA29@@mux4_registered_WIDTH8_test_04@@0.004@@0.004@@4.784@@4.783@@4883@@4883@@4881@@01@@01@@01@@01@@01@@01@@04@@0.003@@100
+24@@top_WIDTH8.uu_muxA.uu_rb27@@register_bank_WIDTH8_test_04@@0.004@@0.004@@2.434@@2.433@@2483@@2483@@2481@@01@@01@@01@@01@@01@@01@@04@@0.003@@100
+26@@top_WIDTH8.uu_muxA.uu_mux413@@mux4_WIDTH8_14@@0.004@@0.004@@2.354@@2.353@@2403@@2403@@2401@@01@@01@@01@@01@@01@@01@@04@@0.003@@100
+18@@top_WIDTH8.uu_ctrl14@@control_test_14@@0.004@@0.004@@3.194@@3.193@@3263@@3263@@3261@@01@@01@@01@@01@@01@@01@@04@@0.003@@100
+
+END_DATA
+END_TAB
+#x STXT_END ST.5
+#x STXT_BEGIN ST.6
+#x STXT_END ST.6
+#x STXT_BEGIN ST.7
+#x STXT_BEGIN ST.8
+#x STXT_END ST.8
+#x STXT_BEGIN ST.9
+#x STXT_BEGIN ST.10
+#x STXT_END ST.10
+#x STXT_BEGIN ST.11

@@ -1,0 +1,11 @@
+Instance Hierarchy,Module Name,Fault Coverage (%),Test Coverage (%),Fault Coverage Loss (%),Test Coverage Loss (%),Total Fault Number,FC,!DT,DT,SR,UU,TI,BL,LR,UT
+top_WIDTH8,top_WIDTH8,0.00,0.00,100.00,100.00,10212,10212,10212,0,0,0,0,0,0,0
+top_WIDTH8.uu_alu,alu_WIDTH8,0.00,0.00,42.68,42.68,4358,4358,4358,0,0,0,0,0,0,0
+top_WIDTH8.uu_mem,memory_WIDTH8_test_1,0.00,0.00,35.27,35.27,3602,3602,3602,0,0,0,0,0,0,0
+top_WIDTH8.uu_muxB,mux4_registered_WIDTH8_test_1,0.00,0.00,4.78,4.78,488,488,488,0,0,0,0,0,0,0
+top_WIDTH8.uu_muxB.uu_rb,register_bank_WIDTH8_test_1,0.00,0.00,2.43,2.43,248,248,248,0,0,0,0,0,0,0
+top_WIDTH8.uu_muxB.uu_mux4,mux4_WIDTH8_0,0.00,0.00,2.35,2.35,240,240,240,0,0,0,0,0,0,0
+top_WIDTH8.uu_muxA,mux4_registered_WIDTH8_test_0,0.00,0.00,4.78,4.78,488,488,488,0,0,0,0,0,0,0
+top_WIDTH8.uu_muxA.uu_rb,register_bank_WIDTH8_test_0,0.00,0.00,2.43,2.43,248,248,248,0,0,0,0,0,0,0
+top_WIDTH8.uu_muxA.uu_mux4,mux4_WIDTH8_1,0.00,0.00,2.35,2.35,240,240,240,0,0,0,0,0,0,0
+top_WIDTH8.uu_ctrl,control_test_1,0.00,0.00,3.19,3.19,326,326,326,0,0,0,0,0,0,0

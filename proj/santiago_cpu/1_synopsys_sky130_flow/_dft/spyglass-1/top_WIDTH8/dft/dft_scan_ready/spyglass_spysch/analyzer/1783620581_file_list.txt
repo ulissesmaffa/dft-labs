@@ -1,0 +1,3 @@
+0 ../out_data/pre_layout/santiago_cpu.v
+1 ./spyglass-1/top_WIDTH8/dft/dft_scan_ready/spyglass_spysch/spyglass_lc/aggregate/cells.nom_0.v
+2 ./spyglass-1/top_WIDTH8/dft/dft_scan_ready/spyglass_spysch/spyglass/sky130_fd_sc_hd__tt_025C_1v80_0.v

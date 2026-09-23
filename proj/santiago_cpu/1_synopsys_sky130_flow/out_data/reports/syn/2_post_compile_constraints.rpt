@@ -1,0 +1,27 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : top_WIDTH8
+Version: W-2024.09-SP5-4
+Date   : Thu Jul  9 14:38:54 2026
+****************************************
+
+
+   max_delay/setup ('MY_CLK' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   zero_reg/D                   9.73           9.75 r        -0.02  (VIOLATED)
+
+
+   max_leakage_power
+
+                             Required        Actual
+   Design                   Leakage Power  Leakage Power     Slack
+   -----------------------------------------------------------------
+   top_WIDTH8                   0.00        6287.33       -6287.33  (VIOLATED)
+
+
+1
