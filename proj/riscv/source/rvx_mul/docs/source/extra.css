@@ -1,0 +1,18 @@
+#hidden-homepage-title {
+  visibility: hidden;
+  height: 0px;
+  margin: 0px;
+}
+
+.md-typeset code {
+  word-break: normal;
+}
+
+.md-typeset table:not([class]) {
+  font-size: .95em;
+  display: table;
+}
+
+.md-typeset__table {
+  width: 100%;
+}

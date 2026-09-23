@@ -12,7 +12,7 @@ set PRE_LAYOUT_DIR	"$FLOW_ROOT/out_data/pre_layout"
 set POST_LAYOUT_DIR	"$FLOW_ROOT/out_data/post_layout"   
 
 set SYN_TECH_DIR	 $SYN_TECH_DIR_SETUP                
-set STD_CELL_LIB_DIR $STD_LIB_PATH_SETUP                
+set STD_CELL_LIB_DIR     $STD_LIB_PATH_SETUP                
 set IO_CELL_LIB_DIR	 $IO_LIB_PATH_SETUP                 
 
 set PRE_LAYOUT_VER_NETLIST  "$PRE_LAYOUT_DIR/${DESIGN}.v"   

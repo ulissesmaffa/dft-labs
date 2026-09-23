@@ -1,7 +1,7 @@
 # optimize design
-#set_fix_hold [all_clocks]
-#set_fix_multiple_port_nets -all -buffer_constants
-#set verilogout_no_tri true
+set_fix_hold [all_clocks]
+set_fix_multiple_port_nets -all -buffer_constants
+set verilogout_no_tri true
 
 # dont_touch nos pads ANTES do compile (crítico!)
 #set_dont_touch [get_cells -hier -filter "is_hierarchical==false && \

@@ -1,3 +1,5 @@
+set_fix_multiple_port_nets -all -buffer_constants
+
 # --- Protect explicitly instantiated I/O cells ---
 # Note: corner/filler/power_cut are physical-only (LEF-only, no logical model)
 #       and are therefore created in ICC2, not instantiated in RTL.

@@ -1,0 +1,24 @@
+{
+  "folders": [
+    {
+      "path": "/workspaces/rvx",
+      "name": "RVX (Project Root)"
+    },
+    {
+      "path": "/workspaces/rvx/simulator",
+      "name": "RVX Simulator"
+    },
+    {
+      "path": "/workspaces/rvx/hal",
+      "name": "RVX HAL"
+    },
+    {
+      "path": "/workspaces/rvx/tests/hal",
+      "name": "RVX HAL Tests"
+    },
+    {
+      "path": "/workspaces/rvx/tests/compliance",
+      "name": "RISC-V Tests"
+    }
+  ]
+}

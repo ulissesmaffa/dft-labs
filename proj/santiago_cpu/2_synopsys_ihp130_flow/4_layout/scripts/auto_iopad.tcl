@@ -27,14 +27,15 @@ set side_pads(left) {
     PAD_DIN1_0 PAD_DIN1_1 PAD_DIN1_2 PAD_DIN1_3
     PAD_DIN1_4 PAD_DIN1_5 PAD_DIN1_6 PAD_DIN1_7
     PAD_CMDIN_0 PAD_CMDIN_1
-    VDD_0 VSS_0 IOVSS_0
+    VDD_0 VSS_0 
+    IOVSS_0
 }
 set side_pads(top) {
     IOVDD_1
     PAD_CMDIN_2 PAD_CMDIN_3 PAD_CMDIN_4 PAD_CMDIN_5 PAD_CMDIN_6
     PAD_DIN2_0 PAD_DIN2_1 PAD_DIN2_2 PAD_DIN2_3 PAD_DIN2_4 PAD_DIN2_5
-    PAD_ZERO PAD_ERROR
-    VDD_1 VSS_1 IOVSS_1
+    PAD_ZERO PAD_ERROR 
+    IOVSS_1
 }
 set side_pads(right) {
     IOVDD_2
@@ -42,7 +43,8 @@ set side_pads(right) {
     PAD_DIN3_0 PAD_DIN3_1 PAD_DIN3_2 PAD_DIN3_3
     PAD_DIN3_4 PAD_DIN3_5 PAD_DIN3_6 PAD_DIN3_7
     PAD_DOUT_HIGH_0 PAD_DOUT_HIGH_1 PAD_DOUT_HIGH_2
-    VDD_2 VSS_2 IOVSS_2
+    VDD_2 VSS_2 
+    IOVSS_2
 }
 set side_pads(bottom) {
     IOVDD_3
@@ -50,7 +52,7 @@ set side_pads(bottom) {
     PAD_DOUT_HIGH_6 PAD_DOUT_HIGH_7
     PAD_DOUT_LOW_0 PAD_DOUT_LOW_1 PAD_DOUT_LOW_2 PAD_DOUT_LOW_3
     PAD_DOUT_LOW_4 PAD_DOUT_LOW_5 PAD_DOUT_LOW_6 PAD_DOUT_LOW_7
-    VDD_3 VSS_3 IOVSS_3
+    IOVSS_3
 }
 
 # ------------------------------------------------------------------------------

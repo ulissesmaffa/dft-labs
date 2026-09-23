@@ -1,0 +1,235 @@
+ 
+                              IC Compiler II (TM)
+
+                Version W-2024.09-SP3 for linux64 - Jan 16, 2025
+  This release has significant feature enhancements. Please review the Release
+                       Notes associated with this release.
+
+                    Copyright (c) 1988 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
+icc2_shell> list_blocks
+0
+icc2_shell> source ../../_setup/setup.tcl
+/pdk/synopsys/saed32/SAED32_EDK/tech
+icc2_shell> open_lib ${TOP_MODULE_NAME}.dlib
+Error: can't read "TOP_MODULE_NAME": no such variable
+        Use error_info for more info. (CMD-013)
+icc2_shell> open_lib top_pad_rvx.dlib/
+Information: Loading library file '/home/mic63/ulisses.maffazioli/dft-labs/proj/rvx_mul/0_synopsys_saed32_flow/4_layout/.tmp/top_pad_rvx.dlib/' (FILE-007)
+Information: Loading library file '/pdk/synopsys/saed32/SAED32_EDK/lib/stdcell_rvt/ndm/saed32rvt_base_frame_timing.ndm' (FILE-007)
+
+Information: Running multithreaded reference-libraries creation.
+Information: The fusion_lib saed32io_wb_5v needs a refresh. 9 file(s) have modified timestamps. (FLIB-11)
+Information: Loading library file '/home/mic63/ulisses.maffazioli/dft-labs/proj/rvx_mul/0_synopsys_saed32_flow/_lc/libs/saed32io_wb_5v' (FILE-007)
+
+Information: Completed multithreaded reference-libraries creation.
+{top_pad_rvx.dlib}
+icc2_shell> list_blocks
+Lib top_pad_rvx.dlib /home/mic63/ulisses.maffazioli/dft-labs/proj/rvx_mul/0_synopsys_saed32_flow/4_layout/.tmp/top_pad_rvx.dlib tech current
+  ->  0 top_pad_rvx.design Aug-13-15:14
+  ->  0 top_pad_rvx_initial.design Aug-13-14:29
+  ->  0 top_pad_rvx_fp.design Aug-13-14:32
+  ->  0 top_pad_rvx_placement.design Aug-13-14:44
+  ->  0 top_pad_rvx_powerplan.design Aug-13-15:14
+5
+icc2_shell> open_block top_pad_rvx_powerplan
+Information: User units loaded from library 'saed32rvt_base_frame_timing' (LNK-040)
+Opening block 'top_pad_rvx.dlib:top_pad_rvx_powerplan.design' in edit mode
+{top_pad_rvx.dlib:top_pad_rvx_powerplan.design}
+icc2_shell> start_gui
+icc2_shell> link_block
+Using libraries: top_pad_rvx.dlib saed32rvt_base_frame_timing saed32io_wb_5v
+Visiting block top_pad_rvx.dlib:top_pad_rvx_powerplan.design
+Warning: Pre-existing standard cell u_core/ibus_address_reg_reg_31_ cannot be connected to pad cell PAD_CLK: standard cells may not be inserted between a pad and the outside world. is_pad attribute on pad pin PAD_CLK/DOUT will be ignored. (MV-143)
+Warning: Pre-existing standard cell u_core/rvx_i2c_instance/U211 cannot be connected to pad cell PAD_RSTN: standard cells may not be inserted between a pad and the outside world. is_pad attribute on pad pin PAD_RSTN/DOUT will be ignored. (MV-143)
+Warning: Pre-existing standard cell u_core/rvx_uart_instance/U606 cannot be connected to pad cell PAD_URX: standard cells may not be inserted between a pad and the outside world. is_pad attribute on pad pin PAD_URX/DOUT will be ignored. (MV-143)
+Warning: Pre-existing standard cell u_core/rvx_spi_instance/U263 cannot be connected to pad cell PAD_MISO: standard cells may not be inserted between a pad and the outside world. is_pad attribute on pad pin PAD_MISO/DOUT will be ignored. (MV-143)
+Design 'top_pad_rvx' was successfully linked.
+1
+icc2_shell> check_pg_drc -ignore_std_cells
+Command check_pg_drc started  at Thu Aug 13 15:51:33 2026
+Command check_pg_drc finished at Thu Aug 13 15:52:29 2026
+CPU usage for check_pg_drc: 57.76 seconds ( 0.02 hours)
+Elapsed time for check_pg_drc: 55.65 seconds ( 0.02 hours)
+Total number of errors found: 45196
+   40 shorts on VIA3
+   40 shorts on M4
+   40 shorts on VIA4
+   40 shorts on M5
+   27 illegal overlaps on VIA4
+   58 illegal overlaps on VIA5
+   58 illegal overlaps on VIA6
+   54 illegal overlaps on VIA7
+   20 illegal overlaps on VIA8
+   71 insufficient spacings on M2
+   70 insufficient spacings on M3
+   31481 insufficient spacings on M4
+   47 insufficient spacings on VIA4
+   11708 insufficient spacings on M5
+   133 insufficient spacings on VIA5
+   133 insufficient spacings on VIA6
+   62 insufficient spacings on VIA7
+   38 insufficient spacings on VIA8
+   4 maximal metal width errors on M9
+   10 maximal metal width errors on MRDL
+   54 error between cuts on different layers on M5
+   126 error between cuts on different layers on M6
+   882 error between cuts on different layers on M7
+------------
+Description of the errors can be seen in gui error set "DRC_report_by_check_pg_drc"
+------------
+icc2_shell> gui_show_error_data
+icc2_shell> create_pad_rings -create all -route_pins_on_layer {M4 M5}
+Processing layer M4 ...
+Creating pad ring for net VDD
+Starting pad ring DRC checking ...
+Creating 84 wires after DRC fixing.
+Wire DRC checking runtime 2.00 seconds.
+Checking 0 stacked vias: 0% 100%
+Committed 84 wires.
+Committed 0 vias.
+Creating pad ring for net VDDIO
+Starting pad ring DRC checking ...
+Creating 912 wires after DRC fixing.
+Wire DRC checking runtime 31.00 seconds.
+Checking 0 stacked vias: 0% 100%
+Committed 912 wires.
+Committed 0 vias.
+Creating pad ring for net VSS
+Starting pad ring DRC checking ...
+Creating 92 wires after DRC fixing.
+Wire DRC checking runtime 2.00 seconds.
+Checking 0 stacked vias: 0% 100%
+Committed 92 wires.
+Committed 0 vias.
+Creating pad ring for net VSSIO
+Starting pad ring DRC checking ...
+Creating 972 wires after DRC fixing.
+Wire DRC checking runtime 34.00 seconds.
+Checking 0 stacked vias: 0% 100%
+Committed 972 wires.
+Committed 0 vias.
+Processing layer M5 ...
+Creating pad ring for net VDD
+Starting pad ring DRC checking ...
+Creating 181 wires after DRC fixing.
+Wire DRC checking runtime 0.00 seconds.
+Checking 0 stacked vias: 0% 100%
+Committed 181 wires.
+Committed 0 vias.
+Creating pad ring for net VDDIO
+Starting pad ring DRC checking ...
+Creating 1440 wires after DRC fixing.
+Wire DRC checking runtime 14.00 seconds.
+Checking 0 stacked vias: 0% 100%
+Committed 1440 wires.
+Committed 0 vias.
+Creating pad ring for net VSS
+Starting pad ring DRC checking ...
+Creating 192 wires after DRC fixing.
+Wire DRC checking runtime 1.00 seconds.
+Checking 0 stacked vias: 0% 100%
+Committed 192 wires.
+Committed 0 vias.
+Creating pad ring for net VSSIO
+Starting pad ring DRC checking ...
+Creating 1492 wires after DRC fixing.
+Wire DRC checking runtime 15.00 seconds.
+Checking 0 stacked vias: 0% 100%
+Committed 1492 wires.
+Committed 0 vias.
+Overall runtime: 108 seconds.
+Overall elapsed time: 104.00 seconds.
+Successfully created PG pad rings.
+icc2_shell> gui_show_error_data
+icc2_shell> check_pg_connectivity
+Checking secondary net through power switch is enabled. 
+Secondary net will be checked together from primary net. They will be treated as the same net
+Primary Net : VDD    Secondary Net:
+Primary Net : VDDIO    Secondary Net:
+Primary Net : VSS    Secondary Net:
+Primary Net : VSSIO    Secondary Net:
+Loading cell instances...
+Number of Standard Cells: 20190
+Number of Macro Cells: 0
+Number of IO Pad Cells: 255
+Number of Blocks: 0
+Loading P/G wires and vias...
+Number of VDD Wires: 1087
+Number of VDD Vias: 100118
+Number of VDD Terminals: 0
+**************Verify net VDD connectivity*****************
+  Number of floating wires: 171
+  Number of floating vias: 0
+  Number of floating std cells: 462
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 4
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Loading cell instances...
+Loading P/G wires and vias...
+Number of VDDIO Wires: 2352
+Number of VDDIO Vias: 0
+Number of VDDIO Terminals: 0
+**************Verify net VDDIO connectivity*****************
+  Number of floating wires: 2004
+  Number of floating vias: 0
+  Number of floating std cells: 0
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 180
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Loading cell instances...
+Loading P/G wires and vias...
+Number of VSS Wires: 1118
+Number of VSS Vias: 71963
+Number of VSS Terminals: 0
+**************Verify net VSS connectivity*****************
+  Number of floating wires: 292
+  Number of floating vias: 64
+  Number of floating std cells: 0
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 251
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Loading cell instances...
+Loading P/G wires and vias...
+Number of VSSIO Wires: 2464
+Number of VSSIO Vias: 0
+Number of VSSIO Terminals: 0
+**************Verify net VSSIO connectivity*****************
+  Number of floating wires: 2116
+  Number of floating vias: 0
+  Number of floating std cells: 0
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 180
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Overall runtime: 0 seconds.
+{PATH_27_4 PATH_27_5 PATH_27_31 PATH_27_32 PATH_11_36 PATH_11_42 PATH_11_48 PATH_27_48 PATH_27_51 PATH_27_52 PATH_27_53 PATH_11_54 PATH_11_60 PATH_17_113 PATH_17_114 PATH_17_115 PATH_17_116 PATH_17_117 PATH_17_118 PATH_17_119 PATH_17_120 PATH_17_121 PATH_19_121 PATH_17_122 PATH_17_123 PATH_19_123 PATH_17_124 PATH_17_125 PATH_19_125 PATH_17_126 PATH_17_127 PATH_19_127 PATH_17_128 PATH_17_129 PATH_19_129 PATH_17_130 PATH_17_131 PATH_19_131 PATH_17_132 PATH_17_133 PATH_19_133 PATH_17_134 PATH_17_135 PATH_19_135 PATH_17_136 PATH_19_136 PATH_17_138 PATH_19_138 PATH_17_140 PATH_19_140 PATH_17_141 PATH_17_142 PATH_19_142 PATH_17_143 PATH_17_144 PATH_17_145 PATH_19_145 PATH_17_146 PATH_19_147 PATH_17_148 PATH_19_149 PATH_17_150 PATH_17_151 PATH_19_151 PATH_17_152 PATH_19_152 PATH_17_153 PATH_19_153 PATH_17_154 PATH_19_154 PATH_17_155 PATH_19_155 PATH_17_156 PATH_17_157 PATH_19_157 PATH_17_158 PATH_17_159 PATH_19_159 PATH_17_160 PATH_17_161 PATH_19_161 PATH_17_162 PATH_17_163 PATH_19_163 PATH_17_164 PATH_17_165 PATH_19_165 PATH_17_166 PATH_17_167 PATH_19_167 PATH_17_168 PATH_17_169 PATH_19_169 PATH_17_170 PATH_19_170 PATH_17_171 PATH_17_172 PATH_19_172 PATH_17_173 PATH_17_174 ...}
+icc2_shell> exit
+Maximum memory usage for this session: 1654.09 MB
+Maximum memory usage for this session including child processes: 1654.09 MB
+CPU usage for this session:    413 seconds (  0.11 hours)
+Elapsed time for this session:   4943 seconds (  1.37 hours)
+Thank you for using IC Compiler II.
+
