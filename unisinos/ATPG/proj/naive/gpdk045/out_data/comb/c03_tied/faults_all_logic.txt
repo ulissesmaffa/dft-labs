@@ -1,0 +1,119 @@
+Starting Command: report_faults 
+
+INFO (TDA-005): Command Line Invocation: 
+            report_faults -faultstatus all -faultlocation cellpin -testmode FULLSCAN -experiment logic -workdir /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c03_tied -logfile /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/comb/c03_tied/faults_all_logic.txt  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 23.12-s005_1, built Aug 15 2024 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/comb/c03_tied/faults_all_logic.txt [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Wednesday Nov 11 14:50:17 2026  -03
+            Host machine is cadmicro-el8-07.inf.ufrgs.br, x86_64 running Linux 4.18.0-553.184.1.el8_10.x86_64.
+            This job is process number 4120227.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c03_tied
+            -TESTMODE FULLSCAN
+            -EXPERIMENT logic
+
+            -LOGFILE /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/comb/c03_tied/faults_all_logic.txt
+            -faultstatus all
+          + -faultlocation cellpin
+[end TDA_009]
+
+TFMlist 
+
+Logic Model(GM)   11/11/26
+                  17:49:59
+File Id     faultModel        faultStatus         experiment
+Created (GM)  11/11/26           11/11/26           11/11/26
+              17:50:07           17:50:07           17:50:10
+Modified(GM)  11/11/26           11/11/26           11/11/26
+              17:50:07           17:50:07           17:50:12
+Code Level        2023.0             2023.0             2023.0            
+Max Fault Id            28
+
+Fault Model Type:   Cell Boundary
+
+
+Global Ignored Static Fault Count                 4
+Global Ignored Dynamic Fault Count                0
+
+
+INFO (TFM-705): Testmode: FULLSCAN Experiment: logic Fault List:   
+
+
+     Fault Status  Type    Sim Func / Cell Name           Fault pin name
+
+         1 T       OSA0           PI                      a   
+         2 T       OSA1           PI                      a   
+         3 T       OSA0           PI                      b   
+         4 T       OSA1           PI                      b   
+         5 T       OSA0           PO                      z   
+        17 cT      OSA0           OR2X1                   g2.Y   
+        20 cT      ISA0           AND2X1                  g3.A   
+        21 cT      OSA0           AND2X1                  g1.Y   
+        22 cT      ISA0           AND2X1                  g3.B   
+        23 cT      OSA0           AND2X1                  g3.Y   
+        25 cT      ISA0           AND2X1                  g1.B   
+        27 cT      OSA0           TIEHI                   t1.Y   
+        28 cT      ISA0           AND2X1                  g1.A   
+         6 T       OSA1           PO                      z   
+        24 cT      OSA1           AND2X1                  g3.Y   
+         7 T       ISA1           AND2X1                  g1.A   
+         8 I       OSA1           TIEHI                   t1.Y   
+         9 I       ISA1           AND2X1                  g1.B   
+        10 I       OSA0           TIELO                   t0.Y   
+        11 T       ISA1           AND2X1                  g3.B   
+        15 cT      ISA1           OR2X1                   g2.A   
+        16 cT      ISA1           OR2X1                   g2.B   
+        18 cT      OSA1           OR2X1                   g2.Y   
+        26 cT      OSA1           TIELO                   t0.Y   
+        12 T       ISA1           AND2X1                  g3.A   
+        19 cT      OSA1           AND2X1                  g1.Y   
+        13 T       ISA0           OR2X1                   g2.A   
+        14 I       ISA0           OR2X1                   g2.B   
+
+[end TFM_705]
+
+
+INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+ Total                 :           28
+ Ignored               :            4
+ Tested                :           24
+ Possibly Tested       :            0
+ Redundant             :            0
+ Untested (unprocessed):            0
+[end TFM_901]
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            9,424,400  bytes
+
+                      CPU Time =    0:00:00.01
+                  Elapsed Time =    0:00:00.04                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 14:50:17 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-705): Testmode: FULLSCAN Experiment: logic Fault List:   
+      1 INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

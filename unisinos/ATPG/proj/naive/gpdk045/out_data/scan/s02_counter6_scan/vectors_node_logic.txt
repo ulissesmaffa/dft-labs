@@ -1,0 +1,881 @@
+# File name = /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/scan/s02_counter6_scan/vectors_node_logic.txt
+# Created by the Modus TBD print program
+# Date/time of output file creation: 20261111033719
+# Cadence(R) Modus(TM) DFT Software Solution, Version 23.12-s005_1, built Aug 15 2024 (linux26_64)
+TBDpatt_Format (mode=node, model_entity_form=name);
+# 
+#Vector_Correspondence
+# 
+# Note:
+#   If the original position of any scancell is changed within the Scan_Load or
+#     Scan_Unload vectors below, it is possible that some of the information
+#     included in the controllable and observable scan chain commentary will no
+#     longer be true.  The potentially incorrect fields would include,
+#     First_Stim_bit, Last_Stim_Bit, First_Meas_Bit and Last_Meas_Bit.
+# 
+# Legend: 
+# 
+#  tf     => the test function for the corresponding primary input/output pin
+#            AC    => A shift clock
+#            AS    => A shift and system clock
+#            BC    => B shift clock
+#            BDY   => boundary (test pin -- data)
+#            BI    => bi-directional inhibit
+#            BS    => B shift and system clock
+#            CHI   => channel input
+#            CHO   => channel output
+#            CI    => clock isolation
+#            CMI   => channel mask input
+#            CME   => channel mask enable
+#            CML   => channel mask load clock
+#            CMLE  => channel mask load enable
+#            CMI_A => channel mask load A clock
+#            CMI_B => channel mask load B clock
+#            CTL   => boundary (test pin -- control)
+#            EC    => shift clock for edge-sensitive flip-flops
+#            ES    => clock for both shift and system function of edge-sensitive
+#                  flip-flops.
+#            LH    => linehold
+#            ME    => MISR enable
+#            MO    => MISR observe
+#            MMI   => MISR mask input
+#            MME   => MISR mask enable
+#            MML   => MISR mask load clock
+#            MMLE  => MISR mask load enable
+#            MMI_A => MISR mask load A clock
+#            MMI_B => MISR mask load B clock
+#            MRE   => MISR reset Enable
+#            MRD   => MISR read
+#            MRST  => MISR reset
+#            NIC   => no interconnect
+#            OI    => output inhibit
+#            PC    => P clock
+#            PGE   => PRPG load enable
+#            PLD   => PRPG load
+#            PR    => PRPG restore
+#            PS    => P and system clock
+#            PV    => PRPG save
+#            SC    => system clock
+#            SE    => scan enable
+#            SI    => scan-in
+#            SIG   => scan in gate
+#            SO    => scan-out
+#            SOF   => scan out fill
+#            SOG   => scan out gate
+#            TC    => test constraint
+#            TCK   => test clock
+#            TI    => test inhibit
+#            TMS   => test mode select
+#            TRST  => test reset
+#            WS    => weight select
+# 
+#  index  => Modus Manufacturing model pin index
+# 
+#
+# PI: 
+#     (PI 1 = "Pin.f.l.top.nl.clk",   #  index = 0  tf = -ES 
+#      PI 2 = "Pin.f.l.top.nl.en",   #  index = 1
+#      PI 3 = "Pin.f.l.top.nl.rst_n",   #  index = 2  tf = +SC 
+#      PI 4 = "Pin.f.l.top.nl.se",   #  index = 3  tf = +SE 
+#      PI 5 = "Pin.f.l.top.nl.si")   #  index = 4  tf =  SI 
+#
+# PO: 
+#     (PO 1 = "Pin.f.l.top.nl.so",   #  index = 5  tf =  SO 
+#      PO 2 = "Pin.f.l.top.nl.z")   #  index = 6
+ 
+# 
+# Scan_Chain Definition
+#   Legend: 
+#     Load_Node       => Pin where logic values are placed for transfer into a
+#                        scancell via the load operation (e.g. a scan-in primary
+#                        input).
+#     Unload_Node     => Pin where scancell logic values appear as the result of an
+#                        unload operation (e.g. a scan-out primary output).
+#     index           => Modus Manufacturing model pin index for load/unload nodes or block
+#                        index for stim/measure scancells.
+#     Load_Sect       => The id of the load section.
+#     Load_ScanSect   => The scan section in which the registers are loaded.
+#     Unload_Sect     => The id of the unload section.
+#     Unload_ScanSect => The scan section in which the registers are unloaded.
+#     Bit_Length      => The number of bit positions in controllable/observable
+#                        scan chain.
+#     Number_Of_RSLs  => The number of Representative Stim Latches/Flops in the
+#                        controllable scan chain.
+#     Number_Of_SSLs  => The number of Skewed Stim Latches/Flops in the controllable
+#                        scan chain.
+#     Number_Of_RMLs  => The number of Representative Measure Latches/Flops in the
+#                        observable scan chain.
+#     First_Stim_Bit  => The bit position in the Scan_Load vector where RSL
+#                        values for this scan chain begin.
+#     Last_Stim_Bit   => The bit position in the Scan_Load vector where RSL
+#                        values for this scan chain stop.
+#     First_Meas_Bit  => The bit position in the Scan_Unload vector where RML
+#                        values for this scan chain begin.
+#     Last_Meas_Bit   => The bit position in the Scan_Unload vector where RML
+#                        values for this scan chain stop.
+# 
+# controllable scan chain 1:
+#    Load_Node = "Pin.f.l.top.nl.si"   index = 4
+#    Load_sect = 3
+#    Load_ScanSect = 1
+#    Bit_Length = 6
+#    Number_Of_RSLs = 6
+#    Number_Of_SSLs = 0
+#    First_Stim_Bit = 1  Last_Stim_Bit = 6
+# 
+# observable scan chain 1:
+#    Unload_Node = "Pin.f.l.top.nl.so"   index = 5
+#    Unload_sect = 3
+#    Unload_ScanSect = 1
+#    Bit_Length = 6
+#    Number_Of_RMLs = 6
+#    First_Meas_Bit = 1  Last_Meas_Bit = 6
+# 
+#  RSL    => Representative Stim Latch/Flop
+#  SSL    => Skewed Stim Latch/Flop
+#  RML    => Representative Measure Latch/Flop
+#  CR     => The id of the controllable scan chain which includes this scancell.
+#            This id can be correlated to the scan chain definition
+#            information listed above.
+#  OR     => The id of the observable scan chain which includes this scancell.
+#            This id can be correlated to the scan chain definition
+#            information listed above.
+#  pos    => Position in the scan chain which this scancell occupies.
+#            For a controllable scan chain, the first scancell which receives a
+#            value from the load node is in position 1 (i.e., scancell
+#            closest to the load node).  For a observable scan chain, the
+#            scancell whose value reaches the unload node first is in
+#            position 1 (i.e., scancell closest to the unload node).
+#  index =>  Modus Manufacturing hierModel index for the RSL,
+#            RML or SSL (scancell) block.
+#  invert => "Yes" means there is inversion in the scan chain
+#            between this scancell and the scan chain I/O pin.  For
+#            a stim scancell, the inversion is with respect to the scan
+#            chain input pin;  for a measure scancell, the inversion
+#            is with respect to the scan chain output pin.
+#            "No" means there is no inversion between the scan chain
+#            I/O pin and the scancell.
+#
+# Scan_Load: 
+#     (RSL 1 = "Block.f.l.top.nl.f0.__iNsT6.dff_primitive",   #  CR = 1  pos = 1  index = 24  invert = no
+#      RSL 2 = "Block.f.l.top.nl.f1.__iNsT6.dff_primitive",   #  CR = 1  pos = 2  index = 50  invert = no
+#      RSL 3 = "Block.f.l.top.nl.f2.__iNsT6.dff_primitive",   #  CR = 1  pos = 3  index = 76  invert = no
+#      RSL 4 = "Block.f.l.top.nl.f3.__iNsT6.dff_primitive",   #  CR = 1  pos = 4  index = 102  invert = no
+#      RSL 5 = "Block.f.l.top.nl.f4.__iNsT6.dff_primitive",   #  CR = 1  pos = 5  index = 128  invert = no
+#      RSL 6 = "Block.f.l.top.nl.f5.__iNsT6.dff_primitive")   #  CR = 1  pos = 6  index = 154  invert = no
+#
+# Scan_Unload: 
+#     (RML 1 = "Block.f.l.top.nl.f5.__iNsT6.dff_primitive",   #  OR = 1  pos = 1  index = 154  invert = no
+#      RML 2 = "Block.f.l.top.nl.f4.__iNsT6.dff_primitive",   #  OR = 1  pos = 2  index = 128  invert = no
+#      RML 3 = "Block.f.l.top.nl.f3.__iNsT6.dff_primitive",   #  OR = 1  pos = 3  index = 102  invert = no
+#      RML 4 = "Block.f.l.top.nl.f2.__iNsT6.dff_primitive",   #  OR = 1  pos = 4  index = 76  invert = no
+#      RML 5 = "Block.f.l.top.nl.f1.__iNsT6.dff_primitive",   #  OR = 1  pos = 5  index = 50  invert = no
+#      RML 6 = "Block.f.l.top.nl.f0.__iNsT6.dff_primitive")   #  OR = 1  pos = 6  index = 24  invert = no
+
+
+#
+# Inputs: 
+#     (Inputs 1 = "Pin.f.l.top.nl.clk",   #  index = 0  tf = -ES 
+#      Inputs 2 = "Pin.f.l.top.nl.en",   #  index = 1
+#      Inputs 3 = "Pin.f.l.top.nl.rst_n",   #  index = 2  tf = +SC 
+#      Inputs 4 = "Pin.f.l.top.nl.se",   #  index = 3  tf = +SE 
+#      Inputs 5 = "Pin.f.l.top.nl.si")   #  index = 4  tf =  SI 
+#      ;                                        # End of vector correspondence
+[ Experiment logic 1 (datetime = 1794368236);
+ [ Test_Section 1.1 (tester_termination = none, test_section_type = scan, test_type = static, simulated, simplified);
+   [ Keyed_Data;
+    "SimOptions" = "globalterm=none latchsimulation=optimistic constraintpropagation=pessimistic ramsimulation=optimistic choppers=risky propxignore=no loadsuffix=fm maxfaultxsize=10000 maxfaultsize=100000 maxfaultcopies=100000 keepers=risky pdl=0 markpdlfaultstested=no removexlatch=no removexpo=no faulttype=static latchfill=random latchfill2=repeat markimpliedstatic=no aliascheck=no contentionremove=hard countxcaptureswitches=half faultimply=yes zmemory=no "
+   ] Keyed_Data;
+  [ Tester_Loop 1.1.1 ();
+   [ Test_Procedure 1.1.1.1 (type = init);
+    [ Test_Sequence 1.1.1.1.1 (type = init); 
+      [ Keyed_Data;
+       "AnalysisSimOptions" = "useppis=no simwaitosc=no simforce=yes stopatunpowered=no delaymode=unit stabilitylatch=no"
+      ] Keyed_Data;
+     [ Pattern 1.1.1.1.1.1 (pattern_type = static);
+        Event 1.1.1.1.1.1.1   Stim_PI ():
+"clk"=0 
+"rst_n"=1 
+"se"=1 ;
+     ] Pattern 1.1.1.1.1.1;
+    ] Test_Sequence 1.1.1.1.1;
+   ] Test_Procedure 1.1.1.1;
+   [ Test_Procedure 1.1.1.2 (static_faults = 60, percent_static_faults = 32.258064);
+    [ Test_Sequence 1.1.1.2.1 (); # Test 1
+     [ Pattern 1.1.1.2.1.1 (pattern_type = static);
+        Event 1.1.1.2.1.1.1   Scan_Load ():
+"f0.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=0 
+"f2.__iNsT6.dff_primitive"=0 
+"f3.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=1 
+"f5.__iNsT6.dff_primitive"=0 ;
+     ] Pattern 1.1.1.2.1.1;
+     [ Pattern 1.1.1.2.1.2 (pattern_type = static);
+        Event 1.1.1.2.1.2.1   Scan_Unload ():
+"f5.__iNsT6.dff_primitive"=0 
+"f4.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=0 
+"f1.__iNsT6.dff_primitive"=0 
+"f0.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.1.1.2.1.2;
+    ] Test_Sequence 1.1.1.2.1;
+   ] Test_Procedure 1.1.1.2;
+  ] Tester_Loop 1.1.1;
+ ] Test_Section 1.1;
+ [ Test_Section 1.2 (tester_termination = none, test_section_type = logic, test_type = static, simulated);
+   [ Keyed_Data;
+    "SimOptions" = "globalterm=none latchsimulation=optimistic constraintpropagation=pessimistic ramsimulation=optimistic choppers=risky propxignore=no loadsuffix=fm maxfaultxsize=10000 maxfaultsize=100000 maxfaultcopies=100000 keepers=risky pdl=0 markpdlfaultstested=no removexlatch=no removexpo=no faulttype=static latchfill=random latchfill2=repeat markimpliedstatic=no aliascheck=no contentionremove=hard countxcaptureswitches=half faultimply=yes zmemory=no "
+   ] Keyed_Data;
+  [ Tester_Loop 1.2.1 ();
+   [ Test_Procedure 1.2.1.1 (type = init);
+    [ Test_Sequence 1.2.1.1.1 (type = init); 
+      [ Keyed_Data;
+       "AnalysisSimOptions" = "useppis=no simwaitosc=no simforce=yes stopatunpowered=no delaymode=unit stabilitylatch=no"
+      ] Keyed_Data;
+     [ Pattern 1.2.1.1.1.1 (pattern_type = static);
+        Event 1.2.1.1.1.1.1   Stim_PI ():
+"clk"=0 
+"rst_n"=1 
+"se"=1 ;
+     ] Pattern 1.2.1.1.1.1;
+    ] Test_Sequence 1.2.1.1.1;
+   ] Test_Procedure 1.2.1.1;
+   [ Test_Procedure 1.2.1.2 (static_faults = 7, percent_static_faults = 36.021507);
+    [ Test_Sequence 1.2.1.2.1 (); # Test 2
+      [ Keyed_Data;
+       "comment" = "Reset Test"
+      ] Keyed_Data;
+     [ sort_keys (sone=1):
+       static = 7
+     ] sort_keys;
+     [ Pattern 1.2.1.2.1.1 (pattern_type = static);
+        Event 1.2.1.2.1.1.1   Compact_Scan_Load ( default_value=random, random_seed=16807 , weight_value=1 ):
+"f0.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=1 
+"f5.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.2.1.1;
+     [ Pattern 1.2.1.2.1.2 (pattern_type = static);
+        Event 1.2.1.2.1.2.1   Stim_PI ():;
+     ] Pattern 1.2.1.2.1.2;
+     [ Pattern 1.2.1.2.1.3 (pattern_type = static);
+        Event 1.2.1.2.1.3.1   Pulse ():
+"rst_n"=- ;
+     ] Pattern 1.2.1.2.1.3;
+     [ Pattern 1.2.1.2.1.4 (pattern_type = static);
+        Event 1.2.1.2.1.4.1   Scan_Unload ():
+"f5.__iNsT6.dff_primitive"=0 
+"f4.__iNsT6.dff_primitive"=0 
+"f3.__iNsT6.dff_primitive"=0 
+"f2.__iNsT6.dff_primitive"=0 
+"f1.__iNsT6.dff_primitive"=0 
+"f0.__iNsT6.dff_primitive"=0 ;
+     ] Pattern 1.2.1.2.1.4;
+    ] Test_Sequence 1.2.1.2.1;
+   ] Test_Procedure 1.2.1.2;
+   [ Test_Procedure 1.2.1.3 (static_faults = 95, percent_static_faults = 87.096771);
+    [ Test_Sequence 1.2.1.3.1 (); # Test 3
+     [ sort_keys (sone=1):
+       static = 4
+     ] sort_keys;
+     [ Target_Faults():
+Fault = 32 MeasurePoint =  "f1.__iNsT6.dff_primitive"
+Fault = 123 MeasurePoint =  "f0.__iNsT6.dff_primitive"
+Fault = 108 MeasurePoint =  "f3.__iNsT6.dff_primitive"
+Fault = 102 MeasurePoint =  "f2.__iNsT6.dff_primitive"
+Fault = 105 MeasurePoint =  "f3.__iNsT6.dff_primitive"
+Fault = 95 MeasurePoint =  "f1.__iNsT6.dff_primitive"
+Fault = 19 MeasurePoint =  "f0.__iNsT6.dff_primitive"
+Fault = 116 MeasurePoint =  "f5.__iNsT6.dff_primitive"
+Fault = 117 MeasurePoint =  "f5.__iNsT6.dff_primitive"
+Fault = 68 MeasurePoint =  "f4.__iNsT6.dff_primitive"
+Fault = 111 MeasurePoint =  "f4.__iNsT6.dff_primitive"
+Fault = 54 MeasurePoint =  "f2.__iNsT6.dff_primitive"
+Fault = 90 MeasurePoint =  "f5.__iNsT6.dff_primitive"
+Fault = 30 MeasurePoint =  "f0.__iNsT6.dff_primitive"
+Fault = 138 MeasurePoint =  "f2.__iNsT6.dff_primitive"
+Fault = 79 MeasurePoint =  "f5.__iNsT6.dff_primitive"
+Fault = 56 MeasurePoint =  "f3.__iNsT6.dff_primitive"
+Fault = 125 MeasurePoint =  "f0.__iNsT6.dff_primitive"
+Fault = 122 MeasurePoint =  "f4.__iNsT6.dff_primitive"
+Fault = 134 MeasurePoint =  "f3.__iNsT6.dff_primitive"
+Fault = 131 MeasurePoint =  "f1.__iNsT6.dff_primitive"
+Fault = 135 MeasurePoint =  "f2.__iNsT6.dff_primitive"
+Fault = 127 MeasurePoint =  "f3.__iNsT6.dff_primitive"
+Fault = 130 MeasurePoint =  "f1.__iNsT6.dff_primitive"
+Fault = 110 MeasurePoint =  "f5.__iNsT6.dff_primitive"
+Fault = 3 MeasurePoint =  "f1.__iNsT6.dff_primitive"
+Fault = 114 MeasurePoint =  "f4.__iNsT6.dff_primitive"
+Fault = 119 MeasurePoint =  "f4.__iNsT6.dff_primitive"
+Fault = 44 MeasurePoint =  "f2.__iNsT6.dff_primitive"
+Fault = 8 MeasurePoint =  "f2.__iNsT6.dff_primitive"
+Fault = 97 MeasurePoint =  "f2.__iNsT6.dff_primitive"
+     ] Target_Faults;
+     [ Pattern 1.2.1.3.1.1 (pattern_type = static);
+        Event 1.2.1.3.1.1.1   Compact_Scan_Load ( default_value=random, random_seed=1075648 , weight_value=1 ):
+"f0.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=0 
+"f2.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=1 
+"f5.__iNsT6.dff_primitive"=0 ;
+     ] Pattern 1.2.1.3.1.1;
+     [ Pattern 1.2.1.3.1.2 (pattern_type = static);
+        Event 1.2.1.3.1.2.1   Stim_PI ():
+"en"=1 
+"se"=0 
+"si"=1 ;
+     ] Pattern 1.2.1.3.1.2;
+     [ Pattern 1.2.1.3.1.3 (pattern_type = static);
+        Event 1.2.1.3.1.3.1   Pulse ():
+"clk"=+ ;
+     ] Pattern 1.2.1.3.1.3;
+     [ Pattern 1.2.1.3.1.4 (pattern_type = static);
+        Event 1.2.1.3.1.4.1   Measure_PO ():
+"so"=0 
+"z"=0 ;
+     ] Pattern 1.2.1.3.1.4;
+     [ Pattern 1.2.1.3.1.5 (pattern_type = static);
+        Event 1.2.1.3.1.5.1   Scan_Unload ():
+"f5.__iNsT6.dff_primitive"=0 
+"f4.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f0.__iNsT6.dff_primitive"=0 ;
+     ] Pattern 1.2.1.3.1.5;
+    ] Test_Sequence 1.2.1.3.1;
+    [ Test_Sequence 1.2.1.3.2 (); # Test 4
+     [ sort_keys (sone=1):
+       static = 9
+     ] sort_keys;
+     [ Target_Faults():
+Fault = 80 MeasurePoint =  "f5.__iNsT6.dff_primitive"
+Fault = 31 MeasurePoint =  "f1.__iNsT6.dff_primitive"
+Fault = 101 MeasurePoint =  "f2.__iNsT6.dff_primitive"
+Fault = 67 MeasurePoint =  "f4.__iNsT6.dff_primitive"
+Fault = 120 MeasurePoint =  "f4.__iNsT6.dff_primitive"
+Fault = 55 MeasurePoint =  "f3.__iNsT6.dff_primitive"
+Fault = 78 MeasurePoint =  "f4.__iNsT6.dff_primitive"
+Fault = 42 MeasurePoint =  "f1.__iNsT6.dff_primitive"
+Fault = 43 MeasurePoint =  "f2.__iNsT6.dff_primitive"
+Fault = 112 MeasurePoint =  "f5.__iNsT6.dff_primitive"
+Fault = 129 MeasurePoint =  "f1.__iNsT6.dff_primitive"
+Fault = 66 MeasurePoint =  "f3.__iNsT6.dff_primitive"
+Fault = 107 MeasurePoint =  "f3.__iNsT6.dff_primitive"
+Fault = 113 MeasurePoint =  "f4.__iNsT6.dff_primitive"
+Fault = 128 MeasurePoint =  "f3.__iNsT6.dff_primitive"
+Fault = 137 MeasurePoint =  "f2.__iNsT6.dff_primitive"
+     ] Target_Faults;
+     [ Pattern 1.2.1.3.2.1 (pattern_type = static);
+        Event 1.2.1.3.2.1.1   Compact_Scan_Load ( default_value=random, random_seed=2202927104 , weight_value=1 ):
+"f0.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=1 
+"f5.__iNsT6.dff_primitive"=0 ;
+     ] Pattern 1.2.1.3.2.1;
+     [ Pattern 1.2.1.3.2.2 (pattern_type = static);
+        Event 1.2.1.3.2.2.1   Stim_PI ():
+"en"=1 
+"se"=0 
+"si"=0 ;
+     ] Pattern 1.2.1.3.2.2;
+     [ Pattern 1.2.1.3.2.3 (pattern_type = static);
+        Event 1.2.1.3.2.3.1   Pulse ():
+"clk"=+ ;
+     ] Pattern 1.2.1.3.2.3;
+     [ Pattern 1.2.1.3.2.4 (pattern_type = static);
+        Event 1.2.1.3.2.4.1   Measure_PO ():
+"so"=1 
+"z"=0 ;
+     ] Pattern 1.2.1.3.2.4;
+     [ Pattern 1.2.1.3.2.5 (pattern_type = static);
+        Event 1.2.1.3.2.5.1   Scan_Unload ():
+"f5.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=0 
+"f3.__iNsT6.dff_primitive"=0 
+"f2.__iNsT6.dff_primitive"=0 
+"f1.__iNsT6.dff_primitive"=0 
+"f0.__iNsT6.dff_primitive"=0 ;
+     ] Pattern 1.2.1.3.2.5;
+    ] Test_Sequence 1.2.1.3.2;
+    [ Test_Sequence 1.2.1.3.3 (); # Test 5
+     [ sort_keys (sone=1):
+       static = 26
+     ] sort_keys;
+     [ Target_Faults():
+Fault = 93 MeasurePoint =  "f1.__iNsT6.dff_primitive"
+Fault = 20 MeasurePoint =  "f0.__iNsT6.dff_primitive"
+Fault = 99 MeasurePoint =  "f2.__iNsT6.dff_primitive"
+     ] Target_Faults;
+     [ Pattern 1.2.1.3.3.1 (pattern_type = static);
+        Event 1.2.1.3.3.1.1   Compact_Scan_Load ( default_value=random, random_seed=9239745964015616 , weight_value=1 ):
+"f0.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.3.3.1;
+     [ Pattern 1.2.1.3.3.2 (pattern_type = static);
+        Event 1.2.1.3.3.2.1   Stim_PI ():
+"en"=0 
+"se"=0 
+"si"=1 ;
+     ] Pattern 1.2.1.3.3.2;
+     [ Pattern 1.2.1.3.3.3 (pattern_type = static);
+        Event 1.2.1.3.3.3.1   Pulse ():
+"clk"=+ ;
+     ] Pattern 1.2.1.3.3.3;
+     [ Pattern 1.2.1.3.3.4 (pattern_type = static);
+        Event 1.2.1.3.3.4.1   Measure_PO ():
+"so"=0 
+"z"=0 ;
+     ] Pattern 1.2.1.3.3.4;
+     [ Pattern 1.2.1.3.3.5 (pattern_type = static);
+        Event 1.2.1.3.3.5.1   Scan_Unload ():
+"f5.__iNsT6.dff_primitive"=0 
+"f4.__iNsT6.dff_primitive"=0 
+"f3.__iNsT6.dff_primitive"=0 
+"f2.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f0.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.3.3.5;
+    ] Test_Sequence 1.2.1.3.3;
+    [ Test_Sequence 1.2.1.3.4 (); # Test 6
+     [ sort_keys (sone=1):
+       static = 51
+     ] sort_keys;
+     [ Target_Faults():
+Fault = 109 MeasurePoint =  "f4.__iNsT6.dff_primitive"
+     ] Target_Faults;
+     [ Pattern 1.2.1.3.4.1 (pattern_type = static);
+        Event 1.2.1.3.4.1.1   Compact_Scan_Load ( default_value=random, random_seed=12486709172287943637 , weight_value=1 ):
+"f0.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=0 
+"f4.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.3.4.1;
+     [ Pattern 1.2.1.3.4.2 (pattern_type = static);
+        Event 1.2.1.3.4.2.1   Stim_PI ():
+"en"=1 
+"se"=0 
+"si"=1 ;
+     ] Pattern 1.2.1.3.4.2;
+     [ Pattern 1.2.1.3.4.3 (pattern_type = static);
+        Event 1.2.1.3.4.3.1   Pulse ():
+"clk"=+ ;
+     ] Pattern 1.2.1.3.4.3;
+     [ Pattern 1.2.1.3.4.4 (pattern_type = static);
+        Event 1.2.1.3.4.4.1   Measure_PO ():
+"so"=1 
+"z"=0 ;
+     ] Pattern 1.2.1.3.4.4;
+     [ Pattern 1.2.1.3.4.5 (pattern_type = static);
+        Event 1.2.1.3.4.5.1   Scan_Unload ():
+"f5.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=0 
+"f1.__iNsT6.dff_primitive"=0 
+"f0.__iNsT6.dff_primitive"=0 ;
+     ] Pattern 1.2.1.3.4.5;
+    ] Test_Sequence 1.2.1.3.4;
+    [ Test_Sequence 1.2.1.3.5 (); # Test 7
+     [ sort_keys (sone=1):
+       static = 1
+     ] sort_keys;
+     [ Target_Faults():
+Fault = 115 MeasurePoint =  "f5.__iNsT6.dff_primitive"
+     ] Target_Faults;
+     [ Pattern 1.2.1.3.5.1 (pattern_type = static);
+        Event 1.2.1.3.5.1.1   Compact_Scan_Load ( default_value=random, random_seed=10669269482210384463 , weight_value=1 ):
+"f0.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=0 ;
+     ] Pattern 1.2.1.3.5.1;
+     [ Pattern 1.2.1.3.5.2 (pattern_type = static);
+        Event 1.2.1.3.5.2.1   Stim_PI ():
+"en"=1 
+"se"=0 
+"si"=1 ;
+     ] Pattern 1.2.1.3.5.2;
+     [ Pattern 1.2.1.3.5.3 (pattern_type = static);
+        Event 1.2.1.3.5.3.1   Pulse ():
+"clk"=+ ;
+     ] Pattern 1.2.1.3.5.3;
+     [ Pattern 1.2.1.3.5.4 (pattern_type = static);
+        Event 1.2.1.3.5.4.1   Measure_PO ():
+"so"=1 
+"z"=0 ;
+     ] Pattern 1.2.1.3.5.4;
+     [ Pattern 1.2.1.3.5.5 (pattern_type = static);
+        Event 1.2.1.3.5.5.1   Scan_Unload ():
+"f5.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=0 
+"f2.__iNsT6.dff_primitive"=0 
+"f1.__iNsT6.dff_primitive"=0 
+"f0.__iNsT6.dff_primitive"=0 ;
+     ] Pattern 1.2.1.3.5.5;
+    ] Test_Sequence 1.2.1.3.5;
+    [ Test_Sequence 1.2.1.3.6 (); # Test 8
+     [ sort_keys (sone=1):
+       static = 2
+     ] sort_keys;
+     [ Target_Faults():
+Fault = 91 MeasurePoint =  "f1.__iNsT6.dff_primitive"
+     ] Target_Faults;
+     [ Pattern 1.2.1.3.6.1 (pattern_type = static);
+        Event 1.2.1.3.6.1.1   Compact_Scan_Load ( default_value=random, random_seed=10253155156304100339 , weight_value=1 ):
+"f0.__iNsT6.dff_primitive"=0 
+"f1.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.3.6.1;
+     [ Pattern 1.2.1.3.6.2 (pattern_type = static);
+        Event 1.2.1.3.6.2.1   Stim_PI ():
+"en"=1 
+"se"=0 
+"si"=0 ;
+     ] Pattern 1.2.1.3.6.2;
+     [ Pattern 1.2.1.3.6.3 (pattern_type = static);
+        Event 1.2.1.3.6.3.1   Pulse ():
+"clk"=+ ;
+     ] Pattern 1.2.1.3.6.3;
+     [ Pattern 1.2.1.3.6.4 (pattern_type = static);
+        Event 1.2.1.3.6.4.1   Measure_PO ():
+"so"=1 
+"z"=0 ;
+     ] Pattern 1.2.1.3.6.4;
+     [ Pattern 1.2.1.3.6.5 (pattern_type = static);
+        Event 1.2.1.3.6.5.1   Scan_Unload ():
+"f5.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=0 
+"f3.__iNsT6.dff_primitive"=0 
+"f2.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f0.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.3.6.5;
+    ] Test_Sequence 1.2.1.3.6;
+    [ Test_Sequence 1.2.1.3.7 (); # Test 9
+     [ sort_keys (sone=1):
+       static = 2
+     ] sort_keys;
+     [ Target_Faults():
+Fault = 103 MeasurePoint =  "f3.__iNsT6.dff_primitive"
+     ] Target_Faults;
+     [ Pattern 1.2.1.3.7.1 (pattern_type = static);
+        Event 1.2.1.3.7.1.1   Compact_Scan_Load ( default_value=random, random_seed=12881072028436598258 , weight_value=1 ):
+"f0.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=0 
+"f3.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.3.7.1;
+     [ Pattern 1.2.1.3.7.2 (pattern_type = static);
+        Event 1.2.1.3.7.2.1   Stim_PI ():
+"en"=1 
+"se"=0 
+"si"=1 ;
+     ] Pattern 1.2.1.3.7.2;
+     [ Pattern 1.2.1.3.7.3 (pattern_type = static);
+        Event 1.2.1.3.7.3.1   Pulse ():
+"clk"=+ ;
+     ] Pattern 1.2.1.3.7.3;
+     [ Pattern 1.2.1.3.7.4 (pattern_type = static);
+        Event 1.2.1.3.7.4.1   Measure_PO ():
+"so"=0 
+"z"=0 ;
+     ] Pattern 1.2.1.3.7.4;
+     [ Pattern 1.2.1.3.7.5 (pattern_type = static);
+        Event 1.2.1.3.7.5.1   Scan_Unload ():
+"f5.__iNsT6.dff_primitive"=0 
+"f4.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=0 
+"f0.__iNsT6.dff_primitive"=0 ;
+     ] Pattern 1.2.1.3.7.5;
+    ] Test_Sequence 1.2.1.3.7;
+   ] Test_Procedure 1.2.1.3;
+   [ Test_Procedure 1.2.1.4 (static_faults = 24, percent_static_faults = 100.000000);
+    [ Test_Sequence 1.2.1.4.1 (); # Test 10
+     [ sort_keys (sone=1):
+       static = 1
+     ] sort_keys;
+     [ Target_Faults():
+Fault = 14 MeasurePoint =  "z"
+Fault = 16 MeasurePoint =  "z"
+Fault = 17 MeasurePoint =  "z"
+     ] Target_Faults;
+     [ Pattern 1.2.1.4.1.1 (pattern_type = static);
+        Event 1.2.1.4.1.1.1   Compact_Scan_Load ( default_value=random, random_seed=5618813678859288683 , weight_value=1 ):
+"f0.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=0 
+"f5.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.4.1.1;
+     [ Pattern 1.2.1.4.1.2 (pattern_type = static);
+        Event 1.2.1.4.1.2.1   Stim_PI ():
+"en"=0 
+"se"=0 
+"si"=0 ;
+     ] Pattern 1.2.1.4.1.2;
+     [ Pattern 1.2.1.4.1.3 (pattern_type = static);
+        Event 1.2.1.4.1.3.1   Measure_PO ():
+"so"=1 
+"z"=0 ;
+     ] Pattern 1.2.1.4.1.3;
+     [ Pattern 1.2.1.4.1.4 (pattern_type = static);
+        Event 1.2.1.4.1.4.1   Scan_Unload ():
+"f5.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=0 
+"f3.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f0.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.4.1.4;
+    ] Test_Sequence 1.2.1.4.1;
+    [ Test_Sequence 1.2.1.4.2 (); # Test 11
+     [ sort_keys (sone=1):
+       static = 3
+     ] sort_keys;
+     [ Target_Faults():
+Fault = 18 MeasurePoint =  "z"
+Fault = 94 MeasurePoint =  "z"
+Fault = 100 MeasurePoint =  "z"
+Fault = 104 MeasurePoint =  "z"
+     ] Target_Faults;
+     [ Pattern 1.2.1.4.2.1 (pattern_type = static);
+        Event 1.2.1.4.2.1.1   Compact_Scan_Load ( default_value=random, random_seed=2408698453789251738 , weight_value=1 ):
+"f0.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=0 
+"f2.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=1 
+"f5.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.4.2.1;
+     [ Pattern 1.2.1.4.2.2 (pattern_type = static);
+        Event 1.2.1.4.2.2.1   Stim_PI ():
+"en"=0 
+"se"=0 
+"si"=0 ;
+     ] Pattern 1.2.1.4.2.2;
+     [ Pattern 1.2.1.4.2.3 (pattern_type = static);
+        Event 1.2.1.4.2.3.1   Measure_PO ():
+"so"=1 
+"z"=0 ;
+     ] Pattern 1.2.1.4.2.3;
+     [ Pattern 1.2.1.4.2.4 (pattern_type = static);
+        Event 1.2.1.4.2.4.1   Scan_Unload ():
+"f5.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=0 
+"f0.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.4.2.4;
+    ] Test_Sequence 1.2.1.4.2;
+    [ Test_Sequence 1.2.1.4.3 (); # Test 12
+     [ sort_keys (sone=1):
+       static = 1
+     ] sort_keys;
+     [ Target_Faults():
+Fault = 98 MeasurePoint =  "z"
+     ] Target_Faults;
+     [ Pattern 1.2.1.4.3.1 (pattern_type = static);
+        Event 1.2.1.4.3.1.1   Compact_Scan_Load ( default_value=random, random_seed=16497676410704662382 , weight_value=1 ):
+"f0.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=0 
+"f3.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=1 
+"f5.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.4.3.1;
+     [ Pattern 1.2.1.4.3.2 (pattern_type = static);
+        Event 1.2.1.4.3.2.1   Stim_PI ():
+"en"=1 
+"se"=0 
+"si"=1 ;
+     ] Pattern 1.2.1.4.3.2;
+     [ Pattern 1.2.1.4.3.3 (pattern_type = static);
+        Event 1.2.1.4.3.3.1   Measure_PO ():
+"so"=1 
+"z"=0 ;
+     ] Pattern 1.2.1.4.3.3;
+     [ Pattern 1.2.1.4.3.4 (pattern_type = static);
+        Event 1.2.1.4.3.4.1   Scan_Unload ():
+"f5.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=0 
+"f1.__iNsT6.dff_primitive"=1 
+"f0.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.4.3.4;
+    ] Test_Sequence 1.2.1.4.3;
+    [ Test_Sequence 1.2.1.4.4 (); # Test 13
+     [ sort_keys (sone=1):
+       static = 1
+     ] sort_keys;
+     [ Target_Faults():
+Fault = 15 MeasurePoint =  "z"
+     ] Target_Faults;
+     [ Pattern 1.2.1.4.4.1 (pattern_type = static);
+        Event 1.2.1.4.4.1.1   Compact_Scan_Load ( default_value=random, random_seed=3297657553807383437 , weight_value=1 ):
+"f0.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=1 
+"f5.__iNsT6.dff_primitive"=0 ;
+     ] Pattern 1.2.1.4.4.1;
+     [ Pattern 1.2.1.4.4.2 (pattern_type = static);
+        Event 1.2.1.4.4.2.1   Stim_PI ():
+"en"=1 
+"se"=0 
+"si"=1 ;
+     ] Pattern 1.2.1.4.4.2;
+     [ Pattern 1.2.1.4.4.3 (pattern_type = static);
+        Event 1.2.1.4.4.3.1   Measure_PO ():
+"so"=0 
+"z"=0 ;
+     ] Pattern 1.2.1.4.4.3;
+     [ Pattern 1.2.1.4.4.4 (pattern_type = static);
+        Event 1.2.1.4.4.4.1   Scan_Unload ():
+"f5.__iNsT6.dff_primitive"=0 
+"f4.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f0.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.4.4.4;
+    ] Test_Sequence 1.2.1.4.4;
+    [ Test_Sequence 1.2.1.4.5 (); # Test 14
+     [ sort_keys (sone=1):
+       static = 16
+     ] sort_keys;
+     [ Target_Faults():
+Fault = 13 MeasurePoint =  "z"
+     ] Target_Faults;
+     [ Pattern 1.2.1.4.5.1 (pattern_type = static);
+        Event 1.2.1.4.5.1.1   Compact_Scan_Load ( default_value=random, random_seed=14199698388374751481 , weight_value=1 ):
+"f0.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=1 
+"f5.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.4.5.1;
+     [ Pattern 1.2.1.4.5.2 (pattern_type = static);
+        Event 1.2.1.4.5.2.1   Stim_PI ():
+"en"=1 
+"se"=0 
+"si"=0 ;
+     ] Pattern 1.2.1.4.5.2;
+     [ Pattern 1.2.1.4.5.3 (pattern_type = static);
+        Event 1.2.1.4.5.3.1   Measure_PO ():
+"so"=1 
+"z"=1 ;
+     ] Pattern 1.2.1.4.5.3;
+     [ Pattern 1.2.1.4.5.4 (pattern_type = static);
+        Event 1.2.1.4.5.4.1   Scan_Unload ():
+"f5.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f0.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.4.5.4;
+    ] Test_Sequence 1.2.1.4.5;
+    [ Test_Sequence 1.2.1.4.6 (); # Test 15
+     [ sort_keys (sone=1):
+       static = 1
+     ] sort_keys;
+     [ Target_Faults():
+Fault = 92 MeasurePoint =  "z"
+     ] Target_Faults;
+     [ Pattern 1.2.1.4.6.1 (pattern_type = static);
+        Event 1.2.1.4.6.1.1   Compact_Scan_Load ( default_value=random, random_seed=1644437045242128328 , weight_value=1 ):
+"f0.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=0 
+"f4.__iNsT6.dff_primitive"=1 
+"f5.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.4.6.1;
+     [ Pattern 1.2.1.4.6.2 (pattern_type = static);
+        Event 1.2.1.4.6.2.1   Stim_PI ():
+"en"=1 
+"se"=0 
+"si"=1 ;
+     ] Pattern 1.2.1.4.6.2;
+     [ Pattern 1.2.1.4.6.3 (pattern_type = static);
+        Event 1.2.1.4.6.3.1   Measure_PO ():
+"so"=1 
+"z"=0 ;
+     ] Pattern 1.2.1.4.6.3;
+     [ Pattern 1.2.1.4.6.4 (pattern_type = static);
+        Event 1.2.1.4.6.4.1   Scan_Unload ():
+"f5.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=0 
+"f2.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f0.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.4.6.4;
+    ] Test_Sequence 1.2.1.4.6;
+    [ Test_Sequence 1.2.1.4.7 (); # Test 16
+     [ sort_keys (sone=1):
+       static = 1
+     ] sort_keys;
+     [ Target_Faults():
+Fault = 106 MeasurePoint =  "z"
+     ] Target_Faults;
+     [ Pattern 1.2.1.4.7.1 (pattern_type = static);
+        Event 1.2.1.4.7.1.1   Compact_Scan_Load ( default_value=random, random_seed=9477446881694898755 , weight_value=1 ):
+"f0.__iNsT6.dff_primitive"=0 
+"f1.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=1 
+"f5.__iNsT6.dff_primitive"=1 ;
+     ] Pattern 1.2.1.4.7.1;
+     [ Pattern 1.2.1.4.7.2 (pattern_type = static);
+        Event 1.2.1.4.7.2.1   Stim_PI ():
+"en"=1 
+"se"=0 
+"si"=1 ;
+     ] Pattern 1.2.1.4.7.2;
+     [ Pattern 1.2.1.4.7.3 (pattern_type = static);
+        Event 1.2.1.4.7.3.1   Measure_PO ():
+"so"=1 
+"z"=0 ;
+     ] Pattern 1.2.1.4.7.3;
+     [ Pattern 1.2.1.4.7.4 (pattern_type = static);
+        Event 1.2.1.4.7.4.1   Scan_Unload ():
+"f5.__iNsT6.dff_primitive"=1 
+"f4.__iNsT6.dff_primitive"=1 
+"f3.__iNsT6.dff_primitive"=1 
+"f2.__iNsT6.dff_primitive"=1 
+"f1.__iNsT6.dff_primitive"=1 
+"f0.__iNsT6.dff_primitive"=0 ;
+     ] Pattern 1.2.1.4.7.4;
+    ] Test_Sequence 1.2.1.4.7;
+   ] Test_Procedure 1.2.1.4;
+  ] Tester_Loop 1.2.1;
+ ] Test_Section 1.2;
+] Experiment logic 1;
+# experiments = 1
+# test sections = 2
+# tester loops = 2
+# test procedures = 6
+# test sequences = 16
+# init sequences = 2
+# patterns = 71
+# events = 71

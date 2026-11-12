@@ -1,0 +1,170 @@
+Starting Command: report_faults 
+
+INFO (TDA-005): Command Line Invocation: 
+            report_faults -faultstatus redundant -faultlocation cellpin -reportkey yes -testmode FULLSCAN -experiment logic -workdir /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s03_timeframe -logfile /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s03_timeframe/faults_redundant_logic.txt  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 23.12-s005_1, built Aug 15 2024 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s03_timeframe/faults_redundant_logic.txt [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Wednesday Nov 11 00:26:00 2026  -03
+            Host machine is cadmicro-el8-07.inf.ufrgs.br, x86_64 running Linux 4.18.0-553.184.1.el8_10.x86_64.
+            This job is process number 3329431.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s03_timeframe
+            -TESTMODE FULLSCAN
+            -EXPERIMENT logic
+
+            -LOGFILE /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s03_timeframe/faults_redundant_logic.txt
+            -faultstatus redundant
+            -reportkey yes
+          + -faultlocation cellpin
+[end TDA_009]
+
+TFMlist 
+
+Logic Model(GM)   11/11/26
+                  03:25:25
+File Id     faultModel        faultStatus         experiment
+Created (GM)  11/11/26           11/11/26           11/11/26
+              03:25:32           03:25:32           03:25:34
+Modified(GM)  11/11/26           11/11/26           11/11/26
+              03:25:32           03:25:32           03:25:35
+Code Level        2023.0             2023.0             2023.0            
+Max Fault Id            36
+
+Fault Model Type:   Cell Boundary
+
+
+Global Ignored Static Fault Count                12
+Global Ignored Dynamic Fault Count                0
+
+
+INFO (TFM-705): Testmode: FULLSCAN Experiment: logic Fault List:   
+
+Status key:
+   i    = inactive in test mode
+   c****= collapsed - listed after equiv. class representative fault (ECR)
+          NOTE: The status of the ECR will be concatenated after the "c".
+          Examples: cu,cT,cP,cR,cUnlo 
+   u    = untested - not processed
+                               
+   I    = ignored (unclassified)
+   It   = ignored (tied)
+   Iu   = ignored (unconnected)
+   Ib   = ignored (blocked)
+   Id   = ignored (dyn SE/SR)
+   If   = ignored (user FRULE)
+                           
+   T    = tested by simulation
+   Ti   = tested by implication
+   P    = possibly tested (limit not reached)
+   Tpdl = tested (possibly detected limit reached)
+   Tm   = tested in another mode
+   Tus  = tested user specifed (fault rule DETECTED statement)
+                    
+   A    = Aborted
+   R    = redundant
+   Rus  = redundant:  user specified 
+                                     
+   Ud   = untestable: undetermined reason
+   Uus  = untestable: user specified
+   Ulh  = untestable: linehold inhibits fault control/observe
+   Utm  = untestable: testmode inhibits fault control/observe
+   Ucn  = untestable: constraint
+   Uxs  = untestable: X sourced or sinked
+   Usd  = untestable: sequential depth (may be testable with more sequential depth)
+   Ugt  = untestable: global termination
+                                        
+   Unio = untestable: Seq or control not specified to target fault (PI to PO Path)
+   Unil = untestable: Seq or control not specified to target fault (PI to LATCH Path)
+   Unlo = untestable: Seq or control not specified to target fault (LATCH to PO Path)
+   Uner = untestable: Seq or control not specified to target fault (interdomain LATCH to LATCH)
+   Unra = untestable: Seq or control not specified to target fault (intradomain LATCH to LATCH)
+                                
+   PTAB (Possibly Tested At Best) status:
+                                
+   3    = PTAB 3-state: Untested
+   P3   = PTAB 3-state: Possibly Tested
+   T3   = PTAB 3-state: Tested (limit reached)
+   X    = PTAB X-state: Untested
+   PX   = PTAB X-state: Possibly Tested
+   TX   = PTAB X-state: Tested (limit reached)
+   TiX  = PTAB X-state: Tested by implication
+   C    = PTAB Clock Stuck Off: Untested
+   PC   = PTAB Clock Stuck Off: Possibly Tested
+   TC   = PTAB Clock Stuck Off: Tested (limit reached)
+   TiC  = PTAB Clock Stuck Off: Tested by implication
+
+Type key:   &  = AND Grouped         |  = OR Grouped
+            ISA0 = stuck-at-zero fault on an input pin
+            ISA1 = stuck-at-one fault on an input pin
+            ISR  = slow-to-rise fault on an input pin
+            ISF  = slow-to-fall fault on an input pin
+            OSA0 = stuck-at-zero fault on an output pin
+            OSA1 = stuck-at-one fault on an output pin
+            OSR  = slow-to-rise fault on an output pin
+            OSF  = slow-to-fall fault on an output pin
+            DPAT = dynamic pattern fault
+            SPAT = static pattern fault
+            DRV0 = driver fault driving 0
+            DRV1 = driver fault driving 1
+            RCV0 = receiver fault receiving 0
+            RCV1 = receiver fault receiving 1
+            SBRG0= static net shorted to 0 bridge fault
+            SBRG1= static net shorted to 1 bridge fault
+            DBRG0= dynamic net shorted to 0 bridge fault
+            DBRG1= dynamic net shorted to 1 bridge fault
+            IDDQ0= Iddq logic 0 fault
+            IDDQ1= Iddq logic 1 fault
+            QPAT = Iddq pattern fault
+
+
+     Fault Status  Type    Sim Func / Cell Name           Fault pin name
+
+
+[end TFM_705]
+INFO (TFM-112): No faults were found which met the selection criteria based on faultstatus and faulttype.  [end TFM_112] 
+
+
+INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+ Total                 :            0
+ Tested                :            0
+ Possibly Tested       :            0
+ Redundant             :            0
+ Untested (unprocessed):            0
+[end TFM_901]
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            9,457,856  bytes
+
+                      CPU Time =    0:00:00.00
+                  Elapsed Time =    0:00:00.06                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 00:26:00 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-112): No faults were found which met the selection criteria based on faultstatus and faulttype.   
+      1 INFO (TFM-705): Testmode: FULLSCAN Experiment: logic Fault List:   
+      1 INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

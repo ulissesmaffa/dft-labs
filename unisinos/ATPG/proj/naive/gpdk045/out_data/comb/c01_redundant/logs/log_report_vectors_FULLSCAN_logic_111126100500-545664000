@@ -1,0 +1,55 @@
+Starting Command: report_vectors 
+
+INFO (TDA-005): Command Line Invocation: 
+            report_vectors -testmode FULLSCAN -outputfile /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/comb/c01_redundant/vectors_node_logic.txt -format node -experiment logic -workdir /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant -targetfault yes  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 23.12-s005_1, built Aug 15 2024 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/testresults/logs/log_report_vectors_FULLSCAN_logic_111126100500-545664000 [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Wednesday Nov 11 10:05:00 2026  -03
+            Host machine is cadmicro-el8-07.inf.ufrgs.br, x86_64 running Linux 4.18.0-553.184.1.el8_10.x86_64.
+            This job is process number 3822924.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant
+            -TESTMODE FULLSCAN
+            -EXPERIMENT logic
+
+            -format node
+            -targetfault yes
+            -LOGFILE /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/testresults/logs/log_report_vectors_FULLSCAN_logic_111126100500-545664000
+            -outputfile /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/comb/c01_redundant/vectors_node_logic.txt
+[end TDA_009]
+INFO (TBD-801): report_vectors Output file will be /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/comb/c01_redundant/vectors_node_logic.txt
+  [end TBD_801] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            5,684,704  bytes
+
+                      CPU Time =    0:00:00.00
+                  Elapsed Time =    0:00:00.12                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 10:05:00 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TBD-801): report_vectors Output file will be /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/comb/c01_redundant/vectors_node_logic.txt
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

@@ -1,0 +1,35 @@
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Cadence(R) Modus(TM) DFT Software Solution, Version 23.12-s005_1, built Aug 15 2024 (linux26_64) 
+// This file was created on..............November 11, 2026 at 00:37:57
+// The date time stamp for the TBDbin file TBDbin.FULLSCAN.logic;  20261111033751 
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//   Total    Relative   Relative     Test      CPP       Pattern                    Event                                          Cycle    Scan      Relative   Measure
+//   Cycle    Cycle      Simulation   Sequence  Test      Odometer                   Type                                           Offset   Length    Scan       Event  
+//   Count    Count      Time (ns)    Number    Number                                                                                                 Number            
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// The vector file output name:  VER.FULLSCAN.logic.data.scan.ex1.ts1.verilog
+         3         3          160         1         2    1.1.1.2.1.1                Scan_Load - Shift                                   0        2         1        N 
+         4         4          320         1         2    1.1.1.2.1.1                end_of_Scan_Load                                    1        0         1        N 
+         6         6          400         1         2    1.1.1.2.1.2                Scan_Unload - Shift                                 0        2         2        N 
+         7         7          560         1         2    1.1.1.2.1.2                end_of_Scan_Unload                                  1        0         2        Y 
+// The vector file output name:  VER.FULLSCAN.logic.data.logic.ex1.ts2.verilog
+        11         3          160         2         4    1.2.1.2.1.1                Scan_Load - Shift                                   0        2         1        N 
+        12         4          320         2         4    1.2.1.2.1.1                end_of_Scan_Load                                    1        0         1        N 
+        15         7          480         2         4    1.2.1.2.1.4                Measure_PO                                          0        1         1        Y 
+        17         9          640         2         4    1.2.1.2.1.5                Scan_Unload - Shift - Overlap                       0        2         2        Y 
+        17         9          640         3         5    1.2.1.2.2.1                Scan_Load - Shift - Overlap                         0        2         2        N 
+        18        10          800         3         5    1.2.1.2.2.1                end_of_Scan_Load - Overlap                          1        0         2        Y 
+        21        13          960         3         5    1.2.1.2.2.4                Measure_PO                                          0        1         2        Y 
+        23        15         1120         3         5    1.2.1.2.2.5                Scan_Unload - Shift - Overlap                       0        2         3        Y 
+        23        15         1120         4         6    1.2.1.2.3.1                Scan_Load - Shift - Overlap                         0        2         3        N 
+        24        16         1280         4         6    1.2.1.2.3.1                end_of_Scan_Load - Overlap                          1        0         3        Y 
+        27        19         1440         4         6    1.2.1.2.3.4                Measure_PO                                          0        1         3        Y 
+        29        21         1600         4         6    1.2.1.2.3.5                Scan_Unload - Shift - Overlap                       0        2         4        Y 
+        29        21         1600         5         7    1.2.1.3.1.1                Scan_Load - Shift - Overlap                         0        2         4        N 
+        30        22         1760         5         7    1.2.1.3.1.1                end_of_Scan_Load - Overlap                          1        0         4        Y 
+        31        23         1760         5         7    1.2.1.3.1.2                Measure_PO                                          0        1         4        Y 
+        33        25         1920         5         7    1.2.1.3.1.4                Measure_PO                                          0        1         4        Y 
+        35        27         2080         5         7    1.2.1.3.1.5                Scan_Unload - Shift                                 0        2         5        N 
+        36        28         2240         5         7    1.2.1.3.1.5                end_of_Scan_Unload                                  1        0         5        Y 

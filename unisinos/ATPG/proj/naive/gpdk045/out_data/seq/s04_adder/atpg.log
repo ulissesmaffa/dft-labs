@@ -1,0 +1,3038 @@
+2026/11/11 23:56:35 WARNING (/tools/cadence/MODUS231/tools.lnx86/bin/cdnsEnvCheck): This OS does not appear to be a Cadence supported Linux configuration. For more info, please run <cdsroot>/tools/bin/checkSysConf <productId>
+Starting Modus DFT Software Solution Tcl UI.
+Type "exit" to return to your previous environment.
+
+ 
+Copyright (C) 2002-2023 Cadence Design Systems Inc. All Rights Reserved. 
+Cadence and the Cadence logo are registered trademarks and Modus is a trademark 
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Type 'help legal_notices' for third party license notices. 
+
+Version : 23.12-s005_1, built Aug 15 2024 (linux26_64)
+Options : -file /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl
+Date    : Wed, November 11 23:56:44 2026
+Host    : cadmicro-el8-07.inf.ufrgs.br (x86_64 Linux 4.18.0-553.184.1.el8_10.x86_64) (32*QEMU Virtual CPU version 2.5+ 16384KB)
+OS      : Rocky Linux release 8.10 (Green Obsidian)
+@modus:root:/ 1> [1G                 [1G
+#@ Processing -files option
+@modus:root:/ 1>  source /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl
+#@ Begin verbose source /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 5: source $::env(ROOT_DIR)/../_setup/setup.tcl
+#@ Begin verbose source /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/../_setup/setup.tcl
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/../_setup/setup.tcl) 4: set FLOW_ROOT_SETUP     [file normalize $::env(ROOT_DIR)/..]
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/../_setup/setup.tcl) 7: set PDK_PATH_SETUP      /pdk/cadence/gpdk045/gsclib045_all_v4.4/gsclib045
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/../_setup/setup.tcl) 8: set STD_LIB_PATH_SETUP  $PDK_PATH_SETUP/timing
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/../_setup/setup.tcl) 9: set LEF_PATH_SETUP      $PDK_PATH_SETUP/lef
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/../_setup/setup.tcl) 12: set STD_VLOG_SETUP      $PDK_PATH_SETUP/verilog/slow_vdd1v0_basicCells.v
+#@ End verbose source /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/../_setup/setup.tcl
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 7: set FLOW_ROOT  $FLOW_ROOT_SETUP
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 8: set STD_VLOG   $STD_VLOG_SETUP
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 9: set CIRCUIT    $::env(CIRCUIT)
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 10: set NETLIST    $::env(NETLIST)   ;# netlists/comb/<c>.v ou netlists/seq/<c>.v
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 11: set OUT_DIR    $::env(OUT_DIR)
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 12: set TESTMODE   FULLSCAN   ;# modedef padrão; sem pinos de teste, vira um modo só PI -> PO
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 14: file mkdir $OUT_DIR
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 15: set_db workdir ./
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 18: build_model -designsource $NETLIST -techlib $STD_VLOG -designtop top
+INFO (TUI-772): The command 'build_model' will release the currently acquired resources. [end TUI_772] 
+
+Starting Command: build_model 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/logs/log_build_model_111126235645-526648000 [end TDA_015]
+
+INFO (TEI-195): Build Model - Controller starting: [end TEI_195] 
+
+
+Search Order  1:  "/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/netlists/seq/s04_adder.v"
+Search Order  2:  "/pdk/cadence/gpdk045/gsclib045_all_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v"
+
+
+
+Reading Verilog data from /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/netlists/seq/s04_adder.v
+
+Verilog Parser complete - 1 modules, 0 gates, 0 user defined primitives.
+
+
+Reading Verilog data from /pdk/cadence/gpdk045/gsclib045_all_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v
+
+Verilog Parser complete - 489 modules, 1844 gates, 14 user defined primitives.
+
+
+
+INFO (TEI-196): Build Model - Hierarchical Model Build starting: [end TEI_196] 
+
+WARNING (TEI-110): Pin 'P01DATA' of 'cell LATCH_udp_2' has no external net connection for any usage in the design. Cell contents file: '/pdk/cadence/gpdk045/gsclib045_all_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v'.  [end TEI_110] 
+WARNING (TEI-110): Pin 'v' of 'cell altos_dff' has no external net connection for any usage in the design. Cell contents file: '/pdk/cadence/gpdk045/gsclib045_all_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v'.  [end TEI_110] 
+
+
+Number of blocks in the hierarchical model is: 33.
+
+Number of technology library cell instances in the hierarchical model is: 10.
+
+
+INFO (TEI-197): Build Model - Hierarchical Model Build completed. [end TEI_197] 
+
+
+
+INFO (TEI-198): Build Model - Flat Model Build starting: [end TEI_198] 
+
+ defaultTIE = X
+ defaultDFN = T
+
+
+INFO (TLM-055): Design Summary
+                --------------
+
+Hierarchical Model:                  Flattened Model:
+             33  Blocks                          18  Blocks
+             92  Pins                            18  Nodes
+             63  Nets
+
+Primary Inputs:                      Primary Outputs:
+          3  Input Only                         1  Output Only
+          0  Input/Output                       0  Input/Output
+          3  Total Inputs                       1  Total Outputs
+
+Tied Nets:                           Dotted Nets:
+          0  Tied to 0                          0  Two-State
+          0  Tied to 1                          0  Three-State
+          0  Tied to X                          0  Total Dotted Nets
+          0  Total Tied Nets
+
+Selected Primitive Functions:
+          0  Clock Chopper (CHOP) primitives 
+          0  RAMs
+          0  ROMs
+          0  TSDs
+          0  Resistors
+          0  Transistors
+          0  Latches
+
+
+          1  Rising  Edge Flop
+          1  Total Flops
+
+         10  Technology Library Cell Instances
+
+[end TLM_055] 
+Optimization removed logic for 1 of 8 cells in this design.
+
+Optimization removed a total of 0 tied Latch Ports.
+Optimization removed a total of 0 non-controlling inputs.
+Optimization removed a total of 7 dangling logic nodes.
+
+
+
+INFO (TEI-199): Build Model - Flat Model Build completed.  [end TEI_199] 
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =          101,580,208  bytes
+
+                      CPU Time =    0:00:00.90
+                  Elapsed Time =    0:00:07.05                    [end TDA_001]
+
+
+
+INFO (TEI-200): Build Model - Controller completed. [end TEI_200] 
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TEI-195): Build Model - Controller starting:  
+      1 INFO (TEI-196): Build Model - Hierarchical Model Build starting:  
+      1 INFO (TEI-197): Build Model - Hierarchical Model Build completed.  
+      1 INFO (TEI-198): Build Model - Flat Model Build starting:  
+      1 INFO (TEI-199): Build Model - Flat Model Build completed.   
+      1 INFO (TEI-200): Build Model - Controller completed.  
+      1 INFO (TLM-055): Design Summary
+
+  WARNING Messages...
+      2 WARNING (TEI-110): Pin 'P01DATA' of 'cell LATCH_udp_2' has no external net connection for any usage in the design. Cell contents file: '/pdk/cadence/gpdk045/gsclib045_all_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v'.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 24: set ASSIGNFILE [file rootname $NETLIST].assignfile
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 25: set HAS_ASSIGN [file exists $ASSIGNFILE]
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 28: set SEQ [expr {$::env(GROUP) eq "seq"}]
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 29: if {$HAS_ASSIGN} {
+    build_testmode -testmode $TESTMODE -assignfile $ASSIGNFILE
+} elseif {[catch {build_testmode -testmode $TESTMODE} err]} {
+    puts "INFO: build_testmode sem assignfile falhou ($err); tentando com assignfile vazio"
+    set fh [open ./empty.assignfile w]
+    puts $fh "#// circuito combinacional: nenhum pino de teste"
+    close $fh
+    build_testmode -testmode $TESTMODE -assignfile ./empty.assignfile
+}
+Starting Command: build_testmode 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/logs/log_build_testmode_FULLSCAN_111126235654-133560000 [end TDA_015]
+
+MODEDEFPATH set to:  /tools/cadence/MODUS231/tools/tb/defaults/rules/modedef 
+TDRPATH set to: /tools/cadence/MODUS231/tools/tb/defaults/rules/tdr 
+
+Modus Build Test Mode(s) beginning...
+
+   TDR NAME      =  dummy.tdr 
+
+   SCAN_TYPE     =  GSD 
+   BOUNDARY      =  NONE 
+   IN            =  PI 
+   OUT           =  PO 
+
+INFO (TTM-391): A default modeinit sequence will be generated.   [end TTM_391] 
+INFO (TTM-387): A default scanop sequence will be generated.   [end TTM_387] 
+INFO (THM-814): Testmode contains 100.00% active logic,  0.00% inactive logic and  0.00% constraint logic.   [end THM_814] 
+
+There are no PPIs for Test Mode:  FULLSCAN
+
+Information for Test Mode:  FULLSCAN
+-------------------------
+
+         Scan Type = GSD
+
+
+ Latch Summary for Test Mode:  FULLSCAN
+ Latch Type                #Active   #Inactive       Total
+ ---------------------   ---------   ---------   ---------
+ Test Constraint (TC)            0           0           0 
+ Scan Enable     (SE)            0           0           0 
+ Fixed Value     (FV)            0           0           0 
+ Floating                        2           0           2 
+ Finite State    (FSM)           0           0           0 
+
+INFO (TTM-800): build_testmode has created mode FULLSCAN. [end TTM_800] 
+
+Test Function Pin Information for Test Mode:  FULLSCAN
+-------------------------------------------
+
+          1  SC    (System  Clock)             Pins
+          0  PC    (P Shift Clock)             Pins
+          1  EC    (E Shift Clock)             Pins
+
+          0  OSC   (Oscillator)                Pins
+
+          0  TI    (Test Inhibit)              Pins
+          0  SE    (Scan Enable)               Pins
+          0  CI    (Clock Isolation)           Pins
+          0  OI    (Output Inhibit)            Pins
+
+          0  SI    (Scan Input)                Pins
+          0  SO    (Scan Output)               Pins
+
+  Pin Index    Type Test Function                         Pin Name / Net Name
+  ---------    ---- ----------------------------------    -------------------
+          2      PI  -EC  -SC                             clk / clk
+
+
+               Total Memory =           11,505,104  bytes
+
+            Cumulative Time in hours:minutes:seconds:
+                   CPU Time =   0:00:00.21
+               Elapsed Time =   0:00:01.48
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (THM-814): Testmode contains 100.00% active logic,  0.00% inactive logic and  0.00% constraint logic.    
+      1 INFO (TTM-387): A default scanop sequence will be generated.    
+      1 INFO (TTM-391): A default modeinit sequence will be generated.    
+      1 INFO (TTM-800): build_testmode has created mode FULLSCAN.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 40: verify_test_structures -testmode $TESTMODE
+Starting Command: verify_test_structures 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/logs/log_verify_test_structures_FULLSCAN_111126235657-153700000 [end TDA_015]
+
+INFO (TSV-900): verify_test_structures processing has started Wed Nov 11 23:56:57 2026    [end TSV_900] 
+------------------- verify_test_structures Process Preview ---------------------
+  apply constraints ...................................... constraints=yes    
+  Print 1 message per source of clock race ............... limitcisource=yes  
+  Print 1 Message per capture of clock race .............. limitcicapture=yes 
+  Check for mutually exclusive gating logic (MEG) ........ megraces=yes       
+  Use raise message severity attributes if they exist .... raisemsgsev=no    
+  Reporting options ...................................... report[option]=yes/no 
+    Process Preview ......................................   preview=yes     
+    Circuit Statistics ...................................   circuit=yes      
+    Message Summary ......................................   summary=yes      
+    Specific Messages ....................................   specific=yes     
+    Tests Status .........................................   status=no       
+    Output File Names and Size ...........................   filestats=yes    
+    Display messages for cloaked objects .................   cloakedobj=no   
+  Re-run verify_test_structures test(s) ................... reruntests=no     
+  Use message suppression attributes if they exist ....... suppressmsg=no    
+  Test selected .......................................... test[option]=yes/no 
+    Analyze test clock control of memory elements ........   testclockusage=yes 
+    Analyze three-state drivers for contention ...........   tsdcontention=yes 
+    Analyze feedback loops and keeper devices ............   feedback=yes 
+    Analyze clock choppers ...............................   clockchopper=yes 
+    Analyze flip-flop and latch scan characteristics .....   latchusage=yes 
+    Analyze explicit fixed value latches .................   explicitfvlatch=yes 
+    Analyze potential clock signal races .................   clocksignalraces=yes 
+    Analyze internal scan chains .........................   internalscanchains=yes 
+
+--------------------Circuit Statistics--------------------
+
+INFO (TLM-055): Design Summary
+                --------------
+
+Hierarchical Model:                  Flattened Model:
+             33  Blocks                          18  Blocks
+             92  Pins                            18  Nodes
+             63  Nets
+
+Primary Inputs:                      Primary Outputs:
+          3  Input Only                         1  Output Only
+          0  Input/Output                       0  Input/Output
+          3  Total Inputs                       1  Total Outputs
+
+Tied Nets:                           Dotted Nets:
+          0  Tied to 0                          0  Two-State
+          0  Tied to 1                          0  Three-State
+          0  Tied to X                          0  Total Dotted Nets
+          0  Total Tied Nets
+
+Selected Primitive Functions:
+          0  Clock Chopper (CHOP) primitives 
+          0  RAMs
+          0  ROMs
+          0  TSDs
+          0  Resistors
+          0  Transistors
+          0  Latches
+
+
+          1  Rising  Edge Flop
+          1  Total Flops
+
+         10  Technology Library Cell Instances
+
+[end TLM_055] 
+
+Test Function Pin Information for Test Mode:  FULLSCAN
+-------------------------------------------
+
+          1  SC    (System  Clock)             Pins
+          0  PC    (P Shift Clock)             Pins
+          1  EC    (E Shift Clock)             Pins
+
+          0  OSC   (Oscillator)                Pins
+
+          0  TI    (Test Inhibit)              Pins
+          0  SE    (Scan Enable)               Pins
+          0  CI    (Clock Isolation)           Pins
+          0  OI    (Output Inhibit)            Pins
+
+          0  SI    (Scan Input)                Pins
+          0  SO    (Scan Output)               Pins
+
+  Pin Index    Type Test Function                         Pin Name / Net Name
+  ---------    ---- ----------------------------------    -------------------
+          2      PI  -EC  -SC                             clk / clk
+
+  
+   Analyze test clocks' control of memory elements    
+WARNING (TSV-315): Memory element block ff.__iNsT1.dff_primitive is not in a scan chain and is corruptible during the scan operation. The memory element may be clocked through pin ff.__iNsT1.dff_primitive.CLK during the scan sequence.   [end TSV_315] 
+
+Analyze test clocks' control of memory elements process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.12
+  
+   Analyze three-state drivers for contention 
+
+Analyze three-state drivers for contention process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.08
+  
+   Analyze feedback loops and keeper devices          
+
+Analyze feedback loops and keeper devices process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.07
+  
+   Analyze clock choppers                             
+
+Analyze clock choppers process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.20
+  
+   Analyze flip-flop and latch scan characteristics   
+INFO (TSV-567): There are 0 controllable scan chains fed by Scan In (SI) primary inputs.   [end TSV_567] 
+INFO (TSV-568): There are 0 observable scan chains feeding to Scan Out (SO) primary outputs.   [end TSV_568] 
+INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).   [end TSV_569] 
+INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).   [end TSV_570] 
+INFO (TSV-383): There are 2 floating latches.   [end TSV_383] 
+
+Analyze flip-flop and latch scan characteristics process has completed.
+                             CPU time =  0:00:00.01  Elapsed time =  0:00:00.13
+  
+   Analyze explicit fixed value latches 
+
+Analyze explicit fixed value latches process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.07
+  
+   Analyze potential clock signal races               
+   Check for mutually exclusive gating logic (MEG)    
+
+Analyze potential clock signal races process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.16
+  
+   Analyze internal scan chains 
+
+Analyze channel inputs for validity process has completed.
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.07
+
+--------------------File Information----------------------
+          57344 /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/TSVmessageFile.FULLSCAN 
+
+INFO (TSV-908): verify_test_structures processing complete.   [end TSV_908] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            5,788,976  bytes
+
+                      CPU Time =    0:00:00.02
+                  Elapsed Time =    0:00:01.43                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:56:58 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TLM-055): Design Summary
+      1 INFO (TSV-383): There are 2 floating latches.    
+      1 INFO (TSV-567): There are 0 controllable scan chains fed by Scan In (SI) primary inputs.    
+      1 INFO (TSV-568): There are 0 observable scan chains feeding to Scan Out (SO) primary outputs.    
+      1 INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).    
+      1 INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).    
+      1 INFO (TSV-900): verify_test_structures processing has started Wed Nov 11 23:56:57 2026     
+      1 INFO (TSV-908): verify_test_structures processing complete.    
+
+  WARNING Messages...
+      1 WARNING (TSV-315): Memory element block ff.__iNsT1.dff_primitive is not in a scan chain and is corruptible during the scan operation. The memory element may be clocked through pin ff.__iNsT1.dff_primitive.CLK during the scan sequence.    
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 43: build_faultmodel -includedynamic no
+INFO (TUI-772): The command 'build_faultmodel' will release the currently acquired resources. [end TUI_772] 
+
+Starting Command: build_faultmodel 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/logs/log_build_faultmodel_111126235659-853404000 [end TDA_015]
+
+INFO (TFM-099): Build Fault Model started.  [end TFM_099] 
+INFO (TFM-102): Creating faultModel file /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/faultModel.  [end TFM_102] 
+
+Global Ignored Static Fault Count                 0
+Global Ignored Dynamic Fault Count                0
+
+
+                            Global Statistics
+
+                    ATCov  ----------------------- Global Faults --------------------------
+                   Global        Total       Tested     Possibly    Redundant     Untested
+
+Total Static         0.00           64            0            0            0           64
+Collapsed Static     0.00           34            0            0            0           34
+PI Static            0.00            6            0            0            0            6
+PO Static            0.00            2            0            0            0            2
+
+Total Dynamic                        0
+
+Parametric        
+
+IDDq                 0.00           64            0                                     64
+
+
+
+INFO (TFM-103): Creating faultStatus file /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/faultStatus.  [end TFM_103] 
+
+                           Testmode Statistics: FULLSCAN
+
+                 ---- ATCov ---- ------------------------ Testmode Faults ----------------------- ------------------------- Global Faults ------------------------
+                 Testmode Global        Total       Tested     Possibly    Redundant     Untested        Total       Tested     Possibly    Redundant     Untested
+
+Total Static         0.00   0.00           64            0            0            0           64           64            0            0            0           64
+Collapsed Static     0.00   0.00           34            0            0            0           34           34            0            0            0           34
+PI Static            0.00   0.00            6            0            0            0            6            6            0            0            0            6
+PO Static            0.00   0.00            2            0            0            0            2            2            0            0            0            2
+
+Total Dynamic                               0
+
+Parametric        
+
+IDDq                 0.00   0.00           64            0                                     64           64            0                                     64
+
+Path                 0.00   0.00            0            0                                      0            0            0                                      0
+
+
+
+INFO (TFM-704): Maximum Global Test Coverage Statistics: 
+
+                  %Active      #Faults      #Active    #Inactive
+Total Static       100.00           64           64            0
+Collapsed Static   100.00           34           34            0
+PI Static          100.00            6            6            0
+PO Static          100.00            2            2            0
+
+Total Dynamic                        0
+
+Parametric        
+
+There are 1 test mode(s) defined:
+      FULLSCAN
+
+[end TFM_704]
+INFO (TFM-109): Build Fault Model has completed with highest level severity message of INFO.  [end TFM_109] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            6,272,000  bytes
+
+                      CPU Time =    0:00:00.01
+                  Elapsed Time =    0:00:00.37                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:00 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-099): Build Fault Model started.   
+      1 INFO (TFM-102): Creating faultModel file /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/faultModel.   
+      1 INFO (TFM-103): Creating faultStatus file /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/faultStatus.   
+      1 INFO (TFM-109): Build Fault Model has completed with highest level severity message of INFO.   
+      1 INFO (TFM-704): Maximum Global Test Coverage Statistics: 
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 49: create_logic_tests -testmode $TESTMODE -experiment logic -effort high
+Starting Command: create_logic_tests 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/logs/log_create_logic_tests_FULLSCAN_logic_111126235702-302090000 [end TDA_015]
+
+
+
+WARNING (TTC-018): verify_test_structures issued Warning messages related to Stored Pattern tests.  Poor test coverage may result.  [end TTC_018] 
+INFO (TTC-107): There are no scan chains in this circuit, therefore no scan chain tests will be generated.  [end TTC_107] 
+****************************************************************************************************
+Coverage Definitions:
+ #Faults  : Number of Active Faults (observable).
+ #Tested  : Number of Active Faults marked tested.
+ #Possibly: Number of Active Faults marked possibly tested
+            (good value is 0 or 1; fault value is X).
+ #Redund  : Number of Active Faults untestable due to redundancy.
+ #Untested: Number of Active Faults untested.
+ %TCov  (%Test Coverage)                      : #Tested / #Faults
+ %ATCov (%Adjusted TCov)                      : #Tested / (#Faults-#Redund)
+****************************************************************************************************
+****************************************************************************************************
+                           Testmode Statistics: FULLSCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64            0            0            0           64   0.00   0.00
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64            0            0            0           64   0.00   0.00
+****************************************************************************************************
+
+*************************************************************************************************************
+INFO (TTC-110): Starting Static Logic Test generation                                           [end TTC_110] 
+
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):      2       0          0     0.00%    0.00%           64           00:00.82    [end TDA_220] 
+INFO (TDA-220):      4       2         30    46.88%   46.88%           19           00:00.87    [end TDA_220] 
+INFO (TDA-220):      7       5         23    82.81%   82.81%            3           00:00.87    [end TDA_220] 
+INFO (TDA-220):      8       6          1    84.38%   84.38%            2           00:00.88    [end TDA_220] 
+INFO (TDA-221):      8       6          0    84.38%   84.38%            2           00:00.88    [end TDA_221] 
+INFO (TDA-220):     10       8          6    93.75%   93.75%            0           00:00.89    [end TDA_220] 
+INFO (TDA-220):     10       8          4    99.99%   99.99%            0           00:01.11    [end TDA_220] 
+INFO (TTC-110): Ending Static Logic Test generation                                             [end TTC_110] 
+*************************************************************************************************************
+
+****************************************************************************************************
+                           Testmode Statistics: FULLSCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64           64            0            0            0 100.00 100.00
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64           64            0            0            0 100.00 100.00
+****************************************************************************************************
+
+
+              ----Final Pattern Statistics----
+
+ Test Section Type                       # Test Sequences
+----------------------------------------------------------
+ Logic                                          8
+----------------------------------------------------------
+ Total                                          8
+
+(I) File(s) generated (bytes and name):
+
+          73728 /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/faultStatus.FULLSCAN.logic
+          10986 /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/TBDbin.FULLSCAN.logic
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            6,244,944  bytes
+
+                      CPU Time =    0:00:00.06
+                  Elapsed Time =    0:00:01.22                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:03 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      8 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
+      1 INFO (TDA-221):      8       6          0    84.38%   84.38%            2           00:00.88     
+      1 INFO (TTC-107): There are no scan chains in this circuit, therefore no scan chain tests will be generated.   
+      2 INFO (TTC-110): Starting Static Logic Test generation                                            
+
+  WARNING Messages...
+      1 WARNING (TTC-018): verify_test_structures issued Warning messages related to Stored Pattern tests.  Poor test coverage may result.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 50: set EXPS logic
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 51: if {$SEQ} {
+    create_sequential_tests -testmode $TESTMODE -experiment seq
+    lappend EXPS seq
+
+    # ILA na prática: limita quantos time frames o gerador pode desenrolar.
+    # Cobertura por profundidade -> comparar as tabelas finais no log
+    # (32 é o máximo aceito pela ferramenta).
+    foreach D {1 2 3 4 32} {
+        # na profundidade máxima usa também esforço alto (o padrão é low)
+        set EFF [expr {$D == 32 ? "high" : "low"}]
+        catch {create_sequential_tests -testmode $TESTMODE -experiment seq_d$D \
+                  -sequentialdepth $D -effort $EFF}
+        catch {report_faults -testmode $TESTMODE -experiment seq_d$D \
+                 -faultstatus all -faultlocation cellpin -reportkey yes \
+                 -logfile $OUT_DIR/faults_all_seq_d$D.txt}
+    }
+}
+Starting Command: create_sequential_tests 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/logs/log_create_sequential_tests_FULLSCAN_seq_111126235705-063017000 [end TDA_015]
+
+
+
+WARNING (TTC-018): verify_test_structures issued Warning messages related to Stored Pattern tests.  Poor test coverage may result.  [end TTC_018] 
+****************************************************************************************************
+Coverage Definitions:
+ #Faults  : Number of Active Faults (observable).
+ #Tested  : Number of Active Faults marked tested.
+ #Possibly: Number of Active Faults marked possibly tested
+            (good value is 0 or 1; fault value is X).
+ #Redund  : Number of Active Faults untestable due to redundancy.
+ #Untested: Number of Active Faults untested.
+ %TCov  (%Test Coverage)                      : #Tested / #Faults
+ %ATCov (%Adjusted TCov)                      : #Tested / (#Faults-#Redund)
+****************************************************************************************************
+****************************************************************************************************
+                           Testmode Statistics: FULLSCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64            0            0            0           64   0.00   0.00
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64            0            0            0           64   0.00   0.00
+****************************************************************************************************
+
+*************************************************************************************************************
+INFO (TTC-110): Starting Static Logic Test generation                                           [end TTC_110] 
+
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):      4       4         53    82.81%   82.81%            0           00:00.62    [end TDA_220] 
+INFO (TDA-220):      6       4          0    82.81%   82.81%            0           00:00.62    [end TDA_220] 
+INFO (TDA-220):     10       6          7    93.75%   93.75%            0           00:00.62    [end TDA_220] 
+INFO (TDA-220):     13       6          0    93.75%   93.75%            0           00:00.63    [end TDA_220] 
+INFO (TDA-220):     13       6          4    99.99%   99.99%            0           00:00.77    [end TDA_220] 
+INFO (TTC-110): Ending Static Logic Test generation                                             [end TTC_110] 
+*************************************************************************************************************
+
+****************************************************************************************************
+                           Testmode Statistics: FULLSCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64           64            0            0            0 100.00 100.00
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64           64            0            0            0 100.00 100.00
+****************************************************************************************************
+
+
+              ----Final Pattern Statistics----
+
+ Test Section Type                       # Test Sequences
+----------------------------------------------------------
+ Logic                                          6
+----------------------------------------------------------
+ Total                                          6
+
+(I) File(s) generated (bytes and name):
+
+          73728 /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/faultStatus.FULLSCAN.seq
+          12853 /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/TBDbin.FULLSCAN.seq
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            6,248,944  bytes
+
+                      CPU Time =    0:00:00.05
+                  Elapsed Time =    0:00:00.88                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:06 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      7 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
+      2 INFO (TTC-110): Starting Static Logic Test generation                                            
+
+  WARNING Messages...
+      1 WARNING (TTC-018): verify_test_structures issued Warning messages related to Stored Pattern tests.  Poor test coverage may result.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: create_sequential_tests 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/logs/log_create_sequential_tests_FULLSCAN_seq_d1_111126235707-350046000 [end TDA_015]
+
+
+
+WARNING (TTC-018): verify_test_structures issued Warning messages related to Stored Pattern tests.  Poor test coverage may result.  [end TTC_018] 
+****************************************************************************************************
+Coverage Definitions:
+ #Faults  : Number of Active Faults (observable).
+ #Tested  : Number of Active Faults marked tested.
+ #Possibly: Number of Active Faults marked possibly tested
+            (good value is 0 or 1; fault value is X).
+ #Redund  : Number of Active Faults untestable due to redundancy.
+ #Untested: Number of Active Faults untested.
+ %TCov  (%Test Coverage)                      : #Tested / #Faults
+ %ATCov (%Adjusted TCov)                      : #Tested / (#Faults-#Redund)
+****************************************************************************************************
+****************************************************************************************************
+                           Testmode Statistics: FULLSCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64            0            0            0           64   0.00   0.00
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64            0            0            0           64   0.00   0.00
+****************************************************************************************************
+
+*************************************************************************************************************
+INFO (TTC-110): Starting Static Logic Test generation                                           [end TTC_110] 
+
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):      4       4         53    82.81%   82.81%            0           00:00.88    [end TDA_220] 
+INFO (TDA-220):      6       4          0    82.81%   82.81%            0           00:00.89    [end TDA_220] 
+INFO (TDA-220):     10       6          7    93.75%   93.75%            0           00:00.90    [end TDA_220] 
+INFO (TDA-220):     13       6          0    93.75%   93.75%            0           00:00.90    [end TDA_220] 
+INFO (TDA-220):     13       6          4    99.99%   99.99%            0           00:01.12    [end TDA_220] 
+INFO (TTC-110): Ending Static Logic Test generation                                             [end TTC_110] 
+*************************************************************************************************************
+
+****************************************************************************************************
+                           Testmode Statistics: FULLSCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64           64            0            0            0 100.00 100.00
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64           64            0            0            0 100.00 100.00
+****************************************************************************************************
+
+
+              ----Final Pattern Statistics----
+
+ Test Section Type                       # Test Sequences
+----------------------------------------------------------
+ Logic                                          6
+----------------------------------------------------------
+ Total                                          6
+
+(I) File(s) generated (bytes and name):
+
+          73728 /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/faultStatus.FULLSCAN.seq_d1
+          12853 /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/TBDbin.FULLSCAN.seq_d1
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            6,252,752  bytes
+
+                      CPU Time =    0:00:00.06
+                  Elapsed Time =    0:00:01.27                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:08 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      7 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
+      2 INFO (TTC-110): Starting Static Logic Test generation                                            
+
+  WARNING Messages...
+      1 WARNING (TTC-018): verify_test_structures issued Warning messages related to Stored Pattern tests.  Poor test coverage may result.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: report_faults 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s04_adder/faults_all_seq_d1.txt [end TDA_015]
+
+
+TFMlist 
+
+Logic Model(GM)   11/12/26
+                  02:56:52
+File Id     faultModel        faultStatus         experiment
+Created (GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:07
+Modified(GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:08
+Code Level        2023.0             2023.0             2023.0            
+Max Fault Id            64
+
+Fault Model Type:   Cell Boundary
+
+
+Global Ignored Static Fault Count                 0
+Global Ignored Dynamic Fault Count                0
+
+
+INFO (TFM-705): Testmode: FULLSCAN Experiment: seq_d1 Fault List:   
+
+Status key:
+   i    = inactive in test mode
+   c****= collapsed - listed after equiv. class representative fault (ECR)
+          NOTE: The status of the ECR will be concatenated after the "c".
+          Examples: cu,cT,cP,cR,cUnlo 
+   u    = untested - not processed
+                               
+   I    = ignored (unclassified)
+   It   = ignored (tied)
+   Iu   = ignored (unconnected)
+   Ib   = ignored (blocked)
+   Id   = ignored (dyn SE/SR)
+   If   = ignored (user FRULE)
+                           
+   T    = tested by simulation
+   Ti   = tested by implication
+   P    = possibly tested (limit not reached)
+   Tpdl = tested (possibly detected limit reached)
+   Tm   = tested in another mode
+   Tus  = tested user specifed (fault rule DETECTED statement)
+                    
+   A    = Aborted
+   R    = redundant
+   Rus  = redundant:  user specified 
+                                     
+   Ud   = untestable: undetermined reason
+   Uus  = untestable: user specified
+   Ulh  = untestable: linehold inhibits fault control/observe
+   Utm  = untestable: testmode inhibits fault control/observe
+   Ucn  = untestable: constraint
+   Uxs  = untestable: X sourced or sinked
+   Usd  = untestable: sequential depth (may be testable with more sequential depth)
+   Ugt  = untestable: global termination
+                                        
+   Unio = untestable: Seq or control not specified to target fault (PI to PO Path)
+   Unil = untestable: Seq or control not specified to target fault (PI to LATCH Path)
+   Unlo = untestable: Seq or control not specified to target fault (LATCH to PO Path)
+   Uner = untestable: Seq or control not specified to target fault (interdomain LATCH to LATCH)
+   Unra = untestable: Seq or control not specified to target fault (intradomain LATCH to LATCH)
+                                
+   PTAB (Possibly Tested At Best) status:
+                                
+   3    = PTAB 3-state: Untested
+   P3   = PTAB 3-state: Possibly Tested
+   T3   = PTAB 3-state: Tested (limit reached)
+   X    = PTAB X-state: Untested
+   PX   = PTAB X-state: Possibly Tested
+   TX   = PTAB X-state: Tested (limit reached)
+   TiX  = PTAB X-state: Tested by implication
+   C    = PTAB Clock Stuck Off: Untested
+   PC   = PTAB Clock Stuck Off: Possibly Tested
+   TC   = PTAB Clock Stuck Off: Tested (limit reached)
+   TiC  = PTAB Clock Stuck Off: Tested by implication
+
+Type key:   &  = AND Grouped         |  = OR Grouped
+            ISA0 = stuck-at-zero fault on an input pin
+            ISA1 = stuck-at-one fault on an input pin
+            ISR  = slow-to-rise fault on an input pin
+            ISF  = slow-to-fall fault on an input pin
+            OSA0 = stuck-at-zero fault on an output pin
+            OSA1 = stuck-at-one fault on an output pin
+            OSR  = slow-to-rise fault on an output pin
+            OSF  = slow-to-fall fault on an output pin
+            DPAT = dynamic pattern fault
+            SPAT = static pattern fault
+            DRV0 = driver fault driving 0
+            DRV1 = driver fault driving 1
+            RCV0 = receiver fault receiving 0
+            RCV1 = receiver fault receiving 1
+            SBRG0= static net shorted to 0 bridge fault
+            SBRG1= static net shorted to 1 bridge fault
+            DBRG0= dynamic net shorted to 0 bridge fault
+            DBRG1= dynamic net shorted to 1 bridge fault
+            IDDQ0= Iddq logic 0 fault
+            IDDQ1= Iddq logic 1 fault
+            QPAT = Iddq pattern fault
+
+
+     Fault Status  Type    Sim Func / Cell Name           Fault pin name
+
+         1 T       OSA0           PI                      a   
+         2 T       OSA1           PI                      a   
+         3 T       OSA0           PI                      b   
+         4 T       OSA1           PI                      b   
+         5 TiC     OSA0           PI                      clk   
+         6 TiC     OSA1           PI                      clk   
+         7 T       OSA0           PO                      s   
+        43 cT      OSA0           OR2X1                   g5.Y   
+        46 cT      ISA0           AND2X1                  g6.A   
+        48 cT      ISA0           AND2X1                  g6.B   
+        49 cT      OSA0           AND2X1                  g6.Y   
+        61 cT      OSA0           INVX1                   u2.Y   
+        62 cT      ISA1           INVX1                   u2.A   
+         8 T       OSA1           PO                      s   
+        50 cT      OSA1           AND2X1                  g6.Y   
+         9 TiC     ISA0           DFFHQX1                 ff.CK   
+        10 TiC     ISA1           DFFHQX1                 ff.CK   
+        11 T       ISA0           DFFHQX1                 ff.D   
+        55 cT      OSA0           OR2X1                   g7.Y   
+        12 T       ISA1           DFFHQX1                 ff.D   
+        52 cT      ISA1           OR2X1                   g7.A   
+        54 cT      ISA1           OR2X1                   g7.B   
+        56 cT      OSA1           OR2X1                   g7.Y   
+        13 T       OSA0           DFFHQX1                 ff.Q   
+        14 T       OSA1           DFFHQX1                 ff.Q   
+        15 T       ISA1           AND2X1                  g1.A   
+        16 T       ISA0           OR2X1                   g7.B   
+        17 T       ISA1           AND2X1                  g1.B   
+        18 T       ISA0           OR2X1                   g7.A   
+        19 T       OSA0           AND2X1                  g1.Y   
+        51 cT      ISA0           AND2X1                  g1.B   
+        53 cT      ISA0           AND2X1                  g1.A   
+        20 T       OSA1           AND2X1                  g1.Y   
+        21 T       ISA0           OR2X1                   g2.A   
+        22 T       ISA1           AND2X1                  g6.B   
+        63 cT      OSA1           INVX1                   u2.Y   
+        64 cT      ISA0           INVX1                   u2.A   
+        23 T       ISA0           OR2X1                   g2.B   
+        24 T       ISA1           AND2X1                  g6.A   
+        40 cT      ISA1           OR2X1                   g5.A   
+        42 cT      ISA1           OR2X1                   g5.B   
+        44 cT      OSA1           OR2X1                   g5.Y   
+        25 T       ISA0           OR2X1                   g5.B   
+        26 T       ISA0           OR2X1                   g5.A   
+        27 T       ISA1           AND2X1                  g3.A   
+        59 cT      OSA1           INVX1                   u1.Y   
+        60 cT      ISA0           INVX1                   u1.A   
+        28 T       OSA1           AND2X1                  g4.Y   
+        29 T       ISA1           AND2X1                  g3.B   
+        39 cT      OSA1           OR2X1                   g2.Y   
+        45 cT      ISA1           OR2X1                   g2.B   
+        47 cT      ISA1           OR2X1                   g2.A   
+        30 T       OSA0           AND2X1                  g4.Y   
+        35 cT      ISA0           AND2X1                  g4.A   
+        36 cT      ISA0           AND2X1                  g4.B   
+        31 T       OSA0           AND2X1                  g3.Y   
+        37 cT      ISA0           AND2X1                  g3.B   
+        38 cT      ISA0           AND2X1                  g3.A   
+        41 cT      OSA0           OR2X1                   g2.Y   
+        57 cT      OSA0           INVX1                   u1.Y   
+        58 cT      ISA1           INVX1                   u1.A   
+        32 T       OSA1           AND2X1                  g3.Y   
+        33 T       ISA1           AND2X1                  g4.A   
+        34 T       ISA1           AND2X1                  g4.B   
+
+[end TFM_705]
+
+
+INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+ Total                 :           64
+ Tested                :           64
+ Possibly Tested       :            0
+ Redundant             :            0
+ Untested (unprocessed):            0
+[end TFM_901]
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            9,432,128  bytes
+
+                      CPU Time =    0:00:00.00
+                  Elapsed Time =    0:00:00.06                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:10 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-705): Testmode: FULLSCAN Experiment: seq_d1 Fault List:   
+      1 INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: create_sequential_tests 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/logs/log_create_sequential_tests_FULLSCAN_seq_d2_111126235711-411701000 [end TDA_015]
+
+
+
+WARNING (TTC-018): verify_test_structures issued Warning messages related to Stored Pattern tests.  Poor test coverage may result.  [end TTC_018] 
+****************************************************************************************************
+Coverage Definitions:
+ #Faults  : Number of Active Faults (observable).
+ #Tested  : Number of Active Faults marked tested.
+ #Possibly: Number of Active Faults marked possibly tested
+            (good value is 0 or 1; fault value is X).
+ #Redund  : Number of Active Faults untestable due to redundancy.
+ #Untested: Number of Active Faults untested.
+ %TCov  (%Test Coverage)                      : #Tested / #Faults
+ %ATCov (%Adjusted TCov)                      : #Tested / (#Faults-#Redund)
+****************************************************************************************************
+****************************************************************************************************
+                           Testmode Statistics: FULLSCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64            0            0            0           64   0.00   0.00
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64            0            0            0           64   0.00   0.00
+****************************************************************************************************
+
+*************************************************************************************************************
+INFO (TTC-110): Starting Static Logic Test generation                                           [end TTC_110] 
+
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):      4       4         53    82.81%   82.81%            0           00:00.71    [end TDA_220] 
+INFO (TDA-220):      6       4          0    82.81%   82.81%            0           00:00.72    [end TDA_220] 
+INFO (TDA-220):     10       6          7    93.75%   93.75%            0           00:00.72    [end TDA_220] 
+INFO (TDA-220):     13       6          0    93.75%   93.75%            0           00:00.73    [end TDA_220] 
+INFO (TDA-220):     13       6          4    99.99%   99.99%            0           00:00.88    [end TDA_220] 
+INFO (TTC-110): Ending Static Logic Test generation                                             [end TTC_110] 
+*************************************************************************************************************
+
+****************************************************************************************************
+                           Testmode Statistics: FULLSCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64           64            0            0            0 100.00 100.00
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64           64            0            0            0 100.00 100.00
+****************************************************************************************************
+
+
+              ----Final Pattern Statistics----
+
+ Test Section Type                       # Test Sequences
+----------------------------------------------------------
+ Logic                                          6
+----------------------------------------------------------
+ Total                                          6
+
+(I) File(s) generated (bytes and name):
+
+          73728 /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/faultStatus.FULLSCAN.seq_d2
+          12853 /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/TBDbin.FULLSCAN.seq_d2
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            6,257,888  bytes
+
+                      CPU Time =    0:00:00.06
+                  Elapsed Time =    0:00:00.98                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:12 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      7 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
+      2 INFO (TTC-110): Starting Static Logic Test generation                                            
+
+  WARNING Messages...
+      1 WARNING (TTC-018): verify_test_structures issued Warning messages related to Stored Pattern tests.  Poor test coverage may result.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: report_faults 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s04_adder/faults_all_seq_d2.txt [end TDA_015]
+
+
+TFMlist 
+
+Logic Model(GM)   11/12/26
+                  02:56:52
+File Id     faultModel        faultStatus         experiment
+Created (GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:11
+Modified(GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:12
+Code Level        2023.0             2023.0             2023.0            
+Max Fault Id            64
+
+Fault Model Type:   Cell Boundary
+
+
+Global Ignored Static Fault Count                 0
+Global Ignored Dynamic Fault Count                0
+
+
+INFO (TFM-705): Testmode: FULLSCAN Experiment: seq_d2 Fault List:   
+
+Status key:
+   i    = inactive in test mode
+   c****= collapsed - listed after equiv. class representative fault (ECR)
+          NOTE: The status of the ECR will be concatenated after the "c".
+          Examples: cu,cT,cP,cR,cUnlo 
+   u    = untested - not processed
+                               
+   I    = ignored (unclassified)
+   It   = ignored (tied)
+   Iu   = ignored (unconnected)
+   Ib   = ignored (blocked)
+   Id   = ignored (dyn SE/SR)
+   If   = ignored (user FRULE)
+                           
+   T    = tested by simulation
+   Ti   = tested by implication
+   P    = possibly tested (limit not reached)
+   Tpdl = tested (possibly detected limit reached)
+   Tm   = tested in another mode
+   Tus  = tested user specifed (fault rule DETECTED statement)
+                    
+   A    = Aborted
+   R    = redundant
+   Rus  = redundant:  user specified 
+                                     
+   Ud   = untestable: undetermined reason
+   Uus  = untestable: user specified
+   Ulh  = untestable: linehold inhibits fault control/observe
+   Utm  = untestable: testmode inhibits fault control/observe
+   Ucn  = untestable: constraint
+   Uxs  = untestable: X sourced or sinked
+   Usd  = untestable: sequential depth (may be testable with more sequential depth)
+   Ugt  = untestable: global termination
+                                        
+   Unio = untestable: Seq or control not specified to target fault (PI to PO Path)
+   Unil = untestable: Seq or control not specified to target fault (PI to LATCH Path)
+   Unlo = untestable: Seq or control not specified to target fault (LATCH to PO Path)
+   Uner = untestable: Seq or control not specified to target fault (interdomain LATCH to LATCH)
+   Unra = untestable: Seq or control not specified to target fault (intradomain LATCH to LATCH)
+                                
+   PTAB (Possibly Tested At Best) status:
+                                
+   3    = PTAB 3-state: Untested
+   P3   = PTAB 3-state: Possibly Tested
+   T3   = PTAB 3-state: Tested (limit reached)
+   X    = PTAB X-state: Untested
+   PX   = PTAB X-state: Possibly Tested
+   TX   = PTAB X-state: Tested (limit reached)
+   TiX  = PTAB X-state: Tested by implication
+   C    = PTAB Clock Stuck Off: Untested
+   PC   = PTAB Clock Stuck Off: Possibly Tested
+   TC   = PTAB Clock Stuck Off: Tested (limit reached)
+   TiC  = PTAB Clock Stuck Off: Tested by implication
+
+Type key:   &  = AND Grouped         |  = OR Grouped
+            ISA0 = stuck-at-zero fault on an input pin
+            ISA1 = stuck-at-one fault on an input pin
+            ISR  = slow-to-rise fault on an input pin
+            ISF  = slow-to-fall fault on an input pin
+            OSA0 = stuck-at-zero fault on an output pin
+            OSA1 = stuck-at-one fault on an output pin
+            OSR  = slow-to-rise fault on an output pin
+            OSF  = slow-to-fall fault on an output pin
+            DPAT = dynamic pattern fault
+            SPAT = static pattern fault
+            DRV0 = driver fault driving 0
+            DRV1 = driver fault driving 1
+            RCV0 = receiver fault receiving 0
+            RCV1 = receiver fault receiving 1
+            SBRG0= static net shorted to 0 bridge fault
+            SBRG1= static net shorted to 1 bridge fault
+            DBRG0= dynamic net shorted to 0 bridge fault
+            DBRG1= dynamic net shorted to 1 bridge fault
+            IDDQ0= Iddq logic 0 fault
+            IDDQ1= Iddq logic 1 fault
+            QPAT = Iddq pattern fault
+
+
+     Fault Status  Type    Sim Func / Cell Name           Fault pin name
+
+         1 T       OSA0           PI                      a   
+         2 T       OSA1           PI                      a   
+         3 T       OSA0           PI                      b   
+         4 T       OSA1           PI                      b   
+         5 TiC     OSA0           PI                      clk   
+         6 TiC     OSA1           PI                      clk   
+         7 T       OSA0           PO                      s   
+        43 cT      OSA0           OR2X1                   g5.Y   
+        46 cT      ISA0           AND2X1                  g6.A   
+        48 cT      ISA0           AND2X1                  g6.B   
+        49 cT      OSA0           AND2X1                  g6.Y   
+        61 cT      OSA0           INVX1                   u2.Y   
+        62 cT      ISA1           INVX1                   u2.A   
+         8 T       OSA1           PO                      s   
+        50 cT      OSA1           AND2X1                  g6.Y   
+         9 TiC     ISA0           DFFHQX1                 ff.CK   
+        10 TiC     ISA1           DFFHQX1                 ff.CK   
+        11 T       ISA0           DFFHQX1                 ff.D   
+        55 cT      OSA0           OR2X1                   g7.Y   
+        12 T       ISA1           DFFHQX1                 ff.D   
+        52 cT      ISA1           OR2X1                   g7.A   
+        54 cT      ISA1           OR2X1                   g7.B   
+        56 cT      OSA1           OR2X1                   g7.Y   
+        13 T       OSA0           DFFHQX1                 ff.Q   
+        14 T       OSA1           DFFHQX1                 ff.Q   
+        15 T       ISA1           AND2X1                  g1.A   
+        16 T       ISA0           OR2X1                   g7.B   
+        17 T       ISA1           AND2X1                  g1.B   
+        18 T       ISA0           OR2X1                   g7.A   
+        19 T       OSA0           AND2X1                  g1.Y   
+        51 cT      ISA0           AND2X1                  g1.B   
+        53 cT      ISA0           AND2X1                  g1.A   
+        20 T       OSA1           AND2X1                  g1.Y   
+        21 T       ISA0           OR2X1                   g2.A   
+        22 T       ISA1           AND2X1                  g6.B   
+        63 cT      OSA1           INVX1                   u2.Y   
+        64 cT      ISA0           INVX1                   u2.A   
+        23 T       ISA0           OR2X1                   g2.B   
+        24 T       ISA1           AND2X1                  g6.A   
+        40 cT      ISA1           OR2X1                   g5.A   
+        42 cT      ISA1           OR2X1                   g5.B   
+        44 cT      OSA1           OR2X1                   g5.Y   
+        25 T       ISA0           OR2X1                   g5.B   
+        26 T       ISA0           OR2X1                   g5.A   
+        27 T       ISA1           AND2X1                  g3.A   
+        59 cT      OSA1           INVX1                   u1.Y   
+        60 cT      ISA0           INVX1                   u1.A   
+        28 T       OSA1           AND2X1                  g4.Y   
+        29 T       ISA1           AND2X1                  g3.B   
+        39 cT      OSA1           OR2X1                   g2.Y   
+        45 cT      ISA1           OR2X1                   g2.B   
+        47 cT      ISA1           OR2X1                   g2.A   
+        30 T       OSA0           AND2X1                  g4.Y   
+        35 cT      ISA0           AND2X1                  g4.A   
+        36 cT      ISA0           AND2X1                  g4.B   
+        31 T       OSA0           AND2X1                  g3.Y   
+        37 cT      ISA0           AND2X1                  g3.B   
+        38 cT      ISA0           AND2X1                  g3.A   
+        41 cT      OSA0           OR2X1                   g2.Y   
+        57 cT      OSA0           INVX1                   u1.Y   
+        58 cT      ISA1           INVX1                   u1.A   
+        32 T       OSA1           AND2X1                  g3.Y   
+        33 T       ISA1           AND2X1                  g4.A   
+        34 T       ISA1           AND2X1                  g4.B   
+
+[end TFM_705]
+
+
+INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+ Total                 :           64
+ Tested                :           64
+ Possibly Tested       :            0
+ Redundant             :            0
+ Untested (unprocessed):            0
+[end TFM_901]
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            9,437,456  bytes
+
+                      CPU Time =    0:00:00.00
+                  Elapsed Time =    0:00:00.05                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:13 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-705): Testmode: FULLSCAN Experiment: seq_d2 Fault List:   
+      1 INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: create_sequential_tests 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/logs/log_create_sequential_tests_FULLSCAN_seq_d3_111126235715-064046000 [end TDA_015]
+
+
+
+WARNING (TTC-018): verify_test_structures issued Warning messages related to Stored Pattern tests.  Poor test coverage may result.  [end TTC_018] 
+****************************************************************************************************
+Coverage Definitions:
+ #Faults  : Number of Active Faults (observable).
+ #Tested  : Number of Active Faults marked tested.
+ #Possibly: Number of Active Faults marked possibly tested
+            (good value is 0 or 1; fault value is X).
+ #Redund  : Number of Active Faults untestable due to redundancy.
+ #Untested: Number of Active Faults untested.
+ %TCov  (%Test Coverage)                      : #Tested / #Faults
+ %ATCov (%Adjusted TCov)                      : #Tested / (#Faults-#Redund)
+****************************************************************************************************
+****************************************************************************************************
+                           Testmode Statistics: FULLSCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64            0            0            0           64   0.00   0.00
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64            0            0            0           64   0.00   0.00
+****************************************************************************************************
+
+*************************************************************************************************************
+INFO (TTC-110): Starting Static Logic Test generation                                           [end TTC_110] 
+
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):      4       4         53    82.81%   82.81%            0           00:00.89    [end TDA_220] 
+INFO (TDA-220):      6       4          0    82.81%   82.81%            0           00:00.89    [end TDA_220] 
+INFO (TDA-220):     10       6          7    93.75%   93.75%            0           00:00.90    [end TDA_220] 
+INFO (TDA-220):     13       6          0    93.75%   93.75%            0           00:00.90    [end TDA_220] 
+INFO (TDA-220):     13       6          4    99.99%   99.99%            0           00:01.11    [end TDA_220] 
+INFO (TTC-110): Ending Static Logic Test generation                                             [end TTC_110] 
+*************************************************************************************************************
+
+****************************************************************************************************
+                           Testmode Statistics: FULLSCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64           64            0            0            0 100.00 100.00
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64           64            0            0            0 100.00 100.00
+****************************************************************************************************
+
+
+              ----Final Pattern Statistics----
+
+ Test Section Type                       # Test Sequences
+----------------------------------------------------------
+ Logic                                          6
+----------------------------------------------------------
+ Total                                          6
+
+(I) File(s) generated (bytes and name):
+
+          73728 /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/faultStatus.FULLSCAN.seq_d3
+          12853 /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/TBDbin.FULLSCAN.seq_d3
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            6,263,216  bytes
+
+                      CPU Time =    0:00:00.06
+                  Elapsed Time =    0:00:01.27                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:16 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      7 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
+      2 INFO (TTC-110): Starting Static Logic Test generation                                            
+
+  WARNING Messages...
+      1 WARNING (TTC-018): verify_test_structures issued Warning messages related to Stored Pattern tests.  Poor test coverage may result.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: report_faults 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s04_adder/faults_all_seq_d3.txt [end TDA_015]
+
+
+TFMlist 
+
+Logic Model(GM)   11/12/26
+                  02:56:52
+File Id     faultModel        faultStatus         experiment
+Created (GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:15
+Modified(GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:16
+Code Level        2023.0             2023.0             2023.0            
+Max Fault Id            64
+
+Fault Model Type:   Cell Boundary
+
+
+Global Ignored Static Fault Count                 0
+Global Ignored Dynamic Fault Count                0
+
+
+INFO (TFM-705): Testmode: FULLSCAN Experiment: seq_d3 Fault List:   
+
+Status key:
+   i    = inactive in test mode
+   c****= collapsed - listed after equiv. class representative fault (ECR)
+          NOTE: The status of the ECR will be concatenated after the "c".
+          Examples: cu,cT,cP,cR,cUnlo 
+   u    = untested - not processed
+                               
+   I    = ignored (unclassified)
+   It   = ignored (tied)
+   Iu   = ignored (unconnected)
+   Ib   = ignored (blocked)
+   Id   = ignored (dyn SE/SR)
+   If   = ignored (user FRULE)
+                           
+   T    = tested by simulation
+   Ti   = tested by implication
+   P    = possibly tested (limit not reached)
+   Tpdl = tested (possibly detected limit reached)
+   Tm   = tested in another mode
+   Tus  = tested user specifed (fault rule DETECTED statement)
+                    
+   A    = Aborted
+   R    = redundant
+   Rus  = redundant:  user specified 
+                                     
+   Ud   = untestable: undetermined reason
+   Uus  = untestable: user specified
+   Ulh  = untestable: linehold inhibits fault control/observe
+   Utm  = untestable: testmode inhibits fault control/observe
+   Ucn  = untestable: constraint
+   Uxs  = untestable: X sourced or sinked
+   Usd  = untestable: sequential depth (may be testable with more sequential depth)
+   Ugt  = untestable: global termination
+                                        
+   Unio = untestable: Seq or control not specified to target fault (PI to PO Path)
+   Unil = untestable: Seq or control not specified to target fault (PI to LATCH Path)
+   Unlo = untestable: Seq or control not specified to target fault (LATCH to PO Path)
+   Uner = untestable: Seq or control not specified to target fault (interdomain LATCH to LATCH)
+   Unra = untestable: Seq or control not specified to target fault (intradomain LATCH to LATCH)
+                                
+   PTAB (Possibly Tested At Best) status:
+                                
+   3    = PTAB 3-state: Untested
+   P3   = PTAB 3-state: Possibly Tested
+   T3   = PTAB 3-state: Tested (limit reached)
+   X    = PTAB X-state: Untested
+   PX   = PTAB X-state: Possibly Tested
+   TX   = PTAB X-state: Tested (limit reached)
+   TiX  = PTAB X-state: Tested by implication
+   C    = PTAB Clock Stuck Off: Untested
+   PC   = PTAB Clock Stuck Off: Possibly Tested
+   TC   = PTAB Clock Stuck Off: Tested (limit reached)
+   TiC  = PTAB Clock Stuck Off: Tested by implication
+
+Type key:   &  = AND Grouped         |  = OR Grouped
+            ISA0 = stuck-at-zero fault on an input pin
+            ISA1 = stuck-at-one fault on an input pin
+            ISR  = slow-to-rise fault on an input pin
+            ISF  = slow-to-fall fault on an input pin
+            OSA0 = stuck-at-zero fault on an output pin
+            OSA1 = stuck-at-one fault on an output pin
+            OSR  = slow-to-rise fault on an output pin
+            OSF  = slow-to-fall fault on an output pin
+            DPAT = dynamic pattern fault
+            SPAT = static pattern fault
+            DRV0 = driver fault driving 0
+            DRV1 = driver fault driving 1
+            RCV0 = receiver fault receiving 0
+            RCV1 = receiver fault receiving 1
+            SBRG0= static net shorted to 0 bridge fault
+            SBRG1= static net shorted to 1 bridge fault
+            DBRG0= dynamic net shorted to 0 bridge fault
+            DBRG1= dynamic net shorted to 1 bridge fault
+            IDDQ0= Iddq logic 0 fault
+            IDDQ1= Iddq logic 1 fault
+            QPAT = Iddq pattern fault
+
+
+     Fault Status  Type    Sim Func / Cell Name           Fault pin name
+
+         1 T       OSA0           PI                      a   
+         2 T       OSA1           PI                      a   
+         3 T       OSA0           PI                      b   
+         4 T       OSA1           PI                      b   
+         5 TiC     OSA0           PI                      clk   
+         6 TiC     OSA1           PI                      clk   
+         7 T       OSA0           PO                      s   
+        43 cT      OSA0           OR2X1                   g5.Y   
+        46 cT      ISA0           AND2X1                  g6.A   
+        48 cT      ISA0           AND2X1                  g6.B   
+        49 cT      OSA0           AND2X1                  g6.Y   
+        61 cT      OSA0           INVX1                   u2.Y   
+        62 cT      ISA1           INVX1                   u2.A   
+         8 T       OSA1           PO                      s   
+        50 cT      OSA1           AND2X1                  g6.Y   
+         9 TiC     ISA0           DFFHQX1                 ff.CK   
+        10 TiC     ISA1           DFFHQX1                 ff.CK   
+        11 T       ISA0           DFFHQX1                 ff.D   
+        55 cT      OSA0           OR2X1                   g7.Y   
+        12 T       ISA1           DFFHQX1                 ff.D   
+        52 cT      ISA1           OR2X1                   g7.A   
+        54 cT      ISA1           OR2X1                   g7.B   
+        56 cT      OSA1           OR2X1                   g7.Y   
+        13 T       OSA0           DFFHQX1                 ff.Q   
+        14 T       OSA1           DFFHQX1                 ff.Q   
+        15 T       ISA1           AND2X1                  g1.A   
+        16 T       ISA0           OR2X1                   g7.B   
+        17 T       ISA1           AND2X1                  g1.B   
+        18 T       ISA0           OR2X1                   g7.A   
+        19 T       OSA0           AND2X1                  g1.Y   
+        51 cT      ISA0           AND2X1                  g1.B   
+        53 cT      ISA0           AND2X1                  g1.A   
+        20 T       OSA1           AND2X1                  g1.Y   
+        21 T       ISA0           OR2X1                   g2.A   
+        22 T       ISA1           AND2X1                  g6.B   
+        63 cT      OSA1           INVX1                   u2.Y   
+        64 cT      ISA0           INVX1                   u2.A   
+        23 T       ISA0           OR2X1                   g2.B   
+        24 T       ISA1           AND2X1                  g6.A   
+        40 cT      ISA1           OR2X1                   g5.A   
+        42 cT      ISA1           OR2X1                   g5.B   
+        44 cT      OSA1           OR2X1                   g5.Y   
+        25 T       ISA0           OR2X1                   g5.B   
+        26 T       ISA0           OR2X1                   g5.A   
+        27 T       ISA1           AND2X1                  g3.A   
+        59 cT      OSA1           INVX1                   u1.Y   
+        60 cT      ISA0           INVX1                   u1.A   
+        28 T       OSA1           AND2X1                  g4.Y   
+        29 T       ISA1           AND2X1                  g3.B   
+        39 cT      OSA1           OR2X1                   g2.Y   
+        45 cT      ISA1           OR2X1                   g2.B   
+        47 cT      ISA1           OR2X1                   g2.A   
+        30 T       OSA0           AND2X1                  g4.Y   
+        35 cT      ISA0           AND2X1                  g4.A   
+        36 cT      ISA0           AND2X1                  g4.B   
+        31 T       OSA0           AND2X1                  g3.Y   
+        37 cT      ISA0           AND2X1                  g3.B   
+        38 cT      ISA0           AND2X1                  g3.A   
+        41 cT      OSA0           OR2X1                   g2.Y   
+        57 cT      OSA0           INVX1                   u1.Y   
+        58 cT      ISA1           INVX1                   u1.A   
+        32 T       OSA1           AND2X1                  g3.Y   
+        33 T       ISA1           AND2X1                  g4.A   
+        34 T       ISA1           AND2X1                  g4.B   
+
+[end TFM_705]
+
+
+INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+ Total                 :           64
+ Tested                :           64
+ Possibly Tested       :            0
+ Redundant             :            0
+ Untested (unprocessed):            0
+[end TFM_901]
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            9,442,784  bytes
+
+                      CPU Time =    0:00:00.00
+                  Elapsed Time =    0:00:00.07                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:17 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-705): Testmode: FULLSCAN Experiment: seq_d3 Fault List:   
+      1 INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: create_sequential_tests 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/logs/log_create_sequential_tests_FULLSCAN_seq_d4_111126235719-055966000 [end TDA_015]
+
+
+
+WARNING (TTC-018): verify_test_structures issued Warning messages related to Stored Pattern tests.  Poor test coverage may result.  [end TTC_018] 
+****************************************************************************************************
+Coverage Definitions:
+ #Faults  : Number of Active Faults (observable).
+ #Tested  : Number of Active Faults marked tested.
+ #Possibly: Number of Active Faults marked possibly tested
+            (good value is 0 or 1; fault value is X).
+ #Redund  : Number of Active Faults untestable due to redundancy.
+ #Untested: Number of Active Faults untested.
+ %TCov  (%Test Coverage)                      : #Tested / #Faults
+ %ATCov (%Adjusted TCov)                      : #Tested / (#Faults-#Redund)
+****************************************************************************************************
+****************************************************************************************************
+                           Testmode Statistics: FULLSCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64            0            0            0           64   0.00   0.00
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64            0            0            0           64   0.00   0.00
+****************************************************************************************************
+
+*************************************************************************************************************
+INFO (TTC-110): Starting Static Logic Test generation                                           [end TTC_110] 
+
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):      4       4         53    82.81%   82.81%            0           00:00.85    [end TDA_220] 
+INFO (TDA-220):      6       4          0    82.81%   82.81%            0           00:00.85    [end TDA_220] 
+INFO (TDA-220):     10       6          7    93.75%   93.75%            0           00:00.86    [end TDA_220] 
+INFO (TDA-220):     13       6          0    93.75%   93.75%            0           00:00.87    [end TDA_220] 
+INFO (TDA-220):     13       6          4    99.99%   99.99%            0           00:01.11    [end TDA_220] 
+INFO (TTC-110): Ending Static Logic Test generation                                             [end TTC_110] 
+*************************************************************************************************************
+
+****************************************************************************************************
+                           Testmode Statistics: FULLSCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64           64            0            0            0 100.00 100.00
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64           64            0            0            0 100.00 100.00
+****************************************************************************************************
+
+
+              ----Final Pattern Statistics----
+
+ Test Section Type                       # Test Sequences
+----------------------------------------------------------
+ Logic                                          6
+----------------------------------------------------------
+ Total                                          6
+
+(I) File(s) generated (bytes and name):
+
+          73728 /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/faultStatus.FULLSCAN.seq_d4
+          12853 /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/TBDbin.FULLSCAN.seq_d4
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            6,268,528  bytes
+
+                      CPU Time =    0:00:00.05
+                  Elapsed Time =    0:00:01.27                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:20 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      7 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
+      2 INFO (TTC-110): Starting Static Logic Test generation                                            
+
+  WARNING Messages...
+      1 WARNING (TTC-018): verify_test_structures issued Warning messages related to Stored Pattern tests.  Poor test coverage may result.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: report_faults 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s04_adder/faults_all_seq_d4.txt [end TDA_015]
+
+
+TFMlist 
+
+Logic Model(GM)   11/12/26
+                  02:56:52
+File Id     faultModel        faultStatus         experiment
+Created (GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:19
+Modified(GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:20
+Code Level        2023.0             2023.0             2023.0            
+Max Fault Id            64
+
+Fault Model Type:   Cell Boundary
+
+
+Global Ignored Static Fault Count                 0
+Global Ignored Dynamic Fault Count                0
+
+
+INFO (TFM-705): Testmode: FULLSCAN Experiment: seq_d4 Fault List:   
+
+Status key:
+   i    = inactive in test mode
+   c****= collapsed - listed after equiv. class representative fault (ECR)
+          NOTE: The status of the ECR will be concatenated after the "c".
+          Examples: cu,cT,cP,cR,cUnlo 
+   u    = untested - not processed
+                               
+   I    = ignored (unclassified)
+   It   = ignored (tied)
+   Iu   = ignored (unconnected)
+   Ib   = ignored (blocked)
+   Id   = ignored (dyn SE/SR)
+   If   = ignored (user FRULE)
+                           
+   T    = tested by simulation
+   Ti   = tested by implication
+   P    = possibly tested (limit not reached)
+   Tpdl = tested (possibly detected limit reached)
+   Tm   = tested in another mode
+   Tus  = tested user specifed (fault rule DETECTED statement)
+                    
+   A    = Aborted
+   R    = redundant
+   Rus  = redundant:  user specified 
+                                     
+   Ud   = untestable: undetermined reason
+   Uus  = untestable: user specified
+   Ulh  = untestable: linehold inhibits fault control/observe
+   Utm  = untestable: testmode inhibits fault control/observe
+   Ucn  = untestable: constraint
+   Uxs  = untestable: X sourced or sinked
+   Usd  = untestable: sequential depth (may be testable with more sequential depth)
+   Ugt  = untestable: global termination
+                                        
+   Unio = untestable: Seq or control not specified to target fault (PI to PO Path)
+   Unil = untestable: Seq or control not specified to target fault (PI to LATCH Path)
+   Unlo = untestable: Seq or control not specified to target fault (LATCH to PO Path)
+   Uner = untestable: Seq or control not specified to target fault (interdomain LATCH to LATCH)
+   Unra = untestable: Seq or control not specified to target fault (intradomain LATCH to LATCH)
+                                
+   PTAB (Possibly Tested At Best) status:
+                                
+   3    = PTAB 3-state: Untested
+   P3   = PTAB 3-state: Possibly Tested
+   T3   = PTAB 3-state: Tested (limit reached)
+   X    = PTAB X-state: Untested
+   PX   = PTAB X-state: Possibly Tested
+   TX   = PTAB X-state: Tested (limit reached)
+   TiX  = PTAB X-state: Tested by implication
+   C    = PTAB Clock Stuck Off: Untested
+   PC   = PTAB Clock Stuck Off: Possibly Tested
+   TC   = PTAB Clock Stuck Off: Tested (limit reached)
+   TiC  = PTAB Clock Stuck Off: Tested by implication
+
+Type key:   &  = AND Grouped         |  = OR Grouped
+            ISA0 = stuck-at-zero fault on an input pin
+            ISA1 = stuck-at-one fault on an input pin
+            ISR  = slow-to-rise fault on an input pin
+            ISF  = slow-to-fall fault on an input pin
+            OSA0 = stuck-at-zero fault on an output pin
+            OSA1 = stuck-at-one fault on an output pin
+            OSR  = slow-to-rise fault on an output pin
+            OSF  = slow-to-fall fault on an output pin
+            DPAT = dynamic pattern fault
+            SPAT = static pattern fault
+            DRV0 = driver fault driving 0
+            DRV1 = driver fault driving 1
+            RCV0 = receiver fault receiving 0
+            RCV1 = receiver fault receiving 1
+            SBRG0= static net shorted to 0 bridge fault
+            SBRG1= static net shorted to 1 bridge fault
+            DBRG0= dynamic net shorted to 0 bridge fault
+            DBRG1= dynamic net shorted to 1 bridge fault
+            IDDQ0= Iddq logic 0 fault
+            IDDQ1= Iddq logic 1 fault
+            QPAT = Iddq pattern fault
+
+
+     Fault Status  Type    Sim Func / Cell Name           Fault pin name
+
+         1 T       OSA0           PI                      a   
+         2 T       OSA1           PI                      a   
+         3 T       OSA0           PI                      b   
+         4 T       OSA1           PI                      b   
+         5 TiC     OSA0           PI                      clk   
+         6 TiC     OSA1           PI                      clk   
+         7 T       OSA0           PO                      s   
+        43 cT      OSA0           OR2X1                   g5.Y   
+        46 cT      ISA0           AND2X1                  g6.A   
+        48 cT      ISA0           AND2X1                  g6.B   
+        49 cT      OSA0           AND2X1                  g6.Y   
+        61 cT      OSA0           INVX1                   u2.Y   
+        62 cT      ISA1           INVX1                   u2.A   
+         8 T       OSA1           PO                      s   
+        50 cT      OSA1           AND2X1                  g6.Y   
+         9 TiC     ISA0           DFFHQX1                 ff.CK   
+        10 TiC     ISA1           DFFHQX1                 ff.CK   
+        11 T       ISA0           DFFHQX1                 ff.D   
+        55 cT      OSA0           OR2X1                   g7.Y   
+        12 T       ISA1           DFFHQX1                 ff.D   
+        52 cT      ISA1           OR2X1                   g7.A   
+        54 cT      ISA1           OR2X1                   g7.B   
+        56 cT      OSA1           OR2X1                   g7.Y   
+        13 T       OSA0           DFFHQX1                 ff.Q   
+        14 T       OSA1           DFFHQX1                 ff.Q   
+        15 T       ISA1           AND2X1                  g1.A   
+        16 T       ISA0           OR2X1                   g7.B   
+        17 T       ISA1           AND2X1                  g1.B   
+        18 T       ISA0           OR2X1                   g7.A   
+        19 T       OSA0           AND2X1                  g1.Y   
+        51 cT      ISA0           AND2X1                  g1.B   
+        53 cT      ISA0           AND2X1                  g1.A   
+        20 T       OSA1           AND2X1                  g1.Y   
+        21 T       ISA0           OR2X1                   g2.A   
+        22 T       ISA1           AND2X1                  g6.B   
+        63 cT      OSA1           INVX1                   u2.Y   
+        64 cT      ISA0           INVX1                   u2.A   
+        23 T       ISA0           OR2X1                   g2.B   
+        24 T       ISA1           AND2X1                  g6.A   
+        40 cT      ISA1           OR2X1                   g5.A   
+        42 cT      ISA1           OR2X1                   g5.B   
+        44 cT      OSA1           OR2X1                   g5.Y   
+        25 T       ISA0           OR2X1                   g5.B   
+        26 T       ISA0           OR2X1                   g5.A   
+        27 T       ISA1           AND2X1                  g3.A   
+        59 cT      OSA1           INVX1                   u1.Y   
+        60 cT      ISA0           INVX1                   u1.A   
+        28 T       OSA1           AND2X1                  g4.Y   
+        29 T       ISA1           AND2X1                  g3.B   
+        39 cT      OSA1           OR2X1                   g2.Y   
+        45 cT      ISA1           OR2X1                   g2.B   
+        47 cT      ISA1           OR2X1                   g2.A   
+        30 T       OSA0           AND2X1                  g4.Y   
+        35 cT      ISA0           AND2X1                  g4.A   
+        36 cT      ISA0           AND2X1                  g4.B   
+        31 T       OSA0           AND2X1                  g3.Y   
+        37 cT      ISA0           AND2X1                  g3.B   
+        38 cT      ISA0           AND2X1                  g3.A   
+        41 cT      OSA0           OR2X1                   g2.Y   
+        57 cT      OSA0           INVX1                   u1.Y   
+        58 cT      ISA1           INVX1                   u1.A   
+        32 T       OSA1           AND2X1                  g3.Y   
+        33 T       ISA1           AND2X1                  g4.A   
+        34 T       ISA1           AND2X1                  g4.B   
+
+[end TFM_705]
+
+
+INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+ Total                 :           64
+ Tested                :           64
+ Possibly Tested       :            0
+ Redundant             :            0
+ Untested (unprocessed):            0
+[end TFM_901]
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            9,448,096  bytes
+
+                      CPU Time =    0:00:00.00
+                  Elapsed Time =    0:00:00.07                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:21 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-705): Testmode: FULLSCAN Experiment: seq_d4 Fault List:   
+      1 INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: create_sequential_tests 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/logs/log_create_sequential_tests_FULLSCAN_seq_d32_111126235723-082575000 [end TDA_015]
+
+
+
+WARNING (TTC-018): verify_test_structures issued Warning messages related to Stored Pattern tests.  Poor test coverage may result.  [end TTC_018] 
+****************************************************************************************************
+Coverage Definitions:
+ #Faults  : Number of Active Faults (observable).
+ #Tested  : Number of Active Faults marked tested.
+ #Possibly: Number of Active Faults marked possibly tested
+            (good value is 0 or 1; fault value is X).
+ #Redund  : Number of Active Faults untestable due to redundancy.
+ #Untested: Number of Active Faults untested.
+ %TCov  (%Test Coverage)                      : #Tested / #Faults
+ %ATCov (%Adjusted TCov)                      : #Tested / (#Faults-#Redund)
+****************************************************************************************************
+****************************************************************************************************
+                           Testmode Statistics: FULLSCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64            0            0            0           64   0.00   0.00
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64            0            0            0           64   0.00   0.00
+****************************************************************************************************
+
+*************************************************************************************************************
+INFO (TTC-110): Starting Static Logic Test generation                                           [end TTC_110] 
+
+INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
+INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
+INFO (TDA-220):      4       4         53    82.81%   82.81%            0           00:00.78    [end TDA_220] 
+INFO (TDA-220):      6       4          0    82.81%   82.81%            0           00:00.79    [end TDA_220] 
+INFO (TDA-220):     10       6          7    93.75%   93.75%            0           00:00.79    [end TDA_220] 
+INFO (TDA-220):     13       6          0    93.75%   93.75%            0           00:00.79    [end TDA_220] 
+INFO (TDA-221):     13       6          0    93.75%   93.75%            0           00:00.79    [end TDA_221] 
+INFO (TDA-220):     13       6          4    99.99%   99.99%            0           00:00.94    [end TDA_220] 
+INFO (TTC-110): Ending Static Logic Test generation                                             [end TTC_110] 
+*************************************************************************************************************
+
+****************************************************************************************************
+                           Testmode Statistics: FULLSCAN
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64           64            0            0            0 100.00 100.00
+
+                            Global Statistics
+
+                           #Faults      #Tested    #Possibly      #Redund    #Untested  %TCov %ATCov
+Total Static                    64           64            0            0            0 100.00 100.00
+****************************************************************************************************
+
+
+              ----Final Pattern Statistics----
+
+ Test Section Type                       # Test Sequences
+----------------------------------------------------------
+ Logic                                          6
+----------------------------------------------------------
+ Total                                          6
+
+(I) File(s) generated (bytes and name):
+
+          73728 /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/faultStatus.FULLSCAN.seq_d32
+          12853 /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/tbdata/TBDbin.FULLSCAN.seq_d32
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            6,273,888  bytes
+
+                      CPU Time =    0:00:00.05
+                  Elapsed Time =    0:00:01.07                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:24 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      7 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -   
+      1 INFO (TDA-221):     13       6          0    93.75%   93.75%            0           00:00.79     
+      2 INFO (TTC-110): Starting Static Logic Test generation                                            
+
+  WARNING Messages...
+      1 WARNING (TTC-018): verify_test_structures issued Warning messages related to Stored Pattern tests.  Poor test coverage may result.   
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: report_faults 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s04_adder/faults_all_seq_d32.txt [end TDA_015]
+
+
+TFMlist 
+
+Logic Model(GM)   11/12/26
+                  02:56:52
+File Id     faultModel        faultStatus         experiment
+Created (GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:23
+Modified(GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:24
+Code Level        2023.0             2023.0             2023.0            
+Max Fault Id            64
+
+Fault Model Type:   Cell Boundary
+
+
+Global Ignored Static Fault Count                 0
+Global Ignored Dynamic Fault Count                0
+
+
+INFO (TFM-705): Testmode: FULLSCAN Experiment: seq_d32 Fault List:   
+
+Status key:
+   i    = inactive in test mode
+   c****= collapsed - listed after equiv. class representative fault (ECR)
+          NOTE: The status of the ECR will be concatenated after the "c".
+          Examples: cu,cT,cP,cR,cUnlo 
+   u    = untested - not processed
+                               
+   I    = ignored (unclassified)
+   It   = ignored (tied)
+   Iu   = ignored (unconnected)
+   Ib   = ignored (blocked)
+   Id   = ignored (dyn SE/SR)
+   If   = ignored (user FRULE)
+                           
+   T    = tested by simulation
+   Ti   = tested by implication
+   P    = possibly tested (limit not reached)
+   Tpdl = tested (possibly detected limit reached)
+   Tm   = tested in another mode
+   Tus  = tested user specifed (fault rule DETECTED statement)
+                    
+   A    = Aborted
+   R    = redundant
+   Rus  = redundant:  user specified 
+                                     
+   Ud   = untestable: undetermined reason
+   Uus  = untestable: user specified
+   Ulh  = untestable: linehold inhibits fault control/observe
+   Utm  = untestable: testmode inhibits fault control/observe
+   Ucn  = untestable: constraint
+   Uxs  = untestable: X sourced or sinked
+   Usd  = untestable: sequential depth (may be testable with more sequential depth)
+   Ugt  = untestable: global termination
+                                        
+   Unio = untestable: Seq or control not specified to target fault (PI to PO Path)
+   Unil = untestable: Seq or control not specified to target fault (PI to LATCH Path)
+   Unlo = untestable: Seq or control not specified to target fault (LATCH to PO Path)
+   Uner = untestable: Seq or control not specified to target fault (interdomain LATCH to LATCH)
+   Unra = untestable: Seq or control not specified to target fault (intradomain LATCH to LATCH)
+                                
+   PTAB (Possibly Tested At Best) status:
+                                
+   3    = PTAB 3-state: Untested
+   P3   = PTAB 3-state: Possibly Tested
+   T3   = PTAB 3-state: Tested (limit reached)
+   X    = PTAB X-state: Untested
+   PX   = PTAB X-state: Possibly Tested
+   TX   = PTAB X-state: Tested (limit reached)
+   TiX  = PTAB X-state: Tested by implication
+   C    = PTAB Clock Stuck Off: Untested
+   PC   = PTAB Clock Stuck Off: Possibly Tested
+   TC   = PTAB Clock Stuck Off: Tested (limit reached)
+   TiC  = PTAB Clock Stuck Off: Tested by implication
+
+Type key:   &  = AND Grouped         |  = OR Grouped
+            ISA0 = stuck-at-zero fault on an input pin
+            ISA1 = stuck-at-one fault on an input pin
+            ISR  = slow-to-rise fault on an input pin
+            ISF  = slow-to-fall fault on an input pin
+            OSA0 = stuck-at-zero fault on an output pin
+            OSA1 = stuck-at-one fault on an output pin
+            OSR  = slow-to-rise fault on an output pin
+            OSF  = slow-to-fall fault on an output pin
+            DPAT = dynamic pattern fault
+            SPAT = static pattern fault
+            DRV0 = driver fault driving 0
+            DRV1 = driver fault driving 1
+            RCV0 = receiver fault receiving 0
+            RCV1 = receiver fault receiving 1
+            SBRG0= static net shorted to 0 bridge fault
+            SBRG1= static net shorted to 1 bridge fault
+            DBRG0= dynamic net shorted to 0 bridge fault
+            DBRG1= dynamic net shorted to 1 bridge fault
+            IDDQ0= Iddq logic 0 fault
+            IDDQ1= Iddq logic 1 fault
+            QPAT = Iddq pattern fault
+
+
+     Fault Status  Type    Sim Func / Cell Name           Fault pin name
+
+         1 T       OSA0           PI                      a   
+         2 T       OSA1           PI                      a   
+         3 T       OSA0           PI                      b   
+         4 T       OSA1           PI                      b   
+         5 TiC     OSA0           PI                      clk   
+         6 TiC     OSA1           PI                      clk   
+         7 T       OSA0           PO                      s   
+        43 cT      OSA0           OR2X1                   g5.Y   
+        46 cT      ISA0           AND2X1                  g6.A   
+        48 cT      ISA0           AND2X1                  g6.B   
+        49 cT      OSA0           AND2X1                  g6.Y   
+        61 cT      OSA0           INVX1                   u2.Y   
+        62 cT      ISA1           INVX1                   u2.A   
+         8 T       OSA1           PO                      s   
+        50 cT      OSA1           AND2X1                  g6.Y   
+         9 TiC     ISA0           DFFHQX1                 ff.CK   
+        10 TiC     ISA1           DFFHQX1                 ff.CK   
+        11 T       ISA0           DFFHQX1                 ff.D   
+        55 cT      OSA0           OR2X1                   g7.Y   
+        12 T       ISA1           DFFHQX1                 ff.D   
+        52 cT      ISA1           OR2X1                   g7.A   
+        54 cT      ISA1           OR2X1                   g7.B   
+        56 cT      OSA1           OR2X1                   g7.Y   
+        13 T       OSA0           DFFHQX1                 ff.Q   
+        14 T       OSA1           DFFHQX1                 ff.Q   
+        15 T       ISA1           AND2X1                  g1.A   
+        16 T       ISA0           OR2X1                   g7.B   
+        17 T       ISA1           AND2X1                  g1.B   
+        18 T       ISA0           OR2X1                   g7.A   
+        19 T       OSA0           AND2X1                  g1.Y   
+        51 cT      ISA0           AND2X1                  g1.B   
+        53 cT      ISA0           AND2X1                  g1.A   
+        20 T       OSA1           AND2X1                  g1.Y   
+        21 T       ISA0           OR2X1                   g2.A   
+        22 T       ISA1           AND2X1                  g6.B   
+        63 cT      OSA1           INVX1                   u2.Y   
+        64 cT      ISA0           INVX1                   u2.A   
+        23 T       ISA0           OR2X1                   g2.B   
+        24 T       ISA1           AND2X1                  g6.A   
+        40 cT      ISA1           OR2X1                   g5.A   
+        42 cT      ISA1           OR2X1                   g5.B   
+        44 cT      OSA1           OR2X1                   g5.Y   
+        25 T       ISA0           OR2X1                   g5.B   
+        26 T       ISA0           OR2X1                   g5.A   
+        27 T       ISA1           AND2X1                  g3.A   
+        59 cT      OSA1           INVX1                   u1.Y   
+        60 cT      ISA0           INVX1                   u1.A   
+        28 T       OSA1           AND2X1                  g4.Y   
+        29 T       ISA1           AND2X1                  g3.B   
+        39 cT      OSA1           OR2X1                   g2.Y   
+        45 cT      ISA1           OR2X1                   g2.B   
+        47 cT      ISA1           OR2X1                   g2.A   
+        30 T       OSA0           AND2X1                  g4.Y   
+        35 cT      ISA0           AND2X1                  g4.A   
+        36 cT      ISA0           AND2X1                  g4.B   
+        31 T       OSA0           AND2X1                  g3.Y   
+        37 cT      ISA0           AND2X1                  g3.B   
+        38 cT      ISA0           AND2X1                  g3.A   
+        41 cT      OSA0           OR2X1                   g2.Y   
+        57 cT      OSA0           INVX1                   u1.Y   
+        58 cT      ISA1           INVX1                   u1.A   
+        32 T       OSA1           AND2X1                  g3.Y   
+        33 T       ISA1           AND2X1                  g4.A   
+        34 T       ISA1           AND2X1                  g4.B   
+
+[end TFM_705]
+
+
+INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+ Total                 :           64
+ Tested                :           64
+ Possibly Tested       :            0
+ Redundant             :            0
+ Untested (unprocessed):            0
+[end TFM_901]
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            9,453,488  bytes
+
+                      CPU Time =    0:00:00.00
+                  Elapsed Time =    0:00:00.06                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:25 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-705): Testmode: FULLSCAN Experiment: seq_d32 Fault List:   
+      1 INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 71: foreach E $EXPS {
+    catch {report_vectors -testmode $TESTMODE -experiment $E -format node \
+              -targetfault yes -outputfile $OUT_DIR/vectors_node_$E.txt}
+    catch {report_faults -testmode $TESTMODE -experiment $E \
+             -faultstatus redundant -faultlocation cellpin -reportkey yes \
+             -logfile $OUT_DIR/faults_redundant_$E.txt}
+    catch {report_faults -testmode $TESTMODE -experiment $E \
+             -faultstatus all -faultlocation cellpin \
+             -logfile $OUT_DIR/faults_all_$E.txt}
+    catch {write_vectors -testmode $TESTMODE -inexperiment $E -language verilog}
+}
+Starting Command: report_vectors 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/logs/log_report_vectors_FULLSCAN_logic_111126235726-812852000 [end TDA_015]
+
+INFO (TBD-801): report_vectors Output file will be /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s04_adder/vectors_node_logic.txt
+  [end TBD_801] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            5,720,848  bytes
+
+                      CPU Time =    0:00:00.00
+                  Elapsed Time =    0:00:00.18                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:27 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TBD-801): report_vectors Output file will be /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s04_adder/vectors_node_logic.txt
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: report_faults 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s04_adder/faults_redundant_logic.txt [end TDA_015]
+
+
+TFMlist 
+
+Logic Model(GM)   11/12/26
+                  02:56:52
+File Id     faultModel        faultStatus         experiment
+Created (GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:02
+Modified(GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:03
+Code Level        2023.0             2023.0             2023.0            
+Max Fault Id            64
+
+Fault Model Type:   Cell Boundary
+
+
+Global Ignored Static Fault Count                 0
+Global Ignored Dynamic Fault Count                0
+
+
+INFO (TFM-705): Testmode: FULLSCAN Experiment: logic Fault List:   
+
+Status key:
+   i    = inactive in test mode
+   c****= collapsed - listed after equiv. class representative fault (ECR)
+          NOTE: The status of the ECR will be concatenated after the "c".
+          Examples: cu,cT,cP,cR,cUnlo 
+   u    = untested - not processed
+                               
+   I    = ignored (unclassified)
+   It   = ignored (tied)
+   Iu   = ignored (unconnected)
+   Ib   = ignored (blocked)
+   Id   = ignored (dyn SE/SR)
+   If   = ignored (user FRULE)
+                           
+   T    = tested by simulation
+   Ti   = tested by implication
+   P    = possibly tested (limit not reached)
+   Tpdl = tested (possibly detected limit reached)
+   Tm   = tested in another mode
+   Tus  = tested user specifed (fault rule DETECTED statement)
+                    
+   A    = Aborted
+   R    = redundant
+   Rus  = redundant:  user specified 
+                                     
+   Ud   = untestable: undetermined reason
+   Uus  = untestable: user specified
+   Ulh  = untestable: linehold inhibits fault control/observe
+   Utm  = untestable: testmode inhibits fault control/observe
+   Ucn  = untestable: constraint
+   Uxs  = untestable: X sourced or sinked
+   Usd  = untestable: sequential depth (may be testable with more sequential depth)
+   Ugt  = untestable: global termination
+                                        
+   Unio = untestable: Seq or control not specified to target fault (PI to PO Path)
+   Unil = untestable: Seq or control not specified to target fault (PI to LATCH Path)
+   Unlo = untestable: Seq or control not specified to target fault (LATCH to PO Path)
+   Uner = untestable: Seq or control not specified to target fault (interdomain LATCH to LATCH)
+   Unra = untestable: Seq or control not specified to target fault (intradomain LATCH to LATCH)
+                                
+   PTAB (Possibly Tested At Best) status:
+                                
+   3    = PTAB 3-state: Untested
+   P3   = PTAB 3-state: Possibly Tested
+   T3   = PTAB 3-state: Tested (limit reached)
+   X    = PTAB X-state: Untested
+   PX   = PTAB X-state: Possibly Tested
+   TX   = PTAB X-state: Tested (limit reached)
+   TiX  = PTAB X-state: Tested by implication
+   C    = PTAB Clock Stuck Off: Untested
+   PC   = PTAB Clock Stuck Off: Possibly Tested
+   TC   = PTAB Clock Stuck Off: Tested (limit reached)
+   TiC  = PTAB Clock Stuck Off: Tested by implication
+
+Type key:   &  = AND Grouped         |  = OR Grouped
+            ISA0 = stuck-at-zero fault on an input pin
+            ISA1 = stuck-at-one fault on an input pin
+            ISR  = slow-to-rise fault on an input pin
+            ISF  = slow-to-fall fault on an input pin
+            OSA0 = stuck-at-zero fault on an output pin
+            OSA1 = stuck-at-one fault on an output pin
+            OSR  = slow-to-rise fault on an output pin
+            OSF  = slow-to-fall fault on an output pin
+            DPAT = dynamic pattern fault
+            SPAT = static pattern fault
+            DRV0 = driver fault driving 0
+            DRV1 = driver fault driving 1
+            RCV0 = receiver fault receiving 0
+            RCV1 = receiver fault receiving 1
+            SBRG0= static net shorted to 0 bridge fault
+            SBRG1= static net shorted to 1 bridge fault
+            DBRG0= dynamic net shorted to 0 bridge fault
+            DBRG1= dynamic net shorted to 1 bridge fault
+            IDDQ0= Iddq logic 0 fault
+            IDDQ1= Iddq logic 1 fault
+            QPAT = Iddq pattern fault
+
+
+     Fault Status  Type    Sim Func / Cell Name           Fault pin name
+
+
+[end TFM_705]
+INFO (TFM-112): No faults were found which met the selection criteria based on faultstatus and faulttype.  [end TFM_112] 
+
+
+INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+ Total                 :            0
+ Tested                :            0
+ Possibly Tested       :            0
+ Redundant             :            0
+ Untested (unprocessed):            0
+[end TFM_901]
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            9,456,384  bytes
+
+                      CPU Time =    0:00:00.00
+                  Elapsed Time =    0:00:00.05                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:28 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-112): No faults were found which met the selection criteria based on faultstatus and faulttype.   
+      1 INFO (TFM-705): Testmode: FULLSCAN Experiment: logic Fault List:   
+      1 INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: report_faults 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s04_adder/faults_all_logic.txt [end TDA_015]
+
+
+TFMlist 
+
+Logic Model(GM)   11/12/26
+                  02:56:52
+File Id     faultModel        faultStatus         experiment
+Created (GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:02
+Modified(GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:03
+Code Level        2023.0             2023.0             2023.0            
+Max Fault Id            64
+
+Fault Model Type:   Cell Boundary
+
+
+Global Ignored Static Fault Count                 0
+Global Ignored Dynamic Fault Count                0
+
+
+INFO (TFM-705): Testmode: FULLSCAN Experiment: logic Fault List:   
+
+
+     Fault Status  Type    Sim Func / Cell Name           Fault pin name
+
+         1 T       OSA0           PI                      a   
+         2 T       OSA1           PI                      a   
+         3 T       OSA0           PI                      b   
+         4 T       OSA1           PI                      b   
+         5 TiC     OSA0           PI                      clk   
+         6 TiC     OSA1           PI                      clk   
+         7 T       OSA0           PO                      s   
+        43 cT      OSA0           OR2X1                   g5.Y   
+        46 cT      ISA0           AND2X1                  g6.A   
+        48 cT      ISA0           AND2X1                  g6.B   
+        49 cT      OSA0           AND2X1                  g6.Y   
+        61 cT      OSA0           INVX1                   u2.Y   
+        62 cT      ISA1           INVX1                   u2.A   
+         8 T       OSA1           PO                      s   
+        50 cT      OSA1           AND2X1                  g6.Y   
+         9 TiC     ISA0           DFFHQX1                 ff.CK   
+        10 TiC     ISA1           DFFHQX1                 ff.CK   
+        11 T       ISA0           DFFHQX1                 ff.D   
+        55 cT      OSA0           OR2X1                   g7.Y   
+        12 T       ISA1           DFFHQX1                 ff.D   
+        52 cT      ISA1           OR2X1                   g7.A   
+        54 cT      ISA1           OR2X1                   g7.B   
+        56 cT      OSA1           OR2X1                   g7.Y   
+        13 T       OSA0           DFFHQX1                 ff.Q   
+        14 T       OSA1           DFFHQX1                 ff.Q   
+        15 T       ISA1           AND2X1                  g1.A   
+        16 T       ISA0           OR2X1                   g7.B   
+        17 T       ISA1           AND2X1                  g1.B   
+        18 T       ISA0           OR2X1                   g7.A   
+        19 T       OSA0           AND2X1                  g1.Y   
+        51 cT      ISA0           AND2X1                  g1.B   
+        53 cT      ISA0           AND2X1                  g1.A   
+        20 T       OSA1           AND2X1                  g1.Y   
+        21 T       ISA0           OR2X1                   g2.A   
+        22 T       ISA1           AND2X1                  g6.B   
+        63 cT      OSA1           INVX1                   u2.Y   
+        64 cT      ISA0           INVX1                   u2.A   
+        23 T       ISA0           OR2X1                   g2.B   
+        24 T       ISA1           AND2X1                  g6.A   
+        40 cT      ISA1           OR2X1                   g5.A   
+        42 cT      ISA1           OR2X1                   g5.B   
+        44 cT      OSA1           OR2X1                   g5.Y   
+        25 T       ISA0           OR2X1                   g5.B   
+        26 T       ISA0           OR2X1                   g5.A   
+        27 T       ISA1           AND2X1                  g3.A   
+        59 cT      OSA1           INVX1                   u1.Y   
+        60 cT      ISA0           INVX1                   u1.A   
+        28 T       OSA1           AND2X1                  g4.Y   
+        29 T       ISA1           AND2X1                  g3.B   
+        39 cT      OSA1           OR2X1                   g2.Y   
+        45 cT      ISA1           OR2X1                   g2.B   
+        47 cT      ISA1           OR2X1                   g2.A   
+        30 T       OSA0           AND2X1                  g4.Y   
+        35 cT      ISA0           AND2X1                  g4.A   
+        36 cT      ISA0           AND2X1                  g4.B   
+        31 T       OSA0           AND2X1                  g3.Y   
+        37 cT      ISA0           AND2X1                  g3.B   
+        38 cT      ISA0           AND2X1                  g3.A   
+        41 cT      OSA0           OR2X1                   g2.Y   
+        57 cT      OSA0           INVX1                   u1.Y   
+        58 cT      ISA1           INVX1                   u1.A   
+        32 T       OSA1           AND2X1                  g3.Y   
+        33 T       ISA1           AND2X1                  g4.A   
+        34 T       ISA1           AND2X1                  g4.B   
+
+[end TFM_705]
+
+
+INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+ Total                 :           64
+ Tested                :           64
+ Possibly Tested       :            0
+ Redundant             :            0
+ Untested (unprocessed):            0
+[end TFM_901]
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            9,457,792  bytes
+
+                      CPU Time =    0:00:00.01
+                  Elapsed Time =    0:00:00.05                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:29 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-705): Testmode: FULLSCAN Experiment: logic Fault List:   
+      1 INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: write_vectors 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/logs/log_write_vectors_FULLSCAN_logic_111126235730-973076000 [end TDA_015]
+
+INFO (TVE-001): Verilog write vectors started.   [end TVE_001] 
+INFO (TVE-103): There was no specified TEST offset for this clock 'pin clk'.  A default clock offset of 8.000000 ns will be used.   [end TVE_103] 
+INFO (TVE-967): Temporary output files are created in /tmp directory. [end TVE_967] 
+INFO (TVE-004): Reading test section 1.1. Test section type equals logic.   [end TVE_004] 
+INFO (TVE-003): Verilog write vectors output file will be: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/verilog/cycleMap.FULLSCAN.logic.   [end TVE_003] 
+INFO (TVE-003): Verilog write vectors output file will be: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/verilog/VER.FULLSCAN.logic.data.logic.ex1.ts1.verilog.   [end TVE_003] 
+INFO (TVE-005): Created 33 total cycles, of which 33 are test cycles, 0 are scan cycles, 0 are dynamic timed cycles and 0 are dynamic cycles that are not timed.   [end TVE_005] 
+INFO (TVE-008): Created 8 total measures, of which 8 are PO measures and 0 are SO (Scan Out) measures.  [end TVE_008] 
+INFO (TVE-003): Verilog write vectors output file will be: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/verilog/VER.FULLSCAN.logic.mainsim.v.   [end TVE_003] 
+
+INFO (TVE-050):         TEST SEQUENCE COVERAGE ESTIMATE REPORT  
+    Test       | Global    | Global    | Global    | Global    | Global    | Global    | Sequence   | Overlapped | Total      | 
+    Sequence   | Static    | Static    | Static    | Dynamic   | Dynamic   | Dynamic   | Cycle      | Cycle      | Cycle      | 
+               | Total     | Delta     | Adjusted  | Total     | Delta     | Adjusted  | Count      | Count      | Count      | 
+               | Coverage  | Coverage  | Total     | Coverage  | Coverage  | Total     |            |            |            | 
+               |           |           | Coverage  |           |           | Coverage  |            |            |            | 
+     1.1.1.1.1 |  0.00     |  0.00     |  0.00     |  0.00     |  0.00     |  0.00     |          1 |          0 |          1 |
+     1.1.1.2.1 |  28.12    |  28.12    |  28.12    |  0.00     |  0.00     |  0.00     |          3 |          0 |          4 |
+     1.1.1.2.2 |  46.88    |  18.75    |  46.88    |  0.00     |  0.00     |  0.00     |          3 |          0 |          7 |
+     1.1.1.3.1 |  51.56    |  4.69     |  51.56    |  0.00     |  0.00     |  0.00     |          4 |          0 |         11 |
+     1.1.1.3.2 |  59.38    |  7.81     |  59.38    |  0.00     |  0.00     |  0.00     |          4 |          0 |         15 |
+     1.1.1.3.3 |  82.81    |  23.44    |  82.81    |  0.00     |  0.00     |  0.00     |          4 |          0 |         19 |
+     1.1.1.4.1 |  84.38    |  1.56     |  84.38    |  0.00     |  0.00     |  0.00     |          5 |          0 |         24 |
+     1.1.1.5.1 |  87.50    |  3.12     |  87.50    |  0.00     |  0.00     |  0.00     |          4 |          0 |         28 |
+     1.1.1.5.2 |  93.75    |  6.25     |  93.75    |  0.00     |  0.00     |  0.00     |          5 |          0 |         33 |
+  [end TVE_050] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            5,869,168  bytes
+
+                      CPU Time =    0:00:00.02
+                  Elapsed Time =    0:00:00.44                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:31 2026  -03
+
+INFO (TVE-002): Verilog write vectors has completed.   [end TVE_002] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TVE-001): Verilog write vectors started.    
+      1 INFO (TVE-002): Verilog write vectors has completed.    
+      3 INFO (TVE-003): Verilog write vectors output file will be: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/verilog/cycleMap.FULLSCAN.logic.    
+      1 INFO (TVE-004): Reading test section 1.1. Test section type equals logic.    
+      1 INFO (TVE-005): Created 33 total cycles, of which 33 are test cycles, 0 are scan cycles, 0 are dynamic timed cycles and 0 are dynamic cycles that are not timed.    
+      1 INFO (TVE-008): Created 8 total measures, of which 8 are PO measures and 0 are SO (Scan Out) measures.   
+      1 INFO (TVE-050):         TEST SEQUENCE COVERAGE ESTIMATE REPORT  
+      1 INFO (TVE-103): There was no specified TEST offset for this clock 'pin clk'.  A default clock offset of 8.000000 ns will be used.    
+      1 INFO (TVE-967): Temporary output files are created in /tmp directory.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: report_vectors 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/logs/log_report_vectors_FULLSCAN_seq_111126235732-695220000 [end TDA_015]
+
+INFO (TBD-801): report_vectors Output file will be /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s04_adder/vectors_node_seq.txt
+  [end TBD_801] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            5,726,640  bytes
+
+                      CPU Time =    0:00:00.00
+                  Elapsed Time =    0:00:00.23                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:33 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TBD-801): report_vectors Output file will be /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s04_adder/vectors_node_seq.txt
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: report_faults 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s04_adder/faults_redundant_seq.txt [end TDA_015]
+
+
+TFMlist 
+
+Logic Model(GM)   11/12/26
+                  02:56:52
+File Id     faultModel        faultStatus         experiment
+Created (GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:05
+Modified(GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:05
+Code Level        2023.0             2023.0             2023.0            
+Max Fault Id            64
+
+Fault Model Type:   Cell Boundary
+
+
+Global Ignored Static Fault Count                 0
+Global Ignored Dynamic Fault Count                0
+
+
+INFO (TFM-705): Testmode: FULLSCAN Experiment: seq Fault List:   
+
+Status key:
+   i    = inactive in test mode
+   c****= collapsed - listed after equiv. class representative fault (ECR)
+          NOTE: The status of the ECR will be concatenated after the "c".
+          Examples: cu,cT,cP,cR,cUnlo 
+   u    = untested - not processed
+                               
+   I    = ignored (unclassified)
+   It   = ignored (tied)
+   Iu   = ignored (unconnected)
+   Ib   = ignored (blocked)
+   Id   = ignored (dyn SE/SR)
+   If   = ignored (user FRULE)
+                           
+   T    = tested by simulation
+   Ti   = tested by implication
+   P    = possibly tested (limit not reached)
+   Tpdl = tested (possibly detected limit reached)
+   Tm   = tested in another mode
+   Tus  = tested user specifed (fault rule DETECTED statement)
+                    
+   A    = Aborted
+   R    = redundant
+   Rus  = redundant:  user specified 
+                                     
+   Ud   = untestable: undetermined reason
+   Uus  = untestable: user specified
+   Ulh  = untestable: linehold inhibits fault control/observe
+   Utm  = untestable: testmode inhibits fault control/observe
+   Ucn  = untestable: constraint
+   Uxs  = untestable: X sourced or sinked
+   Usd  = untestable: sequential depth (may be testable with more sequential depth)
+   Ugt  = untestable: global termination
+                                        
+   Unio = untestable: Seq or control not specified to target fault (PI to PO Path)
+   Unil = untestable: Seq or control not specified to target fault (PI to LATCH Path)
+   Unlo = untestable: Seq or control not specified to target fault (LATCH to PO Path)
+   Uner = untestable: Seq or control not specified to target fault (interdomain LATCH to LATCH)
+   Unra = untestable: Seq or control not specified to target fault (intradomain LATCH to LATCH)
+                                
+   PTAB (Possibly Tested At Best) status:
+                                
+   3    = PTAB 3-state: Untested
+   P3   = PTAB 3-state: Possibly Tested
+   T3   = PTAB 3-state: Tested (limit reached)
+   X    = PTAB X-state: Untested
+   PX   = PTAB X-state: Possibly Tested
+   TX   = PTAB X-state: Tested (limit reached)
+   TiX  = PTAB X-state: Tested by implication
+   C    = PTAB Clock Stuck Off: Untested
+   PC   = PTAB Clock Stuck Off: Possibly Tested
+   TC   = PTAB Clock Stuck Off: Tested (limit reached)
+   TiC  = PTAB Clock Stuck Off: Tested by implication
+
+Type key:   &  = AND Grouped         |  = OR Grouped
+            ISA0 = stuck-at-zero fault on an input pin
+            ISA1 = stuck-at-one fault on an input pin
+            ISR  = slow-to-rise fault on an input pin
+            ISF  = slow-to-fall fault on an input pin
+            OSA0 = stuck-at-zero fault on an output pin
+            OSA1 = stuck-at-one fault on an output pin
+            OSR  = slow-to-rise fault on an output pin
+            OSF  = slow-to-fall fault on an output pin
+            DPAT = dynamic pattern fault
+            SPAT = static pattern fault
+            DRV0 = driver fault driving 0
+            DRV1 = driver fault driving 1
+            RCV0 = receiver fault receiving 0
+            RCV1 = receiver fault receiving 1
+            SBRG0= static net shorted to 0 bridge fault
+            SBRG1= static net shorted to 1 bridge fault
+            DBRG0= dynamic net shorted to 0 bridge fault
+            DBRG1= dynamic net shorted to 1 bridge fault
+            IDDQ0= Iddq logic 0 fault
+            IDDQ1= Iddq logic 1 fault
+            QPAT = Iddq pattern fault
+
+
+     Fault Status  Type    Sim Func / Cell Name           Fault pin name
+
+
+[end TFM_705]
+INFO (TFM-112): No faults were found which met the selection criteria based on faultstatus and faulttype.  [end TFM_112] 
+
+
+INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+ Total                 :            0
+ Tested                :            0
+ Possibly Tested       :            0
+ Redundant             :            0
+ Untested (unprocessed):            0
+[end TFM_901]
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            9,462,192  bytes
+
+                      CPU Time =    0:00:00.00
+                  Elapsed Time =    0:00:00.07                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:34 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-112): No faults were found which met the selection criteria based on faultstatus and faulttype.   
+      1 INFO (TFM-705): Testmode: FULLSCAN Experiment: seq Fault List:   
+      1 INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: report_faults 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s04_adder/faults_all_seq.txt [end TDA_015]
+
+
+TFMlist 
+
+Logic Model(GM)   11/12/26
+                  02:56:52
+File Id     faultModel        faultStatus         experiment
+Created (GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:05
+Modified(GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:05
+Code Level        2023.0             2023.0             2023.0            
+Max Fault Id            64
+
+Fault Model Type:   Cell Boundary
+
+
+Global Ignored Static Fault Count                 0
+Global Ignored Dynamic Fault Count                0
+
+
+INFO (TFM-705): Testmode: FULLSCAN Experiment: seq Fault List:   
+
+
+     Fault Status  Type    Sim Func / Cell Name           Fault pin name
+
+         1 T       OSA0           PI                      a   
+         2 T       OSA1           PI                      a   
+         3 T       OSA0           PI                      b   
+         4 T       OSA1           PI                      b   
+         5 TiC     OSA0           PI                      clk   
+         6 TiC     OSA1           PI                      clk   
+         7 T       OSA0           PO                      s   
+        43 cT      OSA0           OR2X1                   g5.Y   
+        46 cT      ISA0           AND2X1                  g6.A   
+        48 cT      ISA0           AND2X1                  g6.B   
+        49 cT      OSA0           AND2X1                  g6.Y   
+        61 cT      OSA0           INVX1                   u2.Y   
+        62 cT      ISA1           INVX1                   u2.A   
+         8 T       OSA1           PO                      s   
+        50 cT      OSA1           AND2X1                  g6.Y   
+         9 TiC     ISA0           DFFHQX1                 ff.CK   
+        10 TiC     ISA1           DFFHQX1                 ff.CK   
+        11 T       ISA0           DFFHQX1                 ff.D   
+        55 cT      OSA0           OR2X1                   g7.Y   
+        12 T       ISA1           DFFHQX1                 ff.D   
+        52 cT      ISA1           OR2X1                   g7.A   
+        54 cT      ISA1           OR2X1                   g7.B   
+        56 cT      OSA1           OR2X1                   g7.Y   
+        13 T       OSA0           DFFHQX1                 ff.Q   
+        14 T       OSA1           DFFHQX1                 ff.Q   
+        15 T       ISA1           AND2X1                  g1.A   
+        16 T       ISA0           OR2X1                   g7.B   
+        17 T       ISA1           AND2X1                  g1.B   
+        18 T       ISA0           OR2X1                   g7.A   
+        19 T       OSA0           AND2X1                  g1.Y   
+        51 cT      ISA0           AND2X1                  g1.B   
+        53 cT      ISA0           AND2X1                  g1.A   
+        20 T       OSA1           AND2X1                  g1.Y   
+        21 T       ISA0           OR2X1                   g2.A   
+        22 T       ISA1           AND2X1                  g6.B   
+        63 cT      OSA1           INVX1                   u2.Y   
+        64 cT      ISA0           INVX1                   u2.A   
+        23 T       ISA0           OR2X1                   g2.B   
+        24 T       ISA1           AND2X1                  g6.A   
+        40 cT      ISA1           OR2X1                   g5.A   
+        42 cT      ISA1           OR2X1                   g5.B   
+        44 cT      OSA1           OR2X1                   g5.Y   
+        25 T       ISA0           OR2X1                   g5.B   
+        26 T       ISA0           OR2X1                   g5.A   
+        27 T       ISA1           AND2X1                  g3.A   
+        59 cT      OSA1           INVX1                   u1.Y   
+        60 cT      ISA0           INVX1                   u1.A   
+        28 T       OSA1           AND2X1                  g4.Y   
+        29 T       ISA1           AND2X1                  g3.B   
+        39 cT      OSA1           OR2X1                   g2.Y   
+        45 cT      ISA1           OR2X1                   g2.B   
+        47 cT      ISA1           OR2X1                   g2.A   
+        30 T       OSA0           AND2X1                  g4.Y   
+        35 cT      ISA0           AND2X1                  g4.A   
+        36 cT      ISA0           AND2X1                  g4.B   
+        31 T       OSA0           AND2X1                  g3.Y   
+        37 cT      ISA0           AND2X1                  g3.B   
+        38 cT      ISA0           AND2X1                  g3.A   
+        41 cT      OSA0           OR2X1                   g2.Y   
+        57 cT      OSA0           INVX1                   u1.Y   
+        58 cT      ISA1           INVX1                   u1.A   
+        32 T       OSA1           AND2X1                  g3.Y   
+        33 T       ISA1           AND2X1                  g4.A   
+        34 T       ISA1           AND2X1                  g4.B   
+
+[end TFM_705]
+
+
+INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+ Total                 :           64
+ Tested                :           64
+ Possibly Tested       :            0
+ Redundant             :            0
+ Untested (unprocessed):            0
+[end TFM_901]
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            9,463,584  bytes
+
+                      CPU Time =    0:00:00.00
+                  Elapsed Time =    0:00:00.07                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:35 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-705): Testmode: FULLSCAN Experiment: seq Fault List:   
+      1 INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+Starting Command: write_vectors 
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/logs/log_write_vectors_FULLSCAN_seq_111126235737-004402000 [end TDA_015]
+
+INFO (TVE-001): Verilog write vectors started.   [end TVE_001] 
+INFO (TVE-103): There was no specified TEST offset for this clock 'pin clk'.  A default clock offset of 8.000000 ns will be used.   [end TVE_103] 
+INFO (TVE-967): Temporary output files are created in /tmp directory. [end TVE_967] 
+INFO (TVE-004): Reading test section 1.1. Test section type equals logic.   [end TVE_004] 
+INFO (TVE-003): Verilog write vectors output file will be: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/verilog/cycleMap.FULLSCAN.seq.   [end TVE_003] 
+INFO (TVE-003): Verilog write vectors output file will be: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/verilog/VER.FULLSCAN.seq.data.logic.ex1.ts1.verilog.   [end TVE_003] 
+INFO (TVE-005): Created 46 total cycles, of which 46 are test cycles, 0 are scan cycles, 0 are dynamic timed cycles and 0 are dynamic cycles that are not timed.   [end TVE_005] 
+INFO (TVE-008): Created 16 total measures, of which 16 are PO measures and 0 are SO (Scan Out) measures.  [end TVE_008] 
+INFO (TVE-003): Verilog write vectors output file will be: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/verilog/VER.FULLSCAN.seq.mainsim.v.   [end TVE_003] 
+
+INFO (TVE-050):         TEST SEQUENCE COVERAGE ESTIMATE REPORT  
+    Test       | Global    | Global    | Global    | Global    | Global    | Global    | Sequence   | Overlapped | Total      | 
+    Sequence   | Static    | Static    | Static    | Dynamic   | Dynamic   | Dynamic   | Cycle      | Cycle      | Cycle      | 
+               | Total     | Delta     | Adjusted  | Total     | Delta     | Adjusted  | Count      | Count      | Count      | 
+               | Coverage  | Coverage  | Total     | Coverage  | Coverage  | Total     |            |            |            | 
+               |           |           | Coverage  |           |           | Coverage  |            |            |            | 
+     1.1.1.1.1 |  0.00     |  0.00     |  0.00     |  0.00     |  0.00     |  0.00     |          1 |          0 |          1 |
+     1.1.1.2.1 |  53.12    |  53.12    |  53.12    |  0.00     |  0.00     |  0.00     |          8 |          0 |          9 |
+     1.1.1.2.2 |  54.69    |  1.56     |  54.69    |  0.00     |  0.00     |  0.00     |          8 |          0 |         17 |
+     1.1.1.2.3 |  56.25    |  1.56     |  56.25    |  0.00     |  0.00     |  0.00     |          8 |          0 |         25 |
+     1.1.1.2.4 |  82.81    |  26.56    |  82.81    |  0.00     |  0.00     |  0.00     |          8 |          0 |         33 |
+     1.1.1.3.1 |  87.50    |  4.69     |  87.50    |  0.00     |  0.00     |  0.00     |          6 |          0 |         39 |
+     1.1.1.3.2 |  93.75    |  6.25     |  93.75    |  0.00     |  0.00     |  0.00     |          7 |          0 |         46 |
+  [end TVE_050] 
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            5,874,688  bytes
+
+                      CPU Time =    0:00:00.01
+                  Elapsed Time =    0:00:00.49                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:37 2026  -03
+
+INFO (TVE-002): Verilog write vectors has completed.   [end TVE_002] 
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TVE-001): Verilog write vectors started.    
+      1 INFO (TVE-002): Verilog write vectors has completed.    
+      3 INFO (TVE-003): Verilog write vectors output file will be: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder/testresults/verilog/cycleMap.FULLSCAN.seq.    
+      1 INFO (TVE-004): Reading test section 1.1. Test section type equals logic.    
+      1 INFO (TVE-005): Created 46 total cycles, of which 46 are test cycles, 0 are scan cycles, 0 are dynamic timed cycles and 0 are dynamic cycles that are not timed.    
+      1 INFO (TVE-008): Created 16 total measures, of which 16 are PO measures and 0 are SO (Scan Out) measures.   
+      1 INFO (TVE-050):         TEST SEQUENCE COVERAGE ESTIMATE REPORT  
+      1 INFO (TVE-103): There was no specified TEST offset for this clock 'pin clk'.  A default clock offset of 8.000000 ns will be used.    
+      1 INFO (TVE-967): Temporary output files are created in /tmp directory.  
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------
+@file(/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/scripts/modus_top.tcl) 83: exit

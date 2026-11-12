@@ -1,0 +1,154 @@
+Starting Command: report_faults 
+
+INFO (TDA-005): Command Line Invocation: 
+            report_faults -faultstatus all -faultlocation cellpin -testmode FULLSCAN -experiment logic -workdir /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder -logfile /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s04_adder/faults_all_logic.txt  [end TDA_005]
+
+INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 23.12-s005_1, built Aug 15 2024 (linux26_64) [end TDA_014]
+
+INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s04_adder/faults_all_logic.txt [end TDA_015]
+
+INFO (TDA-007): Job Information:
+            Date Started: Wednesday Nov 11 23:57:29 2026  -03
+            Host machine is cadmicro-el8-07.inf.ufrgs.br, x86_64 running Linux 4.18.0-553.184.1.el8_10.x86_64.
+            This job is process number 1681457.
+[end TDA_007]
+
+INFO (TDA-009): Options/Values information.
+            (options marked with '*' have program generated values,
+             options marked with '+' were specified to default.)
+
+            -WORKDIR /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/s04_adder
+            -TESTMODE FULLSCAN
+            -EXPERIMENT logic
+
+            -LOGFILE /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/seq/s04_adder/faults_all_logic.txt
+            -faultstatus all
+          + -faultlocation cellpin
+[end TDA_009]
+
+TFMlist 
+
+Logic Model(GM)   11/12/26
+                  02:56:52
+File Id     faultModel        faultStatus         experiment
+Created (GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:02
+Modified(GM)  11/12/26           11/12/26           11/12/26
+              02:57:00           02:57:00           02:57:03
+Code Level        2023.0             2023.0             2023.0            
+Max Fault Id            64
+
+Fault Model Type:   Cell Boundary
+
+
+Global Ignored Static Fault Count                 0
+Global Ignored Dynamic Fault Count                0
+
+
+INFO (TFM-705): Testmode: FULLSCAN Experiment: logic Fault List:   
+
+
+     Fault Status  Type    Sim Func / Cell Name           Fault pin name
+
+         1 T       OSA0           PI                      a   
+         2 T       OSA1           PI                      a   
+         3 T       OSA0           PI                      b   
+         4 T       OSA1           PI                      b   
+         5 TiC     OSA0           PI                      clk   
+         6 TiC     OSA1           PI                      clk   
+         7 T       OSA0           PO                      s   
+        43 cT      OSA0           OR2X1                   g5.Y   
+        46 cT      ISA0           AND2X1                  g6.A   
+        48 cT      ISA0           AND2X1                  g6.B   
+        49 cT      OSA0           AND2X1                  g6.Y   
+        61 cT      OSA0           INVX1                   u2.Y   
+        62 cT      ISA1           INVX1                   u2.A   
+         8 T       OSA1           PO                      s   
+        50 cT      OSA1           AND2X1                  g6.Y   
+         9 TiC     ISA0           DFFHQX1                 ff.CK   
+        10 TiC     ISA1           DFFHQX1                 ff.CK   
+        11 T       ISA0           DFFHQX1                 ff.D   
+        55 cT      OSA0           OR2X1                   g7.Y   
+        12 T       ISA1           DFFHQX1                 ff.D   
+        52 cT      ISA1           OR2X1                   g7.A   
+        54 cT      ISA1           OR2X1                   g7.B   
+        56 cT      OSA1           OR2X1                   g7.Y   
+        13 T       OSA0           DFFHQX1                 ff.Q   
+        14 T       OSA1           DFFHQX1                 ff.Q   
+        15 T       ISA1           AND2X1                  g1.A   
+        16 T       ISA0           OR2X1                   g7.B   
+        17 T       ISA1           AND2X1                  g1.B   
+        18 T       ISA0           OR2X1                   g7.A   
+        19 T       OSA0           AND2X1                  g1.Y   
+        51 cT      ISA0           AND2X1                  g1.B   
+        53 cT      ISA0           AND2X1                  g1.A   
+        20 T       OSA1           AND2X1                  g1.Y   
+        21 T       ISA0           OR2X1                   g2.A   
+        22 T       ISA1           AND2X1                  g6.B   
+        63 cT      OSA1           INVX1                   u2.Y   
+        64 cT      ISA0           INVX1                   u2.A   
+        23 T       ISA0           OR2X1                   g2.B   
+        24 T       ISA1           AND2X1                  g6.A   
+        40 cT      ISA1           OR2X1                   g5.A   
+        42 cT      ISA1           OR2X1                   g5.B   
+        44 cT      OSA1           OR2X1                   g5.Y   
+        25 T       ISA0           OR2X1                   g5.B   
+        26 T       ISA0           OR2X1                   g5.A   
+        27 T       ISA1           AND2X1                  g3.A   
+        59 cT      OSA1           INVX1                   u1.Y   
+        60 cT      ISA0           INVX1                   u1.A   
+        28 T       OSA1           AND2X1                  g4.Y   
+        29 T       ISA1           AND2X1                  g3.B   
+        39 cT      OSA1           OR2X1                   g2.Y   
+        45 cT      ISA1           OR2X1                   g2.B   
+        47 cT      ISA1           OR2X1                   g2.A   
+        30 T       OSA0           AND2X1                  g4.Y   
+        35 cT      ISA0           AND2X1                  g4.A   
+        36 cT      ISA0           AND2X1                  g4.B   
+        31 T       OSA0           AND2X1                  g3.Y   
+        37 cT      ISA0           AND2X1                  g3.B   
+        38 cT      ISA0           AND2X1                  g3.A   
+        41 cT      OSA0           OR2X1                   g2.Y   
+        57 cT      OSA0           INVX1                   u1.Y   
+        58 cT      ISA1           INVX1                   u1.A   
+        32 T       OSA1           AND2X1                  g3.Y   
+        33 T       ISA1           AND2X1                  g4.A   
+        34 T       ISA1           AND2X1                  g4.B   
+
+[end TFM_705]
+
+
+INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+ Total                 :           64
+ Tested                :           64
+ Possibly Tested       :            0
+ Redundant             :            0
+ Untested (unprocessed):            0
+[end TFM_901]
+
+
+INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
+
+                  Total Memory =            9,457,792  bytes
+
+                      CPU Time =    0:00:00.01
+                  Elapsed Time =    0:00:00.05                    [end TDA_001]
+
+     Date Ended:  Wednesday Nov 11 23:57:29 2026  -03
+
+
+
+
+-------------------------------------------------------------------------------
+*                      Message Summary                                        *
+-------------------------------------------------------------------------------
+ Count  Number             First Instance of Message Text
+------- ------             ------------------------------
+
+  INFO Messages...
+      1 INFO (TFM-705): Testmode: FULLSCAN Experiment: logic Fault List:   
+      1 INFO (TFM-901): Fault Status Statistics for faults included in this fault list: 
+
+ For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009
+
+-------------------------------------------------------------------------------

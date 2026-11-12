@@ -1,0 +1,6 @@
+#// clock (desligado = 0)
+assign pin=clk    test_function= -ES;
+#// scan
+assign pin=se     test_function= +SE;
+assign pin=si     test_function= SI;
+assign pin=so     test_function= SO;
