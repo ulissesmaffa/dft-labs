@@ -1,0 +1,3 @@
+/atpg/.tmp
+/_setup/*
+!/_setup/setup.tcl.example
