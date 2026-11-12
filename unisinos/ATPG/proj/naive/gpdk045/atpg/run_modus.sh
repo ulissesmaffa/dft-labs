@@ -27,7 +27,7 @@ if [ $# -eq 0 ]; then
 fi
 
 for CIRCUIT in "$@"; do
-    NETLIST=$(ls "$FLOW_ROOT"/netlists/*/"$CIRCUIT.v" 2>/dev/null | head -1)
+    NETLIST=$(ls "$FLOW_ROOT"/netlists/*/"$CIRCUIT.v" 2>/dev/null | head -1 || true)
     [ -n "$NETLIST" ] || { echo "ERROR: netlists/{comb,seq,scan}/$CIRCUIT.v não existe"; exit 1; }
     GROUP=$(basename "$(dirname "$NETLIST")")
     TMP_DIR="$ROOT_DIR/.tmp/$CIRCUIT"
