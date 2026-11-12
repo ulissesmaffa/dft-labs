@@ -1,0 +1,2 @@
+#// sem scan e sem reset: só o clock
+assign pin=clk    test_function= -ES;

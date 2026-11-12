@@ -1,0 +1,8 @@
+#// clock (desligado = 0)
+assign pin=clk    test_function= -ES;
+#// reset assíncrono ativo em 0 (inativo = 1)
+assign pin=rst_n  test_function= +SC;
+#// scan
+assign pin=se     test_function= +SE;
+assign pin=si     test_function= SI;
+assign pin=so     test_function= SO;
