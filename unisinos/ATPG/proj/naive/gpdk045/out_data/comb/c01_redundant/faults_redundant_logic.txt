@@ -1,27 +1,27 @@
 Starting Command: report_faults 
 
 INFO (TDA-005): Command Line Invocation: 
-            report_faults -faultstatus redundant -faultlocation cellpin -reportkey yes -testmode FULLSCAN -experiment logic -workdir /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant -logfile /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/comb/c01_redundant/faults_redundant_logic.txt  [end TDA_005]
+            report_faults -faultstatus redundant -faultlocation cellpin -reportkey yes -testmode FULLSCAN -experiment logic -workdir /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant -logfile /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/out_data/comb/c01_redundant/faults_redundant_logic.txt  [end TDA_005]
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 23.12-s005_1, built Aug 15 2024 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/comb/c01_redundant/faults_redundant_logic.txt [end TDA_015]
+INFO (TDA-015): Log File: /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/out_data/comb/c01_redundant/faults_redundant_logic.txt [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Wednesday Nov 11 10:05:01 2026  -03
-            Host machine is cadmicro-el8-07.inf.ufrgs.br, x86_64 running Linux 4.18.0-553.184.1.el8_10.x86_64.
-            This job is process number 3822943.
+            Date Started: Thursday Nov 12 13:33:04 2026  -03
+            Host machine is asav-204.148, x86_64 running Linux 4.18.0-553.5.1.el8_10.x86_64.
+            This job is process number 42936.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
             (options marked with '*' have program generated values,
              options marked with '+' were specified to default.)
 
-            -WORKDIR /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant
+            -WORKDIR /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant
             -TESTMODE FULLSCAN
             -EXPERIMENT logic
 
-            -LOGFILE /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/comb/c01_redundant/faults_redundant_logic.txt
+            -LOGFILE /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/out_data/comb/c01_redundant/faults_redundant_logic.txt
             -faultstatus redundant
             -reportkey yes
           + -faultlocation cellpin
@@ -29,13 +29,13 @@ INFO (TDA-009): Options/Values information.
 
 TFMlist 
 
-Logic Model(GM)   11/11/26
-                  13:04:47
+Logic Model(GM)   11/12/26
+                  16:32:56
 File Id     faultModel        faultStatus         experiment
-Created (GM)  11/11/26           11/11/26           11/11/26
-              13:04:56           13:04:56           13:04:58
-Modified(GM)  11/11/26           11/11/26           11/11/26
-              13:04:56           13:04:56           13:04:59
+Created (GM)  11/12/26           11/12/26           11/12/26
+              16:33:00           16:33:00           16:33:02
+Modified(GM)  11/12/26           11/12/26           11/12/26
+              16:33:00           16:33:00           16:33:02
 Code Level        2023.0             2023.0             2023.0            
 Max Fault Id            42
 
@@ -150,12 +150,12 @@ INFO (TFM-901): Fault Status Statistics for faults included in this fault list:
 
 INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
 
-                  Total Memory =            9,420,304  bytes
+                  Total Memory =            9,420,272  bytes
 
                       CPU Time =    0:00:00.00
-                  Elapsed Time =    0:00:00.04                    [end TDA_001]
+                  Elapsed Time =    0:00:00.00                    [end TDA_001]
 
-     Date Ended:  Wednesday Nov 11 10:05:02 2026  -03
+     Date Ended:  Thursday Nov 12 13:33:04 2026  -03
 
 
 

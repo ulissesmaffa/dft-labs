@@ -1,43 +1,43 @@
 Starting Command: build_model 
 
 INFO (TDA-005): Command Line Invocation: 
-            build_model -designtop top -workdir /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant -designsource /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/netlists/comb/c01_redundant.v -techlib /pdk/cadence/gpdk045/gsclib045_all_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v  [end TDA_005]
+            build_model -designtop top -workdir /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant -designsource /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/netlists/comb/c01_redundant.v -techlib /home/ulisses/pdk/gsclib045_all_v4.8/gsclib045/verilog/slow_vdd1v0_basicCells.v  [end TDA_005]
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 23.12-s005_1, built Aug 15 2024 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/testresults/logs/log_build_model_111126100441-129363000 [end TDA_015]
+INFO (TDA-015): Log File: /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/testresults/logs/log_build_model_111226133255-728373000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Wednesday Nov 11 10:04:41 2026  -03
-            Host machine is cadmicro-el8-07.inf.ufrgs.br, x86_64 running Linux 4.18.0-553.184.1.el8_10.x86_64.
-            This job is process number 3822450.
+            Date Started: Thursday Nov 12 13:32:55 2026  -03
+            Host machine is asav-204.148, x86_64 running Linux 4.18.0-553.5.1.el8_10.x86_64.
+            This job is process number 42776.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
             (options marked with '*' have program generated values,
              options marked with '+' were specified to default.)
 
-            -WORKDIR /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant
+            -WORKDIR /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant
 
             -designtop top
-            -TECHLIB /pdk/cadence/gpdk045/gsclib045_all_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v
-            -LOGFILE /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/testresults/logs/log_build_model_111126100441-129363000
-            -DESIGNSOURCE /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/netlists/comb/c01_redundant.v
+            -TECHLIB /home/ulisses/pdk/gsclib045_all_v4.8/gsclib045/verilog/slow_vdd1v0_basicCells.v
+            -LOGFILE /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/testresults/logs/log_build_model_111226133255-728373000
+            -DESIGNSOURCE /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/netlists/comb/c01_redundant.v
 [end TDA_009]
 INFO (TEI-195): Build Model - Controller starting: [end TEI_195] 
 
 
-Search Order  1:  "/home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/netlists/comb/c01_redundant.v"
-Search Order  2:  "/pdk/cadence/gpdk045/gsclib045_all_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v"
+Search Order  1:  "/home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/netlists/comb/c01_redundant.v"
+Search Order  2:  "/home/ulisses/pdk/gsclib045_all_v4.8/gsclib045/verilog/slow_vdd1v0_basicCells.v"
 
 
 
-Reading Verilog data from /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/netlists/comb/c01_redundant.v
+Reading Verilog data from /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/netlists/comb/c01_redundant.v
 
 Verilog Parser complete - 1 modules, 0 gates, 0 user defined primitives.
 
 
-Reading Verilog data from /pdk/cadence/gpdk045/gsclib045_all_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v
+Reading Verilog data from /home/ulisses/pdk/gsclib045_all_v4.8/gsclib045/verilog/slow_vdd1v0_basicCells.v
 
 Verilog Parser complete - 489 modules, 1844 gates, 14 user defined primitives.
 
@@ -103,10 +103,10 @@ INFO (TEI-199): Build Model - Flat Model Build completed.  [end TEI_199]
 
 INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
 
-                  Total Memory =          101,498,864  bytes
+                  Total Memory =          101,498,976  bytes
 
-                      CPU Time =    0:00:00.71
-                  Elapsed Time =    0:00:06.62                    [end TDA_001]
+                      CPU Time =    0:00:00.43
+                  Elapsed Time =    0:00:00.83                    [end TDA_001]
 
 
 

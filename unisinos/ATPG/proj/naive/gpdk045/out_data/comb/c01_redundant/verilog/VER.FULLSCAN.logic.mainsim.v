@@ -3,7 +3,7 @@
 // Modus(TM) DFT Software Solution, Version 23.12-s005_1, built Aug 15 2024  //
 //***************************************************************************//
 //                                                                           //
-//  FILE CREATED..............November 11, 2026 at 10:05:04                  //
+//  FILE CREATED..............November 12, 2026 at 13:33:07                  //
 //                                                                           //
 //  PROJECT NAME..............c01_redundant                                  //
 //                                                                           //
@@ -32,7 +32,7 @@
 //                                                                           //
 //***************************************************************************//
 
-// Command Line: write_vectors -WORKDIR /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant -TESTMODE FULLSCAN -INEXPERIMENT logic -language verilog
+// Command Line: write_vectors -WORKDIR /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant -TESTMODE FULLSCAN -INEXPERIMENT logic -language verilog
 
   `timescale 1 ns / 1 ps
 

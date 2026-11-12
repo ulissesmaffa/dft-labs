@@ -1,27 +1,27 @@
 Starting Command: create_logic_tests 
 
 INFO (TDA-005): Command Line Invocation: 
-            create_logic_tests -testmode FULLSCAN -experiment logic -effort high -workdir /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant  [end TDA_005]
+            create_logic_tests -testmode FULLSCAN -experiment logic -effort high -workdir /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant  [end TDA_005]
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 23.12-s005_1, built Aug 15 2024 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/testresults/logs/log_create_logic_tests_FULLSCAN_logic_111126100458-641028000 [end TDA_015]
+INFO (TDA-015): Log File: /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/testresults/logs/log_create_logic_tests_FULLSCAN_logic_111226133301-960226000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Wednesday Nov 11 10:04:58 2026  -03
-            Host machine is cadmicro-el8-07.inf.ufrgs.br, x86_64 running Linux 4.18.0-553.184.1.el8_10.x86_64.
-            This job is process number 3822898.
+            Date Started: Thursday Nov 12 13:33:01 2026  -03
+            Host machine is asav-204.148, x86_64 running Linux 4.18.0-553.5.1.el8_10.x86_64.
+            This job is process number 42913.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
             (options marked with '*' have program generated values,
              options marked with '+' were specified to default.)
 
-            -WORKDIR /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant
+            -WORKDIR /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant
             -TESTMODE FULLSCAN
             -EXPERIMENT logic
 
-            -LOGFILE /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/testresults/logs/log_create_logic_tests_FULLSCAN_logic_111126100458-641028000
+            -LOGFILE /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/testresults/logs/log_create_logic_tests_FULLSCAN_logic_111226133301-960226000
           + -effort high
 [end TDA_009]
 
@@ -55,7 +55,7 @@ INFO (TTC-110): Starting Static Logic Test generation                           
 
 INFO (TDA-220):   --- Tests ---   Faults     ---- ATCov ----   -- Faults --   - Elapsed Time -  [end TDA_220] 
 INFO (TDA-220):    Sim.    Eff.  Detected    Tmode    Global     Untested                       [end TDA_220] 
-INFO (TDA-220):      5       5         35    99.99%   99.99%            0           00:00.54    [end TDA_220] 
+INFO (TDA-220):      5       5         35    99.99%   99.99%            0           00:00.19    [end TDA_220] 
 INFO (TTC-110): Ending Static Logic Test generation - processing limit reached                  [end TTC_110] 
 *************************************************************************************************************
 
@@ -82,17 +82,17 @@ Total Static                    42           35            0            7       
 
 (I) File(s) generated (bytes and name):
 
-          61440 /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/tbdata/faultStatus.FULLSCAN.logic
-           5987 /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/tbdata/TBDbin.FULLSCAN.logic
+          61440 /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/tbdata/faultStatus.FULLSCAN.logic
+           5987 /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/tbdata/TBDbin.FULLSCAN.logic
 
 INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
 
-                  Total Memory =            6,239,280  bytes
+                  Total Memory =            6,239,248  bytes
 
-                      CPU Time =    0:00:00.04
-                  Elapsed Time =    0:00:00.68                    [end TDA_001]
+                      CPU Time =    0:00:00.02
+                  Elapsed Time =    0:00:00.22                    [end TDA_001]
 
-     Date Ended:  Wednesday Nov 11 10:04:59 2026  -03
+     Date Ended:  Thursday Nov 12 13:33:02 2026  -03
 
 
 

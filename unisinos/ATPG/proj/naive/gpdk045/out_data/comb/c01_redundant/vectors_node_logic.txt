@@ -1,6 +1,6 @@
-# File name = /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/out_data/comb/c01_redundant/vectors_node_logic.txt
+# File name = /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/out_data/comb/c01_redundant/vectors_node_logic.txt
 # Created by the Modus TBD print program
-# Date/time of output file creation: 20261111130500
+# Date/time of output file creation: 20261112163303
 # Cadence(R) Modus(TM) DFT Software Solution, Version 23.12-s005_1, built Aug 15 2024 (linux26_64)
 TBDpatt_Format (mode=node, model_entity_form=name);
 # 
@@ -84,7 +84,7 @@ TBDpatt_Format (mode=node, model_entity_form=name);
 #      Inputs 4 = "Pin.f.l.top.nl.d",   #  index = 3
 #      Inputs 5 = "Pin.f.l.top.nl.e")   #  index = 4
 #      ;                                        # End of vector correspondence
-[ Experiment logic 1 (datetime = 1794402299);
+[ Experiment logic 1 (datetime = 1794501182);
  [ Test_Section 1.1 (tester_termination = none, test_section_type = logic, test_type = static, simulated);
    [ Keyed_Data;
     "SimOptions" = "globalterm=none latchsimulation=optimistic constraintpropagation=pessimistic ramsimulation=optimistic choppers=risky propxignore=no loadsuffix=fm maxfaultxsize=10000 maxfaultsize=100000 maxfaultcopies=100000 keepers=risky pdl=0 markpdlfaultstested=no removexlatch=no removexpo=no faulttype=static latchfill=random latchfill2=repeat markimpliedstatic=no aliascheck=no contentionremove=hard countxcaptureswitches=half faultimply=yes zmemory=no "

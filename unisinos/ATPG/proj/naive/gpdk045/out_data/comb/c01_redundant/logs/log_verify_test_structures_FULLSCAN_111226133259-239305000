@@ -1,28 +1,28 @@
 Starting Command: verify_test_structures 
 
 INFO (TDA-005): Command Line Invocation: 
-            verify_test_structures -testmode FULLSCAN -workdir /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant  [end TDA_005]
+            verify_test_structures -testmode FULLSCAN -workdir /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant  [end TDA_005]
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 23.12-s005_1, built Aug 15 2024 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/testresults/logs/log_verify_test_structures_FULLSCAN_111126100453-010445000 [end TDA_015]
+INFO (TDA-015): Log File: /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/testresults/logs/log_verify_test_structures_FULLSCAN_111226133259-239305000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Wednesday Nov 11 10:04:53 2026  -03
-            Host machine is cadmicro-el8-07.inf.ufrgs.br, x86_64 running Linux 4.18.0-553.184.1.el8_10.x86_64.
-            This job is process number 3822772.
+            Date Started: Thursday Nov 12 13:32:59 2026  -03
+            Host machine is asav-204.148, x86_64 running Linux 4.18.0-553.5.1.el8_10.x86_64.
+            This job is process number 42853.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
             (options marked with '*' have program generated values,
              options marked with '+' were specified to default.)
 
-            -WORKDIR /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant
+            -WORKDIR /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant
             -TESTMODE FULLSCAN
 
-            -LOGFILE /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/testresults/logs/log_verify_test_structures_FULLSCAN_111126100453-010445000
+            -LOGFILE /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/testresults/logs/log_verify_test_structures_FULLSCAN_111226133259-239305000
 [end TDA_009]
-INFO (TSV-900): verify_test_structures processing has started Wed Nov 11 10:04:53 2026    [end TSV_900] 
+INFO (TSV-900): verify_test_structures processing has started Thu Nov 12 13:32:59 2026    [end TSV_900] 
 ------------------- verify_test_structures Process Preview ---------------------
   apply constraints ...................................... constraints=yes    
   Print 1 message per source of clock race ............... limitcisource=yes  
@@ -108,22 +108,22 @@ Test Function Pin Information for Test Mode:  FULLSCAN
 INFO (TSV-006): Analyze test clocks' control of memory elements was invoked.  However, there are no active memory elements on the product under test.   [end TSV_006] 
 
 Analyze test clocks' control of memory elements process has completed.
-                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.20
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.01
   
    Analyze three-state drivers for contention 
 
 Analyze three-state drivers for contention process has completed.
-                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.13
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.01
   
    Analyze feedback loops and keeper devices          
 
 Analyze feedback loops and keeper devices process has completed.
-                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.12
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.01
   
    Analyze clock choppers                             
 
 Analyze clock choppers process has completed.
-                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.17
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.01
   
    Analyze flip-flop and latch scan characteristics   
 INFO (TSV-567): There are 0 controllable scan chains fed by Scan In (SI) primary inputs.   [end TSV_567] 
@@ -132,37 +132,37 @@ INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern G
 INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).   [end TSV_570] 
 
 Analyze flip-flop and latch scan characteristics process has completed.
-                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.24
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.01
   
    Analyze explicit fixed value latches 
 
 Analyze explicit fixed value latches process has completed.
-                             CPU time =  0:00:00.01  Elapsed time =  0:00:00.14
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.01
   
    Analyze potential clock signal races               
    Check for mutually exclusive gating logic (MEG)    
 
 Analyze potential clock signal races process has completed.
-                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.17
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.01
   
    Analyze internal scan chains 
 
 Analyze channel inputs for validity process has completed.
-                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.11
+                             CPU time =  0:00:00.00  Elapsed time =  0:00:00.01
 
 --------------------File Information----------------------
-          57344 /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/tbdata/TSVmessageFile.FULLSCAN 
+          57344 /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/tbdata/TSVmessageFile.FULLSCAN 
 
 INFO (TSV-908): verify_test_structures processing complete.   [end TSV_908] 
 
 INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:minutes:seconds:
 
-                  Total Memory =            5,731,504  bytes
+                  Total Memory =            5,733,520  bytes
 
-                      CPU Time =    0:00:00.02
-                  Elapsed Time =    0:00:02.08                    [end TDA_001]
+                      CPU Time =    0:00:00.00
+                  Elapsed Time =    0:00:00.22                    [end TDA_001]
 
-     Date Ended:  Wednesday Nov 11 10:04:55 2026  -03
+     Date Ended:  Thursday Nov 12 13:32:59 2026  -03
 
 
 
@@ -180,7 +180,7 @@ INFO (TDA-001): Maximum Memory used during the run and Cumulative Time in hours:
       1 INFO (TSV-568): There are 0 observable scan chains feeding to Scan Out (SO) primary outputs.    
       1 INFO (TSV-569): There are 0 controllable scan chains fed by on-product Pattern Generator(s).    
       1 INFO (TSV-570): There are 0 observable scan chains feeding to on-product Multiple-Input Signature Register (MISRs).    
-      1 INFO (TSV-900): verify_test_structures processing has started Wed Nov 11 10:04:53 2026     
+      1 INFO (TSV-900): verify_test_structures processing has started Thu Nov 12 13:32:59 2026     
       1 INFO (TSV-908): verify_test_structures processing complete.    
 
  For a detailed explanation of a message and a suggested user response execute 'msgHelp <message id>'.  For example: msgHelp TDA-009

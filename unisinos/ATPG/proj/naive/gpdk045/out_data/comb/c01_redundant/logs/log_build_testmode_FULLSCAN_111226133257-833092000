@@ -1,31 +1,31 @@
 Starting Command: build_testmode 
 
 INFO (TDA-005): Command Line Invocation: 
-            build_testmode -testmode FULLSCAN -workdir /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant  [end TDA_005]
+            build_testmode -testmode FULLSCAN -workdir /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant  [end TDA_005]
 
 INFO (TDA-014): Cadence(R) Modus(TM) DFT Software Solution, Version 23.12-s005_1, built Aug 15 2024 (linux26_64) [end TDA_014]
 
-INFO (TDA-015): Log File: /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/testresults/logs/log_build_testmode_FULLSCAN_111126100449-393016000 [end TDA_015]
+INFO (TDA-015): Log File: /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/testresults/logs/log_build_testmode_FULLSCAN_111226133257-833092000 [end TDA_015]
 
 INFO (TDA-007): Job Information:
-            Date Started: Wednesday Nov 11 10:04:49 2026  -03
-            Host machine is cadmicro-el8-07.inf.ufrgs.br, x86_64 running Linux 4.18.0-553.184.1.el8_10.x86_64.
-            This job is process number 3822710.
+            Date Started: Thursday Nov 12 13:32:57 2026  -03
+            Host machine is asav-204.148, x86_64 running Linux 4.18.0-553.5.1.el8_10.x86_64.
+            This job is process number 42832.
 [end TDA_007]
 
 INFO (TDA-009): Options/Values information.
             (options marked with '*' have program generated values,
              options marked with '+' were specified to default.)
 
-            -WORKDIR /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant
+            -WORKDIR /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant
             -TESTMODE FULLSCAN
 
           * ASSIGNFILE=
           * update_assign_file=
-            -LOGFILE /home/ulisses.maffazioli/cademics/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/testresults/logs/log_build_testmode_FULLSCAN_111126100449-393016000
+            -LOGFILE /home/ulisses/dft-labs/unisinos/ATPG/proj/naive/gpdk045/atpg/.tmp/c01_redundant/testresults/logs/log_build_testmode_FULLSCAN_111226133257-833092000
 [end TDA_009]
-MODEDEFPATH set to:  /tools/cadence/MODUS231/tools/tb/defaults/rules/modedef 
-TDRPATH set to: /tools/cadence/MODUS231/tools/tb/defaults/rules/tdr 
+MODEDEFPATH set to:  /home/cadence/MODUS231/tools/tb/defaults/rules/modedef 
+TDRPATH set to: /home/cadence/MODUS231/tools/tb/defaults/rules/tdr 
 
 Modus Build Test Mode(s) beginning...
 
@@ -76,11 +76,11 @@ Test Function Pin Information for Test Mode:  FULLSCAN
           0  SO    (Scan Output)               Pins
 
 
-               Total Memory =           11,328,720  bytes
+               Total Memory =           11,328,656  bytes
 
             Cumulative Time in hours:minutes:seconds:
-                   CPU Time =   0:00:00.17
-               Elapsed Time =   0:00:01.91
+                   CPU Time =   0:00:00.14
+               Elapsed Time =   0:00:00.27
 
 
 
