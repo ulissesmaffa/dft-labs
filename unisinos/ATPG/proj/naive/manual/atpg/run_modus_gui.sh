@@ -4,6 +4,8 @@
 #   com nome   : copia netlists/*/<circuito>.v (e o .assignfile) para inp_data/source/
 #   sem nome   : usa o que já estiver em inp_data/source/
 #   ex.: ./atpg/run_modus_gui.sh s04_adder
+#   --batch    : abre o resultado do último ./atpg/run_modus.sh (não apaga nada)
+#                no console do Modus: set_db workdir ./   e refresh no painel Tasks
 # No console do Modus, rodar UM bloco de cada vez:
 #   atpg/scripts/atpg.tcl      (combinacionais e scan)
 #   atpg/scripts/atpg_seq.tcl  (sequenciais sem scan: profundidade, falhas, vetores)
@@ -19,6 +21,17 @@ SRC="$FLOW_ROOT/inp_data/source"
 [ -f "$FLOW_ROOT/_setup/setup.tcl" ] || { echo "ERROR: falta _setup/setup.tcl"; exit 1; }
 if [ -f "$FLOW_ROOT/_setup/setup_tools.sh" ]; then set +u; source "$FLOW_ROOT/_setup/setup_tools.sh"; set -u; fi
 command -v modus >/dev/null || { echo "ERROR: modus não está no PATH"; exit 1; }
+
+# resultado do batch: abre a pasta já pronta, sem limpar
+if [ "${1:-}" = "--batch" ]; then
+    WORK="$ATPG_DIR/.tmp/batch"
+    [ -d "$WORK/tbdata" ] || { echo "ERROR: rode antes ./atpg/run_modus.sh"; exit 1; }
+    cd "$WORK"
+    echo "Abrindo o resultado do batch. No console do Modus:"
+    echo "  set_db workdir ./"
+    echo "e clique em refresh no painel Tasks."
+    exec modus -gui
+fi
 
 # circuito pedido -> inp_data/source
 if [ $# -ge 1 ]; then
