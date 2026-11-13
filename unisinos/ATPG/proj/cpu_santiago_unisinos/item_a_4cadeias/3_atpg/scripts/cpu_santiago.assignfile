@@ -1,0 +1,19 @@
+#// Item a: 4 cadeias. Ponto de partida = assignfile do fluxo A (uma cadeia).
+
+#//Clock (estado desligado = 0)
+assign pin=clk    test_function= -ES;
+
+#//Reset assíncrono ativo em 1 (inativo = 0)
+assign pin=rst    test_function= -SC;
+
+#//Scan Enable
+assign pin=scan_en  test_function= +SE;
+
+#// >>> TODO (item a): cada cadeia precisa de uma linha SI e uma linha SO,
+#// >>> com os nomes das portas que você criou no 01_read.tcl.
+
+#//Scan Input
+assign pin=scan_in  test_function= SI;
+
+#//Scan Output
+assign pin=scan_out test_function= SO;

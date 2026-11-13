@@ -1,0 +1,5 @@
+/_setup/setup.tcl
+/_setup/setup_tools.sh
+/*/out_data/
+.tmp/
+.tmp_gui/

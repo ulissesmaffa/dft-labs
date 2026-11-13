@@ -1,0 +1,16 @@
+#// Fluxo A: uma cadeia. Pinos de teste escritos à mão.
+
+#//Clock (estado desligado = 0)
+assign pin=clk    test_function= -ES;
+
+#//Reset assíncrono ativo em 1 (inativo = 0)
+assign pin=rst    test_function= -SC;
+
+#//Scan Enable
+assign pin=scan_en  test_function= +SE;
+
+#//Scan Input
+assign pin=scan_in  test_function= SI;
+
+#//Scan Output
+assign pin=scan_out test_function= SO;
