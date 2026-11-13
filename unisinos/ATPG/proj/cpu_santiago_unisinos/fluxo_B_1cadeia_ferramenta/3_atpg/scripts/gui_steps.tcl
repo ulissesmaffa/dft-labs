@@ -25,3 +25,6 @@ create_logic_tests -testmode $TESTMODE -experiment logic
 
 # 6. Write Vectors -> ciclos de scan e de teste (TVE-005)
 write_vectors -testmode $TESTMODE -inexperiment logic -language verilog -scanformat parallel
+
+# 7. Report Vectors -> vetores em formato legível (Scan_Load, clock, Scan_Unload)
+report_vectors -testmode $TESTMODE -experiment logic -format node -outputfile ./vectors_node_logic.txt

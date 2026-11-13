@@ -65,6 +65,7 @@ scripts que o Genus gera em `out_data/pre_layout/modus_ref`.
 | Falhas e cobertura | `atpg/`, log do `create_logic_tests` | linha `Total Static` |
 | Padrões | `atpg/`, log do `create_logic_tests` | quadro `Test Sequences`, linha Logic |
 | Ciclos de teste | `atpg/`, log do `write_vectors` | mensagens `TVE-005` |
+| Vetores legíveis | `atpg/vectors_node_logic.txt` | fluxos A, B e item a |
 
 Os logs do Modus ficam em `atpg/logs/` (fluxos A, B e item a) ou em
 `atpg/logs_runmodus.*/` (itens b e c, um conjunto por modo de teste).
